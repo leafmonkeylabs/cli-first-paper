@@ -1,0 +1,17 @@
+model,arm,success,n,rate,lo,hi
+haiku,mcp,57,60,0.95,0.863,0.983
+haiku,mcp-parity,59,60,0.983,0.911,0.997
+haiku,cli-step,40,40,1.0,0.912,1.0
+haiku,cli-pipe,59,60,0.983,0.911,0.997
+haiku,cli-pipe-noskill,39,40,0.975,0.871,0.996
+haiku,cli-pipe-skills,60,60,1.0,0.94,1.0
+haiku,cli-step-ref,58,60,0.967,0.886,0.991
+haiku,cli-pipe-ref,59,60,0.983,0.911,0.997
+sonnet,mcp,36,36,1.0,0.904,1.0
+sonnet,mcp-parity,35,36,0.972,0.858,0.995
+sonnet,cli-step,24,24,1.0,0.862,1.0
+sonnet,cli-pipe,36,36,1.0,0.904,1.0
+sonnet,cli-pipe-noskill,24,24,1.0,0.862,1.0
+sonnet,cli-pipe-skills,36,36,1.0,0.904,1.0
+sonnet,cli-step-ref,35,36,0.972,0.858,0.995
+sonnet,cli-pipe-ref,36,36,1.0,0.904,1.0

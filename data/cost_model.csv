@@ -1,0 +1,4 @@
+setting,passes,uncached_tokens,cached_tokens
+direct tool calls,6,97500,34475
+CLI pipeline,2,22600,15600
+CLI pipeline S=1k,2,4600,3450

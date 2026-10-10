@@ -1,0 +1,260 @@
+40 runs to do (448 already recorded)
+T2-small-mcp-parity-haiku-1-4e44b0: success=True passes=3 cost=$0.0016 {"entry": true, "no_extra_entries": true}
+T1-small-mcp-parity-haiku-1-70045d: success=True passes=3 cost=$0.0012 {"answer": true}
+T2-large-mcp-parity-haiku-1-e9d423: success=True passes=3 cost=$0.0043 {"entry": true, "no_extra_entries": true}
+T1-large-mcp-parity-haiku-1-464b65: success=True passes=3 cost=$0.0011 {"answer": true}
+T4-small-mcp-parity-haiku-1-05319d: success=True passes=5 cost=$0.0026 {"entry": true, "reminder": true}
+T4-large-mcp-parity-haiku-1-3e43ad: success=True passes=5 cost=$0.0055 {"entry": true, "reminder": true}
+T1-small-mcp-parity-haiku-2-1b6782: success=True passes=3 cost=$0.0012 {"answer": true}
+T2-small-mcp-parity-haiku-2-634f13: success=True passes=3 cost=$0.0015 {"entry": true, "no_extra_entries": true}
+T1-large-mcp-parity-haiku-2-12fc42: success=True passes=3 cost=$0.0011 {"answer": true}
+T2-large-mcp-parity-haiku-2-7094e8: success=True passes=3 cost=$0.0043 {"entry": true, "no_extra_entries": true}
+T1-small-mcp-parity-haiku-3-bfb5b8: success=True passes=3 cost=$0.0012 {"answer": true}
+T4-small-mcp-parity-haiku-2-9d402e: success=True passes=5 cost=$0.0027 {"entry": true, "reminder": true}
+T8-small-mcp-parity-haiku-1-525962: success=True passes=7 cost=$0.0051 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "Software Subscriptions"}
+T1-large-mcp-parity-haiku-3-666f80: success=True passes=3 cost=$0.0011 {"answer": true}
+T4-large-mcp-parity-haiku-2-918b22: success=True passes=5 cost=$0.0054 {"entry": true, "reminder": true}
+T2-small-mcp-parity-haiku-3-0328bb: success=True passes=3 cost=$0.0016 {"entry": true, "no_extra_entries": true}
+T8-large-mcp-parity-haiku-1-02e086: success=True passes=8 cost=$0.0106 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "School Fees (Family)"}
+T2-large-mcp-parity-haiku-3-84ac3a: success=True passes=3 cost=$0.0043 {"entry": true, "no_extra_entries": true}
+T8-small-mcp-parity-haiku-2-1546f0: success=True passes=6 cost=$0.0045 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "Software Subscriptions"}
+T4-small-mcp-parity-haiku-3-d1aded: success=True passes=5 cost=$0.0025 {"entry": true, "reminder": true}
+T1-small-mcp-parity-haiku-4-27e2f3: success=True passes=3 cost=$0.0012 {"answer": true}
+T4-large-mcp-parity-haiku-3-e68b40: success=True passes=5 cost=$0.0059 {"entry": true, "reminder": true}
+T8-large-mcp-parity-haiku-2-d85e9c: success=True passes=7 cost=$0.0090 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "School Fees (Family)"}
+T2-small-mcp-parity-haiku-4-0f6e51: success=True passes=3 cost=$0.0015 {"entry": true, "no_extra_entries": true}
+T1-large-mcp-parity-haiku-4-0a5b4b: success=True passes=3 cost=$0.0011 {"answer": true}
+T8-small-mcp-parity-haiku-3-9190e9: success=True passes=6 cost=$0.0045 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "Software Subscriptions"}
+T2-large-mcp-parity-haiku-4-24eb7d: success=True passes=3 cost=$0.0042 {"entry": true, "no_extra_entries": true}
+T1-small-mcp-parity-haiku-5-795db6: success=True passes=3 cost=$0.0012 {"answer": true}
+T4-small-mcp-parity-haiku-4-250fc7: success=True passes=5 cost=$0.0025 {"entry": true, "reminder": true}
+T2-small-mcp-parity-haiku-5-6acbf1: success=True passes=3 cost=$0.0015 {"entry": true, "no_extra_entries": true}
+T1-large-mcp-parity-haiku-5-cb2543: success=True passes=3 cost=$0.0012 {"answer": true}
+T4-large-mcp-parity-haiku-4-010ec0: success=True passes=5 cost=$0.0059 {"entry": true, "reminder": true}
+T8-large-mcp-parity-haiku-3-ee267c: success=True passes=8 cost=$0.0099 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "School Fees (Family)"}
+T2-large-mcp-parity-haiku-5-c38c5c: success=True passes=3 cost=$0.0043 {"entry": true, "no_extra_entries": true}
+T4-small-mcp-parity-haiku-5-19a910: success=True passes=5 cost=$0.0026 {"entry": true, "reminder": true}
+T8-small-mcp-parity-haiku-4-8d01b9: success=True passes=8 cost=$0.0053 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "Software Subscriptions"}
+T4-large-mcp-parity-haiku-5-4989bf: success=True passes=5 cost=$0.0056 {"entry": true, "reminder": true}
+T8-large-mcp-parity-haiku-4-5f99d1: success=True passes=8 cost=$0.0116 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "School Fees (Family)"}
+T8-small-mcp-parity-haiku-5-447519: success=True passes=6 cost=$0.0043 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "Software Subscriptions"}
+T8-large-mcp-parity-haiku-5-dd2ace: success=True passes=8 cost=$0.0095 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "School Fees (Family)"}
+24 runs to do (488 already recorded)
+T1-small-mcp-parity-sonnet-1-a81350: success=True passes=2 cost=$0.0158 {"answer": true}
+T1-large-mcp-parity-sonnet-1-1b362c: success=True passes=2 cost=$0.0147 {"answer": true}
+T2-small-mcp-parity-sonnet-1-027a04: success=True passes=3 cost=$0.0290 {"entry": true, "no_extra_entries": true}
+T2-large-mcp-parity-sonnet-1-644f7c: success=True passes=3 cost=$0.0833 {"entry": true, "no_extra_entries": true}
+T1-small-mcp-parity-sonnet-2-96771e: success=True passes=2 cost=$0.0150 {"answer": true}
+T4-small-mcp-parity-sonnet-1-a5c89a: success=True passes=5 cost=$0.0441 {"entry": true, "reminder": true}
+T4-large-mcp-parity-sonnet-1-b5b3ad: success=True passes=5 cost=$0.1015 {"entry": true, "reminder": true}
+T1-large-mcp-parity-sonnet-2-a10352: success=True passes=2 cost=$0.0156 {"answer": true}
+T2-small-mcp-parity-sonnet-2-d6d8cc: success=True passes=3 cost=$0.0284 {"entry": true, "no_extra_entries": true}
+T2-large-mcp-parity-sonnet-2-ed2a19: success=True passes=3 cost=$0.0812 {"entry": true, "no_extra_entries": true}
+T8-small-mcp-parity-sonnet-1-374ac5: success=True passes=7 cost=$0.0818 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "Software Subscriptions"}
+T1-small-mcp-parity-sonnet-3-e72337: success=True passes=2 cost=$0.0150 {"answer": true}
+T8-large-mcp-parity-sonnet-1-dc5496: success=True passes=6 cost=$0.1629 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "School Fees (Family)"}
+T4-small-mcp-parity-sonnet-2-b9d3a6: success=True passes=5 cost=$0.0439 {"entry": true, "reminder": true}
+T4-large-mcp-parity-sonnet-2-bd06af: success=True passes=5 cost=$0.1017 {"entry": true, "reminder": true}
+T1-large-mcp-parity-sonnet-3-0f4140: success=True passes=2 cost=$0.0154 {"answer": true}
+T2-small-mcp-parity-sonnet-3-e36701: success=True passes=3 cost=$0.0285 {"entry": true, "no_extra_entries": true}
+T2-large-mcp-parity-sonnet-3-ae1251: success=True passes=3 cost=$0.0815 {"entry": true, "no_extra_entries": true}
+T4-small-mcp-parity-sonnet-3-4e86ea: success=True passes=5 cost=$0.0437 {"entry": true, "reminder": true}
+T8-large-mcp-parity-sonnet-2-810624: success=False passes=5 cost=$0.1381 {"account": true, "software_entry": true, "refund_entry": false, "reminder": true, "target": "School Fees (Family)"}
+T4-large-mcp-parity-sonnet-3-34a8bc: success=True passes=5 cost=$0.1036 {"entry": true, "reminder": true}
+T8-small-mcp-parity-sonnet-2-9e9cea: success=True passes=7 cost=$0.0818 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "Software Subscriptions"}
+T8-small-mcp-parity-sonnet-3-886fde: success=True passes=7 cost=$0.0816 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "Software Subscriptions"}
+T8-large-mcp-parity-sonnet-3-81b270: success=True passes=6 cost=$0.1633 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "School Fees (Family)"}
+120 runs to do (512 already recorded)
+L1-small-mcp-haiku-1-24ec2e: success=True passes=3 cost=$0.0072 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-large-mcp-haiku-1-7c65dd: success=True passes=3 cost=$0.0081 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-small-mcp-parity-haiku-1-210be7: success=True passes=3 cost=$0.0056 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-small-cli-step-ref-haiku-1-0b8ebc: success=True passes=7 cost=$0.0056 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-small-cli-pipe-ref-haiku-1-f9b0b9: success=True passes=4 cost=$0.0028 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-large-mcp-parity-haiku-1-9ee9c1: success=True passes=3 cost=$0.0090 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-small-cli-pipe-skills-haiku-1-f68fc9: success=True passes=4 cost=$0.0035 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-small-cli-pipe-haiku-1-0d87a0: success=True passes=4 cost=$0.0027 {"entries": true, "no_extra_entries": true, "found": 25}
+L2-small-mcp-haiku-1-12f927: success=True passes=3 cost=$0.0012 {"reminders": true, "expected_n": 1, "got_n": 1}
+L2-small-mcp-parity-haiku-1-013e83: success=True passes=3 cost=$0.0020 {"reminders": true, "expected_n": 1, "got_n": 1}
+L2-small-cli-step-ref-haiku-1-61fea7: success=True passes=3 cost=$0.0016 {"reminders": true, "expected_n": 1, "got_n": 1}
+L2-small-cli-pipe-haiku-1-3a4188: success=True passes=6 cost=$0.0022 {"reminders": true, "expected_n": 1, "got_n": 1}
+L2-small-cli-pipe-ref-haiku-1-a845d5: success=True passes=4 cost=$0.0017 {"reminders": true, "expected_n": 1, "got_n": 1}
+L1-large-cli-pipe-haiku-1-99a7fa: success=True passes=3 cost=$0.0036 {"entries": true, "no_extra_entries": true, "found": 25}
+L2-small-cli-pipe-skills-haiku-1-4de7b9: success=True passes=7 cost=$0.0036 {"reminders": true, "expected_n": 1, "got_n": 1}
+L2-large-mcp-haiku-1-93d75d: success=True passes=3 cost=$0.0071 {"reminders": true, "expected_n": 24, "got_n": 24}
+L1-large-cli-step-ref-haiku-1-3db5f7: success=True passes=3 cost=$0.0084 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-large-cli-pipe-ref-haiku-1-b4bf0b: success=True passes=3 cost=$0.0028 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-large-cli-pipe-skills-haiku-1-b7458c: success=True passes=8 cost=$0.0079 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-small-mcp-haiku-2-9ba49f: success=True passes=3 cost=$0.0058 {"entries": true, "no_extra_entries": true, "found": 25}
+L2-large-mcp-parity-haiku-1-a4f1cd: success=True passes=3 cost=$0.0093 {"reminders": true, "expected_n": 24, "got_n": 24}
+L2-large-cli-step-ref-haiku-1-4d8256: success=True passes=5 cost=$0.0104 {"reminders": true, "expected_n": 24, "got_n": 24}
+L2-large-cli-pipe-haiku-1-434a3e: success=True passes=10 cost=$0.0066 {"reminders": true, "expected_n": 24, "got_n": 24}
+L1-small-mcp-parity-haiku-2-fd768f: success=True passes=3 cost=$0.0061 {"entries": true, "no_extra_entries": true, "found": 25}
+L2-large-cli-pipe-ref-haiku-1-4f1709: success=True passes=6 cost=$0.0048 {"reminders": true, "expected_n": 24, "got_n": 24}
+L2-large-cli-pipe-skills-haiku-1-812ce9: success=True passes=11 cost=$0.0071 {"reminders": true, "expected_n": 24, "got_n": 24}
+L1-large-mcp-haiku-2-62af4e: success=True passes=4 cost=$0.0135 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-small-cli-pipe-haiku-2-dc25f5: success=True passes=6 cost=$0.0061 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-small-cli-step-ref-haiku-2-8a4dcb: success=True passes=5 cost=$0.0059 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-small-cli-pipe-skills-haiku-2-93dac4: success=True passes=8 cost=$0.0049 {"entries": true, "no_extra_entries": true, "found": 25}
+L2-small-mcp-haiku-2-af4abe: success=True passes=3 cost=$0.0011 {"reminders": true, "expected_n": 1, "got_n": 1}
+L1-small-cli-pipe-ref-haiku-2-b0811d: success=True passes=4 cost=$0.0023 {"entries": true, "no_extra_entries": true, "found": 25}
+L2-small-mcp-parity-haiku-2-1625bd: success=True passes=3 cost=$0.0020 {"reminders": true, "expected_n": 1, "got_n": 1}
+L2-small-cli-pipe-haiku-2-be5e5b: success=True passes=6 cost=$0.0022 {"reminders": true, "expected_n": 1, "got_n": 1}
+L1-large-mcp-parity-haiku-2-016913: success=True passes=3 cost=$0.0089 {"entries": true, "no_extra_entries": true, "found": 25}
+L2-small-cli-step-ref-haiku-2-046911: success=True passes=3 cost=$0.0015 {"reminders": true, "expected_n": 1, "got_n": 1}
+L2-small-cli-pipe-ref-haiku-2-885743: success=True passes=4 cost=$0.0017 {"reminders": true, "expected_n": 1, "got_n": 1}
+L2-small-cli-pipe-skills-haiku-2-eef6b8: success=True passes=7 cost=$0.0038 {"reminders": true, "expected_n": 1, "got_n": 1}
+L1-large-cli-step-ref-haiku-2-5699ce: success=True passes=4 cost=$0.0080 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-large-cli-pipe-skills-haiku-2-39dd95: success=True passes=8 cost=$0.0057 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-large-cli-pipe-ref-haiku-2-5f075a: success=True passes=3 cost=$0.0054 {"entries": true, "no_extra_entries": true, "found": 25}
+L2-large-mcp-haiku-2-9035be: success=True passes=3 cost=$0.0082 {"reminders": true, "expected_n": 24, "got_n": 24}
+L1-large-cli-pipe-haiku-2-70a968: success=True passes=9 cost=$0.0062 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-small-mcp-haiku-3-48955c: success=True passes=3 cost=$0.0060 {"entries": true, "no_extra_entries": true, "found": 25}
+L2-large-mcp-parity-haiku-2-d5b5d9: success=True passes=3 cost=$0.0094 {"reminders": true, "expected_n": 24, "got_n": 24}
+L2-large-cli-pipe-haiku-2-63f23f: success=True passes=8 cost=$0.0053 {"reminders": true, "expected_n": 24, "got_n": 24}
+L2-large-cli-pipe-ref-haiku-2-235e7a: success=True passes=7 cost=$0.0046 {"reminders": true, "expected_n": 24, "got_n": 24}
+L2-large-cli-step-ref-haiku-2-67e260: success=False passes=5 cost=$0.0106 {"reminders": false, "expected_n": 24, "got_n": 26}
+L1-small-mcp-parity-haiku-3-47d402: success=False passes=7 cost=$0.0151 {"entries": false, "no_extra_entries": false, "found": 0}
+L2-large-cli-pipe-skills-haiku-2-acbabc: success=True passes=11 cost=$0.0077 {"reminders": true, "expected_n": 24, "got_n": 24}
+L1-small-cli-step-ref-haiku-3-6f1729: success=True passes=3 cost=$0.0050 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-small-cli-pipe-skills-haiku-3-fc9791: success=True passes=4 cost=$0.0036 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-small-cli-pipe-haiku-3-6a578c: success=True passes=4 cost=$0.0032 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-large-mcp-haiku-3-e8dd83: success=True passes=3 cost=$0.0072 {"entries": true, "no_extra_entries": true, "found": 25}
+L2-small-mcp-haiku-3-ce69ac: success=True passes=4 cost=$0.0012 {"reminders": true, "expected_n": 1, "got_n": 1}
+L1-small-cli-pipe-ref-haiku-3-cbacbb: success=True passes=3 cost=$0.0022 {"entries": true, "no_extra_entries": true, "found": 25}
+L2-small-mcp-parity-haiku-3-923725: success=True passes=3 cost=$0.0019 {"reminders": true, "expected_n": 1, "got_n": 1}
+L2-small-cli-pipe-haiku-3-63e364: success=True passes=6 cost=$0.0020 {"reminders": true, "expected_n": 1, "got_n": 1}
+L2-small-cli-step-ref-haiku-3-0255cb: success=True passes=4 cost=$0.0016 {"reminders": true, "expected_n": 1, "got_n": 1}
+L2-small-cli-pipe-ref-haiku-3-1aa6e0: success=True passes=3 cost=$0.0014 {"reminders": true, "expected_n": 1, "got_n": 1}
+L1-large-mcp-parity-haiku-3-0166dd: success=True passes=7 cost=$0.0133 {"entries": true, "no_extra_entries": true, "found": 25}
+L2-small-cli-pipe-skills-haiku-3-946622: success=True passes=7 cost=$0.0038 {"reminders": true, "expected_n": 1, "got_n": 1}
+L1-large-cli-pipe-haiku-3-2256de: success=True passes=6 cost=$0.0050 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-large-cli-pipe-ref-haiku-3-d97258: success=True passes=3 cost=$0.0030 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-large-cli-step-ref-haiku-3-979ea7: success=True passes=5 cost=$0.0092 {"entries": true, "no_extra_entries": true, "found": 25}
+L2-large-mcp-haiku-3-f12975: success=False passes=3 cost=$0.0068 {"reminders": false, "expected_n": 24, "got_n": 23}
+L1-small-mcp-haiku-4-71ec55: success=True passes=3 cost=$0.0060 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-large-cli-pipe-skills-haiku-3-ef0521: success=True passes=8 cost=$0.0111 {"entries": true, "no_extra_entries": true, "found": 25}
+L2-large-mcp-parity-haiku-3-d65907: success=True passes=3 cost=$0.0094 {"reminders": true, "expected_n": 24, "got_n": 24}
+L2-large-cli-step-ref-haiku-3-7c0930: success=True passes=4 cost=$0.0099 {"reminders": true, "expected_n": 24, "got_n": 24}
+L2-large-cli-pipe-haiku-3-56e9db: success=False passes=8 cost=$0.0046 {"reminders": false, "expected_n": 24, "got_n": 24}
+L2-large-cli-pipe-ref-haiku-3-9970f7: success=True passes=7 cost=$0.0047 {"reminders": true, "expected_n": 24, "got_n": 24}
+L2-large-cli-pipe-skills-haiku-3-c52d9a: success=True passes=11 cost=$0.0070 {"reminders": true, "expected_n": 24, "got_n": 24}
+L1-large-mcp-haiku-4-33efcc: success=True passes=3 cost=$0.0072 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-small-cli-step-ref-haiku-4-f6112d: success=True passes=3 cost=$0.0057 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-small-cli-pipe-haiku-4-1f3fa3: success=True passes=7 cost=$0.0036 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-small-cli-pipe-skills-haiku-4-b68849: success=True passes=4 cost=$0.0042 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-small-mcp-parity-haiku-4-a1b61b: success=True passes=8 cost=$0.0188 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-small-cli-pipe-ref-haiku-4-96aba5: success=True passes=3 cost=$0.0021 {"entries": true, "no_extra_entries": true, "found": 25}
+L2-small-mcp-haiku-4-d72c2d: success=True passes=3 cost=$0.0011 {"reminders": true, "expected_n": 1, "got_n": 1}
+L1-large-mcp-parity-haiku-4-02458f: success=True passes=3 cost=$0.0090 {"entries": true, "no_extra_entries": true, "found": 25}
+L2-small-mcp-parity-haiku-4-a3fe3e: success=True passes=3 cost=$0.0018 {"reminders": true, "expected_n": 1, "got_n": 1}
+L2-small-cli-pipe-haiku-4-7c33b5: success=True passes=6 cost=$0.0021 {"reminders": true, "expected_n": 1, "got_n": 1}
+L2-small-cli-step-ref-haiku-4-370353: success=True passes=4 cost=$0.0018 {"reminders": true, "expected_n": 1, "got_n": 1}
+L2-small-cli-pipe-ref-haiku-4-3550d7: success=True passes=4 cost=$0.0017 {"reminders": true, "expected_n": 1, "got_n": 1}
+L1-large-cli-pipe-haiku-4-9b22bc: success=True passes=6 cost=$0.0043 {"entries": true, "no_extra_entries": true, "found": 25}
+L2-small-cli-pipe-skills-haiku-4-d8623a: success=True passes=9 cost=$0.0042 {"reminders": true, "expected_n": 1, "got_n": 1}
+L1-large-cli-step-ref-haiku-4-911f4f: success=True passes=3 cost=$0.0086 {"entries": true, "no_extra_entries": true, "found": 25}
+L2-large-mcp-haiku-4-4a99be: success=True passes=3 cost=$0.0071 {"reminders": true, "expected_n": 24, "got_n": 24}
+L1-large-cli-pipe-ref-haiku-4-305884: success=True passes=3 cost=$0.0051 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-small-mcp-haiku-5-f86144: success=True passes=3 cost=$0.0067 {"entries": true, "no_extra_entries": true, "found": 25}
+L2-large-mcp-parity-haiku-4-dda1e8: success=True passes=3 cost=$0.0101 {"reminders": true, "expected_n": 24, "got_n": 24}
+L2-large-cli-step-ref-haiku-4-866c8c: success=True passes=4 cost=$0.0099 {"reminders": true, "expected_n": 24, "got_n": 24}
+L1-large-cli-pipe-skills-haiku-4-f00b7a: success=True passes=9 cost=$0.0072 {"entries": true, "no_extra_entries": true, "found": 25}
+L2-large-cli-pipe-haiku-4-30d70d: success=True passes=9 cost=$0.0060 {"reminders": true, "expected_n": 24, "got_n": 24}
+L2-large-cli-pipe-ref-haiku-4-e5e344: success=True passes=9 cost=$0.0054 {"reminders": true, "expected_n": 24, "got_n": 24}
+L2-large-cli-pipe-skills-haiku-4-4de637: success=True passes=13 cost=$0.0082 {"reminders": true, "expected_n": 24, "got_n": 24}
+L1-large-mcp-haiku-5-f843a6: success=True passes=3 cost=$0.0076 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-small-cli-pipe-haiku-5-7b3480: success=True passes=3 cost=$0.0029 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-small-cli-step-ref-haiku-5-53fdaf: success=True passes=3 cost=$0.0055 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-small-mcp-parity-haiku-5-709ea2: success=True passes=8 cost=$0.0192 {"entries": true, "no_extra_entries": true, "found": 25}
+L2-small-mcp-haiku-5-ac5c52: success=True passes=3 cost=$0.0011 {"reminders": true, "expected_n": 1, "got_n": 1}
+L1-small-cli-pipe-skills-haiku-5-f18f68: success=True passes=7 cost=$0.0041 {"entries": true, "no_extra_entries": true, "found": 25}
+L2-small-mcp-parity-haiku-5-6b110c: success=True passes=3 cost=$0.0021 {"reminders": true, "expected_n": 1, "got_n": 1}
+L2-small-cli-pipe-haiku-5-61e521: success=True passes=7 cost=$0.0025 {"reminders": true, "expected_n": 1, "got_n": 1}
+L1-large-cli-pipe-haiku-5-065023: success=True passes=4 cost=$0.0036 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-large-cli-pipe-skills-haiku-5-d98de6: success=True passes=4 cost=$0.0063 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-large-cli-step-ref-haiku-5-46aeb8: success=True passes=4 cost=$0.0088 {"entries": true, "no_extra_entries": true, "found": 25}
+L2-small-cli-step-ref-haiku-5-0b1bbe: success=True passes=3 cost=$0.0015 {"reminders": true, "expected_n": 1, "got_n": 1}
+L2-small-cli-pipe-ref-haiku-5-1a3dcb: success=True passes=4 cost=$0.0020 {"reminders": true, "expected_n": 1, "got_n": 1}
+L1-large-cli-pipe-ref-haiku-5-760c98: success=True passes=3 cost=$0.0031 {"entries": true, "no_extra_entries": true, "found": 25}
+L2-small-cli-pipe-skills-haiku-5-d0d944: success=True passes=10 cost=$0.0045 {"reminders": true, "expected_n": 1, "got_n": 1}
+L2-large-mcp-haiku-5-f4728c: success=False passes=3 cost=$0.0074 {"reminders": false, "expected_n": 24, "got_n": 24}
+L1-large-mcp-parity-haiku-5-102068: success=True passes=8 cost=$0.0224 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-small-cli-pipe-ref-haiku-5-3d6af4: success=True passes=11 cost=$0.0046 {"entries": true, "no_extra_entries": true, "found": 25}
+L2-large-mcp-parity-haiku-5-1c91e3: success=True passes=3 cost=$0.0096 {"reminders": true, "expected_n": 24, "got_n": 24}
+L2-large-cli-step-ref-haiku-5-14ba62: success=True passes=4 cost=$0.0095 {"reminders": true, "expected_n": 24, "got_n": 24}
+L2-large-cli-pipe-haiku-5-54ffa0: success=True passes=7 cost=$0.0051 {"reminders": true, "expected_n": 24, "got_n": 24}
+L2-large-cli-pipe-ref-haiku-5-b93892: success=True passes=5 cost=$0.0032 {"reminders": true, "expected_n": 24, "got_n": 24}
+L2-large-cli-pipe-skills-haiku-5-5fad15: success=True passes=12 cost=$0.0073 {"reminders": true, "expected_n": 24, "got_n": 24}
+72 runs to do (632 already recorded)
+L1-small-mcp-sonnet-1-81238c: success=True passes=3 cost=$0.0991 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-large-mcp-sonnet-1-6bceac: success=True passes=3 cost=$0.1253 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-small-mcp-parity-sonnet-1-058b12: success=True passes=3 cost=$0.1050 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-small-cli-pipe-skills-sonnet-1-783fb5: success=True passes=4 cost=$0.0533 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-large-mcp-parity-sonnet-1-6df0a1: success=True passes=3 cost=$0.1607 {"entries": true, "no_extra_entries": true, "found": 25}
+L2-small-mcp-sonnet-1-d024bd: success=True passes=3 cost=$0.0183 {"reminders": true, "expected_n": 1, "got_n": 1}
+L2-small-mcp-parity-sonnet-1-c1ac69: success=True passes=3 cost=$0.0312 {"reminders": true, "expected_n": 1, "got_n": 1}
+L1-large-cli-pipe-sonnet-1-b0bf2f: success=True passes=4 cost=$0.0358 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-small-cli-step-ref-sonnet-1-b03767: success=True passes=5 cost=$0.6490 {"entries": true, "no_extra_entries": true, "found": 25}
+L2-small-cli-pipe-sonnet-1-11e2ad: success=True passes=4 cost=$0.0200 {"reminders": true, "expected_n": 1, "got_n": 1}
+L2-small-cli-step-ref-sonnet-1-94c68d: success=True passes=3 cost=$0.0246 {"reminders": true, "expected_n": 1, "got_n": 1}
+L2-small-cli-pipe-ref-sonnet-1-4e80db: success=True passes=3 cost=$0.0156 {"reminders": true, "expected_n": 1, "got_n": 1}
+L1-large-cli-pipe-ref-sonnet-1-03fac8: success=True passes=4 cost=$0.0798 {"entries": true, "no_extra_entries": true, "found": 25}
+L2-small-cli-pipe-skills-sonnet-1-a533e0: success=True passes=7 cost=$0.0583 {"reminders": true, "expected_n": 1, "got_n": 1}
+L2-large-mcp-sonnet-1-63304f: success=True passes=3 cost=$0.1167 {"reminders": true, "expected_n": 24, "got_n": 24}
+L1-large-cli-step-ref-sonnet-1-28e5c7: success=True passes=5 cost=$0.7091 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-small-cli-pipe-ref-sonnet-1-a4882c: success=True passes=8 cost=$0.0891 {"entries": true, "no_extra_entries": true, "found": 25}
+L2-large-mcp-parity-sonnet-1-5cf4d4: success=True passes=3 cost=$0.1695 {"reminders": true, "expected_n": 24, "got_n": 24}
+L1-small-cli-pipe-sonnet-1-064162: success=False passes=20 cost=$0.1929 {"entries": true, "no_extra_entries": false, "found": 25}
+L2-large-cli-step-ref-sonnet-1-4f4352: success=True passes=3 cost=$0.1530 {"reminders": true, "expected_n": 24, "got_n": 24}
+L2-large-cli-pipe-skills-sonnet-1-a0702d: success=True passes=7 cost=$0.0799 {"reminders": true, "expected_n": 24, "got_n": 24}
+L1-small-mcp-sonnet-2-90edd7: success=True passes=3 cost=$0.0977 {"entries": true, "no_extra_entries": true, "found": 25}
+L2-large-cli-pipe-ref-sonnet-1-86088e: success=True passes=3 cost=$0.0315 {"reminders": true, "expected_n": 24, "got_n": 24}
+L1-small-mcp-parity-sonnet-2-11b8f6: success=True passes=3 cost=$0.1033 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-large-cli-pipe-skills-sonnet-1-b20c0a: success=True passes=11 cost=$0.1537 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-large-mcp-sonnet-2-f6d8e7: success=True passes=3 cost=$0.1249 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-small-cli-pipe-ref-sonnet-2-82d3c9: success=True passes=3 cost=$0.0339 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-large-mcp-parity-sonnet-2-1c7e65: success=True passes=3 cost=$0.1564 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-small-cli-pipe-skills-sonnet-2-43294a: success=False passes=10 cost=$0.1222 {"entries": false, "no_extra_entries": true, "found": 3}
+L2-small-mcp-sonnet-2-f69fe4: success=True passes=3 cost=$0.0185 {"reminders": true, "expected_n": 1, "got_n": 1}
+L1-small-cli-step-ref-sonnet-2-02797f: success=True passes=7 cost=$0.7713 {"entries": true, "no_extra_entries": true, "found": 25}
+L2-small-mcp-parity-sonnet-2-f75057: success=True passes=3 cost=$0.0307 {"reminders": true, "expected_n": 1, "got_n": 1}
+L2-small-cli-pipe-sonnet-2-2f8122: success=True passes=4 cost=$0.0261 {"reminders": true, "expected_n": 1, "got_n": 1}
+L2-small-cli-pipe-skills-sonnet-2-2fe5cc: success=True passes=6 cost=$0.0481 {"reminders": true, "expected_n": 1, "got_n": 1}
+L2-small-cli-step-ref-sonnet-2-e3a25d: success=True passes=3 cost=$0.0250 {"reminders": true, "expected_n": 1, "got_n": 1}
+L2-small-cli-pipe-ref-sonnet-2-281e8c: success=True passes=3 cost=$0.0157 {"reminders": true, "expected_n": 1, "got_n": 1}
+L1-large-cli-step-ref-sonnet-2-3bcee3: success=True passes=5 cost=$0.7110 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-large-cli-pipe-skills-sonnet-2-aca77a: success=False passes=8 cost=$0.0878 {"entries": false, "no_extra_entries": true, "found": 0}
+L2-large-mcp-sonnet-2-2accaf: success=True passes=3 cost=$0.1259 {"reminders": true, "expected_n": 24, "got_n": 24}
+L1-large-cli-pipe-ref-sonnet-2-e74852: success=True passes=6 cost=$0.0786 {"entries": true, "no_extra_entries": true, "found": 25}
+L2-large-mcp-parity-sonnet-2-11077b: success=True passes=3 cost=$0.1695 {"reminders": true, "expected_n": 24, "got_n": 24}
+L2-large-cli-pipe-sonnet-2-b68a22: success=True passes=5 cost=$0.0478 {"reminders": true, "expected_n": 24, "got_n": 24}
+L1-large-cli-pipe-sonnet-2-09536b: success=True passes=15 cost=$0.1313 {"entries": true, "no_extra_entries": true, "found": 25}
+L2-large-cli-step-ref-sonnet-2-38d58a: success=True passes=3 cost=$0.1667 {"reminders": true, "expected_n": 24, "got_n": 24}
+L2-large-cli-pipe-skills-sonnet-2-3c43ec: success=True passes=8 cost=$0.0838 {"reminders": true, "expected_n": 24, "got_n": 24}
+L1-small-mcp-sonnet-3-f1336d: success=True passes=3 cost=$0.1003 {"entries": true, "no_extra_entries": true, "found": 25}
+L2-large-cli-pipe-ref-sonnet-2-5bccd7: success=True passes=4 cost=$0.0474 {"reminders": true, "expected_n": 24, "got_n": 24}
+L1-small-cli-pipe-sonnet-2-6287f7: success=False passes=14 cost=$0.1287 {"entries": false, "no_extra_entries": false, "found": 4}
+L1-small-mcp-parity-sonnet-3-200a37: success=True passes=3 cost=$0.1046 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-large-mcp-sonnet-3-043aa2: success=True passes=3 cost=$0.1252 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-small-cli-pipe-skills-sonnet-3-1923dd: success=True passes=4 cost=$0.0577 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-large-mcp-parity-sonnet-3-1ed36e: success=True passes=3 cost=$0.1605 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-small-cli-step-ref-sonnet-3-b3832c: success=True passes=5 cost=$0.6474 {"entries": true, "no_extra_entries": true, "found": 25}
+L2-small-mcp-sonnet-3-639d71: success=True passes=3 cost=$0.0182 {"reminders": true, "expected_n": 1, "got_n": 1}
+L1-small-cli-pipe-sonnet-3-5aa6e6: success=True passes=7 cost=$0.1000 {"entries": true, "no_extra_entries": true, "found": 25}
+L2-small-mcp-parity-sonnet-3-10030e: success=True passes=3 cost=$0.0310 {"reminders": true, "expected_n": 1, "got_n": 1}
+L2-small-cli-pipe-sonnet-3-1413be: success=True passes=4 cost=$0.0260 {"reminders": true, "expected_n": 1, "got_n": 1}
+L2-small-cli-step-ref-sonnet-3-f2d44e: success=True passes=3 cost=$0.0243 {"reminders": true, "expected_n": 1, "got_n": 1}
+L1-large-cli-step-ref-sonnet-3-78a2cc: success=True passes=5 cost=$0.7083 {"entries": true, "no_extra_entries": true, "found": 25}
+L2-small-cli-pipe-skills-sonnet-3-bcef8c: success=True passes=7 cost=$0.0530 {"reminders": true, "expected_n": 1, "got_n": 1}
+L2-small-cli-pipe-ref-sonnet-3-0a5f7d: success=True passes=3 cost=$0.0160 {"reminders": true, "expected_n": 1, "got_n": 1}
+L1-small-cli-pipe-ref-sonnet-3-9a3706: success=True passes=9 cost=$0.0921 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-large-cli-pipe-sonnet-3-e13723: success=True passes=11 cost=$0.0947 {"entries": true, "no_extra_entries": true, "found": 25}
+L2-large-mcp-sonnet-3-af02b5: success=True passes=4 cost=$0.1170 {"reminders": true, "expected_n": 24, "got_n": 24}
+L2-large-mcp-parity-sonnet-3-10a509: success=True passes=3 cost=$0.1726 {"reminders": true, "expected_n": 24, "got_n": 24}
+L2-large-cli-pipe-sonnet-3-77bc76: success=True passes=5 cost=$0.0480 {"reminders": true, "expected_n": 24, "got_n": 24}
+L2-large-cli-step-ref-sonnet-3-dc330b: success=True passes=3 cost=$0.1586 {"reminders": true, "expected_n": 24, "got_n": 24}
+L2-large-cli-pipe-skills-sonnet-3-258adb: success=True passes=7 cost=$0.0749 {"reminders": true, "expected_n": 24, "got_n": 24}
+L2-large-cli-pipe-ref-sonnet-3-eb2f8f: success=True passes=4 cost=$0.0633 {"reminders": true, "expected_n": 24, "got_n": 24}
+L2-large-cli-pipe-sonnet-1-e6305b: success=False passes=0 cost=$0.0000 {"reminders": false, "expected_n": 24, "got_n": 0}
+L1-large-cli-pipe-skills-sonnet-3-944884: success=True passes=16 cost=$0.1673 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-large-cli-pipe-ref-sonnet-3-11be3e: success=True passes=11 cost=$0.1354 {"entries": true, "no_extra_entries": true, "found": 25}

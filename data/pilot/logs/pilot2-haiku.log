@@ -1,0 +1,161 @@
+160 runs to do (128 already recorded)
+T1-small-cli-step-ref-haiku-1-20309e: success=True passes=2 cost=$0.0006 {"answer": true}
+T1-small-cli-pipe-ref-haiku-1-703055: success=True passes=2 cost=$0.0006 {"answer": true}
+T1-large-cli-step-ref-haiku-1-d047d2: success=True passes=2 cost=$0.0006 {"answer": true}
+T1-large-cli-pipe-ref-haiku-1-c8403c: success=True passes=2 cost=$0.0006 {"answer": true}
+T1-small-cli-pipe-noskill-haiku-1-287934: success=True passes=5 cost=$0.0015 {"answer": true}
+T1-large-cli-pipe-haiku-1-c75fa1: success=True passes=4 cost=$0.0014 {"answer": true}
+T1-small-cli-pipe-haiku-1-8b03db: success=True passes=6 cost=$0.0017 {"answer": true}
+T1-large-cli-pipe-noskill-haiku-1-7e955e: success=True passes=5 cost=$0.0014 {"answer": true}
+T2-small-cli-step-ref-haiku-1-917eac: success=True passes=3 cost=$0.0012 {"entry": true, "no_extra_entries": true}
+T2-small-cli-pipe-ref-haiku-1-de4ba8: success=True passes=3 cost=$0.0009 {"entry": true, "no_extra_entries": true}
+T2-small-cli-pipe-haiku-1-4524fb: success=True passes=4 cost=$0.0015 {"entry": true, "no_extra_entries": true}
+T2-small-cli-pipe-noskill-haiku-1-6e6891: success=True passes=4 cost=$0.0018 {"entry": true, "no_extra_entries": true}
+T2-large-cli-step-ref-haiku-1-74eb1e: success=True passes=3 cost=$0.0039 {"entry": true, "no_extra_entries": true}
+T2-large-cli-pipe-haiku-1-3eca48: success=True passes=5 cost=$0.0047 {"entry": true, "no_extra_entries": true}
+T2-large-cli-pipe-ref-haiku-1-66bf45: success=True passes=3 cost=$0.0018 {"entry": true, "no_extra_entries": true}
+T4-small-cli-step-ref-haiku-1-2e669e: success=True passes=5 cost=$0.0019 {"entry": true, "reminder": true}
+T2-large-cli-pipe-noskill-haiku-1-d7cf3e: success=True passes=5 cost=$0.0050 {"entry": true, "no_extra_entries": true}
+T4-small-cli-pipe-ref-haiku-1-6dfb09: success=True passes=5 cost=$0.0022 {"entry": true, "reminder": true}
+T4-large-cli-step-ref-haiku-1-3eb45e: success=True passes=5 cost=$0.0049 {"entry": true, "reminder": true}
+T4-large-cli-pipe-ref-haiku-1-b78b95: success=True passes=4 cost=$0.0024 {"entry": true, "reminder": true}
+T4-small-cli-pipe-noskill-haiku-1-ff40ab: success=True passes=11 cost=$0.0042 {"entry": true, "reminder": true}
+T4-small-cli-pipe-haiku-1-f6de1b: success=True passes=11 cost=$0.0057 {"entry": true, "reminder": true}
+T4-large-cli-pipe-noskill-haiku-1-e29d2b: success=True passes=11 cost=$0.0075 {"entry": true, "reminder": true}
+T8-small-cli-step-ref-haiku-1-c7126c: success=True passes=8 cost=$0.0029 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "Software Subscriptions"}
+T4-large-cli-pipe-haiku-1-791160: success=True passes=11 cost=$0.0047 {"entry": true, "reminder": true}
+T8-small-cli-pipe-ref-haiku-1-1d1041: success=True passes=6 cost=$0.0033 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "Software Subscriptions"}
+T8-small-cli-pipe-haiku-1-8c9e64: success=True passes=11 cost=$0.0061 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "Software Subscriptions"}
+T1-small-cli-step-ref-haiku-2-bbdf73: success=True passes=2 cost=$0.0006 {"answer": true}
+T1-small-cli-pipe-noskill-haiku-2-bbbf65: success=True passes=5 cost=$0.0014 {"answer": true}
+T8-small-cli-pipe-noskill-haiku-1-e34a76: success=True passes=14 cost=$0.0064 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "Software Subscriptions"}
+T1-small-cli-pipe-haiku-2-303f53: success=True passes=5 cost=$0.0016 {"answer": true}
+T1-small-cli-pipe-ref-haiku-2-b21287: success=True passes=2 cost=$0.0006 {"answer": true}
+T8-large-cli-step-ref-haiku-1-ef4351: success=False passes=9 cost=$0.0090 {"account": true, "software_entry": true, "refund_entry": true, "reminder": false, "target": "School Fees (Family)"}
+T1-large-cli-step-ref-haiku-2-b4444e: success=True passes=2 cost=$0.0006 {"answer": true}
+T1-large-cli-pipe-ref-haiku-2-e0666a: success=True passes=2 cost=$0.0006 {"answer": true}
+T8-large-cli-pipe-ref-haiku-1-95f53a: success=True passes=9 cost=$0.0080 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "School Fees (Family)"}
+T1-large-cli-pipe-noskill-haiku-2-27688e: success=True passes=4 cost=$0.0013 {"answer": true}
+T2-small-cli-pipe-haiku-2-8546a8: success=True passes=5 cost=$0.0017 {"entry": true, "no_extra_entries": true}
+T1-large-cli-pipe-haiku-2-30fdac: success=True passes=6 cost=$0.0016 {"answer": true}
+T2-small-cli-pipe-ref-haiku-2-312b8b: success=True passes=3 cost=$0.0009 {"entry": true, "no_extra_entries": true}
+T8-large-cli-pipe-noskill-haiku-1-24fe17: success=True passes=16 cost=$0.0091 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "School Fees (Family)"}
+T2-small-cli-step-ref-haiku-2-87e39a: success=True passes=3 cost=$0.0012 {"entry": true, "no_extra_entries": true}
+T2-small-cli-pipe-noskill-haiku-2-51ffd1: success=True passes=4 cost=$0.0018 {"entry": true, "no_extra_entries": true}
+T8-large-cli-pipe-haiku-1-98cea4: success=True passes=16 cost=$0.0128 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "School Fees (Family)"}
+T2-large-cli-pipe-haiku-2-9dc9c8: success=True passes=5 cost=$0.0048 {"entry": true, "no_extra_entries": true}
+T2-large-cli-step-ref-haiku-2-8fafa5: success=True passes=3 cost=$0.0040 {"entry": true, "no_extra_entries": true}
+T2-large-cli-pipe-ref-haiku-2-de3ab3: success=True passes=3 cost=$0.0041 {"entry": true, "no_extra_entries": true}
+T2-large-cli-pipe-noskill-haiku-2-b1c43f: success=True passes=4 cost=$0.0027 {"entry": true, "no_extra_entries": true}
+T4-small-cli-step-ref-haiku-2-3a11ba: success=True passes=5 cost=$0.0020 {"entry": true, "reminder": true}
+T4-small-cli-pipe-ref-haiku-2-085dd7: success=True passes=5 cost=$0.0021 {"entry": true, "reminder": true}
+T4-large-cli-step-ref-haiku-2-8ba02c: success=True passes=4 cost=$0.0047 {"entry": true, "reminder": true}
+T4-small-cli-pipe-haiku-2-c87361: success=True passes=9 cost=$0.0036 {"entry": true, "reminder": true}
+T4-small-cli-pipe-noskill-haiku-2-5c40ff: success=True passes=7 cost=$0.0033 {"entry": true, "reminder": true}
+T4-large-cli-pipe-ref-haiku-2-d69898: success=False passes=4 cost=$0.0049 {"entry": true, "reminder": false}
+T4-large-cli-pipe-noskill-haiku-2-cad7c1: success=True passes=9 cost=$0.0071 {"entry": true, "reminder": true}
+T8-small-cli-step-ref-haiku-2-bc228d: success=True passes=8 cost=$0.0032 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "Software Subscriptions"}
+T4-large-cli-pipe-haiku-2-75aca4: success=True passes=14 cost=$0.0054 {"entry": true, "reminder": true}
+T8-small-cli-pipe-ref-haiku-2-0a5034: success=True passes=9 cost=$0.0037 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "Software Subscriptions"}
+T1-small-cli-pipe-noskill-haiku-3-2094ae: success=True passes=4 cost=$0.0012 {"answer": true}
+T1-small-cli-pipe-haiku-3-716199: success=True passes=5 cost=$0.0016 {"answer": true}
+T8-small-cli-pipe-noskill-haiku-2-8c0f59: success=True passes=15 cost=$0.0061 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "Software Subscriptions"}
+T1-small-cli-step-ref-haiku-3-2054bd: success=True passes=2 cost=$0.0006 {"answer": true}
+T8-large-cli-step-ref-haiku-2-05c9d2: success=True passes=8 cost=$0.0087 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "School Fees (Family)"}
+T1-small-cli-pipe-ref-haiku-3-740dd0: success=True passes=2 cost=$0.0006 {"answer": true}
+T8-large-cli-pipe-ref-haiku-2-5dcaae: success=True passes=9 cost=$0.0076 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "School Fees (Family)"}
+T1-large-cli-step-ref-haiku-3-8742f6: success=True passes=2 cost=$0.0006 {"answer": true}
+T1-large-cli-pipe-ref-haiku-3-477f3d: success=True passes=2 cost=$0.0006 {"answer": true}
+T8-large-cli-pipe-haiku-2-8e25f5: success=True passes=16 cost=$0.0096 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "School Fees (Family)"}
+T1-large-cli-pipe-noskill-haiku-3-5da370: success=True passes=4 cost=$0.0012 {"answer": true}
+T1-large-cli-pipe-haiku-3-9604ee: success=True passes=4 cost=$0.0014 {"answer": true}
+T2-small-cli-step-ref-haiku-3-fb573d: success=True passes=3 cost=$0.0011 {"entry": true, "no_extra_entries": true}
+T2-small-cli-pipe-haiku-3-24c990: success=True passes=5 cost=$0.0017 {"entry": true, "no_extra_entries": true}
+T2-small-cli-pipe-ref-haiku-3-14fcdb: success=True passes=3 cost=$0.0012 {"entry": true, "no_extra_entries": true}
+T8-large-cli-pipe-noskill-haiku-2-728605: success=True passes=18 cost=$0.0097 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "School Fees (Family)"}
+T2-large-cli-step-ref-haiku-3-2c89ed: success=True passes=3 cost=$0.0039 {"entry": true, "no_extra_entries": true}
+T2-large-cli-pipe-haiku-3-4a213c: success=True passes=6 cost=$0.0053 {"entry": true, "no_extra_entries": true}
+T2-large-cli-pipe-noskill-haiku-3-966dba: success=True passes=4 cost=$0.0023 {"entry": true, "no_extra_entries": true}
+T2-large-cli-pipe-ref-haiku-3-fad1f3: success=True passes=3 cost=$0.0040 {"entry": true, "no_extra_entries": true}
+T4-small-cli-step-ref-haiku-3-7b5e37: success=True passes=5 cost=$0.0019 {"entry": true, "reminder": true}
+T4-small-cli-pipe-ref-haiku-3-d22486: success=True passes=5 cost=$0.0021 {"entry": true, "reminder": true}
+T2-small-cli-pipe-noskill-haiku-3-8c24fa: success=False passes=10 cost=$0.0042 {"entry": false, "no_extra_entries": false}
+T4-small-cli-pipe-haiku-3-911093: success=True passes=6 cost=$0.0031 {"entry": true, "reminder": true}
+T4-large-cli-step-ref-haiku-3-7b7928: success=True passes=4 cost=$0.0047 {"entry": true, "reminder": true}
+T4-small-cli-pipe-noskill-haiku-3-ba7433: success=True passes=9 cost=$0.0042 {"entry": true, "reminder": true}
+T4-large-cli-pipe-ref-haiku-3-fec5c5: success=True passes=5 cost=$0.0053 {"entry": true, "reminder": true}
+T4-large-cli-pipe-noskill-haiku-3-3026ee: success=True passes=8 cost=$0.0046 {"entry": true, "reminder": true}
+T4-large-cli-pipe-haiku-3-120379: success=True passes=13 cost=$0.0070 {"entry": true, "reminder": true}
+T8-small-cli-step-ref-haiku-3-8f7aac: success=True passes=8 cost=$0.0031 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "Software Subscriptions"}
+T8-small-cli-pipe-haiku-3-f6fd35: success=True passes=13 cost=$0.0059 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "Software Subscriptions"}
+T8-small-cli-pipe-ref-haiku-3-ef0169: success=True passes=6 cost=$0.0033 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "Software Subscriptions"}
+T1-small-cli-pipe-haiku-4-2066da: success=True passes=4 cost=$0.0014 {"answer": true}
+T1-small-cli-pipe-noskill-haiku-4-51ddcd: success=True passes=5 cost=$0.0014 {"answer": true}
+T8-small-cli-pipe-haiku-2-4ba24d: success=True passes=9 cost=$0.0051 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "Software Subscriptions"}
+T1-small-cli-step-ref-haiku-4-78ce3c: success=True passes=2 cost=$0.0006 {"answer": true}
+T1-small-cli-pipe-ref-haiku-4-a3fd64: success=True passes=2 cost=$0.0006 {"answer": true}
+T8-large-cli-step-ref-haiku-3-33a8ba: success=True passes=8 cost=$0.0085 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "School Fees (Family)"}
+T1-large-cli-step-ref-haiku-4-b6abcd: success=True passes=2 cost=$0.0006 {"answer": true}
+T8-large-cli-pipe-haiku-3-1c36d8: success=True passes=12 cost=$0.0079 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "School Fees (Family)"}
+T1-large-cli-pipe-ref-haiku-4-36c65c: success=True passes=2 cost=$0.0006 {"answer": true}
+T1-large-cli-pipe-haiku-4-efad14: success=True passes=4 cost=$0.0013 {"answer": true}
+T2-small-cli-step-ref-haiku-4-65ce86: success=True passes=3 cost=$0.0011 {"entry": true, "no_extra_entries": true}
+T1-large-cli-pipe-noskill-haiku-4-f708f1: success=True passes=6 cost=$0.0018 {"answer": true}
+T8-large-cli-pipe-ref-haiku-3-2bfe06: success=True passes=9 cost=$0.0088 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "School Fees (Family)"}
+T2-small-cli-pipe-haiku-4-f4cf1d: success=True passes=5 cost=$0.0017 {"entry": true, "no_extra_entries": true}
+T8-large-cli-pipe-noskill-haiku-3-8f84fe: success=True passes=17 cost=$0.0083 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "School Fees (Family)"}
+T2-small-cli-pipe-ref-haiku-4-e05b70: success=True passes=3 cost=$0.0009 {"entry": true, "no_extra_entries": true}
+T2-small-cli-pipe-noskill-haiku-4-b45059: success=True passes=4 cost=$0.0017 {"entry": true, "no_extra_entries": true}
+T2-large-cli-step-ref-haiku-4-6c422e: success=True passes=3 cost=$0.0040 {"entry": true, "no_extra_entries": true}
+T2-large-cli-pipe-haiku-4-9e0891: success=True passes=5 cost=$0.0048 {"entry": true, "no_extra_entries": true}
+T2-large-cli-pipe-ref-haiku-4-322507: success=True passes=3 cost=$0.0017 {"entry": true, "no_extra_entries": true}
+T2-large-cli-pipe-noskill-haiku-4-f208d7: success=True passes=4 cost=$0.0028 {"entry": true, "no_extra_entries": true}
+T4-small-cli-step-ref-haiku-4-2f4add: success=True passes=4 cost=$0.0018 {"entry": true, "reminder": true}
+T4-small-cli-pipe-ref-haiku-4-c0aa3b: success=True passes=5 cost=$0.0023 {"entry": true, "reminder": true}
+T4-small-cli-pipe-haiku-4-e37fd9: success=True passes=7 cost=$0.0032 {"entry": true, "reminder": true}
+T4-large-cli-step-ref-haiku-4-d713a6: success=True passes=4 cost=$0.0047 {"entry": true, "reminder": true}
+T4-small-cli-pipe-noskill-haiku-4-f14ae7: success=True passes=8 cost=$0.0035 {"entry": true, "reminder": true}
+T4-large-cli-pipe-ref-haiku-4-53c206: success=True passes=5 cost=$0.0051 {"entry": true, "reminder": true}
+T4-large-cli-pipe-haiku-4-69d675: success=True passes=7 cost=$0.0043 {"entry": true, "reminder": true}
+T4-large-cli-pipe-noskill-haiku-4-2d0e2c: success=True passes=8 cost=$0.0065 {"entry": true, "reminder": true}
+T8-small-cli-step-ref-haiku-4-05d08b: success=True passes=5 cost=$0.0027 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "Software Subscriptions"}
+T8-small-cli-pipe-ref-haiku-4-9c388b: success=True passes=8 cost=$0.0034 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "Software Subscriptions"}
+T1-small-cli-pipe-haiku-5-487b9f: success=True passes=5 cost=$0.0014 {"answer": true}
+T8-large-cli-step-ref-haiku-4-48d851: success=True passes=9 cost=$0.0094 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "School Fees (Family)"}
+T1-small-cli-step-ref-haiku-5-6f8210: success=True passes=2 cost=$0.0006 {"answer": true}
+T8-small-cli-pipe-haiku-4-5887f0: success=True passes=15 cost=$0.0084 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "Software Subscriptions"}
+T1-small-cli-pipe-noskill-haiku-5-1cf20f: success=True passes=7 cost=$0.0019 {"answer": true}
+T8-large-cli-pipe-ref-haiku-4-2523bd: success=True passes=10 cost=$0.0098 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "School Fees (Family)"}
+T8-large-cli-pipe-noskill-haiku-4-0b520b: success=True passes=10 cost=$0.0059 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "School Fees (Family)"}
+T8-large-cli-pipe-haiku-4-29b4cb: success=True passes=15 cost=$0.0106 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "School Fees (Family)"}
+T8-small-cli-pipe-noskill-haiku-3-ce9514: success=True passes=13 cost=$0.0057 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "Software Subscriptions"}
+T1-large-cli-pipe-ref-haiku-5-2b5d37: success=True passes=2 cost=$0.0006 {"answer": true}
+T1-large-cli-step-ref-haiku-5-506b4d: success=True passes=2 cost=$0.0006 {"answer": true}
+T8-small-cli-pipe-noskill-haiku-4-6ddaf9: success=True passes=19 cost=$0.0082 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "Software Subscriptions"}
+T1-large-cli-pipe-noskill-haiku-5-569409: success=True passes=5 cost=$0.0014 {"answer": true}
+T2-small-cli-step-ref-haiku-5-e195e9: success=True passes=3 cost=$0.0012 {"entry": true, "no_extra_entries": true}
+T1-large-cli-pipe-haiku-5-1f69bb: success=True passes=6 cost=$0.0016 {"answer": true}
+T2-small-cli-pipe-ref-haiku-5-b0f15b: success=True passes=3 cost=$0.0012 {"entry": true, "no_extra_entries": true}
+T2-small-cli-pipe-haiku-5-922c52: success=True passes=5 cost=$0.0018 {"entry": true, "no_extra_entries": true}
+T2-small-cli-pipe-noskill-haiku-5-36eedb: success=True passes=4 cost=$0.0018 {"entry": true, "no_extra_entries": true}
+T2-large-cli-pipe-haiku-5-148158: success=True passes=5 cost=$0.0047 {"entry": true, "no_extra_entries": true}
+T2-large-cli-step-ref-haiku-5-8a01d5: success=True passes=3 cost=$0.0040 {"entry": true, "no_extra_entries": true}
+T2-large-cli-pipe-ref-haiku-5-f7e4af: success=True passes=3 cost=$0.0018 {"entry": true, "no_extra_entries": true}
+T2-large-cli-pipe-noskill-haiku-5-089ebc: success=True passes=5 cost=$0.0032 {"entry": true, "no_extra_entries": true}
+T4-small-cli-step-ref-haiku-5-eb3edf: success=True passes=5 cost=$0.0022 {"entry": true, "reminder": true}
+T4-small-cli-pipe-ref-haiku-5-a5eb66: success=True passes=4 cost=$0.0019 {"entry": true, "reminder": true}
+T1-small-cli-pipe-ref-haiku-5-af3872: success=True passes=2 cost=$0.0007 {"answer": true}
+T4-small-cli-pipe-haiku-5-3e98f4: success=True passes=7 cost=$0.0031 {"entry": true, "reminder": true}
+T4-large-cli-step-ref-haiku-5-4eadf9: success=True passes=4 cost=$0.0046 {"entry": true, "reminder": true}
+T4-small-cli-pipe-noskill-haiku-5-7813b7: success=True passes=9 cost=$0.0065 {"entry": true, "reminder": true}
+T4-large-cli-pipe-haiku-5-fe2899: success=True passes=7 cost=$0.0038 {"entry": true, "reminder": true}
+T4-large-cli-pipe-ref-haiku-5-556c51: success=True passes=6 cost=$0.0061 {"entry": true, "reminder": true}
+T4-large-cli-pipe-noskill-haiku-5-1ce2a3: success=True passes=10 cost=$0.0057 {"entry": true, "reminder": true}
+T8-small-cli-step-ref-haiku-5-45008b: success=True passes=8 cost=$0.0032 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "Software Subscriptions"}
+T8-small-cli-pipe-ref-haiku-5-82b50a: success=True passes=9 cost=$0.0039 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "Software Subscriptions"}
+T8-large-cli-step-ref-haiku-5-bd52ae: success=True passes=6 cost=$0.0086 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "School Fees (Family)"}
+T8-large-cli-pipe-ref-haiku-5-77537c: success=True passes=7 cost=$0.0080 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "School Fees (Family)"}
+T8-large-cli-pipe-haiku-5-98d41b: success=True passes=15 cost=$0.0104 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "School Fees (Family)"}
+T8-small-cli-pipe-noskill-haiku-5-b9c5b8: success=True passes=17 cost=$0.0070 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "Software Subscriptions"}
+T8-small-cli-pipe-haiku-5-d790e1: success=True passes=16 cost=$0.0070 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "Software Subscriptions"}
+T8-large-cli-pipe-noskill-haiku-5-f6a3b7: success=True passes=14 cost=$0.0115 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "School Fees (Family)"}

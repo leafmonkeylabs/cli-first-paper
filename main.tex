@@ -1,0 +1,597 @@
+%% CLI-First (arXiv v1, 2026-10-10)
+%% ACM sigconf; nonacm for the preprint.
+\documentclass[sigconf,nonacm]{acmart}
+
+\usepackage{tikz}
+\usetikzlibrary{positioning,arrows.meta,calc,fit,backgrounds}
+\usepackage{pgfplots}
+\usepackage{catchfile}
+\pgfplotsset{compat=1.18}
+\usepackage{booktabs}
+\usepackage{tabularx}
+
+%% The product's name is a macro so it can be anonymised in one place.
+\newcommand{\sysA}{Salli}
+\newcommand{\flag}[1]{\texttt{-\/-#1}}
+\newcommand{\cmd}[1]{\texttt{#1}}
+\newcommand{\cfg}[1]{\textsf{#1}}
+\newcommand{\finding}[1]{\textbf{#1}}
+
+%% One colour per protocol, used in every figure.
+\definecolor{mcpc}{RGB}{37,99,165}
+\definecolor{clic}{RGB}{212,106,20}
+
+\settopmatter{printacmref=false}
+\renewcommand\footnotetextcopyrightpermission[1]{}
+\pagestyle{plain}
+\setlength{\emergencystretch}{3em}
+
+\newsavebox{\loopbox}
+\newsavebox{\mcpbox}
+
+\begin{document}
+
+\title{CLI-First: What an Agent Knows About an Interface Matters More Than Its Protocol}
+
+\author{Chandra Irugalbandara}
+\affiliation{%
+  \institution{Leaf Monkey Labs}
+  \city{Colombo}
+  \country{Sri Lanka}}
+\email{chandra@leafmonkey.org}
+
+\begin{abstract}
+Coding agents now build and operate much of the software they touch, mostly from a terminal. We propose CLI-first development: a capability is done only when it works from the product's command-line interface, and that CLI is the reference client against which the product's other clients are checked. In a personal-finance product that adopted the rule, CLI coverage fell behind the product's API until a dedicated phase restored it, and a coding agent's pass through the CLI found a safety control that held on the web path but not on the CLI's. We then test a popular claim, that CLIs cost agents less than Model Context Protocol (MCP) servers. Holding the product fixed, 704 runs crossed the protocol, what the agent knows about the interface, and whether it may compose operations. What the agent knew mattered more than the protocol. Agents that learned the CLI from its help cost 1.6 to 2 times as much as agents given the product's curated MCP server. A compact command sheet brought the CLI level with that server on chains of dependent steps for the stronger model, though not the weaker. With the sheet, agents replaced 26 tool calls with a two-call script and cost 36 to 39\% less on two tasks that repeat an operation, at the price of coarser oversight. The curated server was the fastest configuration.
+\end{abstract}
+
+\begin{CCSXML}
+<ccs2012>
+<concept><concept_id>10003120.10003121.10003124</concept_id><concept_desc>Human-centered computing~Interaction paradigms</concept_desc><concept_significance>500</concept_significance></concept>
+<concept><concept_id>10011007.10011074.10011099</concept_id><concept_desc>Software and its engineering~Software verification and validation</concept_desc><concept_significance>300</concept_significance></concept>
+<concept><concept_id>10010147.10010178.10010219.10010221</concept_id><concept_desc>Computing methodologies~Intelligent agents</concept_desc><concept_significance>300</concept_significance></concept>
+</ccs2012>
+\end{CCSXML}
+\ccsdesc[500]{Human-centered computing~Interaction paradigms}
+\ccsdesc[300]{Software and its engineering~Software verification and validation}
+\ccsdesc[300]{Computing methodologies~Intelligent agents}
+
+\keywords{AI agents, command-line interfaces, Model Context Protocol, tool use, agent-computer interfaces, cost, oversight}
+
+%% --- Teaser: one task solved both ways -----------------------------------
+\begin{lrbox}{\mcpbox}\begin{minipage}[t][3.05cm][t]{0.40\textwidth}\scriptsize\ttfamily
+get\_trial\_balance()\\
+get\_accounts()\\
+create\_reminder("Review spending: General Expenses", "2026-04-30")\\
+create\_reminder("Review spending: Fuel", "2026-04-30")\\
+create\_reminder("Review spending: Pharmacy", "2026-04-30")\\
+\textrm{\itshape\dots{} 21 more \texttt{create\_reminder} calls}
+\end{minipage}\end{lrbox}
+\begin{lrbox}{\loopbox}\begin{minipage}[t][3.05cm][t]{0.47\textwidth}\scriptsize
+\begin{verbatim}
+# call 1
+salli accounts list --json > $TMPDIR/a.json 2>/dev/null
+salli ledger trial-balance --json > $TMPDIR/tb.json
+jq -r --slurpfile tb $TMPDIR/tb.json '.[]
+  | select(.type=="expense") | [.id,.name,.currency,
+    ($tb[0][.id]//"none")] | @tsv' $TMPDIR/a.json
+# call 2
+jq -r --slurpfile tb $TMPDIR/tb.json '.[]
+  | select(.type=="expense" and .currency=="LKR")
+  | select((($tb[0][.id]//"0")|tonumber)>20000)
+  | .name' $TMPDIR/a.json |
+while IFS= read -r n; do salli reminders add \
+  "Review spending: $n" --due-date 2026-04-30 --json; done
+\end{verbatim}
+\end{minipage}\end{lrbox}
+
+\begin{teaserfigure}
+\centering
+\begin{tikzpicture}[
+  panel/.style={draw=#1, line width=0.9pt, rounded corners=3pt, inner sep=5pt, fill=#1!4},
+  head/.style={font=\small\bfseries, text=#1, anchor=south west},
+  stat/.style={font=\scriptsize, anchor=north west, text=black!80}]
+\node[panel=mcpc] (m) {\usebox{\mcpbox}};
+\node[head=mcpc] at (m.north west) {MCP, curated server (\cfg{MCP-24})};
+\node[stat] at (m.south west) {3 passes \quad 26 tool calls \quad 4.1k output tokens \quad \textbf{11.7\textcent} \quad 25\,s};
+\node[panel=clic, right=8mm of m.north east, anchor=north west] (c) {\usebox{\loopbox}};
+\node[head=clic] at (c.north west) {CLI with the command sheet, composed (\cfg{CLI sheet/comp})};
+\node[stat] at (c.south west) {3 passes \quad 2 tool calls \quad 0.9k output tokens \quad \textbf{4.4\textcent} \quad 48\,s};
+\end{tikzpicture}
+\caption{\textbf{The same task through two interfaces to one product.} Asked to set a review reminder for every expense account over LKR~20{,}000, an agent with \sysA{}'s MCP server called a tool 26 times; an agent given the CLI's command sheet wrote a two-call script ending in one loop, produced a fifth of the output tokens and cost 62\% less, but took twice as long and put 24 writes behind one tool call. This is the cell where composition saved most; over both repetition tasks the saving was 36--39\%, and on chains CLI agents without the command sheet cost more than MCP (Section~\ref{sec:f1}). Medians of three Sonnet runs on the large ledger. The left panel abridges an actual trace; the right reproduces one run's two commands, with line breaks added.}
+\label{fig:teaser}
+\Description{Two side-by-side panels. Left, outlined in blue: a list of MCP tool calls, get_trial_balance, get_accounts, then create_reminder calls for General Expenses, Fuel and Pharmacy and 21 more; footer: 3 passes, 26 tool calls, 4.1k output tokens, 11.7 cents, 25 seconds. Right, outlined in orange: two shell commands; the first saves the account list and trial balance to files and lists expense accounts with jq, the second filters expense accounts over 20,000 with jq and loops over the names calling salli reminders add; footer: 3 passes, 2 tool calls, 0.9k output tokens, 4.4 cents, 48 seconds.}
+\end{teaserfigure}
+
+\maketitle
+
+%% ===========================================================================
+\section{Introduction}
+
+Agents are becoming a large share of the users of developer tools. Cloudflare reports that agents accounted for a quarter of the use of its command-line tool in March 2026, up from single digits a year earlier, and for 48\% by late September~\cite{cloudflare2026cf}. Inside product teams the shift shows in version control: in \sysA{}, the personal-finance product we study, 75\% of commits carry a coding agent's co-authorship trailer. Those agents need to run the software they change, not just compile it.
+
+We propose \emph{CLI-first development}, a process with two rules: a capability is done only when it works from the product's command-line interface (CLI), and the CLI is the \emph{reference client} that the product's other clients, including the web application and any Model Context Protocol (MCP) server, are checked against. The proposal makes two claims. One concerns process: a CLI held to these rules lets the agents that build a product exercise and verify all of it. We examine it in \sysA{}'s version history. The other concerns cost and is widely argued, while the few measurements disagree: that a CLI is cheaper for agents than an MCP server because MCP loads every tool definition into the model's context~\cite{schmitt2026circleci,qi2026ibm}, or more expensive because every call starts a process~\cite{mindstudio2026mcpcli}.
+
+To test the cost claim we held one product fixed and varied only the interface its agents used (Figure~\ref{fig:teaser}), crossing three factors: the \emph{protocol} (MCP tool calls or shell commands), what the agent \emph{knows} about the interface before it starts, and whether it may \emph{compose} operations into one program. If the interface did not matter, every configuration would cost what \sysA{}'s curated MCP server costs, and every ratio we report would be 1. What the agent knew moved cost more than the protocol did. On chains, giving a CLI agent a command sheet instead of help lowered its cost relative to the MCP server from 1.6--2.0 to 0.9--1.2, a wider swing than the gap between the best CLI configuration and the server. Our thesis follows: the case for CLI-first rests on the agents that build and check a product, and for agents in general, what they are told about an interface matters more than which protocol carries it. We report five findings:
+
+\begin{itemize}
+\item \finding{F1.} An agent that learned the CLI from its help cost 1.6 to 2 times as much as an agent given the curated MCP server's schemas (Section~\ref{sec:f1}).
+\item \finding{F2.} For the same operations, an MCP server generated from the CLI cost 1.3 to 1.8 times as much as the curated one; it also returned larger results, so the effect of catalogue size alone is not isolated (Section~\ref{sec:f2}).
+\item \finding{F3.} On chains of dependent steps, the CLI with a 1.1k-token command sheet and composition could not be told apart from the curated server for the stronger model, Sonnet, and cost 1.2 times as much for the weaker, Haiku (Section~\ref{sec:f3}).
+\item \finding{F4.} On two tasks that repeat an operation, the same configuration cost 36--39\% less than the curated server for both models; Haiku saved only on bulk entry, and where one write was needed there was no consistent advantage (Section~\ref{sec:f4}).
+\item \finding{F5.} Composition moved the unit a person could review from single actions to whole scripts, and agents on both protocols, in four of eight configurations, reported success they had not achieved (Section~\ref{sec:f5}).
+\end{itemize}
+
+\noindent The paper contributes (1) a definition of CLI-first development (Section~\ref{sec:principle}); (2) a single-product case study of the rule in practice (Section~\ref{sec:cases}); (3) a caching-aware cost model that separates what an interface costs an agent into description, discovery and composition (Section~\ref{sec:mcp}); (4) an exploratory experiment with all runs, transcripts and analysis released (Section~\ref{sec:experiment}); and (5) principles for agent-ready CLIs and controls for agents that act through them (Sections~\ref{sec:principles}--\ref{sec:guardrails}).
+
+%% ===========================================================================
+\section{Related Work}
+\label{sec:related}
+
+\paragraph{Delegation and oversight}
+The debate between direct manipulation and delegation to agents is older than large language models~\cite{shneiderman1997direct,maes1994agents}. Norman warned that delegation works only when people keep an accurate sense of what the agent is doing and can take control back~\cite{norman1994agents}, and Horvitz's mixed-initiative principles~\cite{horvitz1999principles} and Amershi et al.'s guidelines for human-AI interaction~\cite{amershi2019guidelines} turn that concern into design advice. Work on automation describes how oversight degrades: the operator of a highly automated system is left with the hardest decisions and the least practice at them~\cite{bainbridge1983ironies}, the right level of automation differs by stage of a task~\cite{parasuraman2000model}, and trust has to be calibrated to reliability~\cite{lee2004trust}. An agent narrows the person's gulf of execution and can widen their gulf of evaluation~\cite{hutchins1985direct}, and stating intent is itself hard for non-experts~\cite{nielsen2023paradigm,zamfirescu2023johnny}. F5 bears on both gulfs.
+
+\paragraph{Agent-computer interfaces and tool use}
+SWE-agent showed that interface design changes agent performance: a purpose-built interface resolved 18.0\% of SWE-bench Lite tasks~\cite{jimenez2024swebench} against 11.0\% for a plain shell~\cite{yang2024sweagent}. CodeAct found that acting through executable code outperformed JSON and text tool calls by up to 20\% in success rate across 17 models~\cite{wang2024codeact}, and InterCode and Terminal-Bench evaluate agents in shells~\cite{yang2023intercode,merrill2026terminalbench}. Documentation alone lets models use unfamiliar tools about as well as demonstrations do~\cite{hsieh2023tooldoc}, and ReWOO and LLMCompiler cut model invocations by planning tool calls ahead~\cite{xu2023rewoo,kim2023llmcompiler}. Translating language into shell commands is a long-studied problem~\cite{lin2018nl2bash}.
+
+\paragraph{GUI, API, CLI and MCP agents}
+GUI agents beat CLI agents on 440 desktop tasks until the CLI's missing capabilities were filled in~\cite{zhou2026guicli}, and take 2.7 to 4.3 times more steps than necessary~\cite{abhyankar2025osworldhuman}; API-first and hybrid agents are faster~\cite{lu2024axis,zhang2025apigui,zhang2025ufo2}, and MCP tools raise computer-use agents' success~\cite{jia2025osworldmcp}. Comparisons of MCP and CLIs disagree. Across seven scaffoldings, paired MCP-to-CLI cost ratios ranged from 0.43 to 29~\cite{alier2026scaffolding}; in 120 runs MCP was 23\% faster and 2.5\% cheaper than an equivalent CLI~\cite{zechner2025mcpcli}. Holding a backend fixed, Smithery's 756 runs against public APIs found native MCP ahead of a CLI with descriptions on GitHub's REST API in success (91.7\% against 83.3\%), median tokens (28.8k against 82.9k) and time (10.4 against 24.9~s)~\cite{mao2026smithery,nordicapis2026mcpcli}, and Scale Labs' 50 long-horizon tasks found the CLI's advantage depended on model and task and mattered little for frontier models~\cite{hou2026scale}.
+
+\paragraph{Practice and lineage}
+``Agent experience'' has become a design concern~\cite{biilmann2025ax,baer2026agentsfirst}, and products increasingly give the UI and the agent one set of actions~\cite{builderio2026app,posthog2026golden}. For CLI input, named flags beat single JSON payloads on accuracy and cost~\cite{mastykarz2026dont,poehnelt2026rewrite}, and Mistral gives every interactive prompt a flag~\cite{mistral2026spaces}. The architecture underneath CLI-first is old: composable programs~\cite{mcilroy1978unix}, ports and adapters~\cite{cockburn2005hexagonal}, command-line design guidance~\cite{clig2020} and API usability research~\cite{myers2016api}; the decay of a shared interface is a form of architecture erosion~\cite{perry1992foundations,desilva2012erosion}. CLI-first differs from API-first in naming which client must work first and giving it the role of reference.
+
+\paragraph{How this study differs}
+The two fixed-backend studies are closest to ours. We differ in three ways: (1) we vary what the agent knows about the interface and whether it may compose as separate factors, so their effects can be told apart; (2) we decompose cost by token type under prompt caching and model it, rather than reporting totals; and (3) we score a production product's database state rather than an agent's answer.
+
+%% ===========================================================================
+\section{CLI-First Development}
+\label{sec:principle}
+
+A team practises CLI-first development when it holds two rules. First, a capability is complete only when it can be exercised from the product's CLI; other clients may ship it at the same time or later, but not instead. Second, the CLI is the reference client: when the web application, the MCP server or an embedded assistant disagrees with the CLI about what the product does, the disagreement is a defect in one of them, and checks written against the CLI define the expected behaviour. The first rule without the second produces coverage that can drift; the second without the first produces a reference for part of the product.
+
+Three kinds of agent interact with such a product (Figure~\ref{fig:arch}). Coding agents and operators' agents run in a shell and are the CLI's main users: they exercise features without a browser, configure deployments and check their own changes. Embedded agents call the same core operations and get no more power than any other client. Users' agents, the assistants that end users delegate to, usually run where no shell exists and reach \sysA{} through an MCP server with OAuth-scoped access. CLI-first serves them indirectly, by making every capability a scriptable operation that any protocol can expose; it does not guarantee that they will: \sysA{}'s open-source core has 125 CLI commands but 24 MCP tools.
+
+The analogy with mobile-first~\cite{wroblewski2009mobile,wroblewski2011mobile} holds for the order of work and fails on constraint: mobile-first started from the most limited client, CLI-first from the most capable, and its new user is an agent acting for a person. Accessibility is a closer precedent: the interfaces that expose an application to a screen reader stay complete only where teams treat gaps as defects.
+
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}[
+  box/.style={draw, rounded corners=2pt, align=center, font=\scriptsize, minimum height=8mm, inner sep=2pt},
+  surf/.style={box, minimum width=1.38cm, text width=1.25cm},
+  cli/.style={box, draw=clic, fill=clic!12, very thick, minimum width=1.7cm, text width=1.55cm},
+  mcps/.style={surf, draw=mcpc, fill=mcpc!8},
+  core/.style={box, fill=black!6, minimum width=8.1cm, minimum height=7mm, font=\footnotesize},
+  agent/.style={box, dashed, minimum width=1.9cm, text width=1.8cm, minimum height=7mm},
+  >={Stealth[length=1.8mm]}
+]
+\node[cli] (cli) {\textbf{CLI}\\reference\\client};
+\node[surf, right=1.5mm of cli] (api) {HTTP API};
+\node[mcps, right=1.5mm of api] (mcp) {MCP server\\(OAuth-scoped)};
+\node[surf, right=1.5mm of mcp] (gui) {Web / mobile\\GUI};
+\node[surf, right=1.5mm of gui] (emb) {Embedded\\agent};
+\node[core, below=6mm of $(cli.south west)!0.5!(emb.south east)$] (core) {Core: domain logic, rules, data, controls};
+\foreach \s in {cli,api,mcp,gui,emb} { \draw[->] (\s.south) -- (\s.south |- core.north); }
+\node[agent, above=7mm of cli] (coding) {Coding and\\operators' agents};
+\node[agent, above=7mm of mcp] (users) {Users' agents\\(no shell)};
+\node[agent, above=7mm of $(gui)!0.5!(emb)$] (people) {People\\(direct use)};
+\draw[->] (coding) -- (cli);
+\draw[->] (users) -- (mcp);
+\draw[->] (people) -- (gui);
+\end{tikzpicture}
+\caption{\textbf{Every client calls one core; the CLI is the reference.} Coding and operators' agents use the CLI; users' agents usually arrive through a scoped MCP server.}
+\label{fig:arch}
+\Description{A diagram with a core at the bottom and five clients above it, each pointing down to the core: the CLI, highlighted in orange as the reference client; the HTTP API; an OAuth-scoped MCP server in blue; the web and mobile GUI; and an embedded agent. At the top, coding and operators' agents connect to the CLI, users' agents without a shell connect to the MCP server, and people connect to the GUI.}
+\end{figure}
+
+%% ===========================================================================
+\section{A CLI-First Product}
+\label{sec:cases}
+
+\paragraph{Method}
+We studied \sysA{}, a personal finance and tax product for Sri Lanka whose agent guidance adopts the CLI-first rule and which the author develops. The design is a single-case study with the author as participant-observer, in the tradition of autobiographical design~\cite{neustaedter2012autobiographical} and following case-study guidance from software engineering~\cite{runeson2009case}. The data are the product's git history (417 commits), architecture documents and commit messages at a fixed snapshot (13 September 2026). For CLI coverage we counted CLI commands and API route handlers, excluding authentication, at a series of dates; the ratio of counts is a proxy for parity, not a mapping of commands to routes. For agent involvement we counted commits whose message contains a \texttt{Co-Authored-By: Claude} trailer. The case can show what happened in one product; it cannot show how often CLI-first works elsewhere. Commit messages were themselves written with agent assistance and may be more explicit, and more favourable, than an independent record~\cite{bird2009git}.
+
+\subsection{Coverage fell behind under a written rule and recovered in a dedicated phase}
+\sysA{} combines a double-entry ledger, a versioned tax engine and AI agents that explain a user's financial position. Its domain core has no input/output or framework imports, and its CLI and HTTP API build their services through one composition function. The project's agent guidance states the order of work: ``Core + CLI first --- all domain logic runs from the terminal before any HTTP server exists,'' then the API, then web and mobile clients. 311 of its 417 commits carry an agent trailer.
+
+\finding{The rule did not hold on its own.} An HTTP API with 19 feature routes existed from the first day, and over four weeks the API grew while the CLI did not: by 14 July the CLI had 13 commands against 54 feature routes, a ratio of 0.24 (Figure~\ref{fig:parity}). The roadmap then inserted a ``CLI completion'' phase ahead of new domain work, and within two days the ratio reached 0.82. Five domains built immediately afterwards each received core logic, API routes and a CLI command group within about twelve minutes, in one agent session. Coverage then fell to 0.73 as the API gained routes the CLI did not; the open-source core now runs a continuous-integration check that fails when a route has neither a command nor a recorded reason for lacking one. We have no data yet on whether the check holds coverage.
+
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}
+\begin{axis}[width=\columnwidth, height=4.4cm, xmin=0, xmax=90, ymin=0, ymax=140,
+  xlabel={Days since first commit (18 Jun 2026)}, ylabel={Count},
+  tick label style={font=\scriptsize}, label style={font=\scriptsize}, axis lines*=left]
+\addplot[thick, mark=none, color=black!70] table[x=day, y=api_feature_routes, col sep=comma] {data/salli_coverage.csv};
+\addplot[thick, mark=*, mark size=1pt, color=clic] table[x=day, y=cli_commands, col sep=comma] {data/salli_coverage.csv};
+\node[font=\scriptsize, text=black!70, anchor=south] at (axis cs:70,130) {API feature routes};
+\node[font=\scriptsize, text=clic, anchor=north] at (axis cs:70,88) {CLI commands};
+\node[font=\tiny] at (axis cs:16,28) {coverage 0.24};
+\node[font=\tiny] at (axis cs:36,76) {0.82};
+\node[font=\tiny] at (axis cs:84,100) {0.73};
+\end{axis}
+\end{tikzpicture}
+\caption{\textbf{CLI coverage fell under a written rule until a dedicated phase restored it.} Commands and API feature routes in \sysA{} over its first 87 days; authentication routes are excluded.}
+\label{fig:parity}
+\Description{A line chart. API feature routes, in grey, rise from 19 to 128 over 87 days; CLI commands, in orange, stay at 13 until day 27, jump to 89 by day 28 and reach 93; annotations mark coverage ratios of 0.24, 0.82 and 0.73.}
+\end{figure}
+
+\subsection{A pass through the CLI found a control that held on only one path}
+\finding{Once the CLI covered the product, a coding agent's pass through it found defects in the core.} One agent-assisted commit (\texttt{862ed06}, 19 July) records the defects ``found during a full CLI end-to-end pass''. The CLI had never set up the checkpointer that the HTTP server configures for the embedded agents, so the agents' history commands crashed and the human-approval gate on their write tools silently did nothing when invoked from the CLI. Data export crashed for any user who had computed their tax, and a command that posts imported transactions misreported how many it had posted. The approval-gate defect could not be seen from the web client, which reached the agents through the HTTP server that set the checkpointer up. That gate had been fixed for the web path a month earlier; the CLI pass found that the same guarantee did not hold on another path into the core. These observations, from one product and one participant-observer, motivate study S2 in Section~\ref{sec:agenda}.
+
+%% ===========================================================================
+\section{What an Interface Costs an Agent}
+\label{sec:mcp}
+
+An MCP server publishes typed tools whose definitions the agent's host loads into the model's context~\cite{mcp2024spec}; the model calls tools one response at a time, possibly several in parallel. With a CLI that emits structured output, an agent can instead write a chain of operations once as a program and run it as one tool call, so that intermediate data move through pipes or files rather than through the model, as in Figure~\ref{fig:teaser}.
+
+\paragraph{A cost model}
+Consider $k$ operations, each needing the result of the one before. Let $S$ be the fixed prompt prefix (system prompt and interface description), $u$ the user's request, $a_i$ and $r_i$ the tokens of the $i$-th call and its result, $c$ the tokens of a pipeline script and $f$ its filtered output. With direct calls there are $k+1$ model passes, and pass $j$ reads $P_j = S + u + \sum_{i<j}(a_i + r_i)$. Without caching, the input tokens processed are
+\begin{equation}
+I_{\text{calls}} = (k+1)(S+u) + \sum_{i=1}^{k}(k+1-i)(a_i+r_i),
+\label{eq:calls}
+\end{equation}
+quadratic in $k$ when results are of similar size, while a single pipeline needs two passes:
+\begin{equation}
+I_{\text{pipe}} = 2(S+u) + c + f.
+\label{eq:pipe}
+\end{equation}
+With prompt caching, cache writes cost $\omega$ times the base input rate and cache reads $\rho$ times; for one provider $\rho = 0.1$, $\omega$ is 1.25 for five-minute and 2 for one-hour entries, and output costs five times the input rate~\cite{anthropic2026caching}. Direct calls then cost approximately $\omega P_1 + \rho\sum_{j\le k}P_j + \omega\sum_i(a_i+r_i)$ input-token equivalents and the pipeline $\omega(S+u+c+f)+\rho(S+u)$ (Table~\ref{tab:cost}). Caching removes most of the quadratic term but not the $k+1$ sequential passes, nor the cost of every intermediate result entering the context once. When many agents share a prefix, even the first pass may read $S$ from the cache.
+
+\begin{table}[t]
+\caption{\textbf{A pipeline needs two passes where direct calls need $k+1$.} Input-token equivalents for $k=5$ dependent operations with $S=10$k, $u=1$k, $a_i=100$, $r_i=2$k, $c=400$, $f=200$, $\omega=1.25$, $\rho=0.1$. The last row drops tool definitions from the prefix. The table uses the five-minute cache rate for illustration; the experiment used one-hour entries ($\omega=2$).}
+\label{tab:cost}
+\small
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+ & \textbf{Passes} & \textbf{Uncached} & \textbf{Cached} \\
+\midrule
+Direct tool calls & 6 & 97.5k & 34.5k \\
+CLI pipeline & 2 & 22.6k & 15.6k \\
+CLI pipeline, $S=1$k & 2 & 4.6k & 3.5k \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Discovery and repetition}
+Two further terms decide whether a pipeline is available. The first is \emph{discovery}. Equation~\ref{eq:pipe} assumes an agent that knows the commands and the shape of their output. An MCP server supplies that knowledge in $S$; an agent that must learn a CLI reads help instead, taking $d$ extra passes that add $h$ tokens, written to the cache once and re-read on every later pass. Whether this exceeds the CLI's saving in $S$ depends on $d$, $h$ and the passes that follow. The second is \emph{repetition}. For $n$ independent operations of one kind, direct calls can run in parallel within one pass, but the model writes all $n$ calls and all $n$ results enter the context. A loop over a CLI command avoids the per-call overhead; its length is constant in $n$ when it iterates over the product's own data, as in Figure~\ref{fig:teaser}, and grows with $n$ when the arguments must be written out.
+
+\paragraph{Research questions}
+\label{sec:hypotheses}
+The model raises four questions. We formed the predictions after the first wave of the experiment (Section~\ref{sec:history}) and test them on data that include that wave, so they are exploratory.
+\begin{description}
+\item[RQ1, knowledge.] Does an agent that must learn a CLI from its help cost more than one given an MCP server's schemas? \emph{Predicted: yes.}
+\item[RQ2, description size.] For the same operations, does an MCP server generated from the CLI cost more than a curated one? \emph{Predicted: yes.}
+\item[RQ3, composition.] When the agent knows the commands, does a composed CLI cost less than the curated MCP server on chains of dependent operations, and on tasks that repeat an operation? \emph{Predicted: yes, more so for repetition.}
+\item[RQ4, oversight.] What does composition do to what a person can review? \emph{No prediction.}
+\end{description}
+
+\noindent Composition's economics come from code as the agent's action space, not from the shell; MCP tools can also be called from code in a sandbox~\cite{anthropic2025codeexec,anthropic2025advancedtools,cloudflare2025codemode}, though standard MCP clients do not offer it. A CLI brings composition with the interface, along with costs: scripts must anticipate output shapes that MCP declares, chains can fail halfway, shell quoting is fragile~\cite{mastykarz2026dont}, every invocation starts a process, and a shell carries ambient authority. A pipeline planned before reading data keeps untrusted content out of the control flow~\cite{debenedetti2025camel}; one that interpolates data into commands, like Figure~\ref{fig:teaser}'s loop, does not.
+
+%% ===========================================================================
+\section{An Exploratory Experiment}
+\label{sec:experiment}
+
+\subsection{Design}
+We held one product, its data and its tasks fixed and varied the interface. The product was \sysA{}'s open-source core at commit \texttt{0277747}, whose CLI (125 commands, 120 with \flag{json}) and MCP server (24 tools) call the same services and database. A \emph{configuration} fixes three factors (Table~\ref{tab:arms}). The \emph{protocol} is MCP tool calls or shell commands. \emph{Knowledge} is what the interface description tells the agent before it starts. MCP configurations receive tool schemas. CLI configurations receive one of four descriptions: help alone; the core's agent skill, pasted into the prompt (646 tokens naming command groups and rules, but no options); the core's five skills, installed for the agent to load if it chooses; or a \emph{command sheet} generated from the CLI's own definitions (1{,}134 tokens giving usage, options and JSON output shape for the 14 commands that do what \cfg{MCP-24}'s tools do). \emph{Composition} is whether the agent may combine commands: one-per-call configurations permitted only the \cmd{salli} executable, while composed ones asked the agent to compose dependent steps and allowed pipes, \cmd{jq}, scripts and (from wave 4) Python. \cfg{MCP-24} is the core's own, curated server, whose results are compact summaries. \cfg{MCP-102} is generated from the CLI, with one tool for each of 102 of the 120 commands that support \flag{json} (administrative command groups are left out), and returns the CLI's JSON, so it differs from \cfg{MCP-24} in both catalogue size and result size.
+
+\finding{What the experiment can and cannot show.} It compares these configurations on one product, six tasks and two models from one provider. It cannot say how often CLIs beat MCP servers in general, and it does not test the process claim of Section~\ref{sec:cases}.
+
+\begin{table}[t]
+\caption{\textbf{Eight configurations cross protocol, knowledge and composition.} Knowledge gives the interface description's size (\texttt{o200k\_base} tokens). 1st pass: median context of the first model call. Runs: retained runs (Haiku and Sonnet).}
+\label{tab:arms}
+\footnotesize
+\setlength{\tabcolsep}{2.5pt}
+\begin{tabular}{@{}lllrr@{}}
+\toprule
+\textbf{Configuration} & \textbf{Knowledge} & \textbf{Composition} & \textbf{1st pass} & \textbf{Runs} \\
+\midrule
+\textcolor{mcpc}{\cfg{MCP-24}} & 24 schemas (3.0k) & parallel calls & 5.3k & 96 \\
+\textcolor{mcpc}{\cfg{MCP-102}} & 102 schemas (9.7k) & parallel calls & 17.2k & 96 \\
+\textcolor{clic}{\cfg{CLI skill/step}} & skill (0.6k) & one per call & 3.8k & 64 \\
+\textcolor{clic}{\cfg{CLI skill/comp}} & skill (0.6k) & composed & 3.9k & 96 \\
+\textcolor{clic}{\cfg{CLI help/comp}} & help only & composed & 2.9k & 64 \\
+\textcolor{clic}{\cfg{CLI installed/comp}} & 5 skills, on demand & composed & 6.6k & 96 \\
+\textcolor{clic}{\cfg{CLI sheet/step}} & command sheet (1.1k) & one per call & 4.7k & 96 \\
+\textcolor{clic}{\cfg{CLI sheet/comp}} & command sheet (1.1k) & composed & 4.7k & 96 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Tasks and scoring}
+Six tasks could all be completed with the operations available to \cfg{MCP-24}. Four are \emph{chains} of $k = 1, 2, 4$ and $8$ operations, with nominal dependency depths 1, 2, 4 and 6: report the tax owed; record a cash expense; record a salary, compute the tax and set a reminder carrying the figure; and create an account, post to it, find the expense account with the largest balance, refund it, and set a reminder carrying the tax and the bank balance. Two are \emph{repetition tasks}: record 25 expenses listed in the request (bulk entry), and set a reminder for every expense account over LKR~20{,}000 (fan-out, Figure~\ref{fig:teaser}). Each ran on a small ledger (16 accounts, 30 entries) and a large one (106 accounts, 440 entries); fan-out needs one write on the small ledger and 24 on the large, which makes the small cell a control where composition has nothing to compose. A \emph{cell} is one task on one ledger, so there are 12 cells and 24 combinations of model and cell. Every run used a freshly seeded user. The one-operation tax question was scored from the answer and the other tasks against the database, by the expected records; the two-step and repetition tasks also required that no other records of the same kind exist on the task's dates, while the 4- and 8-step checks did not look for extra records.
+
+\paragraph{Interface asymmetries}
+\cfg{MCP-24}'s reminder tool takes free text, while the CLI's \cmd{reminders add} takes it as a \texttt{KIND} argument that neither the skill nor the sheet explains. The CLI accepts account codes. The core's documentation, our prompt for the CLI configurations and the command sheet's header all said identifiers could be shortened to a unique prefix, which \cmd{entry add} did not accept. On the small ledger the 8-step task's target account is necessarily the one created in its first step.
+
+\paragraph{Harness}
+The agent was Claude Code 2.1.293 in headless mode driving Claude Haiku~5.5 and Claude Sonnet~5.5. Its system prompt was replaced by a short task prompt common to all configurations plus a configuration-specific paragraph; user settings were excluded, MCP tool search disabled, and only the configuration's tools enabled. The composed configurations' paragraph alone gave a reason to compose, so ``that intermediate output does not have to pass through you''; no other configuration was told anything about efficiency. \cfg{MCP-24} ran the core's server over stdio with its OAuth user lookup replaced by the seeded user. Composed configurations ran with permissions bypassed under a deny-list of deletion, network, version-control and package-manager commands, and with a directory holding only \cmd{salli} prepended to the path; there was no sandbox, and the environment held the test instance's database URL and service keys. No transcript shows a command that bypassed the CLI. Caching used one-hour entries shared across runs: in 702 of 704 runs the first call read the prompt and interface description from a cache warmed by earlier runs.
+
+\subsection{Collection history}
+\label{sec:history}
+\finding{The design grew in five waves, each started after the previous one's results were visible} (Table~\ref{tab:waves}). The first wave, a pilot on the chain tasks, found the CLI more expensive than \cfg{MCP-24}; the command-sheet configurations, the repetition tasks and the research questions came afterwards, and the pilot's 128 \cfg{MCP-24} and \cfg{CLI skill/step} runs are part of the analysed data. Of 947 runs attempted, 243 were superseded and 704 retained; the run ledger lists each with its wave, parallelism, permissions and fate. Four harness problems caused the supersessions. Claude Code's allowlist matcher refused composed commands containing variables, quoting or loops (in 29 of 128 wave-1 composed runs, all of which still succeeded), so composed configurations were re-collected without it (128 runs). A deny-list that also blocked interpreters was in force for 32 repetition-task runs, three of which had a script refused; all 32 were re-collected. The composed chain runs we kept used that deny-list, and none invoked an interpreter. Parallel runs shared a temporary directory and overwrote each other's files, so the 80 composed runs that had used a shared path, and one that ran beside a smoke test, were collected again one at a time; because this rule selected runs by behaviour, Section~\ref{sec:robust} restores them. One run was stopped by the operator in error and one produced no output; both were collected again.
+
+\begin{table}[t]
+\caption{\textbf{The design grew over five waves.} Parallel: concurrent runs. Retained: runs in the analysis.}
+\label{tab:waves}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabularx}{\columnwidth}{@{}l>{\raggedright\arraybackslash}Xrr@{}}
+\toprule
+\textbf{Wave} & \textbf{Content} & \textbf{Parallel} & \textbf{Retained} \\
+\midrule
+1 & Pilot: \cfg{MCP-24}, \cfg{CLI skill/step}, \cfg{skill/comp}, \cfg{help/comp}; chains & 6 & 128 \\
+2 & Command-sheet configurations; composed configurations re-collected & 8 & 224 \\
+3 & \cfg{CLI installed/comp} & 8 & 55 \\
+4 & \cfg{MCP-102} on chains; repetition tasks for six configurations & 8 & 217 \\
+5 & Shared-directory runs, re-collected one at a time & 1 & 80 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Measures and analysis}
+\label{sec:analysis}
+For each run we recorded success; cost; tokens of each kind, summed over the run's agent invocations; passes, tool calls and characters of tool output; and time as reported by the agent harness, summed over invocations. Cost is at list prices: \$0.10, 0.20, 0.01 and 0.50 per million uncached input, cache-write, cache-read and output tokens for Haiku, and \$2, 4, 0.20 and 10 for Sonnet. These prices reproduce the harness's reported cost for every run. The outcome is cost relative to \cfg{MCP-24}: in each cell the ratio of geometric-mean costs, combined over cells by the geometric mean. We report two targets of inference. \emph{For these tasks}, the 95\% interval is a Welch-type $t$ interval for the mean log ratio over cells, with runs within cells as the sampling unit and Satterthwaite degrees of freedom; $p$-values come from a stratified permutation test (10{,}000 permutations), Holm-adjusted over 24 comparisons~\cite{holm1979}. A bootstrap over runs within cells~\cite{efron1994bootstrap} gives similar intervals and is in the released data. \emph{For tasks like these}, a $t$ interval over tasks uses each task's log ratio averaged over its two ledgers; with four chain tasks it is wide, and with two repetition tasks uninformative. We compare models as a ratio of ratios, overall and per task, and give absolute differences in cents.
+
+\subsection{Results}
+\label{sec:results}
+
+\finding{Success was at ceiling, so cost decides.} Of 704 runs, 693 (98.4\%) succeeded; per configuration and model, success ranged from 57/60 to 60/60 with overlapping Wilson intervals. Figure~\ref{fig:forest} and Table~\ref{tab:effects} give every cost effect; Table~\ref{tab:results} gives the median cost per run that anchors them, from 0.05 cents (Haiku, \cfg{MCP-24}, one operation) to 70.9 cents (Sonnet, \cfg{CLI sheet/step}, bulk entry on the large ledger).
+
+\begin{figure*}[t]
+\centering
+\begin{tikzpicture}
+\begin{axis}[xmode=log, width=0.47\textwidth, height=5.4cm, xmin=0.12, xmax=8,
+  xtick={0.25,0.5,1,2,4}, xticklabels={0.25,0.5,1,2,4}, tick label style={font=\scriptsize}, label style={font=\scriptsize},
+  title style={font=\small}, y tick label style={font=\scriptsize}, enlarge y limits=0.12,
+  xlabel={Cost relative to MCP-24 (log scale; lower is cheaper)},
+  legend style={font=\scriptsize, at={(0.98,0.03)}, anchor=south east, draw=none, fill=white, fill opacity=0.85, text opacity=1},
+  title={(a) Chains, $k\in\{1,2,4,8\}$}, ytick={0,...,6},
+  yticklabels={CLI sheet/comp, CLI sheet/step, CLI installed/comp, CLI help/comp, CLI skill/comp, CLI skill/step, MCP-102}]
+\draw[black!40, dashed] (axis cs:1,-1) -- (axis cs:1,7);
+\addplot[forget plot, only marks, mark=none, mcpc!45, error bars/.cd, x dir=both, x explicit] table[x=ratio, y=y, x error plus=tplus, x error minus=tminus, col sep=comma] {data/pilot/forest_chain_haiku_mcp.csv};
+\addplot[forget plot, only marks, mark=none, mcpc!45, error bars/.cd, x dir=both, x explicit] table[x=ratio, y=y, x error plus=tplus, x error minus=tminus, col sep=comma] {data/pilot/forest_chain_sonnet_mcp.csv};
+\addplot[forget plot, only marks, mark=none, clic!45, error bars/.cd, x dir=both, x explicit] table[x=ratio, y=y, x error plus=tplus, x error minus=tminus, col sep=comma] {data/pilot/forest_chain_haiku_cli.csv};
+\addplot[forget plot, only marks, mark=none, clic!45, error bars/.cd, x dir=both, x explicit] table[x=ratio, y=y, x error plus=tplus, x error minus=tminus, col sep=comma] {data/pilot/forest_chain_sonnet_cli.csv};
+\addplot[forget plot, only marks, mark=o, mark size=1.8pt, mcpc, thick, error bars/.cd, x dir=both, x explicit, error bar style={line width=1.3pt}] table[x=ratio, y=y, x error plus=plus, x error minus=minus, col sep=comma] {data/pilot/forest_chain_haiku_mcp.csv};
+\addplot[forget plot, only marks, mark=square*, mark size=1.6pt, mcpc, error bars/.cd, x dir=both, x explicit, error bar style={line width=1.3pt}] table[x=ratio, y=y, x error plus=plus, x error minus=minus, col sep=comma] {data/pilot/forest_chain_sonnet_mcp.csv};
+\addplot[forget plot, only marks, mark=o, mark size=1.8pt, clic, thick, error bars/.cd, x dir=both, x explicit, error bar style={line width=1.3pt}] table[x=ratio, y=y, x error plus=plus, x error minus=minus, col sep=comma] {data/pilot/forest_chain_haiku_cli.csv};
+\addplot[forget plot, only marks, mark=square*, mark size=1.6pt, clic, error bars/.cd, x dir=both, x explicit, error bar style={line width=1.3pt}] table[x=ratio, y=y, x error plus=plus, x error minus=minus, col sep=comma] {data/pilot/forest_chain_sonnet_cli.csv};
+\addlegendimage{only marks, mark=o, mark size=1.8pt, black, thick}\addlegendentry{Haiku}
+\addlegendimage{only marks, mark=square*, mark size=1.6pt, black}\addlegendentry{Sonnet}
+\end{axis}
+\end{tikzpicture}\hfill
+\begin{tikzpicture}
+\begin{axis}[xmode=log, width=0.47\textwidth, height=5.4cm, xmin=0.12, xmax=8,
+  xtick={0.25,0.5,1,2,4}, xticklabels={0.25,0.5,1,2,4}, tick label style={font=\scriptsize}, label style={font=\scriptsize},
+  title style={font=\small}, y tick label style={font=\scriptsize}, enlarge y limits=0.12,
+  xlabel={Cost relative to MCP-24 (log scale; lower is cheaper)},
+  title={(b) Repetition: bulk and fan-out}, ytick={0,...,4},
+  yticklabels={CLI sheet/comp, CLI sheet/step, CLI installed/comp, CLI skill/comp, MCP-102}]
+\draw[black!40, dashed] (axis cs:1,-1) -- (axis cs:1,5);
+\addplot[forget plot, only marks, mark=none, mcpc!45, error bars/.cd, x dir=both, x explicit] table[x=ratio, y=y, x error plus=tplus, x error minus=tminus, col sep=comma] {data/pilot/forest_loop_haiku_mcp.csv};
+\addplot[forget plot, only marks, mark=none, mcpc!45, error bars/.cd, x dir=both, x explicit] table[x=ratio, y=y, x error plus=tplus, x error minus=tminus, col sep=comma] {data/pilot/forest_loop_sonnet_mcp.csv};
+\addplot[forget plot, only marks, mark=none, clic!45, error bars/.cd, x dir=both, x explicit] table[x=ratio, y=y, x error plus=tplus, x error minus=tminus, col sep=comma] {data/pilot/forest_loop_haiku_cli.csv};
+\addplot[forget plot, only marks, mark=none, clic!45, error bars/.cd, x dir=both, x explicit] table[x=ratio, y=y, x error plus=tplus, x error minus=tminus, col sep=comma] {data/pilot/forest_loop_sonnet_cli.csv};
+\addplot[only marks, mark=o, mark size=1.8pt, mcpc, thick, error bars/.cd, x dir=both, x explicit, error bar style={line width=1.3pt}] table[x=ratio, y=y, x error plus=plus, x error minus=minus, col sep=comma] {data/pilot/forest_loop_haiku_mcp.csv};
+\addplot[only marks, mark=square*, mark size=1.6pt, mcpc, error bars/.cd, x dir=both, x explicit, error bar style={line width=1.3pt}] table[x=ratio, y=y, x error plus=plus, x error minus=minus, col sep=comma] {data/pilot/forest_loop_sonnet_mcp.csv};
+\addplot[only marks, mark=o, mark size=1.8pt, clic, thick, error bars/.cd, x dir=both, x explicit, error bar style={line width=1.3pt}] table[x=ratio, y=y, x error plus=plus, x error minus=minus, col sep=comma] {data/pilot/forest_loop_haiku_cli.csv};
+\addplot[only marks, mark=square*, mark size=1.6pt, clic, error bars/.cd, x dir=both, x explicit, error bar style={line width=1.3pt}] table[x=ratio, y=y, x error plus=plus, x error minus=minus, col sep=comma] {data/pilot/forest_loop_sonnet_cli.csv};
+\end{axis}
+\end{tikzpicture}
+\caption{\textbf{Knowledge, more than protocol, decides cost; composition pays when work repeats.} Cost of each configuration relative to \cfg{MCP-24} (dashed line), geometric mean over cells; blue: MCP, orange: CLI; hollow: Haiku, filled: Sonnet. Thick bars: 95\% Welch intervals for these tasks. Thin bars: 95\% intervals over tasks, clipped to the axis for the two repetition tasks. \cfg{CLI help/comp} and \cfg{CLI skill/step} were not run on repetition tasks.}
+\label{fig:forest}
+\Description{Two forest plots on a log scale with a dashed line at 1. Left, chain tasks: the blue MCP-102 points sit near 1.6 to 1.8; orange CLI configurations without the command sheet sit between 1.2 and 2.7; CLI sheet/step near 1.25; CLI sheet/comp at 1.21 for Haiku and 0.89 for Sonnet. Right, repetition tasks: MCP-102 near 1.3 to 1.5; CLI skill/comp around 0.64 to 0.79; CLI installed/comp around 1.1 to 1.2; CLI sheet/step at 1.15 for Haiku and 2.9 for Sonnet; CLI sheet/comp at 0.64 for Haiku and 0.61 for Sonnet.}
+\end{figure*}
+
+\begin{table*}[t]
+\caption{\textbf{Without the command sheet, every CLI configuration cost more than \cfg{MCP-24} on chains; with the sheet and composition, the CLI cost less on repetition tasks.} Ratio: geometric mean over cells (lower is cheaper). For these tasks: 95\% Welch $t$ interval, runs within cells. For tasks like these: 95\% $t$ interval over tasks. $p$: stratified permutation test, Holm-adjusted over the 24 comparisons in this table; the smallest attainable value is 0.002.}
+\label{tab:effects}
+\CatchFileDef{\effectrows}{data/pilot/table_effects.tex}{}
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}lrrrrcrrrr@{}}
+\toprule
+ & \multicolumn{4}{c}{\textbf{Haiku 5.5}} & & \multicolumn{4}{c}{\textbf{Sonnet 5.5}} \\
+\cmidrule(lr){2-5}\cmidrule(lr){7-10}
+\textbf{Configuration} & ratio & these tasks & tasks like these & $p$ & & ratio & these tasks & tasks like these & $p$ \\
+\midrule
+\effectrows
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\subsection{F1. Agents that learned the CLI from its help paid 1.6 to 2 times as much}
+\label{sec:f1}
+\finding{An agent that had to learn the CLI from its help cost more than an agent given \cfg{MCP-24}'s schemas} (RQ1). On chains \cfg{CLI help/comp} cost 1.99 times as much with Haiku and 1.62 times with Sonnet, about 0.2 and 1.7 cents more per task, with intervals above 1 for these tasks and for tasks like these; it cost more in all 8 cells for Haiku and 7 of 8 for Sonnet. These agents made two to four help calls per run, and at $k=8$ took a median of 15.5 passes against 7 for \cfg{MCP-24} (Haiku). A skill that named the command groups but no options did not close the gap (1.22 to 2.08).
+
+\subsection{F2. The generated MCP server cost more than the curated one in every cell}
+\label{sec:f2}
+\finding{\cfg{MCP-102} cost more than \cfg{MCP-24} in all 12 cells for both models} (RQ2): 1.79 and 1.57 times as much on chains with Haiku and Sonnet, and 1.53 and 1.34 times on repetition tasks ($p = 0.002$ throughout). Its schemas took 9.7k tokens against 3.0k, and it also returned 2.3 to 3.4 times as many characters of results, so the comparison does not isolate catalogue size. Against the CLI it was generated from, used with the command sheet and composed, it was the more expensive interface on both models and both task families.
+
+\subsection{F3. On chains, the CLI with the command sheet could not be told apart from MCP for Sonnet, and cost more for Haiku}
+\label{sec:f3}
+\finding{With the command sheet and composition, Sonnet's agents cost about what \cfg{MCP-24}'s did on chains, and Haiku's cost more} (RQ3). Sonnet's ratio was 0.89 (95\% CI 0.78--1.02; Holm $p = 0.26$), under a cent less per task; over tasks like these the interval, 0.57--1.39, is too wide to claim either parity or a saving. Haiku's ratio was 1.21 (1.11--1.31; Holm $p = 0.002$), about 0.07 cents more per task. The models differed: Sonnet's ratio was 0.74 times Haiku's (0.67--0.82). At $k=8$ on the large ledger Sonnet composed its work into three tool calls and four passes, and Haiku composed its work into ten calls and nine passes.
+
+\finding{Result size is a third factor.} The CLI's JSON is fuller than \cfg{MCP-24}'s summaries. With one command per call, \cfg{CLI sheet/step} agents received about twice as many characters of results as \cfg{MCP-24}'s (1.98 times for Haiku, 1.96 for Sonnet) and cost 1.28 and 1.24 times as much, although, like \cfg{MCP-24}'s agents, they issued one operation per call. Composed agents could filter results before they reached the model, and received 1.64 and 1.07 times as many characters.
+
+\subsection{F4. Composition paid when an operation repeated}
+\label{sec:f4}
+\finding{On the two repetition tasks, the composed CLI with the command sheet cost 36--39\% less than \cfg{MCP-24}} (RQ3): 0.64 with Haiku (95\% CI 0.56--0.73; Holm $p = 0.005$), about 0.3 cents less per task, and 0.61 with Sonnet (0.50--0.74; $p = 0.002$), about 4 cents less. Cost fell in three of four cells for Haiku and four of four for Sonnet. \finding{The saving was not spread alike.} Haiku saved on bulk entry only (0.41; fan-out 1.02), while Sonnet saved on both (0.67 and 0.56). Sonnet's ratio was 1.65 times Haiku's on bulk entry and 0.55 times on fan-out, so the overall ratio of ratios, 0.95, hides an interaction between model and task. In the control cell, the fan-out that needs one write, composition had nothing to compose and gave no consistent advantage: \cfg{MCP-24} was cheaper for Haiku (0.11 against 0.18 cents) and more expensive for Sonnet (1.83 against 1.61). Two tasks cannot establish generality; the interval over tasks spans 0.20 to 1.91 for Sonnet.
+
+Composition without the sheet had similar point estimates that were not established (\cfg{CLI skill/comp}, 0.79 for Haiku and 0.64 for Sonnet; Holm $p = 0.19$ and $0.067$), and restoring the superseded runs moves Sonnet's to 0.81. One command per call reversed the effect for Sonnet, at 2.90 times \cfg{MCP-24}. On bulk entry its agents issued the 25 writes in parallel, with account identifiers shortened to a prefix as the documentation, our prompt and the command sheet said they could be; \cmd{entry add} rejected each with a traceback, the agents repeated the writes, and the two bulk cells cost 5.7 and 6.6 times \cfg{MCP-24}.
+
+\begin{table*}[t]
+\caption{\textbf{Absolute cost anchors the ratios.} Median cost per run in US cents at list prices (lower is cheaper), with each configuration's ratio to \cfg{MCP-24}. (a) Chains by number of operations $k$, pooled over ledgers. (b) Repetition tasks by ledger; Fan S is the one-write control.}
+\label{tab:results}
+\CatchFileDef{\chainrows}{data/pilot/table_chain.tex}{}
+\CatchFileDef{\looprows}{data/pilot/table_loop.tex}{}
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}lrrrrrcrrrrr@{}}
+\toprule
+\textbf{(a) Chains} & \multicolumn{5}{c}{\textbf{Haiku 5.5}} & & \multicolumn{5}{c}{\textbf{Sonnet 5.5}} \\
+\cmidrule(lr){2-6}\cmidrule(lr){8-12}
+\textbf{Configuration} & $k$=1 & 2 & 4 & 8 & ratio & & $k$=1 & 2 & 4 & 8 & ratio \\
+\midrule
+\chainrows
+\midrule
+\textbf{(b) Repetition} & Bulk S & Bulk L & Fan S & Fan L & ratio & & Bulk S & Bulk L & Fan S & Fan L & ratio \\
+\midrule
+\looprows
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\subsection{F5. Composition coarsened oversight, and neither protocol made reports reliable}
+\label{sec:f5}
+\finding{The configuration that saved most put 25 writes behind one tool call} (RQ4). With \cfg{MCP-24} or one command per call, each tool call carried at most one write; on the bulk task the composed agents placed a median of 25 writes in a single call. No person approved anything in the experiment, so this describes what a reviewer would be shown, not how reviewers would fare: per-action approval would become approval of a script. In 31 of the 96 composed repetition runs the script also sent the writes' output to \texttt{/dev/null}, so not even the transcript records what each write returned. \finding{Five of the 11 failures ended in a report of success}, 5 of 704 runs, as coded by the author. Two were with \cfg{MCP-24} (an omitted account; the wrong one of two similar names), one each with \cfg{MCP-102} and \cfg{CLI sheet/step} (each refunded the wrong account), and one with \cfg{CLI skill/comp} (reminder texts carrying stray quotation marks). One \cfg{MCP-24} agent ended: ``Created 23 reminders \dots{} for the expense accounts over LKR 20,000'', when 24 qualified. The other six failures disclosed what had gone wrong.
+
+\subsection{Composition saved tokens rather than passes, and the conclusions survive a cold cache}
+\label{sec:robust}
+
+\finding{Composition saved tokens rather than passes.} Across the 24 combinations of model and cell, \cfg{CLI sheet/comp} took more passes than \cfg{MCP-24} in 8, fewer in 4 and as many in 12; its saving came from what each pass carried. Table~\ref{tab:mech} decomposes two Sonnet cells. On the 8-step chain, \cfg{CLI sheet/comp} read 36k cached tokens against 64k for \cfg{MCP-24}, and three quarters of its saving came from smaller cache writes; the help-only agent took twice the passes and read twice as much. \cfg{MCP-24} took 5 passes rather than $k+1 = 9$ because it issued independent calls in parallel. On the fan-out, smaller cache writes (54\%) and fewer output tokens (44\%) made up the saving; on Haiku's bulk task output tokens made up 63\%.
+
+\begin{table}[t]
+\caption{\textbf{The composed agent wrote less and re-read less.} Median tokens (thousands), passes, tool calls and cost (cents) in two Sonnet cells on the large ledger.}
+\label{tab:mech}
+\CatchFileDef{\mechrows}{data/pilot/table_mech.tex}{}
+\small
+\setlength{\tabcolsep}{2.6pt}
+\begin{tabular}{@{}lrrrrrr@{}}
+\toprule
+\textbf{Config.} & \textbf{Cache write} & \textbf{Cache read} & \textbf{Out} & \textbf{Passes} & \textbf{Calls} & \textbf{Cost} \\
+\midrule
+\mechrows
+\bottomrule
+\end{tabular}
+\end{table}
+
+\finding{On chains, the command sheet mattered more than composition, and installed skills cost most.} Holding composition fixed, replacing help with the sheet lowered the chain ratio from 1.99 to 1.21 (Haiku) and 1.62 to 0.89 (Sonnet); holding the sheet fixed, composition lowered it from 1.28 to 1.21 and 1.24 to 0.89. On repetition tasks composition did more, lowering the ratio from 1.15 to 0.64 and 2.90 to 0.61. Which part of the sheet mattered (scope, options or output shapes) is not identified. Installed skills were loaded in 35 of 60 Haiku and 30 of 36 Sonnet runs, arrived as an extra pass, and made \cfg{CLI installed/comp} the most expensive configuration on chains (2.74 and 1.95).
+
+\finding{The conclusions survive a cold cache and the superseded runs.} Re-pricing every run as if its first pass had written the cache raises \cfg{MCP-102}'s chain ratio to 2.44 and 2.38 and lowers \cfg{CLI help/comp}'s to 1.41 and 1.17. \cfg{CLI sheet/comp}'s ratios move by at most 0.11 and \cfg{CLI sheet/step}'s by up to 0.32; two ratios that were near 1 and not significant move just below it (\cfg{CLI skill/comp}, Sonnet, chains, 1.22 to 0.99; \cfg{CLI installed/comp}, Sonnet, repetition, 1.11 to 0.97). Restoring the superseded shared-directory runs changes no ratio by more than 0.08 except \cfg{CLI skill/comp} on Sonnet's repetition tasks, from 0.64 to 0.81.
+
+\finding{The curated MCP server was fastest, and the CLI failed in ways \cfg{MCP-24} did not.} In time reported by the agent harness, \cfg{MCP-24} took a median of 9.5 seconds per run on chains (8.6 for Haiku, 11.5 for Sonnet), against 15.3 to 39.3 for the CLI configurations and 16.3 for \cfg{MCP-102}, which like the CLI starts a Python process per call. On repetition tasks it took 26.5 seconds, against 60.3 to 69.2 for every other configuration. Runs executed six to eight at a time in waves 1--4 and one at a time in wave 5. Raw Python tracebacks of up to 9{,}400 characters entered the context in 48 of 512 CLI runs and 5 \cfg{MCP-102} runs; in 35 of these 53 runs they came from identifiers shortened to a prefix, which \cmd{entry add} rejected although the documentation and our command sheet said it would accept them. Outputs over the harness's 30~KB limit were truncated to a preview in 56 CLI runs. Five composed runs took 11.6 to 15.9 minutes: in two, a command the agent wrote waited on standard input until the harness moved it to the background; in two, the agent called the trial balance once per account; one we could not explain. \cfg{MCP-24} met none of these problems.
+
+\begin{table}[t]
+\caption{\textbf{Each finding, its evidence, and how far it reaches.}}
+\label{tab:findings}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabularx}{\columnwidth}{@{}l>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}p{2.3cm}@{}}
+\toprule
+ & \textbf{Finding and evidence} & \textbf{Scope} \\
+\midrule
+F1 & A CLI learned from help cost 1.62--1.99$\times$ \cfg{MCP-24} on chains & Both models; holds over tasks \\
+F2 & \cfg{MCP-102} cost more than \cfg{MCP-24} in all 12 cells, both models & Confounded with result size \\
+F3 & Sheet + composition on chains: 1.21$\times$ (Haiku), 0.89$\times$ (Sonnet, 0.78--1.02) & Sonnet not distinguishable from \cfg{MCP-24} \\
+F4 & Sheet + composition on repetition: 0.64$\times$ (Haiku), 0.61$\times$ (Sonnet) & Two tasks; Haiku on bulk only \\
+F5 & 25 writes per tool call; 5 of 11 failures reported as successes & Both protocols; no human reviewers \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Threats to validity}
+\finding{Construct.} Cost was measured at one provider's prices under a warm shared cache; the cold-start analysis bounds that effect. Scoring checked the expected records, and same-kind extras on three of the six tasks, not the whole state; every failure was also read by hand. The command sheet was generated for the operations the tasks needed and is a best case for CLI knowledge, so we also report help-only and skill configurations. \finding{Internal.} The design changed between waves, and three permission regimes and two degrees of parallelism are confounded with configuration and family; the run ledger records each run's conditions, and restoring the superseded runs changes one ratio materially. Only the composed configurations were given a reason to compose, and only the CLI configurations were told about prefix identifiers. \finding{External.} One product, one harness, two models from one provider, and tasks drawn from what \cfg{MCP-24} can do. \sysA{}'s CLI is absent from training data, unlike \cmd{git} or \cmd{gh}; \cfg{CLI help/comp} approximates an unfamiliar CLI, and a familiar one is left to the confirmatory study (Section~\ref{sec:agenda}). \finding{Statistical conclusion.} With three to five runs per cell and two to four tasks per family, we report intervals for these tasks and for tasks like these separately, correct for 24 comparisons, and treat the research questions as exploratory. The author built the product, tasks and harness (see the positionality statement).
+
+%% ===========================================================================
+\section{Principles for Agent-Ready CLIs}
+\label{sec:principles}
+
+Table~\ref{tab:principles} lists nine principles. Most restate good CLI design~\cite{clig2020} and advice on writing tools for agents~\cite{anthropic2025writingtools}; the evidence column separates prior studies, the case, the experiment and practitioner reports.
+
+\begin{table*}[t]
+\caption{\textbf{Nine principles for agent-ready CLIs}, with the evidence for each: prior work (cited), the case (\S\ref{sec:cases}), the experiment (\S\ref{sec:experiment}) or practitioner reports.}
+\label{tab:principles}
+\small
+\begin{tabularx}{\textwidth}{@{}l>{\raggedright\arraybackslash}p{3.9cm}X@{}}
+\toprule
+ & \textbf{Principle} & \textbf{Evidence and notes} \\
+\midrule
+P1 & Cover the product, and check it & Gaps send agents back to the GUI~\cite{zhou2026guicli}; coverage fell in \sysA{} until enforced in continuous integration (Figure~\ref{fig:parity}). \\
+P2 & Never wait for input & A flag for every interactive prompt~\cite{mistral2026spaces}. The experiment's stalls came from commands the agents wrote, not from \sysA{}'s prompts, so the evidence is practitioners'. Consent is the exception (C1). \\
+P3 & Compact structured output & \flag{json} on commands that return data, accepted as input by related commands; every composed run depended on it. The CLI's JSON was about twice the size of \cfg{MCP-24}'s summaries, and one-per-call agents paid for it (F3). \\
+P4 & Named flags for input & Flags beat single JSON payloads on accuracy and cost~\cite{mastykarz2026dont}; one study, five runs per model. \\
+P5 & A compact command sheet that matches behaviour & Documentation substitutes for demonstrations~\cite{hsieh2023tooldoc}; a 1.1k-token sheet of usage, options and output shapes cost less than help alone, a skill without options or skills loaded on demand (F1, F3). Which element mattered is not identified. A sheet that promises what the CLI does not do is costly: our sheet's claim about prefix identifiers led to most tracebacks. \\
+P6 & Errors that name the problem; never a traceback & Tracebacks of up to 9{,}400 characters entered the context in 48 of 512 CLI runs, 35 of 53 affected runs from identifiers that the documentation and command sheet said were accepted. \\
+P7 & Preview before change & \flag{dry-run} or diff for commands that change state~\cite{clig2020}; a preview should return a plan identifier to which approval (C1) can be bound. \\
+P8 & Safe under concurrent use, with batch operations & Agents issued up to 25 invocations of one command in parallel; credential refresh, writes and connections must tolerate it. A command that takes many records in one call would give one-per-call agents part of composition's saving. \\
+P9 & Built on the shared contract, described sparingly & One composition function serves \sysA{}'s CLI and API; an interface generated from the CLI cost more as MCP than the curated one (F2). \\
+\bottomrule
+\end{tabularx}
+\end{table*}
+
+%% ===========================================================================
+\section{Controls for Agents That Act Through a CLI}
+\label{sec:guardrails}
+
+An agent with a shell, a person's credentials and access to untrusted content is exposed to indirect prompt injection~\cite{greshake2023indirect,debenedetti2024agentdojo}; with network access it has all three elements of Willison's lethal trifecta: private data, untrusted content and a way to send data out~\cite{willison2025trifecta}. A coding agent that reads content generated from users' documents while holding an operator's credentials fits this description, and OWASP names the risk excessive agency~\cite{owasp2025agency}. Rules therefore have to be enforced in the core. We propose five controls and report which ones \sysA{} has.
+
+\paragraph{C1, approval out of band}
+A destructive or irreversible command should create a pending action on the server and return its identifier; the action runs only after a person approves it on a separate channel. A \flag{yes} flag the agent can pass is not consent. F5 makes this pressing: approval should attach to a script's effects, not its text. \sysA{} implements it only for return preparation, and its approval gate for the embedded agents once failed open on the CLI path (Section~\ref{sec:cases}).
+
+\paragraph{C2, agent identities with least privilege}
+Agents should hold short-lived, scoped, read-only-by-default credentials distinct from the person's. \sysA{} scopes external agents through OAuth for MCP, but at the studied commit its CLI does not authenticate at all, acting as whichever user its local configuration names. Credentials in environment variables or arguments are visible to child processes and transcripts.
+
+\paragraph{C3, deterministic computation where correctness matters}
+Figures people act on should come from code, with the model explaining them, as in \sysA{}'s rule that the model never computes money or tax.
+
+\paragraph{C4, attributable audit}
+Every action should be logged with the acting agent and the person it acted for. At the studied commit, \sysA{} logs MCP tools' actions but not CLI commands', so the surface we recommend for agents is the one that is not audited.
+
+\paragraph{C5, containment below the shell}
+Agents that run CLIs should do so in sandboxes with restricted file-system and network access, using signed, pinned releases. Command allowlists sit at the wrong level for composition: the harness's matcher refused composed calls in 29 of 128 runs, and our own harness, which then bypassed permissions under a deny-list without a sandbox, is an example of what teams do instead. Composed scripts add partial failure without rollback, retries without idempotency keys, and data interpolated into commands, so writes should be idempotent and every rule enforced in the core.
+
+%% ===========================================================================
+\section{Discussion}
+\label{sec:discussion}
+
+\paragraph{What CLI-first does and does not buy}
+The experiment does not support the claim that a CLI is the cheaper way for any agent to use a product (Table~\ref{tab:findings}). A curated MCP server was cheaper than a CLI the agent had to learn, and faster. Its agents met no tracebacks, truncated outputs or stalled commands, and each of its actions could be reviewed on its own. Since users' agents reach \sysA{} through MCP, nothing here argues for moving them. What the evidence supports is narrower: a CLI with a compact command sheet cost about as much as the curated server on chains for Sonnet, less on two repetition tasks, and less than a server generated from the same commands. The process claim, that a complete CLI lets coding agents build and verify the product, rests on the case and is the subject of study S2 in the agenda below.
+
+\paragraph{Description is a design object}
+The largest effects came from what the agent was told, not from the protocol. On chains, the command sheet did more than composition; a skill that taught rules without options did little; and skills loaded on demand cost more than a description supplied up front. On repetition tasks, composition did most of the work. For MCP, the curated server's advantage over the generated one points the same way, though that comparison also varies result size. Both suggest treating the interface description as something to design and measure. The newest models may need less of it~\cite{hou2026scale}.
+
+\paragraph{Delegation, oversight and access}
+Composition trades the granularity of oversight for cost, and on both protocols agents sometimes reported success they had not achieved. A CLI is not itself accessible to people~\cite{sampath2021accessibility}, though people who delegate do not use it. Whether delegation through agents improves access, and how people review composed actions, is the subject of study S4.
+
+\paragraph{Limits}
+We did not measure the cost of maintaining coverage. CLI checks cannot see layout, rendering or client-side state, and checks that put a language model in the loop are no more deterministic than the browser tests they replace.
+
+%% ===========================================================================
+\section{Research Agenda}
+\label{sec:agenda}
+
+Table~\ref{tab:agenda} lists four studies; S1 and S3 extend RQ1--RQ3 of Section~\ref{sec:hypotheses}. For S1, a confirmatory version of the experiment should be pre-registered with a task-level analysis and use about 20 chain and 30 to 50 repetition tasks generated from a specification, three repeats, at least three models from two providers and two harnesses, isolated caches, a frozen harness and randomised run order. It should include an MCP server whose tools match the command sheet one for one, MCP with code execution, a CLI agents already know (\cmd{gh}), tasks beyond the curated server's operations, and whole-state checks. Its cost in model calls is small; writing and verifying tasks is the constraint.
+
+\begin{table*}[t]
+\caption{\textbf{Four studies would test CLI-first beyond one product.}}
+\label{tab:agenda}
+\small
+\begin{tabularx}{\textwidth}{@{}l>{\raggedright\arraybackslash}p{3.6cm}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}p{4.0cm}@{}}
+\toprule
+ & \textbf{Question} & \textbf{Design} & \textbf{Measures} \\
+\midrule
+S1 & Does the interface change agent outcomes when the product is fixed? & Explored in \S\ref{sec:experiment}; the confirmatory design above, with injections planted in intermediate data. & Success by whole-state diff, cost by token type, passes, latency, injection success. \\
+S2 & Is the CLI a better verification surface for agent-built software? & Agents implement features under CLI acceptance checks, browser end-to-end tests or unit tests only; defects seeded in the core and the GUI; several products. & Defects caught by layer, escaped defects, flake rate, cost, time. \\
+S3 & Which CLI design choices matter to agents? & Ablate the command sheet (scope, options, output shapes) and P2--P8 on a fixed product. & Success and cost, especially for small models. \\
+S4 & How do people fare when they delegate through agents? & A natural-language front end held constant while the agent's interface and approval granularity vary (per action, per script, out of band); scripted errors and false success reports injected; synthetic data on a sandboxed backend; ethics approval and pre-registration. & Completion, time, detection of injected errors and false reports, understanding of what was done, trust and workload. \\
+\bottomrule
+\end{tabularx}
+\end{table*}
+
+%% ===========================================================================
+\section{Conclusion}
+We have argued that a product's capabilities should first become usable from its command line, and that this CLI should be the reference client against which its other clients are checked. In one product, coverage fell behind until a dedicated phase restored it, and a pass through the CLI found an approval gate that worked on only one path into the core. Holding the product fixed, we found that a CLI is not cheaper for agents because it is a CLI. Cost depended mostly on what the agent knew. Composition paid when an operation repeated, and the curated MCP server stayed fastest and easier to review. For a CLI-first product, the description an agent receives, a command sheet for the CLI and a curated catalogue for MCP, is part of the interface and should be designed and measured like the rest of it.
+
+\paragraph{Positionality and competing interests}
+The author founded Leaf Monkey Labs, which develops \sysA{} and offers a hosted version commercially, and proposed the CLI-first thesis. The author built the product, the tasks, the command sheet and the experimental harness. The experiment's adverse findings for the CLI are reported in full.
+
+\paragraph{Artifact availability}
+\sysA{}'s core is open source under the AGPL-3.0 at \url{https://github.com/leafmonkeylabs/salli-core}; the experiment used commit \texttt{0277747}. Its public history begins when the core was separated from the hosted product in October 2026, so Section~\ref{sec:cases} was measured on the earlier private history. The paper's source, the case-study scripts, the harness, the generated command sheet and MCP server, all 704 transcripts, the 243 superseded runs, the run ledger, the collection logs and the analysis are at \url{https://github.com/leafmonkeylabs/cli-first-paper}.
+
+\paragraph{Use of generative AI}
+Generative AI tools were used for literature search, repository analysis, the experimental harness and drafting, and to simulate peer review of earlier drafts. The author checked every figure and quotation against its source and takes full responsibility for the content.
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{references}
+
+\end{document}

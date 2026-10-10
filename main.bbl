@@ -1,0 +1,902 @@
+%%% -*-BibTeX-*-
+%%% Do NOT edit. File created by BibTeX with style
+%%% ACM-Reference-Format-Journals [18-Jan-2012].
+
+\begin{thebibliography}{67}
+
+%%% ====================================================================
+%%% NOTE TO THE USER: you can override these defaults by providing
+%%% customized versions of any of these macros before the \bibliography
+%%% command.  Each of them MUST provide its own final punctuation,
+%%% except for \shownote{}, \showDOI{}, and \showURL{}.  The latter two
+%%% do not use final punctuation, in order to avoid confusing it with
+%%% the Web address.
+%%%
+%%% To suppress output of a particular field, define its macro to expand
+%%% to an empty string, or better, \unskip, like this:
+%%%
+%%% \newcommand{\showDOI}[1]{\unskip}   % LaTeX syntax
+%%%
+%%% \def \showDOI #1{\unskip}           % plain TeX syntax
+%%%
+%%% ====================================================================
+
+\ifx \showCODEN    \undefined \def \showCODEN     #1{\unskip}     \fi
+\ifx \showDOI      \undefined \def \showDOI       #1{#1}\fi
+\ifx \showISBNx    \undefined \def \showISBNx     #1{\unskip}     \fi
+\ifx \showISBNxiii \undefined \def \showISBNxiii  #1{\unskip}     \fi
+\ifx \showISSN     \undefined \def \showISSN      #1{\unskip}     \fi
+\ifx \showLCCN     \undefined \def \showLCCN      #1{\unskip}     \fi
+\ifx \shownote     \undefined \def \shownote      #1{#1}          \fi
+\ifx \showarticletitle \undefined \def \showarticletitle #1{#1}   \fi
+\ifx \showURL      \undefined \def \showURL       {\relax}        \fi
+% The following commands are used for tagged output and should be
+% invisible to TeX
+\providecommand\bibfield[2]{#2}
+\providecommand\bibinfo[2]{#2}
+\providecommand\natexlab[1]{#1}
+\providecommand\showeprint[2][]{arXiv:#2}
+
+\bibitem[Abhyankar et~al\mbox{.}(2025)]%
+        {abhyankar2025osworldhuman}
+\bibfield{author}{\bibinfo{person}{Reyna Abhyankar}, \bibinfo{person}{Qi Qi},
+  {and} \bibinfo{person}{Yiying Zhang}.} \bibinfo{year}{2025}\natexlab{}.
+\newblock \bibinfo{title}{{OSWorld-Human}: Benchmarking the Efficiency of
+  Computer-Use Agents}.
+\newblock
+\newblock
+\showeprint[arxiv]{2506.16042}
+
+
+\bibitem[Amershi et~al\mbox{.}(2019)]%
+        {amershi2019guidelines}
+\bibfield{author}{\bibinfo{person}{Saleema Amershi}, \bibinfo{person}{Dan
+  Weld}, \bibinfo{person}{Mihaela Vorvoreanu}, \bibinfo{person}{Adam Fourney},
+  \bibinfo{person}{Besmira Nushi}, \bibinfo{person}{Penny Collisson},
+  \bibinfo{person}{Jina Suh}, \bibinfo{person}{Shamsi Iqbal},
+  \bibinfo{person}{Paul~N. Bennett}, \bibinfo{person}{Kori Inkpen},
+  \bibinfo{person}{Jaime Teevan}, \bibinfo{person}{Ruth Kikin-Gil}, {and}
+  \bibinfo{person}{Eric Horvitz}.} \bibinfo{year}{2019}\natexlab{}.
+\newblock \showarticletitle{Guidelines for Human-AI Interaction}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the 2019 CHI Conference on Human
+  Factors in Computing Systems}} \emph{(\bibinfo{series}{CHI '19})}.
+  \bibinfo{publisher}{ACM}, \bibinfo{pages}{1--13}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1145/3290605.3300233}
+\showDOI{\tempurl}
+
+
+\bibitem[{Anthropic}(2025a)]%
+        {anthropic2025codeexec}
+\bibfield{author}{\bibinfo{person}{{Anthropic}}.}
+  \bibinfo{year}{2025}\natexlab{a}.
+\newblock \bibinfo{title}{Code Execution with {MCP}: Building More Efficient
+  {AI} Agents}.
+\newblock
+\newblock
+\urldef\tempurl%
+\url{https://www.anthropic.com/engineering/code-execution-with-mcp}
+\showURL{%
+\tempurl}
+
+
+\bibitem[{Anthropic}(2025b)]%
+        {anthropic2025advancedtools}
+\bibfield{author}{\bibinfo{person}{{Anthropic}}.}
+  \bibinfo{year}{2025}\natexlab{b}.
+\newblock \bibinfo{title}{Introducing Advanced Tool Use on the {Claude}
+  Developer Platform}.
+\newblock
+\newblock
+\urldef\tempurl%
+\url{https://www.anthropic.com/engineering/advanced-tool-use}
+\showURL{%
+\tempurl}
+
+
+\bibitem[{Anthropic}(2025c)]%
+        {anthropic2025writingtools}
+\bibfield{author}{\bibinfo{person}{{Anthropic}}.}
+  \bibinfo{year}{2025}\natexlab{c}.
+\newblock \bibinfo{title}{Writing Effective Tools for {AI} Agents, Using {AI}
+  Agents}.
+\newblock
+\newblock
+\urldef\tempurl%
+\url{https://www.anthropic.com/engineering/writing-tools-for-agents}
+\showURL{%
+\tempurl}
+
+
+\bibitem[{Anthropic}(2026)]%
+        {anthropic2026caching}
+\bibfield{author}{\bibinfo{person}{{Anthropic}}.}
+  \bibinfo{year}{2026}\natexlab{}.
+\newblock \bibinfo{title}{Prompt Caching}.
+\newblock \bibinfo{howpublished}{Claude Platform documentation}.
+\newblock
+\urldef\tempurl%
+\url{https://docs.claude.com/en/docs/build-with-claude/prompt-caching}
+\showURL{%
+\tempurl}
+
+
+\bibitem[Baer(2026)]%
+        {baer2026agentsfirst}
+\bibfield{author}{\bibinfo{person}{Joshua Baer}.}
+  \bibinfo{year}{2026}\natexlab{}.
+\newblock \bibinfo{title}{Agents First (v0.8)}.
+\newblock
+\newblock
+\urldef\tempurl%
+\url{https://agentsfirst.dev/}
+\showURL{%
+\tempurl}
+
+
+\bibitem[Bainbridge(1983)]%
+        {bainbridge1983ironies}
+\bibfield{author}{\bibinfo{person}{Lisanne Bainbridge}.}
+  \bibinfo{year}{1983}\natexlab{}.
+\newblock \showarticletitle{Ironies of Automation}.
+\newblock \bibinfo{journal}{\emph{Automatica}} \bibinfo{volume}{19},
+  \bibinfo{number}{6} (\bibinfo{year}{1983}), \bibinfo{pages}{775--779}.
+\newblock
+
+
+\bibitem[Bird et~al\mbox{.}(2009)]%
+        {bird2009git}
+\bibfield{author}{\bibinfo{person}{Christian Bird}, \bibinfo{person}{Peter~C.
+  Rigby}, \bibinfo{person}{Earl~T. Barr}, \bibinfo{person}{David~J. Hamilton},
+  \bibinfo{person}{Daniel~M. German}, {and} \bibinfo{person}{Prem Devanbu}.}
+  \bibinfo{year}{2009}\natexlab{}.
+\newblock \showarticletitle{The Promises and Perils of Mining Git}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the 6th IEEE International Working
+  Conference on Mining Software Repositories (MSR)}}. \bibinfo{pages}{1--10}.
+\newblock
+
+
+\bibitem[{Builder.io}(2026)]%
+        {builderio2026app}
+\bibfield{author}{\bibinfo{person}{{Builder.io}}.}
+  \bibinfo{year}{2026}\natexlab{}.
+\newblock \bibinfo{title}{Your App Is Your Agent: Building Agent-Native
+  Applications}.
+\newblock
+\newblock
+\urldef\tempurl%
+\url{https://www.builder.io/blog/your-app-is-your-agent-building-agent-native-applications}
+\showURL{%
+\tempurl}
+
+
+\bibitem[{Cloudflare}(2025)]%
+        {cloudflare2025codemode}
+\bibfield{author}{\bibinfo{person}{{Cloudflare}}.}
+  \bibinfo{year}{2025}\natexlab{}.
+\newblock \bibinfo{title}{Code Mode: The Better Way to Use {MCP}}.
+\newblock
+\newblock
+\urldef\tempurl%
+\url{https://blog.cloudflare.com/code-mode/}
+\showURL{%
+\tempurl}
+
+
+\bibitem[{Cloudflare}(2026)]%
+        {cloudflare2026cf}
+\bibfield{author}{\bibinfo{person}{{Cloudflare}}.}
+  \bibinfo{year}{2026}\natexlab{}.
+\newblock \bibinfo{title}{Introducing cf: The Agentic {CLI} for the Entire
+  {Cloudflare} {API}}.
+\newblock
+\newblock
+\urldef\tempurl%
+\url{https://blog.cloudflare.com/cloudflare-cf-cli-launch/}
+\showURL{%
+\tempurl}
+
+
+\bibitem[Cockburn(2005)]%
+        {cockburn2005hexagonal}
+\bibfield{author}{\bibinfo{person}{Alistair Cockburn}.}
+  \bibinfo{year}{2005}\natexlab{}.
+\newblock \bibinfo{title}{Hexagonal Architecture (Ports and Adapters)}.
+\newblock
+\newblock
+\urldef\tempurl%
+\url{https://alistair.cockburn.us/hexagonal-architecture/}
+\showURL{%
+\tempurl}
+
+
+\bibitem[de~Silva and Balasubramaniam(2012)]%
+        {desilva2012erosion}
+\bibfield{author}{\bibinfo{person}{Lakshitha de Silva} {and}
+  \bibinfo{person}{Dharini Balasubramaniam}.} \bibinfo{year}{2012}\natexlab{}.
+\newblock \showarticletitle{Controlling Software Architecture Erosion: A
+  Survey}.
+\newblock \bibinfo{journal}{\emph{Journal of Systems and Software}}
+  \bibinfo{volume}{85}, \bibinfo{number}{1} (\bibinfo{year}{2012}),
+  \bibinfo{pages}{132--151}.
+\newblock
+
+
+\bibitem[Debenedetti et~al\mbox{.}(2025)]%
+        {debenedetti2025camel}
+\bibfield{author}{\bibinfo{person}{Edoardo Debenedetti}, \bibinfo{person}{Ilia
+  Shumailov}, \bibinfo{person}{Tianqi Fan}, \bibinfo{person}{Jamie Hayes},
+  \bibinfo{person}{Nicholas Carlini}, \bibinfo{person}{Daniel Fabian},
+  {et~al\mbox{.}}} \bibinfo{year}{2025}\natexlab{}.
+\newblock \bibinfo{title}{Defeating Prompt Injections by Design}.
+\newblock
+\newblock
+\showeprint[arxiv]{2503.18813}
+
+
+\bibitem[Debenedetti et~al\mbox{.}(2024)]%
+        {debenedetti2024agentdojo}
+\bibfield{author}{\bibinfo{person}{Edoardo Debenedetti}, \bibinfo{person}{Jie
+  Zhang}, \bibinfo{person}{Mislav Balunovi{\'c}}, \bibinfo{person}{Luca
+  Beurer-Kellner}, \bibinfo{person}{Marc Fischer}, {and}
+  \bibinfo{person}{Florian Tram{\`e}r}.} \bibinfo{year}{2024}\natexlab{}.
+\newblock \bibinfo{title}{{AgentDojo}: A Dynamic Environment to Evaluate Prompt
+  Injection Attacks and Defenses for {LLM} Agents}.
+\newblock
+\newblock
+\showeprint[arxiv]{2406.13352}
+
+
+\bibitem[Efron and Tibshirani(1994)]%
+        {efron1994bootstrap}
+\bibfield{author}{\bibinfo{person}{Bradley Efron} {and}
+  \bibinfo{person}{Robert~J. Tibshirani}.} \bibinfo{year}{1994}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{An Introduction to the Bootstrap}}.
+\newblock \bibinfo{publisher}{Chapman \& Hall/CRC}.
+\newblock
+
+
+\bibitem[Forment et~al\mbox{.}(2026)]%
+        {alier2026scaffolding}
+\bibfield{author}{\bibinfo{person}{Marc~Alier Forment},
+  \bibinfo{person}{Mar{\'i}a Jos{\'e}~Casa{\~n} Guerrero},
+  \bibinfo{person}{Francisco~Jos{\'e} Garc{\'i}a-Pe{\~n}alvo}, {and}
+  \bibinfo{person}{Juanan Pereira}.} \bibinfo{year}{2026}\natexlab{}.
+\newblock \bibinfo{title}{The Scaffolding Matters More Than the Interface: A
+  Controlled Comparison of {MCP} and {CLI} Tool Use Across Seven Agent
+  Scaffoldings, Five Language Models, and One Software Task}.
+\newblock
+\newblock
+\showeprint[arxiv]{2608.08654}
+
+
+\bibitem[Greshake et~al\mbox{.}(2023)]%
+        {greshake2023indirect}
+\bibfield{author}{\bibinfo{person}{Kai Greshake}, \bibinfo{person}{Sahar
+  Abdelnabi}, \bibinfo{person}{Shailesh Mishra}, \bibinfo{person}{Christoph
+  Endres}, \bibinfo{person}{Thorsten Holz}, {and} \bibinfo{person}{Mario
+  Fritz}.} \bibinfo{year}{2023}\natexlab{}.
+\newblock \bibinfo{title}{Not What You've Signed Up For: Compromising
+  Real-World {LLM}-Integrated Applications with Indirect Prompt Injection}.
+\newblock
+\newblock
+\showeprint[arxiv]{2302.12173}
+
+
+\bibitem[Holm(1979)]%
+        {holm1979}
+\bibfield{author}{\bibinfo{person}{Sture Holm}.}
+  \bibinfo{year}{1979}\natexlab{}.
+\newblock \showarticletitle{A Simple Sequentially Rejective Multiple Test
+  Procedure}.
+\newblock \bibinfo{journal}{\emph{Scandinavian Journal of Statistics}}
+  \bibinfo{volume}{6}, \bibinfo{number}{2} (\bibinfo{year}{1979}),
+  \bibinfo{pages}{65--70}.
+\newblock
+
+
+\bibitem[Horvitz(1999)]%
+        {horvitz1999principles}
+\bibfield{author}{\bibinfo{person}{Eric Horvitz}.}
+  \bibinfo{year}{1999}\natexlab{}.
+\newblock \showarticletitle{Principles of Mixed-Initiative User Interfaces}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the SIGCHI Conference on Human
+  Factors in Computing Systems}} \emph{(\bibinfo{series}{CHI '99})}.
+  \bibinfo{publisher}{ACM}, \bibinfo{pages}{159--166}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1145/302979.303030}
+\showDOI{\tempurl}
+
+
+\bibitem[Hou et~al\mbox{.}(2026)]%
+        {hou2026scale}
+\bibfield{author}{\bibinfo{person}{Sunjie Hou}, \bibinfo{person}{Razvan-Gabriel
+  Dumitru}, \bibinfo{person}{Edgar Arakelyan}, \bibinfo{person}{Daniel~Yue
+  Zhang}, \bibinfo{person}{Helen Li}, {and} \bibinfo{person}{Chetan Rane}.}
+  \bibinfo{year}{2026}\natexlab{}.
+\newblock \bibinfo{title}{{MCP} vs. {CLI}: Does an {AI} Agent's Tool Interface
+  Still Matter?}
+\newblock \bibinfo{howpublished}{Scale Labs blog}.
+\newblock
+\urldef\tempurl%
+\url{https://labs.scale.com/blog/mcp-vs-cli}
+\showURL{%
+\tempurl}
+
+
+\bibitem[Hsieh et~al\mbox{.}(2023)]%
+        {hsieh2023tooldoc}
+\bibfield{author}{\bibinfo{person}{Cheng-Yu Hsieh}, \bibinfo{person}{Si-An
+  Chen}, \bibinfo{person}{Chun-Liang Li}, \bibinfo{person}{Yasuhisa Fujii},
+  \bibinfo{person}{Alexander Ratner}, \bibinfo{person}{Chen-Yu Lee},
+  \bibinfo{person}{Ranjay Krishna}, {and} \bibinfo{person}{Tomas Pfister}.}
+  \bibinfo{year}{2023}\natexlab{}.
+\newblock \bibinfo{title}{Tool Documentation Enables Zero-Shot Tool-Usage with
+  Large Language Models}.
+\newblock
+\newblock
+\showeprint[arxiv]{2308.00675}
+
+
+\bibitem[Hutchins et~al\mbox{.}(1985)]%
+        {hutchins1985direct}
+\bibfield{author}{\bibinfo{person}{Edwin~L. Hutchins},
+  \bibinfo{person}{James~D. Hollan}, {and} \bibinfo{person}{Donald~A. Norman}.}
+  \bibinfo{year}{1985}\natexlab{}.
+\newblock \showarticletitle{Direct Manipulation Interfaces}.
+\newblock \bibinfo{journal}{\emph{Human--Computer Interaction}}
+  \bibinfo{volume}{1}, \bibinfo{number}{4} (\bibinfo{year}{1985}),
+  \bibinfo{pages}{311--338}.
+\newblock
+
+
+\bibitem[Jia et~al\mbox{.}(2025)]%
+        {jia2025osworldmcp}
+\bibfield{author}{\bibinfo{person}{Hongrui Jia}, \bibinfo{person}{Jitong Liao},
+  \bibinfo{person}{Xi Zhang}, \bibinfo{person}{Haiyang Xu},
+  \bibinfo{person}{Tianbao Xie}, \bibinfo{person}{Chaoya Jiang},
+  {et~al\mbox{.}}} \bibinfo{year}{2025}\natexlab{}.
+\newblock \bibinfo{title}{{OSWorld-MCP}: Benchmarking {MCP} Tool Invocation in
+  Computer-Use Agents}.
+\newblock
+\newblock
+\showeprint[arxiv]{2510.24563}
+
+
+\bibitem[Jimenez et~al\mbox{.}(2024)]%
+        {jimenez2024swebench}
+\bibfield{author}{\bibinfo{person}{Carlos~E. Jimenez}, \bibinfo{person}{John
+  Yang}, \bibinfo{person}{Alexander Wettig}, \bibinfo{person}{Shunyu Yao},
+  \bibinfo{person}{Kexin Pei}, \bibinfo{person}{Ofir Press}, {and}
+  \bibinfo{person}{Karthik Narasimhan}.} \bibinfo{year}{2024}\natexlab{}.
+\newblock \showarticletitle{{SWE}-bench: Can Language Models Resolve Real-World
+  {GitHub} Issues?}. In \bibinfo{booktitle}{\emph{International Conference on
+  Learning Representations (ICLR)}}.
+\newblock
+
+
+\bibitem[Kim et~al\mbox{.}(2023)]%
+        {kim2023llmcompiler}
+\bibfield{author}{\bibinfo{person}{Sehoon Kim}, \bibinfo{person}{Suhong Moon},
+  \bibinfo{person}{Ryan Tabrizi}, \bibinfo{person}{Nicholas Lee},
+  \bibinfo{person}{Michael~W. Mahoney}, \bibinfo{person}{Kurt Keutzer}, {and}
+  \bibinfo{person}{Amir Gholami}.} \bibinfo{year}{2023}\natexlab{}.
+\newblock \bibinfo{title}{An {LLM} Compiler for Parallel Function Calling}.
+\newblock
+\newblock
+\showeprint[arxiv]{2312.04511}
+
+
+\bibitem[Lee and See(2004)]%
+        {lee2004trust}
+\bibfield{author}{\bibinfo{person}{John~D. Lee} {and}
+  \bibinfo{person}{Katrina~A. See}.} \bibinfo{year}{2004}\natexlab{}.
+\newblock \showarticletitle{Trust in Automation: Designing for Appropriate
+  Reliance}.
+\newblock \bibinfo{journal}{\emph{Human Factors}} \bibinfo{volume}{46},
+  \bibinfo{number}{1} (\bibinfo{year}{2004}), \bibinfo{pages}{50--80}.
+\newblock
+
+
+\bibitem[Lin et~al\mbox{.}(2018)]%
+        {lin2018nl2bash}
+\bibfield{author}{\bibinfo{person}{Xi~Victoria Lin}, \bibinfo{person}{Chenglong
+  Wang}, \bibinfo{person}{Luke Zettlemoyer}, {and} \bibinfo{person}{Michael~D.
+  Ernst}.} \bibinfo{year}{2018}\natexlab{}.
+\newblock \showarticletitle{{NL2Bash}: A Corpus and Semantic Parser for Natural
+  Language Interface to the {Linux} Operating System}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the Eleventh International
+  Conference on Language Resources and Evaluation (LREC)}}.
+\newblock
+
+
+\bibitem[Lu et~al\mbox{.}(2024)]%
+        {lu2024axis}
+\bibfield{author}{\bibinfo{person}{Junting Lu}, \bibinfo{person}{Zhiyang
+  Zhang}, \bibinfo{person}{Fangkai Yang}, \bibinfo{person}{Jue Zhang},
+  \bibinfo{person}{Lu Wang}, \bibinfo{person}{Chao Du},
+  \bibinfo{person}{Qingwei Lin}, \bibinfo{person}{Saravan Rajmohan},
+  {et~al\mbox{.}}} \bibinfo{year}{2024}\natexlab{}.
+\newblock \bibinfo{title}{{AXIS}: Efficient Human-Agent-Computer Interaction
+  with {API}-First {LLM}-Based Agents}.
+\newblock
+\newblock
+\showeprint[arxiv]{2409.17140}
+
+
+\bibitem[Maes(1994)]%
+        {maes1994agents}
+\bibfield{author}{\bibinfo{person}{Pattie Maes}.}
+  \bibinfo{year}{1994}\natexlab{}.
+\newblock \showarticletitle{Agents that Reduce Work and Information Overload}.
+\newblock \bibinfo{journal}{\emph{Commun. ACM}} \bibinfo{volume}{37},
+  \bibinfo{number}{7} (\bibinfo{year}{1994}), \bibinfo{pages}{30--40}.
+\newblock
+
+
+\bibitem[Mao and Pradhan(2026)]%
+        {mao2026smithery}
+\bibfield{author}{\bibinfo{person}{Henry Mao} {and} \bibinfo{person}{Rach
+  Pradhan}.} \bibinfo{year}{2026}\natexlab{}.
+\newblock \bibinfo{title}{{MCP} vs {CLI} Is the Wrong Fight}.
+\newblock \bibinfo{howpublished}{Smithery blog}.
+\newblock
+\urldef\tempurl%
+\url{https://smithery.ai/blog/mcp-vs-cli-is-the-wrong-fight}
+\showURL{%
+\tempurl}
+
+
+\bibitem[Mastykarz(2026)]%
+        {mastykarz2026dont}
+\bibfield{author}{\bibinfo{person}{Waldek Mastykarz}.}
+  \bibinfo{year}{2026}\natexlab{}.
+\newblock \bibinfo{title}{Don't Rewrite Your {CLI} for Agents}.
+\newblock \bibinfo{howpublished}{Microsoft Developer Blog}.
+\newblock
+\urldef\tempurl%
+\url{https://developer.microsoft.com/blog/dont-rewrite-your-cli-for-agents/}
+\showURL{%
+\tempurl}
+
+
+\bibitem[McIlroy et~al\mbox{.}(1978)]%
+        {mcilroy1978unix}
+\bibfield{author}{\bibinfo{person}{M.~Douglas McIlroy},
+  \bibinfo{person}{Elliot~N. Pinson}, {and} \bibinfo{person}{Berkley~A.
+  Tague}.} \bibinfo{year}{1978}\natexlab{}.
+\newblock \showarticletitle{{UNIX} Time-Sharing System: Foreword}.
+\newblock \bibinfo{journal}{\emph{The Bell System Technical Journal}}
+  \bibinfo{volume}{57}, \bibinfo{number}{6} (\bibinfo{year}{1978}),
+  \bibinfo{pages}{1899--1904}.
+\newblock
+
+
+\bibitem[Merrill et~al\mbox{.}(2026)]%
+        {merrill2026terminalbench}
+\bibfield{author}{\bibinfo{person}{Mike~A. Merrill},
+  \bibinfo{person}{Alexander~G. Shaw}, \bibinfo{person}{Nicholas Carlini},
+  \bibinfo{person}{Boxuan Li}, \bibinfo{person}{Harsh Raj},
+  \bibinfo{person}{Ivan Bercovich}, \bibinfo{person}{Lin Shi},
+  \bibinfo{person}{Jeong~Yeon Shin}, {et~al\mbox{.}}}
+  \bibinfo{year}{2026}\natexlab{}.
+\newblock \bibinfo{title}{Terminal-Bench: Benchmarking Agents on Hard,
+  Realistic Tasks in Command Line Interfaces}.
+\newblock
+\newblock
+\showeprint[arxiv]{2601.11868}
+
+
+\bibitem[{MindStudio}(2026)]%
+        {mindstudio2026mcpcli}
+\bibfield{author}{\bibinfo{person}{{MindStudio}}.}
+  \bibinfo{year}{2026}\natexlab{}.
+\newblock \bibinfo{title}{{MCP} Servers vs {CLI} Tools for {AI} Agents: When to
+  Use Each}.
+\newblock \bibinfo{howpublished}{MindStudio blog, edited by Luis
+  Chavez-Mattos}.
+\newblock
+\urldef\tempurl%
+\url{https://www.mindstudio.ai/blog/mcp-servers-vs-cli-tools-for-ai-agents}
+\showURL{%
+\tempurl}
+
+
+\bibitem[{Mistral AI}(2026)]%
+        {mistral2026spaces}
+\bibfield{author}{\bibinfo{person}{{Mistral AI}}.}
+  \bibinfo{year}{2026}\natexlab{}.
+\newblock \bibinfo{title}{Spaces: A {CLI} Built for Humans and Agents}.
+\newblock
+\newblock
+\urldef\tempurl%
+\url{https://mistral.ai/news/spaces}
+\showURL{%
+\tempurl}
+
+
+\bibitem[{Model Context Protocol}(2025)]%
+        {mcp2024spec}
+\bibfield{author}{\bibinfo{person}{{Model Context Protocol}}.}
+  \bibinfo{year}{2025}\natexlab{}.
+\newblock \bibinfo{title}{Model Context Protocol Specification, version
+  2025-06-18}.
+\newblock
+\newblock
+\urldef\tempurl%
+\url{https://modelcontextprotocol.io/specification/2025-06-18}
+\showURL{%
+\tempurl}
+
+
+\bibitem[Myers and Stylos(2016)]%
+        {myers2016api}
+\bibfield{author}{\bibinfo{person}{Brad~A. Myers} {and}
+  \bibinfo{person}{Jeffrey Stylos}.} \bibinfo{year}{2016}\natexlab{}.
+\newblock \showarticletitle{Improving {API} Usability}.
+\newblock \bibinfo{journal}{\emph{Commun. ACM}} \bibinfo{volume}{59},
+  \bibinfo{number}{6} (\bibinfo{year}{2016}), \bibinfo{pages}{62--69}.
+\newblock
+
+
+\bibitem[{Netlify}(2025)]%
+        {biilmann2025ax}
+\bibfield{author}{\bibinfo{person}{{Netlify}}.}
+  \bibinfo{year}{2025}\natexlab{}.
+\newblock \bibinfo{title}{Agent Experience ({AX})}.
+\newblock
+\newblock
+\urldef\tempurl%
+\url{https://www.netlify.com/agent-experience/}
+\showURL{%
+\tempurl}
+
+
+\bibitem[Neustaedter and Sengers(2012)]%
+        {neustaedter2012autobiographical}
+\bibfield{author}{\bibinfo{person}{Carman Neustaedter} {and}
+  \bibinfo{person}{Phoebe Sengers}.} \bibinfo{year}{2012}\natexlab{}.
+\newblock \showarticletitle{Autobiographical Design in {HCI} Research:
+  Designing and Learning through Use-It-Yourself}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the Designing Interactive Systems
+  Conference (DIS)}}. \bibinfo{pages}{514--523}.
+\newblock
+
+
+\bibitem[Nielsen(2023)]%
+        {nielsen2023paradigm}
+\bibfield{author}{\bibinfo{person}{Jakob Nielsen}.}
+  \bibinfo{year}{2023}\natexlab{}.
+\newblock \bibinfo{title}{{AI}: First New {UI} Paradigm in 60 Years}.
+\newblock \bibinfo{howpublished}{Nielsen Norman Group}.
+\newblock
+\urldef\tempurl%
+\url{https://www.nngroup.com/articles/ai-paradigm/}
+\showURL{%
+\tempurl}
+
+
+\bibitem[{Nordic APIs}(2026)]%
+        {nordicapis2026mcpcli}
+\bibfield{author}{\bibinfo{person}{{Nordic APIs}}.}
+  \bibinfo{year}{2026}\natexlab{}.
+\newblock \bibinfo{title}{{MCP} vs. {CLI}: Which Is Better for Agentic {AI}?}
+\newblock \bibinfo{howpublished}{Nordic APIs}.
+\newblock
+\urldef\tempurl%
+\url{https://nordicapis.com/mcp-vs-cli-which-is-better-for-agentic-ai/}
+\showURL{%
+\tempurl}
+
+
+\bibitem[Norman(1994)]%
+        {norman1994agents}
+\bibfield{author}{\bibinfo{person}{Donald~A. Norman}.}
+  \bibinfo{year}{1994}\natexlab{}.
+\newblock \showarticletitle{How Might People Interact with Agents}.
+\newblock \bibinfo{journal}{\emph{Commun. ACM}} \bibinfo{volume}{37},
+  \bibinfo{number}{7} (\bibinfo{year}{1994}), \bibinfo{pages}{68--71}.
+\newblock
+
+
+\bibitem[{OWASP Gen AI Security Project}(2025)]%
+        {owasp2025agency}
+\bibfield{author}{\bibinfo{person}{{OWASP Gen AI Security Project}}.}
+  \bibinfo{year}{2025}\natexlab{}.
+\newblock \bibinfo{title}{{LLM06:2025} Excessive Agency}.
+\newblock
+\newblock
+\urldef\tempurl%
+\url{https://genai.owasp.org/llmrisk/llm062025-excessive-agency/}
+\showURL{%
+\tempurl}
+
+
+\bibitem[Parasuraman et~al\mbox{.}(2000)]%
+        {parasuraman2000model}
+\bibfield{author}{\bibinfo{person}{Raja Parasuraman},
+  \bibinfo{person}{Thomas~B. Sheridan}, {and} \bibinfo{person}{Christopher~D.
+  Wickens}.} \bibinfo{year}{2000}\natexlab{}.
+\newblock \showarticletitle{A Model for Types and Levels of Human Interaction
+  with Automation}.
+\newblock \bibinfo{journal}{\emph{IEEE Transactions on Systems, Man, and
+  Cybernetics -- Part A: Systems and Humans}} \bibinfo{volume}{30},
+  \bibinfo{number}{3} (\bibinfo{year}{2000}), \bibinfo{pages}{286--297}.
+\newblock
+
+
+\bibitem[Perry and Wolf(1992)]%
+        {perry1992foundations}
+\bibfield{author}{\bibinfo{person}{Dewayne~E. Perry} {and}
+  \bibinfo{person}{Alexander~L. Wolf}.} \bibinfo{year}{1992}\natexlab{}.
+\newblock \showarticletitle{Foundations for the Study of Software
+  Architecture}.
+\newblock \bibinfo{journal}{\emph{ACM SIGSOFT Software Engineering Notes}}
+  \bibinfo{volume}{17}, \bibinfo{number}{4} (\bibinfo{year}{1992}),
+  \bibinfo{pages}{40--52}.
+\newblock
+
+
+\bibitem[Poehnelt(2026)]%
+        {poehnelt2026rewrite}
+\bibfield{author}{\bibinfo{person}{Justin Poehnelt}.}
+  \bibinfo{year}{2026}\natexlab{}.
+\newblock \bibinfo{title}{You Need to Rewrite Your {CLI} for {AI} Agents}.
+\newblock
+\newblock
+\urldef\tempurl%
+\url{https://justin.poehnelt.com/posts/rewrite-your-cli-for-ai-agents/}
+\showURL{%
+\tempurl}
+
+
+\bibitem[{PostHog}(2026)]%
+        {posthog2026golden}
+\bibfield{author}{\bibinfo{person}{{PostHog}}.}
+  \bibinfo{year}{2026}\natexlab{}.
+\newblock \bibinfo{title}{The Golden Rules of Agent-First Product Engineering}.
+\newblock
+\newblock
+\urldef\tempurl%
+\url{https://newsletter.posthog.com/p/the-golden-rules-of-agent-first-product}
+\showURL{%
+\tempurl}
+
+
+\bibitem[Prasad et~al\mbox{.}(2020)]%
+        {clig2020}
+\bibfield{author}{\bibinfo{person}{Aanand Prasad}, \bibinfo{person}{Ben
+  Firshman}, \bibinfo{person}{Carl Tashian}, {and} \bibinfo{person}{Eva
+  Parish}.} \bibinfo{year}{2020}\natexlab{}.
+\newblock \bibinfo{title}{Command Line Interface Guidelines}.
+\newblock
+\newblock
+\urldef\tempurl%
+\url{https://clig.dev/}
+\showURL{%
+\tempurl}
+
+
+\bibitem[Qi(2026)]%
+        {qi2026ibm}
+\bibfield{author}{\bibinfo{person}{Jia Qi}.} \bibinfo{year}{2026}\natexlab{}.
+\newblock \bibinfo{title}{{MCP} vs {CLI}: Two Ways to Let {AI} Take Action (and
+  Why It Matters)}.
+\newblock \bibinfo{howpublished}{IBM Community blog}.
+\newblock
+\urldef\tempurl%
+\url{https://community.ibm.com/community/user/blogs/jia-qi/2026/04/08/mcp-vs-cli}
+\showURL{%
+\tempurl}
+
+
+\bibitem[Runeson and H{\"o}st(2009)]%
+        {runeson2009case}
+\bibfield{author}{\bibinfo{person}{Per Runeson} {and} \bibinfo{person}{Martin
+  H{\"o}st}.} \bibinfo{year}{2009}\natexlab{}.
+\newblock \showarticletitle{Guidelines for Conducting and Reporting Case Study
+  Research in Software Engineering}.
+\newblock \bibinfo{journal}{\emph{Empirical Software Engineering}}
+  \bibinfo{volume}{14}, \bibinfo{number}{2} (\bibinfo{year}{2009}),
+  \bibinfo{pages}{131--164}.
+\newblock
+
+
+\bibitem[Sampath et~al\mbox{.}(2021)]%
+        {sampath2021accessibility}
+\bibfield{author}{\bibinfo{person}{Harini Sampath}, \bibinfo{person}{Alice
+  Merrick}, {and} \bibinfo{person}{Andrew Macvean}.}
+  \bibinfo{year}{2021}\natexlab{}.
+\newblock \showarticletitle{Accessibility of Command Line Interfaces}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the 2021 CHI Conference on Human
+  Factors in Computing Systems}} \emph{(\bibinfo{series}{CHI '21})}.
+  \bibinfo{publisher}{ACM}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1145/3411764.3445544}
+\showDOI{\tempurl}
+
+
+\bibitem[Schmitt(2026)]%
+        {schmitt2026circleci}
+\bibfield{author}{\bibinfo{person}{Jacob Schmitt}.}
+  \bibinfo{year}{2026}\natexlab{}.
+\newblock \bibinfo{title}{{MCP} vs. {CLI} for {AI}-native development}.
+\newblock \bibinfo{howpublished}{CircleCI blog}.
+\newblock
+\urldef\tempurl%
+\url{https://circleci.com/blog/mcp-vs-cli/}
+\showURL{%
+\tempurl}
+
+
+\bibitem[Shneiderman and Maes(1997)]%
+        {shneiderman1997direct}
+\bibfield{author}{\bibinfo{person}{Ben Shneiderman} {and}
+  \bibinfo{person}{Pattie Maes}.} \bibinfo{year}{1997}\natexlab{}.
+\newblock \showarticletitle{Direct Manipulation vs. Interface Agents}.
+\newblock \bibinfo{journal}{\emph{Interactions}} \bibinfo{volume}{4},
+  \bibinfo{number}{6} (\bibinfo{year}{1997}), \bibinfo{pages}{42--61}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1145/267505.267514}
+\showDOI{\tempurl}
+
+
+\bibitem[Wang et~al\mbox{.}(2024)]%
+        {wang2024codeact}
+\bibfield{author}{\bibinfo{person}{Xingyao Wang}, \bibinfo{person}{Yangyi
+  Chen}, \bibinfo{person}{Lifan Yuan}, \bibinfo{person}{Yizhe Zhang},
+  \bibinfo{person}{Yunzhu Li}, \bibinfo{person}{Hao Peng}, {and}
+  \bibinfo{person}{Heng Ji}.} \bibinfo{year}{2024}\natexlab{}.
+\newblock \showarticletitle{Executable Code Actions Elicit Better {LLM}
+  Agents}. In \bibinfo{booktitle}{\emph{Proceedings of the 41st International
+  Conference on Machine Learning (ICML)}}.
+\newblock
+\newblock
+\shownote{arXiv:2402.01030}.
+
+
+\bibitem[Willison(2025)]%
+        {willison2025trifecta}
+\bibfield{author}{\bibinfo{person}{Simon Willison}.}
+  \bibinfo{year}{2025}\natexlab{}.
+\newblock \bibinfo{title}{The Lethal Trifecta for {AI} Agents: Private Data,
+  Untrusted Content, and External Communication}.
+\newblock
+\newblock
+\urldef\tempurl%
+\url{https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/}
+\showURL{%
+\tempurl}
+
+
+\bibitem[Wroblewski(2009)]%
+        {wroblewski2009mobile}
+\bibfield{author}{\bibinfo{person}{Luke Wroblewski}.}
+  \bibinfo{year}{2009}\natexlab{}.
+\newblock \bibinfo{title}{Mobile First}.
+\newblock
+\newblock
+\urldef\tempurl%
+\url{https://www.lukew.com/ff/entry.asp?933}
+\showURL{%
+\tempurl}
+
+
+\bibitem[Wroblewski(2011)]%
+        {wroblewski2011mobile}
+\bibfield{author}{\bibinfo{person}{Luke Wroblewski}.}
+  \bibinfo{year}{2011}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{Mobile First}}.
+\newblock \bibinfo{publisher}{A Book Apart}, \bibinfo{address}{New York, NY,
+  USA}.
+\newblock
+
+
+\bibitem[Xu et~al\mbox{.}(2023)]%
+        {xu2023rewoo}
+\bibfield{author}{\bibinfo{person}{Binfeng Xu}, \bibinfo{person}{Zhiyuan Peng},
+  \bibinfo{person}{Bowen Lei}, \bibinfo{person}{Subhabrata Mukherjee},
+  \bibinfo{person}{Yuchen Liu}, {and} \bibinfo{person}{Dongkuan Xu}.}
+  \bibinfo{year}{2023}\natexlab{}.
+\newblock \bibinfo{title}{{ReWOO}: Decoupling Reasoning from Observations for
+  Efficient Augmented Language Models}.
+\newblock
+\newblock
+\showeprint[arxiv]{2305.18323}
+
+
+\bibitem[Yang et~al\mbox{.}(2024)]%
+        {yang2024sweagent}
+\bibfield{author}{\bibinfo{person}{John Yang}, \bibinfo{person}{Carlos~E.
+  Jimenez}, \bibinfo{person}{Alexander Wettig}, \bibinfo{person}{Kilian
+  Lieret}, \bibinfo{person}{Shunyu Yao}, \bibinfo{person}{Karthik Narasimhan},
+  {and} \bibinfo{person}{Ofir Press}.} \bibinfo{year}{2024}\natexlab{}.
+\newblock \showarticletitle{{SWE}-agent: Agent-Computer Interfaces Enable
+  Automated Software Engineering}. In \bibinfo{booktitle}{\emph{Advances in
+  Neural Information Processing Systems (NeurIPS)}}.
+\newblock
+\newblock
+\shownote{arXiv:2405.15793}.
+
+
+\bibitem[Yang et~al\mbox{.}(2023)]%
+        {yang2023intercode}
+\bibfield{author}{\bibinfo{person}{John Yang}, \bibinfo{person}{Akshara
+  Prabhakar}, \bibinfo{person}{Karthik Narasimhan}, {and}
+  \bibinfo{person}{Shunyu Yao}.} \bibinfo{year}{2023}\natexlab{}.
+\newblock \bibinfo{title}{{InterCode}: Standardizing and Benchmarking
+  Interactive Coding with Execution Feedback}.
+\newblock
+\newblock
+\showeprint[arxiv]{2306.14898}
+
+
+\bibitem[Zamfirescu-Pereira et~al\mbox{.}(2023)]%
+        {zamfirescu2023johnny}
+\bibfield{author}{\bibinfo{person}{J.D. Zamfirescu-Pereira},
+  \bibinfo{person}{Richmond~Y. Wong}, \bibinfo{person}{Bjoern Hartmann}, {and}
+  \bibinfo{person}{Qian Yang}.} \bibinfo{year}{2023}\natexlab{}.
+\newblock \showarticletitle{Why {Johnny} Can't Prompt: How Non-{AI} Experts Try
+  (and Fail) to Design {LLM} Prompts}. In \bibinfo{booktitle}{\emph{Proceedings
+  of the 2023 CHI Conference on Human Factors in Computing Systems}}
+  \emph{(\bibinfo{series}{CHI '23})}.
+\newblock
+
+
+\bibitem[Zechner(2025)]%
+        {zechner2025mcpcli}
+\bibfield{author}{\bibinfo{person}{Mario Zechner}.}
+  \bibinfo{year}{2025}\natexlab{}.
+\newblock \bibinfo{title}{{MCP} vs {CLI}: Benchmarking Tools for Coding
+  Agents}.
+\newblock
+\newblock
+\urldef\tempurl%
+\url{https://mariozechner.at/posts/2025-08-15-mcp-vs-cli/}
+\showURL{%
+\tempurl}
+
+
+\bibitem[Zhang et~al\mbox{.}(2025a)]%
+        {zhang2025apigui}
+\bibfield{author}{\bibinfo{person}{Chaoyun Zhang}, \bibinfo{person}{Shilin He},
+  \bibinfo{person}{Liqun Li}, \bibinfo{person}{Si Qin}, \bibinfo{person}{Yu
+  Kang}, \bibinfo{person}{Qingwei Lin}, \bibinfo{person}{Saravan Rajmohan},
+  {and} \bibinfo{person}{Dongmei Zhang}.} \bibinfo{year}{2025}\natexlab{a}.
+\newblock \bibinfo{title}{{API} Agents vs. {GUI} Agents: Divergence and
+  Convergence}.
+\newblock
+\newblock
+\showeprint[arxiv]{2503.11069}
+
+
+\bibitem[Zhang et~al\mbox{.}(2025b)]%
+        {zhang2025ufo2}
+\bibfield{author}{\bibinfo{person}{Chaoyun Zhang}, \bibinfo{person}{He Huang},
+  \bibinfo{person}{Chiming Ni}, \bibinfo{person}{Jian Mu}, \bibinfo{person}{Si
+  Qin}, \bibinfo{person}{Shilin He}, {et~al\mbox{.}}}
+  \bibinfo{year}{2025}\natexlab{b}.
+\newblock \bibinfo{title}{{UFO2}: The Desktop {AgentOS}}.
+\newblock
+\newblock
+\showeprint[arxiv]{2504.14603}
+
+
+\bibitem[Zhou et~al\mbox{.}(2026)]%
+        {zhou2026guicli}
+\bibfield{author}{\bibinfo{person}{Xiao Zhou}, \bibinfo{person}{Siyue Zhang},
+  \bibinfo{person}{Yilun Zhao}, \bibinfo{person}{Jinbiao Wei},
+  \bibinfo{person}{Tingyu Song}, \bibinfo{person}{Arman Cohan}, {and}
+  \bibinfo{person}{Chen Zhao}.} \bibinfo{year}{2026}\natexlab{}.
+\newblock \bibinfo{title}{{GUI} vs. {CLI}: Execution Bottlenecks in Screen-Only
+  and Skill-Mediated Computer-Use Agents}.
+\newblock
+\newblock
+\showeprint[arxiv]{2606.24551}
+
+
+\end{thebibliography}

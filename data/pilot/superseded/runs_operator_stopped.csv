@@ -1,0 +1,2 @@
+run_id,task,k,size,arm,model,rep,success,checks,passes,tool_calls,tool_result_chars,input_tokens,cache_write_tokens,cache_read_tokens,output_tokens,cost_usd,duration_s,num_turns,denied,is_error,final
+T8-large-cli-pipe-skills-sonnet-3-5d66d9,T8,8,large,cli-pipe-skills,sonnet,3,False,"{""account"": true, ""software_entry"": false, ""refund_entry"": false, ""reminder"": false, ""target"": ""School Fees (Family)""}",3,3,2536,0,0,0,0,0,14.1,0,0,True,

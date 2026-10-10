@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this package, please cite the paper."
+title: "CLI-First: paper and replication package"
+version: "1.0.0"
+authors:
+  - family-names: Irugalbandara
+    given-names: Chandra
+    affiliation: Leaf Monkey Labs
+    email: chandra@leafmonkey.org
+repository-code: "https://github.com/leafmonkeylabs/cli-first-paper"
+license: [MIT, CC-BY-4.0]
+preferred-citation:
+  type: article
+  title: "CLI-First: What an Agent Knows About an Interface Matters More Than Its Protocol"
+  authors:
+    - family-names: Irugalbandara
+      given-names: Chandra
+      affiliation: Leaf Monkey Labs
+  year: 2026

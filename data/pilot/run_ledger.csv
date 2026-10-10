@@ -1,0 +1,948 @@
+run_id,task,size,arm,model,rep,wave,parallel,permissions,status,reason
+T1-small-mcp-haiku-1-f17878,T1,small,mcp,haiku,1,1,6,mcp tools only,retained,
+T1-large-mcp-haiku-1-fe98dc,T1,large,mcp,haiku,1,1,6,mcp tools only,retained,
+T1-large-cli-step-haiku-1-7cb431,T1,large,cli-step,haiku,1,1,6,allowlist: salli only,retained,
+T1-small-cli-step-haiku-1-a4e11c,T1,small,cli-step,haiku,1,1,6,allowlist: salli only,retained,
+T2-small-mcp-haiku-1-296c56,T2,small,mcp,haiku,1,1,6,mcp tools only,retained,
+T2-small-cli-step-haiku-1-8ee4e6,T2,small,cli-step,haiku,1,1,6,allowlist: salli only,retained,
+T2-large-mcp-haiku-1-c24c67,T2,large,mcp,haiku,1,1,6,mcp tools only,retained,
+T2-large-cli-step-haiku-1-36af22,T2,large,cli-step,haiku,1,1,6,allowlist: salli only,retained,
+T4-small-mcp-haiku-1-f05c85,T4,small,mcp,haiku,1,1,6,mcp tools only,retained,
+T4-large-mcp-haiku-1-098b4f,T4,large,mcp,haiku,1,1,6,mcp tools only,retained,
+T4-small-cli-step-haiku-1-363baa,T4,small,cli-step,haiku,1,1,6,allowlist: salli only,retained,
+T4-large-cli-step-haiku-1-817fe0,T4,large,cli-step,haiku,1,1,6,allowlist: salli only,retained,
+T8-small-mcp-haiku-1-1cefb8,T8,small,mcp,haiku,1,1,6,mcp tools only,retained,
+T8-large-mcp-haiku-1-0a64cb,T8,large,mcp,haiku,1,1,6,mcp tools only,retained,
+T8-large-cli-step-haiku-1-5cbf0b,T8,large,cli-step,haiku,1,1,6,allowlist: salli only,retained,
+T1-small-mcp-haiku-2-0cc565,T1,small,mcp,haiku,2,1,6,mcp tools only,retained,
+T1-small-cli-step-haiku-2-f1d0e3,T1,small,cli-step,haiku,2,1,6,allowlist: salli only,retained,
+T1-large-mcp-haiku-2-560d25,T1,large,mcp,haiku,2,1,6,mcp tools only,retained,
+T1-large-cli-step-haiku-2-0a61db,T1,large,cli-step,haiku,2,1,6,allowlist: salli only,retained,
+T2-small-mcp-haiku-2-f7e37d,T2,small,mcp,haiku,2,1,6,mcp tools only,retained,
+T2-small-cli-step-haiku-2-7028a2,T2,small,cli-step,haiku,2,1,6,allowlist: salli only,retained,
+T2-large-mcp-haiku-2-4fb203,T2,large,mcp,haiku,2,1,6,mcp tools only,retained,
+T2-large-cli-step-haiku-2-e5b1bb,T2,large,cli-step,haiku,2,1,6,allowlist: salli only,retained,
+T4-small-mcp-haiku-2-99205f,T4,small,mcp,haiku,2,1,6,mcp tools only,retained,
+T4-large-mcp-haiku-2-8839ec,T4,large,mcp,haiku,2,1,6,mcp tools only,retained,
+T4-small-cli-step-haiku-2-a08d09,T4,small,cli-step,haiku,2,1,6,allowlist: salli only,retained,
+T8-small-cli-step-haiku-1-720772,T8,small,cli-step,haiku,1,1,6,allowlist: salli only,retained,
+T4-large-cli-step-haiku-2-cd5d4f,T4,large,cli-step,haiku,2,1,6,allowlist: salli only,retained,
+T8-small-mcp-haiku-2-148f68,T8,small,mcp,haiku,2,1,6,mcp tools only,retained,
+T8-large-mcp-haiku-2-9dd8bf,T8,large,mcp,haiku,2,1,6,mcp tools only,retained,
+T8-small-cli-step-haiku-2-b1b62f,T8,small,cli-step,haiku,2,1,6,allowlist: salli only,retained,
+T1-small-mcp-haiku-3-f41335,T1,small,mcp,haiku,3,1,6,mcp tools only,retained,
+T1-small-cli-step-haiku-3-428de3,T1,small,cli-step,haiku,3,1,6,allowlist: salli only,retained,
+T8-large-cli-step-haiku-2-2521a2,T8,large,cli-step,haiku,2,1,6,allowlist: salli only,retained,
+T1-large-mcp-haiku-3-c49add,T1,large,mcp,haiku,3,1,6,mcp tools only,retained,
+T2-small-mcp-haiku-3-701a97,T2,small,mcp,haiku,3,1,6,mcp tools only,retained,
+T1-large-cli-step-haiku-3-30c19c,T1,large,cli-step,haiku,3,1,6,allowlist: salli only,retained,
+T2-small-cli-step-haiku-3-01d905,T2,small,cli-step,haiku,3,1,6,allowlist: salli only,retained,
+T2-large-mcp-haiku-3-ca4311,T2,large,mcp,haiku,3,1,6,mcp tools only,retained,
+T2-large-cli-step-haiku-3-f18219,T2,large,cli-step,haiku,3,1,6,allowlist: salli only,retained,
+T4-small-mcp-haiku-3-c67988,T4,small,mcp,haiku,3,1,6,mcp tools only,retained,
+T4-small-cli-step-haiku-3-be466e,T4,small,cli-step,haiku,3,1,6,allowlist: salli only,retained,
+T4-large-cli-step-haiku-3-38251c,T4,large,cli-step,haiku,3,1,6,allowlist: salli only,retained,
+T8-small-mcp-haiku-3-3ce628,T8,small,mcp,haiku,3,1,6,mcp tools only,retained,
+T4-large-mcp-haiku-3-eb33df,T4,large,mcp,haiku,3,1,6,mcp tools only,retained,
+T8-large-mcp-haiku-3-441334,T8,large,mcp,haiku,3,1,6,mcp tools only,retained,
+T8-large-cli-step-haiku-3-31d74e,T8,large,cli-step,haiku,3,1,6,allowlist: salli only,retained,
+T1-small-mcp-haiku-4-b30ddd,T1,small,mcp,haiku,4,1,6,mcp tools only,retained,
+T1-small-cli-step-haiku-4-1054b7,T1,small,cli-step,haiku,4,1,6,allowlist: salli only,retained,
+T1-large-mcp-haiku-4-e658a2,T1,large,mcp,haiku,4,1,6,mcp tools only,retained,
+T1-large-cli-step-haiku-4-6072b6,T1,large,cli-step,haiku,4,1,6,allowlist: salli only,retained,
+T2-small-mcp-haiku-4-1f4c54,T2,small,mcp,haiku,4,1,6,mcp tools only,retained,
+T2-large-mcp-haiku-4-62e425,T2,large,mcp,haiku,4,1,6,mcp tools only,retained,
+T2-large-cli-step-haiku-4-77f1af,T2,large,cli-step,haiku,4,1,6,allowlist: salli only,retained,
+T4-small-mcp-haiku-4-50cc80,T4,small,mcp,haiku,4,1,6,mcp tools only,retained,
+T4-large-mcp-haiku-4-9a170c,T4,large,mcp,haiku,4,1,6,mcp tools only,retained,
+T4-small-cli-step-haiku-4-507ea5,T4,small,cli-step,haiku,4,1,6,allowlist: salli only,retained,
+T8-small-cli-step-haiku-3-883fc4,T8,small,cli-step,haiku,3,1,6,allowlist: salli only,retained,
+T4-large-cli-step-haiku-4-1eca3e,T4,large,cli-step,haiku,4,1,6,allowlist: salli only,retained,
+T8-small-cli-step-haiku-4-4baf66,T8,small,cli-step,haiku,4,1,6,allowlist: salli only,retained,
+T8-large-mcp-haiku-4-6bf1e6,T8,large,mcp,haiku,4,1,6,mcp tools only,retained,
+T8-small-mcp-haiku-4-bf3477,T8,small,mcp,haiku,4,1,6,mcp tools only,retained,
+T1-small-mcp-haiku-5-d2e204,T1,small,mcp,haiku,5,1,6,mcp tools only,retained,
+T1-small-cli-step-haiku-5-dd41d1,T1,small,cli-step,haiku,5,1,6,allowlist: salli only,retained,
+T2-small-cli-step-haiku-4-b1ec61,T2,small,cli-step,haiku,4,1,6,allowlist: salli only,retained,
+T1-large-mcp-haiku-5-5d0755,T1,large,mcp,haiku,5,1,6,mcp tools only,retained,
+T8-large-cli-step-haiku-4-cdf367,T8,large,cli-step,haiku,4,1,6,allowlist: salli only,retained,
+T1-large-cli-step-haiku-5-f03adb,T1,large,cli-step,haiku,5,1,6,allowlist: salli only,retained,
+T2-small-mcp-haiku-5-175b99,T2,small,mcp,haiku,5,1,6,mcp tools only,retained,
+T2-small-cli-step-haiku-5-4c0cf5,T2,small,cli-step,haiku,5,1,6,allowlist: salli only,retained,
+T2-large-mcp-haiku-5-d9f1e0,T2,large,mcp,haiku,5,1,6,mcp tools only,retained,
+T2-large-cli-step-haiku-5-d14d8b,T2,large,cli-step,haiku,5,1,6,allowlist: salli only,retained,
+T4-small-mcp-haiku-5-2d0d5f,T4,small,mcp,haiku,5,1,6,mcp tools only,retained,
+T4-large-mcp-haiku-5-a7711a,T4,large,mcp,haiku,5,1,6,mcp tools only,retained,
+T4-small-cli-step-haiku-5-d89b24,T4,small,cli-step,haiku,5,1,6,allowlist: salli only,retained,
+T4-large-cli-step-haiku-5-db7b34,T4,large,cli-step,haiku,5,1,6,allowlist: salli only,retained,
+T8-small-mcp-haiku-5-9d2e44,T8,small,mcp,haiku,5,1,6,mcp tools only,retained,
+T8-large-mcp-haiku-5-67c957,T8,large,mcp,haiku,5,1,6,mcp tools only,retained,
+T8-small-cli-step-haiku-5-cf246e,T8,small,cli-step,haiku,5,1,6,allowlist: salli only,retained,
+T8-large-cli-step-haiku-5-97f986,T8,large,cli-step,haiku,5,1,6,allowlist: salli only,retained,
+T1-small-mcp-sonnet-1-75a0fa,T1,small,mcp,sonnet,1,1,6,mcp tools only,retained,
+T1-large-mcp-sonnet-1-9ffbb2,T1,large,mcp,sonnet,1,1,6,mcp tools only,retained,
+T1-small-cli-step-sonnet-1-1f3117,T1,small,cli-step,sonnet,1,1,6,allowlist: salli only,retained,
+T1-large-cli-step-sonnet-1-363a63,T1,large,cli-step,sonnet,1,1,6,allowlist: salli only,retained,
+T2-small-mcp-sonnet-1-836332,T2,small,mcp,sonnet,1,1,6,mcp tools only,retained,
+T2-small-cli-step-sonnet-1-d08dcc,T2,small,cli-step,sonnet,1,1,6,allowlist: salli only,retained,
+T2-large-mcp-sonnet-1-9e3884,T2,large,mcp,sonnet,1,1,6,mcp tools only,retained,
+T2-large-cli-step-sonnet-1-c1f3b5,T2,large,cli-step,sonnet,1,1,6,allowlist: salli only,retained,
+T4-small-mcp-sonnet-1-79b32f,T4,small,mcp,sonnet,1,1,6,mcp tools only,retained,
+T4-small-cli-step-sonnet-1-d2dd4e,T4,small,cli-step,sonnet,1,1,6,allowlist: salli only,retained,
+T4-large-mcp-sonnet-1-9e0a4d,T4,large,mcp,sonnet,1,1,6,mcp tools only,retained,
+T4-large-cli-step-sonnet-1-1cda9d,T4,large,cli-step,sonnet,1,1,6,allowlist: salli only,retained,
+T8-small-mcp-sonnet-1-c99846,T8,small,mcp,sonnet,1,1,6,mcp tools only,retained,
+T8-small-cli-step-sonnet-1-af8aaf,T8,small,cli-step,sonnet,1,1,6,allowlist: salli only,retained,
+T8-large-mcp-sonnet-1-4481e8,T8,large,mcp,sonnet,1,1,6,mcp tools only,retained,
+T1-small-mcp-sonnet-2-de61ef,T1,small,mcp,sonnet,2,1,6,mcp tools only,retained,
+T8-large-cli-step-sonnet-1-45b575,T8,large,cli-step,sonnet,1,1,6,allowlist: salli only,retained,
+T1-small-cli-step-sonnet-2-0748d5,T1,small,cli-step,sonnet,2,1,6,allowlist: salli only,retained,
+T1-large-mcp-sonnet-2-f99f1f,T1,large,mcp,sonnet,2,1,6,mcp tools only,retained,
+T1-large-cli-step-sonnet-2-656bad,T1,large,cli-step,sonnet,2,1,6,allowlist: salli only,retained,
+T2-small-mcp-sonnet-2-2c2b2e,T2,small,mcp,sonnet,2,1,6,mcp tools only,retained,
+T2-small-cli-step-sonnet-2-348f64,T2,small,cli-step,sonnet,2,1,6,allowlist: salli only,retained,
+T2-large-mcp-sonnet-2-c9a2b3,T2,large,mcp,sonnet,2,1,6,mcp tools only,retained,
+T2-large-cli-step-sonnet-2-4f4ecb,T2,large,cli-step,sonnet,2,1,6,allowlist: salli only,retained,
+T4-small-mcp-sonnet-2-67e9ca,T4,small,mcp,sonnet,2,1,6,mcp tools only,retained,
+T4-small-cli-step-sonnet-2-1f2144,T4,small,cli-step,sonnet,2,1,6,allowlist: salli only,retained,
+T4-large-mcp-sonnet-2-790882,T4,large,mcp,sonnet,2,1,6,mcp tools only,retained,
+T4-large-cli-step-sonnet-2-266590,T4,large,cli-step,sonnet,2,1,6,allowlist: salli only,retained,
+T8-small-mcp-sonnet-2-5f0a8c,T8,small,mcp,sonnet,2,1,6,mcp tools only,retained,
+T8-large-mcp-sonnet-2-3f35d8,T8,large,mcp,sonnet,2,1,6,mcp tools only,retained,
+T8-small-cli-step-sonnet-2-705595,T8,small,cli-step,sonnet,2,1,6,allowlist: salli only,retained,
+T1-small-mcp-sonnet-3-d06dec,T1,small,mcp,sonnet,3,1,6,mcp tools only,retained,
+T1-small-cli-step-sonnet-3-f1edbc,T1,small,cli-step,sonnet,3,1,6,allowlist: salli only,retained,
+T8-large-cli-step-sonnet-2-ae35bf,T8,large,cli-step,sonnet,2,1,6,allowlist: salli only,retained,
+T1-large-mcp-sonnet-3-17d289,T1,large,mcp,sonnet,3,1,6,mcp tools only,retained,
+T1-large-cli-step-sonnet-3-edefdb,T1,large,cli-step,sonnet,3,1,6,allowlist: salli only,retained,
+T2-small-mcp-sonnet-3-642a26,T2,small,mcp,sonnet,3,1,6,mcp tools only,retained,
+T2-small-cli-step-sonnet-3-93a2e1,T2,small,cli-step,sonnet,3,1,6,allowlist: salli only,retained,
+T2-large-mcp-sonnet-3-4c0f97,T2,large,mcp,sonnet,3,1,6,mcp tools only,retained,
+T2-large-cli-step-sonnet-3-60c8ca,T2,large,cli-step,sonnet,3,1,6,allowlist: salli only,retained,
+T4-small-mcp-sonnet-3-3b3270,T4,small,mcp,sonnet,3,1,6,mcp tools only,retained,
+T4-small-cli-step-sonnet-3-117c5e,T4,small,cli-step,sonnet,3,1,6,allowlist: salli only,retained,
+T4-large-mcp-sonnet-3-803ec7,T4,large,mcp,sonnet,3,1,6,mcp tools only,retained,
+T4-large-cli-step-sonnet-3-110842,T4,large,cli-step,sonnet,3,1,6,allowlist: salli only,retained,
+T8-small-mcp-sonnet-3-4a59b4,T8,small,mcp,sonnet,3,1,6,mcp tools only,retained,
+T8-large-mcp-sonnet-3-958014,T8,large,mcp,sonnet,3,1,6,mcp tools only,retained,
+T8-small-cli-step-sonnet-3-413261,T8,small,cli-step,sonnet,3,1,6,allowlist: salli only,retained,
+T8-large-cli-step-sonnet-3-1fa3c1,T8,large,cli-step,sonnet,3,1,6,allowlist: salli only,retained,
+T1-small-cli-step-ref-haiku-1-20309e,T1,small,cli-step-ref,haiku,1,2,8,allowlist: salli only,retained,
+T1-small-cli-pipe-ref-haiku-1-703055,T1,small,cli-pipe-ref,haiku,1,2,8,deny-list v1,retained,
+T1-large-cli-step-ref-haiku-1-d047d2,T1,large,cli-step-ref,haiku,1,2,8,allowlist: salli only,retained,
+T1-large-cli-pipe-ref-haiku-1-c8403c,T1,large,cli-pipe-ref,haiku,1,2,8,deny-list v1,retained,
+T1-large-cli-pipe-haiku-1-c75fa1,T1,large,cli-pipe,haiku,1,2,8,deny-list v1,retained,
+T1-small-cli-pipe-haiku-1-8b03db,T1,small,cli-pipe,haiku,1,2,8,deny-list v1,retained,
+T1-large-cli-pipe-noskill-haiku-1-7e955e,T1,large,cli-pipe-noskill,haiku,1,2,8,deny-list v1,retained,
+T2-small-cli-step-ref-haiku-1-917eac,T2,small,cli-step-ref,haiku,1,2,8,allowlist: salli only,retained,
+T2-small-cli-pipe-ref-haiku-1-de4ba8,T2,small,cli-pipe-ref,haiku,1,2,8,deny-list v1,retained,
+T2-small-cli-pipe-haiku-1-4524fb,T2,small,cli-pipe,haiku,1,2,8,deny-list v1,retained,
+T2-small-cli-pipe-noskill-haiku-1-6e6891,T2,small,cli-pipe-noskill,haiku,1,2,8,deny-list v1,retained,
+T2-large-cli-step-ref-haiku-1-74eb1e,T2,large,cli-step-ref,haiku,1,2,8,allowlist: salli only,retained,
+T2-large-cli-pipe-haiku-1-3eca48,T2,large,cli-pipe,haiku,1,2,8,deny-list v1,retained,
+T2-large-cli-pipe-ref-haiku-1-66bf45,T2,large,cli-pipe-ref,haiku,1,2,8,deny-list v1,retained,
+T4-small-cli-step-ref-haiku-1-2e669e,T4,small,cli-step-ref,haiku,1,2,8,allowlist: salli only,retained,
+T2-large-cli-pipe-noskill-haiku-1-d7cf3e,T2,large,cli-pipe-noskill,haiku,1,2,8,deny-list v1,retained,
+T4-small-cli-pipe-ref-haiku-1-6dfb09,T4,small,cli-pipe-ref,haiku,1,2,8,deny-list v1,retained,
+T4-large-cli-step-ref-haiku-1-3eb45e,T4,large,cli-step-ref,haiku,1,2,8,allowlist: salli only,retained,
+T4-large-cli-pipe-ref-haiku-1-b78b95,T4,large,cli-pipe-ref,haiku,1,2,8,deny-list v1,retained,
+T4-small-cli-pipe-haiku-1-f6de1b,T4,small,cli-pipe,haiku,1,2,8,deny-list v1,retained,
+T8-small-cli-step-ref-haiku-1-c7126c,T8,small,cli-step-ref,haiku,1,2,8,allowlist: salli only,retained,
+T8-small-cli-pipe-ref-haiku-1-1d1041,T8,small,cli-pipe-ref,haiku,1,2,8,deny-list v1,retained,
+T1-small-cli-step-ref-haiku-2-bbdf73,T1,small,cli-step-ref,haiku,2,2,8,allowlist: salli only,retained,
+T1-small-cli-pipe-haiku-2-303f53,T1,small,cli-pipe,haiku,2,2,8,deny-list v1,retained,
+T1-small-cli-pipe-ref-haiku-2-b21287,T1,small,cli-pipe-ref,haiku,2,2,8,deny-list v1,retained,
+T8-large-cli-step-ref-haiku-1-ef4351,T8,large,cli-step-ref,haiku,1,2,8,allowlist: salli only,retained,
+T1-large-cli-step-ref-haiku-2-b4444e,T1,large,cli-step-ref,haiku,2,2,8,allowlist: salli only,retained,
+T1-large-cli-pipe-ref-haiku-2-e0666a,T1,large,cli-pipe-ref,haiku,2,2,8,deny-list v1,retained,
+T8-large-cli-pipe-ref-haiku-1-95f53a,T8,large,cli-pipe-ref,haiku,1,2,8,deny-list v1,retained,
+T1-large-cli-pipe-noskill-haiku-2-27688e,T1,large,cli-pipe-noskill,haiku,2,2,8,deny-list v1,retained,
+T2-small-cli-pipe-haiku-2-8546a8,T2,small,cli-pipe,haiku,2,2,8,deny-list v1,retained,
+T1-large-cli-pipe-haiku-2-30fdac,T1,large,cli-pipe,haiku,2,2,8,deny-list v1,retained,
+T2-small-cli-pipe-ref-haiku-2-312b8b,T2,small,cli-pipe-ref,haiku,2,2,8,deny-list v1,retained,
+T2-small-cli-step-ref-haiku-2-87e39a,T2,small,cli-step-ref,haiku,2,2,8,allowlist: salli only,retained,
+T2-small-cli-pipe-noskill-haiku-2-51ffd1,T2,small,cli-pipe-noskill,haiku,2,2,8,deny-list v1,retained,
+T8-large-cli-pipe-haiku-1-98cea4,T8,large,cli-pipe,haiku,1,2,8,deny-list v1,retained,
+T2-large-cli-pipe-haiku-2-9dc9c8,T2,large,cli-pipe,haiku,2,2,8,deny-list v1,retained,
+T2-large-cli-step-ref-haiku-2-8fafa5,T2,large,cli-step-ref,haiku,2,2,8,allowlist: salli only,retained,
+T2-large-cli-pipe-ref-haiku-2-de3ab3,T2,large,cli-pipe-ref,haiku,2,2,8,deny-list v1,retained,
+T2-large-cli-pipe-noskill-haiku-2-b1c43f,T2,large,cli-pipe-noskill,haiku,2,2,8,deny-list v1,retained,
+T4-small-cli-step-ref-haiku-2-3a11ba,T4,small,cli-step-ref,haiku,2,2,8,allowlist: salli only,retained,
+T4-small-cli-pipe-ref-haiku-2-085dd7,T4,small,cli-pipe-ref,haiku,2,2,8,deny-list v1,retained,
+T4-large-cli-step-ref-haiku-2-8ba02c,T4,large,cli-step-ref,haiku,2,2,8,allowlist: salli only,retained,
+T4-small-cli-pipe-haiku-2-c87361,T4,small,cli-pipe,haiku,2,2,8,deny-list v1,retained,
+T4-small-cli-pipe-noskill-haiku-2-5c40ff,T4,small,cli-pipe-noskill,haiku,2,2,8,deny-list v1,retained,
+T4-large-cli-pipe-ref-haiku-2-d69898,T4,large,cli-pipe-ref,haiku,2,2,8,deny-list v1,retained,
+T4-large-cli-pipe-noskill-haiku-2-cad7c1,T4,large,cli-pipe-noskill,haiku,2,2,8,deny-list v1,retained,
+T8-small-cli-step-ref-haiku-2-bc228d,T8,small,cli-step-ref,haiku,2,2,8,allowlist: salli only,retained,
+T4-large-cli-pipe-haiku-2-75aca4,T4,large,cli-pipe,haiku,2,2,8,deny-list v1,retained,
+T1-small-cli-pipe-noskill-haiku-3-2094ae,T1,small,cli-pipe-noskill,haiku,3,2,8,deny-list v1,retained,
+T1-small-cli-pipe-haiku-3-716199,T1,small,cli-pipe,haiku,3,2,8,deny-list v1,retained,
+T8-small-cli-pipe-noskill-haiku-2-8c0f59,T8,small,cli-pipe-noskill,haiku,2,2,8,deny-list v1,retained,
+T1-small-cli-step-ref-haiku-3-2054bd,T1,small,cli-step-ref,haiku,3,2,8,allowlist: salli only,retained,
+T8-large-cli-step-ref-haiku-2-05c9d2,T8,large,cli-step-ref,haiku,2,2,8,allowlist: salli only,retained,
+T1-small-cli-pipe-ref-haiku-3-740dd0,T1,small,cli-pipe-ref,haiku,3,2,8,deny-list v1,retained,
+T8-large-cli-pipe-ref-haiku-2-5dcaae,T8,large,cli-pipe-ref,haiku,2,2,8,deny-list v1,retained,
+T1-large-cli-step-ref-haiku-3-8742f6,T1,large,cli-step-ref,haiku,3,2,8,allowlist: salli only,retained,
+T1-large-cli-pipe-ref-haiku-3-477f3d,T1,large,cli-pipe-ref,haiku,3,2,8,deny-list v1,retained,
+T1-large-cli-pipe-noskill-haiku-3-5da370,T1,large,cli-pipe-noskill,haiku,3,2,8,deny-list v1,retained,
+T1-large-cli-pipe-haiku-3-9604ee,T1,large,cli-pipe,haiku,3,2,8,deny-list v1,retained,
+T2-small-cli-step-ref-haiku-3-fb573d,T2,small,cli-step-ref,haiku,3,2,8,allowlist: salli only,retained,
+T2-small-cli-pipe-haiku-3-24c990,T2,small,cli-pipe,haiku,3,2,8,deny-list v1,retained,
+T2-small-cli-pipe-ref-haiku-3-14fcdb,T2,small,cli-pipe-ref,haiku,3,2,8,deny-list v1,retained,
+T2-large-cli-step-ref-haiku-3-2c89ed,T2,large,cli-step-ref,haiku,3,2,8,allowlist: salli only,retained,
+T2-large-cli-pipe-haiku-3-4a213c,T2,large,cli-pipe,haiku,3,2,8,deny-list v1,retained,
+T2-large-cli-pipe-noskill-haiku-3-966dba,T2,large,cli-pipe-noskill,haiku,3,2,8,deny-list v1,retained,
+T2-large-cli-pipe-ref-haiku-3-fad1f3,T2,large,cli-pipe-ref,haiku,3,2,8,deny-list v1,retained,
+T4-small-cli-step-ref-haiku-3-7b5e37,T4,small,cli-step-ref,haiku,3,2,8,allowlist: salli only,retained,
+T4-small-cli-pipe-ref-haiku-3-d22486,T4,small,cli-pipe-ref,haiku,3,2,8,deny-list v1,retained,
+T2-small-cli-pipe-noskill-haiku-3-8c24fa,T2,small,cli-pipe-noskill,haiku,3,2,8,deny-list v1,retained,
+T4-large-cli-step-ref-haiku-3-7b7928,T4,large,cli-step-ref,haiku,3,2,8,allowlist: salli only,retained,
+T4-small-cli-pipe-noskill-haiku-3-ba7433,T4,small,cli-pipe-noskill,haiku,3,2,8,deny-list v1,retained,
+T4-large-cli-pipe-ref-haiku-3-fec5c5,T4,large,cli-pipe-ref,haiku,3,2,8,deny-list v1,retained,
+T4-large-cli-pipe-noskill-haiku-3-3026ee,T4,large,cli-pipe-noskill,haiku,3,2,8,deny-list v1,retained,
+T4-large-cli-pipe-haiku-3-120379,T4,large,cli-pipe,haiku,3,2,8,deny-list v1,retained,
+T8-small-cli-step-ref-haiku-3-8f7aac,T8,small,cli-step-ref,haiku,3,2,8,allowlist: salli only,retained,
+T8-small-cli-pipe-haiku-3-f6fd35,T8,small,cli-pipe,haiku,3,2,8,deny-list v1,retained,
+T8-small-cli-pipe-ref-haiku-3-ef0169,T8,small,cli-pipe-ref,haiku,3,2,8,deny-list v1,retained,
+T8-small-cli-pipe-haiku-2-4ba24d,T8,small,cli-pipe,haiku,2,2,8,deny-list v1,retained,
+T1-small-cli-step-ref-haiku-4-78ce3c,T1,small,cli-step-ref,haiku,4,2,8,allowlist: salli only,retained,
+T1-small-cli-pipe-ref-haiku-4-a3fd64,T1,small,cli-pipe-ref,haiku,4,2,8,deny-list v1,retained,
+T8-large-cli-step-ref-haiku-3-33a8ba,T8,large,cli-step-ref,haiku,3,2,8,allowlist: salli only,retained,
+T1-large-cli-step-ref-haiku-4-b6abcd,T1,large,cli-step-ref,haiku,4,2,8,allowlist: salli only,retained,
+T8-large-cli-pipe-haiku-3-1c36d8,T8,large,cli-pipe,haiku,3,2,8,deny-list v1,retained,
+T1-large-cli-pipe-ref-haiku-4-36c65c,T1,large,cli-pipe-ref,haiku,4,2,8,deny-list v1,retained,
+T1-large-cli-pipe-haiku-4-efad14,T1,large,cli-pipe,haiku,4,2,8,deny-list v1,retained,
+T2-small-cli-step-ref-haiku-4-65ce86,T2,small,cli-step-ref,haiku,4,2,8,allowlist: salli only,retained,
+T8-large-cli-pipe-ref-haiku-3-2bfe06,T8,large,cli-pipe-ref,haiku,3,2,8,deny-list v1,retained,
+T2-small-cli-pipe-haiku-4-f4cf1d,T2,small,cli-pipe,haiku,4,2,8,deny-list v1,retained,
+T2-small-cli-pipe-ref-haiku-4-e05b70,T2,small,cli-pipe-ref,haiku,4,2,8,deny-list v1,retained,
+T2-small-cli-pipe-noskill-haiku-4-b45059,T2,small,cli-pipe-noskill,haiku,4,2,8,deny-list v1,retained,
+T2-large-cli-step-ref-haiku-4-6c422e,T2,large,cli-step-ref,haiku,4,2,8,allowlist: salli only,retained,
+T2-large-cli-pipe-haiku-4-9e0891,T2,large,cli-pipe,haiku,4,2,8,deny-list v1,retained,
+T2-large-cli-pipe-ref-haiku-4-322507,T2,large,cli-pipe-ref,haiku,4,2,8,deny-list v1,retained,
+T2-large-cli-pipe-noskill-haiku-4-f208d7,T2,large,cli-pipe-noskill,haiku,4,2,8,deny-list v1,retained,
+T4-small-cli-step-ref-haiku-4-2f4add,T4,small,cli-step-ref,haiku,4,2,8,allowlist: salli only,retained,
+T4-small-cli-pipe-ref-haiku-4-c0aa3b,T4,small,cli-pipe-ref,haiku,4,2,8,deny-list v1,retained,
+T4-small-cli-pipe-haiku-4-e37fd9,T4,small,cli-pipe,haiku,4,2,8,deny-list v1,retained,
+T4-large-cli-step-ref-haiku-4-d713a6,T4,large,cli-step-ref,haiku,4,2,8,allowlist: salli only,retained,
+T4-small-cli-pipe-noskill-haiku-4-f14ae7,T4,small,cli-pipe-noskill,haiku,4,2,8,deny-list v1,retained,
+T4-large-cli-pipe-ref-haiku-4-53c206,T4,large,cli-pipe-ref,haiku,4,2,8,deny-list v1,retained,
+T4-large-cli-pipe-haiku-4-69d675,T4,large,cli-pipe,haiku,4,2,8,deny-list v1,retained,
+T4-large-cli-pipe-noskill-haiku-4-2d0e2c,T4,large,cli-pipe-noskill,haiku,4,2,8,deny-list v1,retained,
+T8-small-cli-step-ref-haiku-4-05d08b,T8,small,cli-step-ref,haiku,4,2,8,allowlist: salli only,retained,
+T8-small-cli-pipe-ref-haiku-4-9c388b,T8,small,cli-pipe-ref,haiku,4,2,8,deny-list v1,retained,
+T1-small-cli-pipe-haiku-5-487b9f,T1,small,cli-pipe,haiku,5,2,8,deny-list v1,retained,
+T8-large-cli-step-ref-haiku-4-48d851,T8,large,cli-step-ref,haiku,4,2,8,allowlist: salli only,retained,
+T1-small-cli-step-ref-haiku-5-6f8210,T1,small,cli-step-ref,haiku,5,2,8,allowlist: salli only,retained,
+T8-large-cli-pipe-ref-haiku-4-2523bd,T8,large,cli-pipe-ref,haiku,4,2,8,deny-list v1,retained,
+T8-large-cli-pipe-haiku-4-29b4cb,T8,large,cli-pipe,haiku,4,2,8,deny-list v1,retained,
+T8-small-cli-pipe-noskill-haiku-3-ce9514,T8,small,cli-pipe-noskill,haiku,3,2,8,deny-list v1,retained,
+T1-large-cli-pipe-ref-haiku-5-2b5d37,T1,large,cli-pipe-ref,haiku,5,2,8,deny-list v1,retained,
+T1-large-cli-step-ref-haiku-5-506b4d,T1,large,cli-step-ref,haiku,5,2,8,allowlist: salli only,retained,
+T1-large-cli-pipe-noskill-haiku-5-569409,T1,large,cli-pipe-noskill,haiku,5,2,8,deny-list v1,retained,
+T2-small-cli-step-ref-haiku-5-e195e9,T2,small,cli-step-ref,haiku,5,2,8,allowlist: salli only,retained,
+T1-large-cli-pipe-haiku-5-1f69bb,T1,large,cli-pipe,haiku,5,2,8,deny-list v1,retained,
+T2-small-cli-pipe-ref-haiku-5-b0f15b,T2,small,cli-pipe-ref,haiku,5,2,8,deny-list v1,retained,
+T2-small-cli-pipe-haiku-5-922c52,T2,small,cli-pipe,haiku,5,2,8,deny-list v1,retained,
+T2-small-cli-pipe-noskill-haiku-5-36eedb,T2,small,cli-pipe-noskill,haiku,5,2,8,deny-list v1,retained,
+T2-large-cli-pipe-haiku-5-148158,T2,large,cli-pipe,haiku,5,2,8,deny-list v1,retained,
+T2-large-cli-step-ref-haiku-5-8a01d5,T2,large,cli-step-ref,haiku,5,2,8,allowlist: salli only,retained,
+T2-large-cli-pipe-ref-haiku-5-f7e4af,T2,large,cli-pipe-ref,haiku,5,2,8,deny-list v1,retained,
+T2-large-cli-pipe-noskill-haiku-5-089ebc,T2,large,cli-pipe-noskill,haiku,5,2,8,deny-list v1,retained,
+T4-small-cli-step-ref-haiku-5-eb3edf,T4,small,cli-step-ref,haiku,5,2,8,allowlist: salli only,retained,
+T4-small-cli-pipe-ref-haiku-5-a5eb66,T4,small,cli-pipe-ref,haiku,5,2,8,deny-list v1,retained,
+T1-small-cli-pipe-ref-haiku-5-af3872,T1,small,cli-pipe-ref,haiku,5,2,8,deny-list v1,retained,
+T4-small-cli-pipe-haiku-5-3e98f4,T4,small,cli-pipe,haiku,5,2,8,deny-list v1,retained,
+T4-large-cli-step-ref-haiku-5-4eadf9,T4,large,cli-step-ref,haiku,5,2,8,allowlist: salli only,retained,
+T4-large-cli-pipe-ref-haiku-5-556c51,T4,large,cli-pipe-ref,haiku,5,2,8,deny-list v1,retained,
+T4-large-cli-pipe-noskill-haiku-5-1ce2a3,T4,large,cli-pipe-noskill,haiku,5,2,8,deny-list v1,retained,
+T8-small-cli-step-ref-haiku-5-45008b,T8,small,cli-step-ref,haiku,5,2,8,allowlist: salli only,retained,
+T8-small-cli-pipe-ref-haiku-5-82b50a,T8,small,cli-pipe-ref,haiku,5,2,8,deny-list v1,retained,
+T8-large-cli-step-ref-haiku-5-bd52ae,T8,large,cli-step-ref,haiku,5,2,8,allowlist: salli only,retained,
+T8-large-cli-pipe-ref-haiku-5-77537c,T8,large,cli-pipe-ref,haiku,5,2,8,deny-list v1,retained,
+T8-large-cli-pipe-haiku-5-98d41b,T8,large,cli-pipe,haiku,5,2,8,deny-list v1,retained,
+T8-small-cli-pipe-noskill-haiku-5-b9c5b8,T8,small,cli-pipe-noskill,haiku,5,2,8,deny-list v1,retained,
+T8-large-cli-pipe-noskill-haiku-5-f6a3b7,T8,large,cli-pipe-noskill,haiku,5,2,8,deny-list v1,retained,
+T1-small-cli-step-ref-sonnet-1-471014,T1,small,cli-step-ref,sonnet,1,2,8,allowlist: salli only,retained,
+T1-small-cli-pipe-ref-sonnet-1-309357,T1,small,cli-pipe-ref,sonnet,1,2,8,deny-list v1,retained,
+T1-large-cli-step-ref-sonnet-1-966047,T1,large,cli-step-ref,sonnet,1,2,8,allowlist: salli only,retained,
+T1-large-cli-pipe-ref-sonnet-1-7ef384,T1,large,cli-pipe-ref,sonnet,1,2,8,deny-list v1,retained,
+T1-small-cli-pipe-sonnet-1-d5f09d,T1,small,cli-pipe,sonnet,1,2,8,deny-list v1,retained,
+T1-small-cli-pipe-noskill-sonnet-1-3359f6,T1,small,cli-pipe-noskill,sonnet,1,2,8,deny-list v1,retained,
+T1-large-cli-pipe-noskill-sonnet-1-a1ff07,T1,large,cli-pipe-noskill,sonnet,1,2,8,deny-list v1,retained,
+T1-large-cli-pipe-sonnet-1-a0db29,T1,large,cli-pipe,sonnet,1,2,8,deny-list v1,retained,
+T2-small-cli-step-ref-sonnet-1-a48cf8,T2,small,cli-step-ref,sonnet,1,2,8,allowlist: salli only,retained,
+T2-small-cli-pipe-ref-sonnet-1-f1c221,T2,small,cli-pipe-ref,sonnet,1,2,8,deny-list v1,retained,
+T2-small-cli-pipe-sonnet-1-bb5938,T2,small,cli-pipe,sonnet,1,2,8,deny-list v1,retained,
+T2-large-cli-step-ref-sonnet-1-b01b8e,T2,large,cli-step-ref,sonnet,1,2,8,allowlist: salli only,retained,
+T2-small-cli-pipe-noskill-sonnet-1-2bbea6,T2,small,cli-pipe-noskill,sonnet,1,2,8,deny-list v1,retained,
+T2-large-cli-pipe-ref-sonnet-1-3af737,T2,large,cli-pipe-ref,sonnet,1,2,8,deny-list v1,retained,
+T2-large-cli-pipe-sonnet-1-194d8d,T2,large,cli-pipe,sonnet,1,2,8,deny-list v1,retained,
+T4-small-cli-step-ref-sonnet-1-b890c9,T4,small,cli-step-ref,sonnet,1,2,8,allowlist: salli only,retained,
+T2-large-cli-pipe-noskill-sonnet-1-5a37ec,T2,large,cli-pipe-noskill,sonnet,1,2,8,deny-list v1,retained,
+T4-small-cli-pipe-sonnet-1-307514,T4,small,cli-pipe,sonnet,1,2,8,deny-list v1,retained,
+T4-small-cli-pipe-ref-sonnet-1-248797,T4,small,cli-pipe-ref,sonnet,1,2,8,deny-list v1,retained,
+T4-small-cli-pipe-noskill-sonnet-1-f2a388,T4,small,cli-pipe-noskill,sonnet,1,2,8,deny-list v1,retained,
+T4-large-cli-step-ref-sonnet-1-dfa867,T4,large,cli-step-ref,sonnet,1,2,8,allowlist: salli only,retained,
+T4-large-cli-pipe-ref-sonnet-1-9ad7a4,T4,large,cli-pipe-ref,sonnet,1,2,8,deny-list v1,retained,
+T4-large-cli-pipe-sonnet-1-9235c3,T4,large,cli-pipe,sonnet,1,2,8,deny-list v1,retained,
+T4-large-cli-pipe-noskill-sonnet-1-81f19e,T4,large,cli-pipe-noskill,sonnet,1,2,8,deny-list v1,retained,
+T8-small-cli-step-ref-sonnet-1-38de26,T8,small,cli-step-ref,sonnet,1,2,8,allowlist: salli only,retained,
+T8-small-cli-pipe-ref-sonnet-1-5e72c4,T8,small,cli-pipe-ref,sonnet,1,2,8,deny-list v1,retained,
+T8-small-cli-pipe-sonnet-1-a6788c,T8,small,cli-pipe,sonnet,1,2,8,deny-list v1,retained,
+T8-large-cli-step-ref-sonnet-1-884d26,T8,large,cli-step-ref,sonnet,1,2,8,allowlist: salli only,retained,
+T1-small-cli-pipe-sonnet-2-b2c4d2,T1,small,cli-pipe,sonnet,2,2,8,deny-list v1,retained,
+T1-small-cli-step-ref-sonnet-2-7f7857,T1,small,cli-step-ref,sonnet,2,2,8,allowlist: salli only,retained,
+T1-small-cli-pipe-ref-sonnet-2-3e22e6,T1,small,cli-pipe-ref,sonnet,2,2,8,deny-list v1,retained,
+T1-small-cli-pipe-noskill-sonnet-2-4e54f6,T1,small,cli-pipe-noskill,sonnet,2,2,8,deny-list v1,retained,
+T1-large-cli-step-ref-sonnet-2-60c8a5,T1,large,cli-step-ref,sonnet,2,2,8,allowlist: salli only,retained,
+T1-large-cli-pipe-ref-sonnet-2-db016f,T1,large,cli-pipe-ref,sonnet,2,2,8,deny-list v1,retained,
+T1-large-cli-pipe-noskill-sonnet-2-ba5ef4,T1,large,cli-pipe-noskill,sonnet,2,2,8,deny-list v1,retained,
+T2-small-cli-pipe-sonnet-2-62a486,T2,small,cli-pipe,sonnet,2,2,8,deny-list v1,retained,
+T1-large-cli-pipe-sonnet-2-18bde7,T1,large,cli-pipe,sonnet,2,2,8,deny-list v1,retained,
+T2-small-cli-step-ref-sonnet-2-741baf,T2,small,cli-step-ref,sonnet,2,2,8,allowlist: salli only,retained,
+T2-small-cli-pipe-ref-sonnet-2-0afdb7,T2,small,cli-pipe-ref,sonnet,2,2,8,deny-list v1,retained,
+T2-large-cli-step-ref-sonnet-2-7eaaca,T2,large,cli-step-ref,sonnet,2,2,8,allowlist: salli only,retained,
+T2-large-cli-pipe-ref-sonnet-2-081326,T2,large,cli-pipe-ref,sonnet,2,2,8,deny-list v1,retained,
+T2-small-cli-pipe-noskill-sonnet-2-8904b1,T2,small,cli-pipe-noskill,sonnet,2,2,8,deny-list v1,retained,
+T2-large-cli-pipe-noskill-sonnet-2-40542b,T2,large,cli-pipe-noskill,sonnet,2,2,8,deny-list v1,retained,
+T2-large-cli-pipe-sonnet-2-1a41c6,T2,large,cli-pipe,sonnet,2,2,8,deny-list v1,retained,
+T4-small-cli-pipe-sonnet-2-55a45c,T4,small,cli-pipe,sonnet,2,2,8,deny-list v1,retained,
+T4-small-cli-step-ref-sonnet-2-2a3c8c,T4,small,cli-step-ref,sonnet,2,2,8,allowlist: salli only,retained,
+T4-small-cli-pipe-ref-sonnet-2-c80763,T4,small,cli-pipe-ref,sonnet,2,2,8,deny-list v1,retained,
+T4-small-cli-pipe-noskill-sonnet-2-5b8421,T4,small,cli-pipe-noskill,sonnet,2,2,8,deny-list v1,retained,
+T4-large-cli-step-ref-sonnet-2-b79a2f,T4,large,cli-step-ref,sonnet,2,2,8,allowlist: salli only,retained,
+T4-large-cli-pipe-sonnet-2-822358,T4,large,cli-pipe,sonnet,2,2,8,deny-list v1,retained,
+T4-large-cli-pipe-ref-sonnet-2-a13be5,T4,large,cli-pipe-ref,sonnet,2,2,8,deny-list v1,retained,
+T4-large-cli-pipe-noskill-sonnet-2-f34b81,T4,large,cli-pipe-noskill,sonnet,2,2,8,deny-list v1,retained,
+T8-small-cli-pipe-sonnet-2-0f57ae,T8,small,cli-pipe,sonnet,2,2,8,deny-list v1,retained,
+T8-small-cli-pipe-ref-sonnet-2-8a29e1,T8,small,cli-pipe-ref,sonnet,2,2,8,deny-list v1,retained,
+T8-small-cli-step-ref-sonnet-2-c89647,T8,small,cli-step-ref,sonnet,2,2,8,allowlist: salli only,retained,
+T8-small-cli-pipe-noskill-sonnet-2-c6a25c,T8,small,cli-pipe-noskill,sonnet,2,2,8,deny-list v1,retained,
+T1-small-cli-pipe-sonnet-3-82a7d4,T1,small,cli-pipe,sonnet,3,2,8,deny-list v1,retained,
+T1-small-cli-step-ref-sonnet-3-57dc96,T1,small,cli-step-ref,sonnet,3,2,8,allowlist: salli only,retained,
+T1-small-cli-pipe-noskill-sonnet-3-0e73dc,T1,small,cli-pipe-noskill,sonnet,3,2,8,deny-list v1,retained,
+T8-large-cli-step-ref-sonnet-2-1a7e89,T8,large,cli-step-ref,sonnet,2,2,8,allowlist: salli only,retained,
+T1-small-cli-pipe-ref-sonnet-3-66829c,T1,small,cli-pipe-ref,sonnet,3,2,8,deny-list v1,retained,
+T8-large-cli-pipe-ref-sonnet-2-e91cc3,T8,large,cli-pipe-ref,sonnet,2,2,8,deny-list v1,retained,
+T1-large-cli-step-ref-sonnet-3-5e4640,T1,large,cli-step-ref,sonnet,3,2,8,allowlist: salli only,retained,
+T1-large-cli-pipe-sonnet-3-89424e,T1,large,cli-pipe,sonnet,3,2,8,deny-list v1,retained,
+T1-large-cli-pipe-noskill-sonnet-3-bd83a6,T1,large,cli-pipe-noskill,sonnet,3,2,8,deny-list v1,retained,
+T1-large-cli-pipe-ref-sonnet-3-42835b,T1,large,cli-pipe-ref,sonnet,3,2,8,deny-list v1,retained,
+T2-small-cli-pipe-sonnet-3-09b3d8,T2,small,cli-pipe,sonnet,3,2,8,deny-list v1,retained,
+T8-small-cli-pipe-noskill-sonnet-1-65d56a,T8,small,cli-pipe-noskill,sonnet,1,2,8,deny-list v1,retained,
+T2-small-cli-step-ref-sonnet-3-181f62,T2,small,cli-step-ref,sonnet,3,2,8,allowlist: salli only,retained,
+T2-small-cli-pipe-ref-sonnet-3-a07df6,T2,small,cli-pipe-ref,sonnet,3,2,8,deny-list v1,retained,
+T2-large-cli-step-ref-sonnet-3-ef2118,T2,large,cli-step-ref,sonnet,3,2,8,allowlist: salli only,retained,
+T2-large-cli-pipe-ref-sonnet-3-d8dfdd,T2,large,cli-pipe-ref,sonnet,3,2,8,deny-list v1,retained,
+T2-small-cli-pipe-noskill-sonnet-3-241a43,T2,small,cli-pipe-noskill,sonnet,3,2,8,deny-list v1,retained,
+T2-large-cli-pipe-sonnet-3-b3e373,T2,large,cli-pipe,sonnet,3,2,8,deny-list v1,retained,
+T2-large-cli-pipe-noskill-sonnet-3-fd13db,T2,large,cli-pipe-noskill,sonnet,3,2,8,deny-list v1,retained,
+T4-small-cli-step-ref-sonnet-3-ddef16,T4,small,cli-step-ref,sonnet,3,2,8,allowlist: salli only,retained,
+T4-small-cli-pipe-sonnet-3-61f9dd,T4,small,cli-pipe,sonnet,3,2,8,deny-list v1,retained,
+T4-small-cli-pipe-ref-sonnet-3-2301f5,T4,small,cli-pipe-ref,sonnet,3,2,8,deny-list v1,retained,
+T4-small-cli-pipe-noskill-sonnet-3-f5ffcd,T4,small,cli-pipe-noskill,sonnet,3,2,8,deny-list v1,retained,
+T4-large-cli-step-ref-sonnet-3-ece8ae,T4,large,cli-step-ref,sonnet,3,2,8,allowlist: salli only,retained,
+T4-large-cli-pipe-ref-sonnet-3-6243c5,T4,large,cli-pipe-ref,sonnet,3,2,8,deny-list v1,retained,
+T4-large-cli-pipe-sonnet-3-03d02c,T4,large,cli-pipe,sonnet,3,2,8,deny-list v1,retained,
+T8-small-cli-step-ref-sonnet-3-cb57fe,T8,small,cli-step-ref,sonnet,3,2,8,allowlist: salli only,retained,
+T4-large-cli-pipe-noskill-sonnet-3-8b0e4e,T4,large,cli-pipe-noskill,sonnet,3,2,8,deny-list v1,retained,
+T8-small-cli-pipe-ref-sonnet-3-e34b29,T8,small,cli-pipe-ref,sonnet,3,2,8,deny-list v1,retained,
+T8-small-cli-pipe-noskill-sonnet-3-db536c,T8,small,cli-pipe-noskill,sonnet,3,2,8,deny-list v1,retained,
+T8-large-cli-step-ref-sonnet-3-3cad43,T8,large,cli-step-ref,sonnet,3,2,8,allowlist: salli only,retained,
+T1-small-cli-pipe-skills-haiku-1-2e54e5,T1,small,cli-pipe-skills,haiku,1,3,8,deny-list v1,retained,
+T2-small-cli-pipe-skills-haiku-1-2cf373,T2,small,cli-pipe-skills,haiku,1,3,8,deny-list v1,retained,
+T1-large-cli-pipe-skills-haiku-1-4e86fa,T1,large,cli-pipe-skills,haiku,1,3,8,deny-list v1,retained,
+T2-large-cli-pipe-skills-haiku-1-d6f344,T2,large,cli-pipe-skills,haiku,1,3,8,deny-list v1,retained,
+T4-small-cli-pipe-skills-haiku-1-26ef4b,T4,small,cli-pipe-skills,haiku,1,3,8,deny-list v1,retained,
+T4-large-cli-pipe-skills-haiku-1-013a77,T4,large,cli-pipe-skills,haiku,1,3,8,deny-list v1,retained,
+T1-small-cli-pipe-skills-haiku-2-dee4a8,T1,small,cli-pipe-skills,haiku,2,3,8,deny-list v1,retained,
+T1-large-cli-pipe-skills-haiku-2-df3a5e,T1,large,cli-pipe-skills,haiku,2,3,8,deny-list v1,retained,
+T2-small-cli-pipe-skills-haiku-2-6f776f,T2,small,cli-pipe-skills,haiku,2,3,8,deny-list v1,retained,
+T2-large-cli-pipe-skills-haiku-2-945295,T2,large,cli-pipe-skills,haiku,2,3,8,deny-list v1,retained,
+T8-small-cli-pipe-skills-haiku-1-c2a14c,T8,small,cli-pipe-skills,haiku,1,3,8,deny-list v1,retained,
+T4-small-cli-pipe-skills-haiku-2-4a081f,T4,small,cli-pipe-skills,haiku,2,3,8,deny-list v1,retained,
+T1-small-cli-pipe-skills-haiku-3-2565c4,T1,small,cli-pipe-skills,haiku,3,3,8,deny-list v1,retained,
+T2-small-cli-pipe-skills-haiku-3-4aeb38,T2,small,cli-pipe-skills,haiku,3,3,8,deny-list v1,retained,
+T1-large-cli-pipe-skills-haiku-3-804036,T1,large,cli-pipe-skills,haiku,3,3,8,deny-list v1,retained,
+T2-large-cli-pipe-skills-haiku-3-c99887,T2,large,cli-pipe-skills,haiku,3,3,8,deny-list v1,retained,
+T4-large-cli-pipe-skills-haiku-3-ae4e0b,T4,large,cli-pipe-skills,haiku,3,3,8,deny-list v1,retained,
+T4-small-cli-pipe-skills-haiku-3-8b31db,T4,small,cli-pipe-skills,haiku,3,3,8,deny-list v1,retained,
+T8-large-cli-pipe-skills-haiku-2-3bda97,T8,large,cli-pipe-skills,haiku,2,3,8,deny-list v1,retained,
+T1-small-cli-pipe-skills-haiku-4-771ce3,T1,small,cli-pipe-skills,haiku,4,3,8,deny-list v1,retained,
+T2-small-cli-pipe-skills-haiku-4-8726a9,T2,small,cli-pipe-skills,haiku,4,3,8,deny-list v1,retained,
+T2-large-cli-pipe-skills-haiku-4-3607c1,T2,large,cli-pipe-skills,haiku,4,3,8,deny-list v1,retained,
+T1-large-cli-pipe-skills-haiku-4-799168,T1,large,cli-pipe-skills,haiku,4,3,8,deny-list v1,retained,
+T8-large-cli-pipe-skills-haiku-3-39fd92,T8,large,cli-pipe-skills,haiku,3,3,8,deny-list v1,retained,
+T4-small-cli-pipe-skills-haiku-4-573923,T4,small,cli-pipe-skills,haiku,4,3,8,deny-list v1,retained,
+T4-large-cli-pipe-skills-haiku-4-97467d,T4,large,cli-pipe-skills,haiku,4,3,8,deny-list v1,retained,
+T1-small-cli-pipe-skills-haiku-5-13162f,T1,small,cli-pipe-skills,haiku,5,3,8,deny-list v1,retained,
+T2-small-cli-pipe-skills-haiku-5-276669,T2,small,cli-pipe-skills,haiku,5,3,8,deny-list v1,retained,
+T1-large-cli-pipe-skills-haiku-5-2cf53a,T1,large,cli-pipe-skills,haiku,5,3,8,deny-list v1,retained,
+T8-small-cli-pipe-skills-haiku-4-a3c224,T8,small,cli-pipe-skills,haiku,4,3,8,deny-list v1,retained,
+T2-large-cli-pipe-skills-haiku-5-9cb2c9,T2,large,cli-pipe-skills,haiku,5,3,8,deny-list v1,retained,
+T4-small-cli-pipe-skills-haiku-5-e6e46d,T4,small,cli-pipe-skills,haiku,5,3,8,deny-list v1,retained,
+T4-large-cli-pipe-skills-haiku-5-7fe8ea,T4,large,cli-pipe-skills,haiku,5,3,8,deny-list v1,retained,
+T8-small-cli-pipe-skills-haiku-5-957ddf,T8,small,cli-pipe-skills,haiku,5,3,8,deny-list v1,retained,
+T8-large-cli-pipe-skills-haiku-5-b7ac1d,T8,large,cli-pipe-skills,haiku,5,3,8,deny-list v1,retained,
+T1-small-cli-pipe-skills-sonnet-1-7305b8,T1,small,cli-pipe-skills,sonnet,1,3,8,deny-list v1,retained,
+T2-small-cli-pipe-skills-sonnet-1-0211c9,T2,small,cli-pipe-skills,sonnet,1,3,8,deny-list v1,retained,
+T1-large-cli-pipe-skills-sonnet-1-8eed30,T1,large,cli-pipe-skills,sonnet,1,3,8,deny-list v1,retained,
+T2-large-cli-pipe-skills-sonnet-1-d5231b,T2,large,cli-pipe-skills,sonnet,1,3,8,deny-list v1,retained,
+T4-small-cli-pipe-skills-sonnet-1-900498,T4,small,cli-pipe-skills,sonnet,1,3,8,deny-list v1,retained,
+T1-small-cli-pipe-skills-sonnet-2-e109d5,T1,small,cli-pipe-skills,sonnet,2,3,8,deny-list v1,retained,
+T4-large-cli-pipe-skills-sonnet-1-cd45a5,T4,large,cli-pipe-skills,sonnet,1,3,8,deny-list v1,retained,
+T2-small-cli-pipe-skills-sonnet-2-0c28a0,T2,small,cli-pipe-skills,sonnet,2,3,8,deny-list v1,retained,
+T1-large-cli-pipe-skills-sonnet-2-026e85,T1,large,cli-pipe-skills,sonnet,2,3,8,deny-list v1,retained,
+T2-large-cli-pipe-skills-sonnet-2-8eeabe,T2,large,cli-pipe-skills,sonnet,2,3,8,deny-list v1,retained,
+T4-small-cli-pipe-skills-sonnet-2-8724d4,T4,small,cli-pipe-skills,sonnet,2,3,8,deny-list v1,retained,
+T4-large-cli-pipe-skills-sonnet-2-5ba0db,T4,large,cli-pipe-skills,sonnet,2,3,8,deny-list v1,retained,
+T8-small-cli-pipe-skills-sonnet-2-2380db,T8,small,cli-pipe-skills,sonnet,2,3,8,deny-list v1,retained,
+T1-small-cli-pipe-skills-sonnet-3-807458,T1,small,cli-pipe-skills,sonnet,3,3,8,deny-list v1,retained,
+T1-large-cli-pipe-skills-sonnet-3-c1ef2e,T1,large,cli-pipe-skills,sonnet,3,3,8,deny-list v1,retained,
+T2-small-cli-pipe-skills-sonnet-3-0dfa5a,T2,small,cli-pipe-skills,sonnet,3,3,8,deny-list v1,retained,
+T2-large-cli-pipe-skills-sonnet-3-d3c22d,T2,large,cli-pipe-skills,sonnet,3,3,8,deny-list v1,retained,
+T4-small-cli-pipe-skills-sonnet-3-ffce30,T4,small,cli-pipe-skills,sonnet,3,3,8,deny-list v1,retained,
+T4-large-cli-pipe-skills-sonnet-3-1988e8,T4,large,cli-pipe-skills,sonnet,3,3,8,deny-list v1,retained,
+T8-small-cli-pipe-skills-sonnet-3-a178ec,T8,small,cli-pipe-skills,sonnet,3,3,8,deny-list v1,retained,
+T2-small-mcp-parity-haiku-1-4e44b0,T2,small,mcp-parity,haiku,1,4,8,mcp tools only,retained,
+T1-small-mcp-parity-haiku-1-70045d,T1,small,mcp-parity,haiku,1,4,8,mcp tools only,retained,
+T2-large-mcp-parity-haiku-1-e9d423,T2,large,mcp-parity,haiku,1,4,8,mcp tools only,retained,
+T1-large-mcp-parity-haiku-1-464b65,T1,large,mcp-parity,haiku,1,4,8,mcp tools only,retained,
+T4-small-mcp-parity-haiku-1-05319d,T4,small,mcp-parity,haiku,1,4,8,mcp tools only,retained,
+T4-large-mcp-parity-haiku-1-3e43ad,T4,large,mcp-parity,haiku,1,4,8,mcp tools only,retained,
+T1-small-mcp-parity-haiku-2-1b6782,T1,small,mcp-parity,haiku,2,4,8,mcp tools only,retained,
+T2-small-mcp-parity-haiku-2-634f13,T2,small,mcp-parity,haiku,2,4,8,mcp tools only,retained,
+T1-large-mcp-parity-haiku-2-12fc42,T1,large,mcp-parity,haiku,2,4,8,mcp tools only,retained,
+T2-large-mcp-parity-haiku-2-7094e8,T2,large,mcp-parity,haiku,2,4,8,mcp tools only,retained,
+T1-small-mcp-parity-haiku-3-bfb5b8,T1,small,mcp-parity,haiku,3,4,8,mcp tools only,retained,
+T4-small-mcp-parity-haiku-2-9d402e,T4,small,mcp-parity,haiku,2,4,8,mcp tools only,retained,
+T8-small-mcp-parity-haiku-1-525962,T8,small,mcp-parity,haiku,1,4,8,mcp tools only,retained,
+T1-large-mcp-parity-haiku-3-666f80,T1,large,mcp-parity,haiku,3,4,8,mcp tools only,retained,
+T4-large-mcp-parity-haiku-2-918b22,T4,large,mcp-parity,haiku,2,4,8,mcp tools only,retained,
+T2-small-mcp-parity-haiku-3-0328bb,T2,small,mcp-parity,haiku,3,4,8,mcp tools only,retained,
+T8-large-mcp-parity-haiku-1-02e086,T8,large,mcp-parity,haiku,1,4,8,mcp tools only,retained,
+T2-large-mcp-parity-haiku-3-84ac3a,T2,large,mcp-parity,haiku,3,4,8,mcp tools only,retained,
+T8-small-mcp-parity-haiku-2-1546f0,T8,small,mcp-parity,haiku,2,4,8,mcp tools only,retained,
+T4-small-mcp-parity-haiku-3-d1aded,T4,small,mcp-parity,haiku,3,4,8,mcp tools only,retained,
+T1-small-mcp-parity-haiku-4-27e2f3,T1,small,mcp-parity,haiku,4,4,8,mcp tools only,retained,
+T4-large-mcp-parity-haiku-3-e68b40,T4,large,mcp-parity,haiku,3,4,8,mcp tools only,retained,
+T8-large-mcp-parity-haiku-2-d85e9c,T8,large,mcp-parity,haiku,2,4,8,mcp tools only,retained,
+T2-small-mcp-parity-haiku-4-0f6e51,T2,small,mcp-parity,haiku,4,4,8,mcp tools only,retained,
+T1-large-mcp-parity-haiku-4-0a5b4b,T1,large,mcp-parity,haiku,4,4,8,mcp tools only,retained,
+T8-small-mcp-parity-haiku-3-9190e9,T8,small,mcp-parity,haiku,3,4,8,mcp tools only,retained,
+T2-large-mcp-parity-haiku-4-24eb7d,T2,large,mcp-parity,haiku,4,4,8,mcp tools only,retained,
+T1-small-mcp-parity-haiku-5-795db6,T1,small,mcp-parity,haiku,5,4,8,mcp tools only,retained,
+T4-small-mcp-parity-haiku-4-250fc7,T4,small,mcp-parity,haiku,4,4,8,mcp tools only,retained,
+T2-small-mcp-parity-haiku-5-6acbf1,T2,small,mcp-parity,haiku,5,4,8,mcp tools only,retained,
+T1-large-mcp-parity-haiku-5-cb2543,T1,large,mcp-parity,haiku,5,4,8,mcp tools only,retained,
+T4-large-mcp-parity-haiku-4-010ec0,T4,large,mcp-parity,haiku,4,4,8,mcp tools only,retained,
+T8-large-mcp-parity-haiku-3-ee267c,T8,large,mcp-parity,haiku,3,4,8,mcp tools only,retained,
+T2-large-mcp-parity-haiku-5-c38c5c,T2,large,mcp-parity,haiku,5,4,8,mcp tools only,retained,
+T4-small-mcp-parity-haiku-5-19a910,T4,small,mcp-parity,haiku,5,4,8,mcp tools only,retained,
+T8-small-mcp-parity-haiku-4-8d01b9,T8,small,mcp-parity,haiku,4,4,8,mcp tools only,retained,
+T4-large-mcp-parity-haiku-5-4989bf,T4,large,mcp-parity,haiku,5,4,8,mcp tools only,retained,
+T8-large-mcp-parity-haiku-4-5f99d1,T8,large,mcp-parity,haiku,4,4,8,mcp tools only,retained,
+T8-small-mcp-parity-haiku-5-447519,T8,small,mcp-parity,haiku,5,4,8,mcp tools only,retained,
+T8-large-mcp-parity-haiku-5-dd2ace,T8,large,mcp-parity,haiku,5,4,8,mcp tools only,retained,
+T1-small-mcp-parity-sonnet-1-a81350,T1,small,mcp-parity,sonnet,1,4,8,mcp tools only,retained,
+T1-large-mcp-parity-sonnet-1-1b362c,T1,large,mcp-parity,sonnet,1,4,8,mcp tools only,retained,
+T2-small-mcp-parity-sonnet-1-027a04,T2,small,mcp-parity,sonnet,1,4,8,mcp tools only,retained,
+T2-large-mcp-parity-sonnet-1-644f7c,T2,large,mcp-parity,sonnet,1,4,8,mcp tools only,retained,
+T1-small-mcp-parity-sonnet-2-96771e,T1,small,mcp-parity,sonnet,2,4,8,mcp tools only,retained,
+T4-small-mcp-parity-sonnet-1-a5c89a,T4,small,mcp-parity,sonnet,1,4,8,mcp tools only,retained,
+T4-large-mcp-parity-sonnet-1-b5b3ad,T4,large,mcp-parity,sonnet,1,4,8,mcp tools only,retained,
+T1-large-mcp-parity-sonnet-2-a10352,T1,large,mcp-parity,sonnet,2,4,8,mcp tools only,retained,
+T2-small-mcp-parity-sonnet-2-d6d8cc,T2,small,mcp-parity,sonnet,2,4,8,mcp tools only,retained,
+T2-large-mcp-parity-sonnet-2-ed2a19,T2,large,mcp-parity,sonnet,2,4,8,mcp tools only,retained,
+T8-small-mcp-parity-sonnet-1-374ac5,T8,small,mcp-parity,sonnet,1,4,8,mcp tools only,retained,
+T1-small-mcp-parity-sonnet-3-e72337,T1,small,mcp-parity,sonnet,3,4,8,mcp tools only,retained,
+T8-large-mcp-parity-sonnet-1-dc5496,T8,large,mcp-parity,sonnet,1,4,8,mcp tools only,retained,
+T4-small-mcp-parity-sonnet-2-b9d3a6,T4,small,mcp-parity,sonnet,2,4,8,mcp tools only,retained,
+T4-large-mcp-parity-sonnet-2-bd06af,T4,large,mcp-parity,sonnet,2,4,8,mcp tools only,retained,
+T1-large-mcp-parity-sonnet-3-0f4140,T1,large,mcp-parity,sonnet,3,4,8,mcp tools only,retained,
+T2-small-mcp-parity-sonnet-3-e36701,T2,small,mcp-parity,sonnet,3,4,8,mcp tools only,retained,
+T2-large-mcp-parity-sonnet-3-ae1251,T2,large,mcp-parity,sonnet,3,4,8,mcp tools only,retained,
+T4-small-mcp-parity-sonnet-3-4e86ea,T4,small,mcp-parity,sonnet,3,4,8,mcp tools only,retained,
+T8-large-mcp-parity-sonnet-2-810624,T8,large,mcp-parity,sonnet,2,4,8,mcp tools only,retained,
+T4-large-mcp-parity-sonnet-3-34a8bc,T4,large,mcp-parity,sonnet,3,4,8,mcp tools only,retained,
+T8-small-mcp-parity-sonnet-2-9e9cea,T8,small,mcp-parity,sonnet,2,4,8,mcp tools only,retained,
+T8-small-mcp-parity-sonnet-3-886fde,T8,small,mcp-parity,sonnet,3,4,8,mcp tools only,retained,
+T8-large-mcp-parity-sonnet-3-81b270,T8,large,mcp-parity,sonnet,3,4,8,mcp tools only,retained,
+L1-small-mcp-haiku-1-24ec2e,L1,small,mcp,haiku,1,4,8,mcp tools only,retained,
+L1-large-mcp-haiku-1-7c65dd,L1,large,mcp,haiku,1,4,8,mcp tools only,retained,
+L1-small-mcp-parity-haiku-1-210be7,L1,small,mcp-parity,haiku,1,4,8,mcp tools only,retained,
+L1-small-cli-step-ref-haiku-1-0b8ebc,L1,small,cli-step-ref,haiku,1,4,8,allowlist: salli only,retained,
+L1-small-cli-pipe-ref-haiku-1-f9b0b9,L1,small,cli-pipe-ref,haiku,1,4,8,deny-list v2,retained,
+L1-large-mcp-parity-haiku-1-9ee9c1,L1,large,mcp-parity,haiku,1,4,8,mcp tools only,retained,
+L1-small-cli-pipe-skills-haiku-1-f68fc9,L1,small,cli-pipe-skills,haiku,1,4,8,deny-list v2,retained,
+L1-small-cli-pipe-haiku-1-0d87a0,L1,small,cli-pipe,haiku,1,4,8,deny-list v2,retained,
+L2-small-mcp-haiku-1-12f927,L2,small,mcp,haiku,1,4,8,mcp tools only,retained,
+L2-small-mcp-parity-haiku-1-013e83,L2,small,mcp-parity,haiku,1,4,8,mcp tools only,retained,
+L2-small-cli-step-ref-haiku-1-61fea7,L2,small,cli-step-ref,haiku,1,4,8,allowlist: salli only,retained,
+L2-small-cli-pipe-haiku-1-3a4188,L2,small,cli-pipe,haiku,1,4,8,deny-list v2,retained,
+L2-small-cli-pipe-ref-haiku-1-a845d5,L2,small,cli-pipe-ref,haiku,1,4,8,deny-list v2,retained,
+L1-large-cli-pipe-haiku-1-99a7fa,L1,large,cli-pipe,haiku,1,4,8,deny-list v2,retained,
+L2-small-cli-pipe-skills-haiku-1-4de7b9,L2,small,cli-pipe-skills,haiku,1,4,8,deny-list v2,retained,
+L2-large-mcp-haiku-1-93d75d,L2,large,mcp,haiku,1,4,8,mcp tools only,retained,
+L1-large-cli-step-ref-haiku-1-3db5f7,L1,large,cli-step-ref,haiku,1,4,8,allowlist: salli only,retained,
+L1-large-cli-pipe-ref-haiku-1-b4bf0b,L1,large,cli-pipe-ref,haiku,1,4,8,deny-list v2,retained,
+L1-small-mcp-haiku-2-9ba49f,L1,small,mcp,haiku,2,4,8,mcp tools only,retained,
+L2-large-mcp-parity-haiku-1-a4f1cd,L2,large,mcp-parity,haiku,1,4,8,mcp tools only,retained,
+L2-large-cli-step-ref-haiku-1-4d8256,L2,large,cli-step-ref,haiku,1,4,8,allowlist: salli only,retained,
+L2-large-cli-pipe-haiku-1-434a3e,L2,large,cli-pipe,haiku,1,4,8,deny-list v2,retained,
+L1-small-mcp-parity-haiku-2-fd768f,L1,small,mcp-parity,haiku,2,4,8,mcp tools only,retained,
+L2-large-cli-pipe-ref-haiku-1-4f1709,L2,large,cli-pipe-ref,haiku,1,4,8,deny-list v2,retained,
+L2-large-cli-pipe-skills-haiku-1-812ce9,L2,large,cli-pipe-skills,haiku,1,4,8,deny-list v2,retained,
+L1-large-mcp-haiku-2-62af4e,L1,large,mcp,haiku,2,4,8,mcp tools only,retained,
+L1-small-cli-pipe-haiku-2-dc25f5,L1,small,cli-pipe,haiku,2,4,8,deny-list v2,retained,
+L1-small-cli-step-ref-haiku-2-8a4dcb,L1,small,cli-step-ref,haiku,2,4,8,allowlist: salli only,retained,
+L2-small-mcp-haiku-2-af4abe,L2,small,mcp,haiku,2,4,8,mcp tools only,retained,
+L1-small-cli-pipe-ref-haiku-2-b0811d,L1,small,cli-pipe-ref,haiku,2,4,8,deny-list v2,retained,
+L2-small-mcp-parity-haiku-2-1625bd,L2,small,mcp-parity,haiku,2,4,8,mcp tools only,retained,
+L2-small-cli-pipe-haiku-2-be5e5b,L2,small,cli-pipe,haiku,2,4,8,deny-list v2,retained,
+L1-large-mcp-parity-haiku-2-016913,L1,large,mcp-parity,haiku,2,4,8,mcp tools only,retained,
+L2-small-cli-step-ref-haiku-2-046911,L2,small,cli-step-ref,haiku,2,4,8,allowlist: salli only,retained,
+L2-small-cli-pipe-skills-haiku-2-eef6b8,L2,small,cli-pipe-skills,haiku,2,4,8,deny-list v2,retained,
+L1-large-cli-step-ref-haiku-2-5699ce,L1,large,cli-step-ref,haiku,2,4,8,allowlist: salli only,retained,
+L1-large-cli-pipe-skills-haiku-2-39dd95,L1,large,cli-pipe-skills,haiku,2,4,8,deny-list v2,retained,
+L1-large-cli-pipe-ref-haiku-2-5f075a,L1,large,cli-pipe-ref,haiku,2,4,8,deny-list v2,retained,
+L2-large-mcp-haiku-2-9035be,L2,large,mcp,haiku,2,4,8,mcp tools only,retained,
+L1-small-mcp-haiku-3-48955c,L1,small,mcp,haiku,3,4,8,mcp tools only,retained,
+L2-large-mcp-parity-haiku-2-d5b5d9,L2,large,mcp-parity,haiku,2,4,8,mcp tools only,retained,
+L2-large-cli-pipe-haiku-2-63f23f,L2,large,cli-pipe,haiku,2,4,8,deny-list v2,retained,
+L2-large-cli-pipe-ref-haiku-2-235e7a,L2,large,cli-pipe-ref,haiku,2,4,8,deny-list v2,retained,
+L2-large-cli-step-ref-haiku-2-67e260,L2,large,cli-step-ref,haiku,2,4,8,allowlist: salli only,retained,
+L1-small-mcp-parity-haiku-3-47d402,L1,small,mcp-parity,haiku,3,4,8,mcp tools only,retained,
+L2-large-cli-pipe-skills-haiku-2-acbabc,L2,large,cli-pipe-skills,haiku,2,4,8,deny-list v2,retained,
+L1-small-cli-step-ref-haiku-3-6f1729,L1,small,cli-step-ref,haiku,3,4,8,allowlist: salli only,retained,
+L1-small-cli-pipe-skills-haiku-3-fc9791,L1,small,cli-pipe-skills,haiku,3,4,8,deny-list v2,retained,
+L1-small-cli-pipe-haiku-3-6a578c,L1,small,cli-pipe,haiku,3,4,8,deny-list v2,retained,
+L1-large-mcp-haiku-3-e8dd83,L1,large,mcp,haiku,3,4,8,mcp tools only,retained,
+L2-small-mcp-haiku-3-ce69ac,L2,small,mcp,haiku,3,4,8,mcp tools only,retained,
+L1-small-cli-pipe-ref-haiku-3-cbacbb,L1,small,cli-pipe-ref,haiku,3,4,8,deny-list v2,retained,
+L2-small-mcp-parity-haiku-3-923725,L2,small,mcp-parity,haiku,3,4,8,mcp tools only,retained,
+L2-small-cli-pipe-haiku-3-63e364,L2,small,cli-pipe,haiku,3,4,8,deny-list v2,retained,
+L2-small-cli-step-ref-haiku-3-0255cb,L2,small,cli-step-ref,haiku,3,4,8,allowlist: salli only,retained,
+L1-large-mcp-parity-haiku-3-0166dd,L1,large,mcp-parity,haiku,3,4,8,mcp tools only,retained,
+L2-small-cli-pipe-skills-haiku-3-946622,L2,small,cli-pipe-skills,haiku,3,4,8,deny-list v2,retained,
+L1-large-cli-pipe-ref-haiku-3-d97258,L1,large,cli-pipe-ref,haiku,3,4,8,deny-list v2,retained,
+L1-large-cli-step-ref-haiku-3-979ea7,L1,large,cli-step-ref,haiku,3,4,8,allowlist: salli only,retained,
+L2-large-mcp-haiku-3-f12975,L2,large,mcp,haiku,3,4,8,mcp tools only,retained,
+L1-small-mcp-haiku-4-71ec55,L1,small,mcp,haiku,4,4,8,mcp tools only,retained,
+L1-large-cli-pipe-skills-haiku-3-ef0521,L1,large,cli-pipe-skills,haiku,3,4,8,deny-list v2,retained,
+L2-large-mcp-parity-haiku-3-d65907,L2,large,mcp-parity,haiku,3,4,8,mcp tools only,retained,
+L2-large-cli-step-ref-haiku-3-7c0930,L2,large,cli-step-ref,haiku,3,4,8,allowlist: salli only,retained,
+L2-large-cli-pipe-haiku-3-56e9db,L2,large,cli-pipe,haiku,3,4,8,deny-list v2,retained,
+L2-large-cli-pipe-skills-haiku-3-c52d9a,L2,large,cli-pipe-skills,haiku,3,4,8,deny-list v2,retained,
+L1-large-mcp-haiku-4-33efcc,L1,large,mcp,haiku,4,4,8,mcp tools only,retained,
+L1-small-cli-step-ref-haiku-4-f6112d,L1,small,cli-step-ref,haiku,4,4,8,allowlist: salli only,retained,
+L1-small-cli-pipe-haiku-4-1f3fa3,L1,small,cli-pipe,haiku,4,4,8,deny-list v2,retained,
+L1-small-cli-pipe-skills-haiku-4-b68849,L1,small,cli-pipe-skills,haiku,4,4,8,deny-list v2,retained,
+L1-small-mcp-parity-haiku-4-a1b61b,L1,small,mcp-parity,haiku,4,4,8,mcp tools only,retained,
+L1-small-cli-pipe-ref-haiku-4-96aba5,L1,small,cli-pipe-ref,haiku,4,4,8,deny-list v2,retained,
+L2-small-mcp-haiku-4-d72c2d,L2,small,mcp,haiku,4,4,8,mcp tools only,retained,
+L1-large-mcp-parity-haiku-4-02458f,L1,large,mcp-parity,haiku,4,4,8,mcp tools only,retained,
+L2-small-mcp-parity-haiku-4-a3fe3e,L2,small,mcp-parity,haiku,4,4,8,mcp tools only,retained,
+L2-small-cli-pipe-haiku-4-7c33b5,L2,small,cli-pipe,haiku,4,4,8,deny-list v2,retained,
+L2-small-cli-step-ref-haiku-4-370353,L2,small,cli-step-ref,haiku,4,4,8,allowlist: salli only,retained,
+L1-large-cli-pipe-haiku-4-9b22bc,L1,large,cli-pipe,haiku,4,4,8,deny-list v2,retained,
+L2-small-cli-pipe-skills-haiku-4-d8623a,L2,small,cli-pipe-skills,haiku,4,4,8,deny-list v2,retained,
+L1-large-cli-step-ref-haiku-4-911f4f,L1,large,cli-step-ref,haiku,4,4,8,allowlist: salli only,retained,
+L2-large-mcp-haiku-4-4a99be,L2,large,mcp,haiku,4,4,8,mcp tools only,retained,
+L1-small-mcp-haiku-5-f86144,L1,small,mcp,haiku,5,4,8,mcp tools only,retained,
+L2-large-mcp-parity-haiku-4-dda1e8,L2,large,mcp-parity,haiku,4,4,8,mcp tools only,retained,
+L2-large-cli-step-ref-haiku-4-866c8c,L2,large,cli-step-ref,haiku,4,4,8,allowlist: salli only,retained,
+L1-large-cli-pipe-skills-haiku-4-f00b7a,L1,large,cli-pipe-skills,haiku,4,4,8,deny-list v2,retained,
+L2-large-cli-pipe-haiku-4-30d70d,L2,large,cli-pipe,haiku,4,4,8,deny-list v2,retained,
+L2-large-cli-pipe-ref-haiku-4-e5e344,L2,large,cli-pipe-ref,haiku,4,4,8,deny-list v2,retained,
+L2-large-cli-pipe-skills-haiku-4-4de637,L2,large,cli-pipe-skills,haiku,4,4,8,deny-list v2,retained,
+L1-large-mcp-haiku-5-f843a6,L1,large,mcp,haiku,5,4,8,mcp tools only,retained,
+L1-small-cli-pipe-haiku-5-7b3480,L1,small,cli-pipe,haiku,5,4,8,deny-list v2,retained,
+L1-small-cli-step-ref-haiku-5-53fdaf,L1,small,cli-step-ref,haiku,5,4,8,allowlist: salli only,retained,
+L1-small-mcp-parity-haiku-5-709ea2,L1,small,mcp-parity,haiku,5,4,8,mcp tools only,retained,
+L2-small-mcp-haiku-5-ac5c52,L2,small,mcp,haiku,5,4,8,mcp tools only,retained,
+L1-small-cli-pipe-skills-haiku-5-f18f68,L1,small,cli-pipe-skills,haiku,5,4,8,deny-list v2,retained,
+L2-small-mcp-parity-haiku-5-6b110c,L2,small,mcp-parity,haiku,5,4,8,mcp tools only,retained,
+L2-small-cli-pipe-haiku-5-61e521,L2,small,cli-pipe,haiku,5,4,8,deny-list v2,retained,
+L1-large-cli-pipe-skills-haiku-5-d98de6,L1,large,cli-pipe-skills,haiku,5,4,8,deny-list v2,retained,
+L1-large-cli-step-ref-haiku-5-46aeb8,L1,large,cli-step-ref,haiku,5,4,8,allowlist: salli only,retained,
+L2-small-cli-step-ref-haiku-5-0b1bbe,L2,small,cli-step-ref,haiku,5,4,8,allowlist: salli only,retained,
+L2-small-cli-pipe-ref-haiku-5-1a3dcb,L2,small,cli-pipe-ref,haiku,5,4,8,deny-list v2,retained,
+L1-large-cli-pipe-ref-haiku-5-760c98,L1,large,cli-pipe-ref,haiku,5,4,8,deny-list v2,retained,
+L2-large-mcp-haiku-5-f4728c,L2,large,mcp,haiku,5,4,8,mcp tools only,retained,
+L1-large-mcp-parity-haiku-5-102068,L1,large,mcp-parity,haiku,5,4,8,mcp tools only,retained,
+L1-small-cli-pipe-ref-haiku-5-3d6af4,L1,small,cli-pipe-ref,haiku,5,4,8,deny-list v2,retained,
+L2-large-mcp-parity-haiku-5-1c91e3,L2,large,mcp-parity,haiku,5,4,8,mcp tools only,retained,
+L2-large-cli-step-ref-haiku-5-14ba62,L2,large,cli-step-ref,haiku,5,4,8,allowlist: salli only,retained,
+L2-large-cli-pipe-haiku-5-54ffa0,L2,large,cli-pipe,haiku,5,4,8,deny-list v2,retained,
+L2-large-cli-pipe-ref-haiku-5-b93892,L2,large,cli-pipe-ref,haiku,5,4,8,deny-list v2,retained,
+L2-large-cli-pipe-skills-haiku-5-5fad15,L2,large,cli-pipe-skills,haiku,5,4,8,deny-list v2,retained,
+L1-small-mcp-sonnet-1-81238c,L1,small,mcp,sonnet,1,4,8,mcp tools only,retained,
+L1-large-mcp-sonnet-1-6bceac,L1,large,mcp,sonnet,1,4,8,mcp tools only,retained,
+L1-small-mcp-parity-sonnet-1-058b12,L1,small,mcp-parity,sonnet,1,4,8,mcp tools only,retained,
+L1-small-cli-pipe-skills-sonnet-1-783fb5,L1,small,cli-pipe-skills,sonnet,1,4,8,deny-list v2,retained,
+L1-large-mcp-parity-sonnet-1-6df0a1,L1,large,mcp-parity,sonnet,1,4,8,mcp tools only,retained,
+L2-small-mcp-sonnet-1-d024bd,L2,small,mcp,sonnet,1,4,8,mcp tools only,retained,
+L2-small-mcp-parity-sonnet-1-c1ac69,L2,small,mcp-parity,sonnet,1,4,8,mcp tools only,retained,
+L1-small-cli-step-ref-sonnet-1-b03767,L1,small,cli-step-ref,sonnet,1,4,8,allowlist: salli only,retained,
+L2-small-cli-pipe-sonnet-1-11e2ad,L2,small,cli-pipe,sonnet,1,4,8,deny-list v2,retained,
+L2-small-cli-step-ref-sonnet-1-94c68d,L2,small,cli-step-ref,sonnet,1,4,8,allowlist: salli only,retained,
+L2-large-mcp-sonnet-1-63304f,L2,large,mcp,sonnet,1,4,8,mcp tools only,retained,
+L1-large-cli-step-ref-sonnet-1-28e5c7,L1,large,cli-step-ref,sonnet,1,4,8,allowlist: salli only,retained,
+L2-large-mcp-parity-sonnet-1-5cf4d4,L2,large,mcp-parity,sonnet,1,4,8,mcp tools only,retained,
+L2-large-cli-step-ref-sonnet-1-4f4352,L2,large,cli-step-ref,sonnet,1,4,8,allowlist: salli only,retained,
+L1-small-mcp-sonnet-2-90edd7,L1,small,mcp,sonnet,2,4,8,mcp tools only,retained,
+L1-small-mcp-parity-sonnet-2-11b8f6,L1,small,mcp-parity,sonnet,2,4,8,mcp tools only,retained,
+L1-large-mcp-sonnet-2-f6d8e7,L1,large,mcp,sonnet,2,4,8,mcp tools only,retained,
+L1-large-mcp-parity-sonnet-2-1c7e65,L1,large,mcp-parity,sonnet,2,4,8,mcp tools only,retained,
+L2-small-mcp-sonnet-2-f69fe4,L2,small,mcp,sonnet,2,4,8,mcp tools only,retained,
+L1-small-cli-step-ref-sonnet-2-02797f,L1,small,cli-step-ref,sonnet,2,4,8,allowlist: salli only,retained,
+L2-small-mcp-parity-sonnet-2-f75057,L2,small,mcp-parity,sonnet,2,4,8,mcp tools only,retained,
+L2-small-cli-pipe-sonnet-2-2f8122,L2,small,cli-pipe,sonnet,2,4,8,deny-list v2,retained,
+L2-small-cli-pipe-skills-sonnet-2-2fe5cc,L2,small,cli-pipe-skills,sonnet,2,4,8,deny-list v2,retained,
+L2-small-cli-step-ref-sonnet-2-e3a25d,L2,small,cli-step-ref,sonnet,2,4,8,allowlist: salli only,retained,
+L2-small-cli-pipe-ref-sonnet-2-281e8c,L2,small,cli-pipe-ref,sonnet,2,4,8,deny-list v2,retained,
+L1-large-cli-step-ref-sonnet-2-3bcee3,L1,large,cli-step-ref,sonnet,2,4,8,allowlist: salli only,retained,
+L2-large-mcp-sonnet-2-2accaf,L2,large,mcp,sonnet,2,4,8,mcp tools only,retained,
+L2-large-mcp-parity-sonnet-2-11077b,L2,large,mcp-parity,sonnet,2,4,8,mcp tools only,retained,
+L2-large-cli-step-ref-sonnet-2-38d58a,L2,large,cli-step-ref,sonnet,2,4,8,allowlist: salli only,retained,
+L1-small-mcp-sonnet-3-f1336d,L1,small,mcp,sonnet,3,4,8,mcp tools only,retained,
+L1-small-mcp-parity-sonnet-3-200a37,L1,small,mcp-parity,sonnet,3,4,8,mcp tools only,retained,
+L1-large-mcp-sonnet-3-043aa2,L1,large,mcp,sonnet,3,4,8,mcp tools only,retained,
+L1-small-cli-pipe-skills-sonnet-3-1923dd,L1,small,cli-pipe-skills,sonnet,3,4,8,deny-list v2,retained,
+L1-large-mcp-parity-sonnet-3-1ed36e,L1,large,mcp-parity,sonnet,3,4,8,mcp tools only,retained,
+L1-small-cli-step-ref-sonnet-3-b3832c,L1,small,cli-step-ref,sonnet,3,4,8,allowlist: salli only,retained,
+L2-small-mcp-sonnet-3-639d71,L2,small,mcp,sonnet,3,4,8,mcp tools only,retained,
+L1-small-cli-pipe-sonnet-3-5aa6e6,L1,small,cli-pipe,sonnet,3,4,8,deny-list v2,retained,
+L2-small-mcp-parity-sonnet-3-10030e,L2,small,mcp-parity,sonnet,3,4,8,mcp tools only,retained,
+L2-small-cli-pipe-sonnet-3-1413be,L2,small,cli-pipe,sonnet,3,4,8,deny-list v2,retained,
+L2-small-cli-step-ref-sonnet-3-f2d44e,L2,small,cli-step-ref,sonnet,3,4,8,allowlist: salli only,retained,
+L1-large-cli-step-ref-sonnet-3-78a2cc,L1,large,cli-step-ref,sonnet,3,4,8,allowlist: salli only,retained,
+L2-large-mcp-sonnet-3-af02b5,L2,large,mcp,sonnet,3,4,8,mcp tools only,retained,
+L2-large-mcp-parity-sonnet-3-10a509,L2,large,mcp-parity,sonnet,3,4,8,mcp tools only,retained,
+L2-large-cli-step-ref-sonnet-3-dc330b,L2,large,cli-step-ref,sonnet,3,4,8,allowlist: salli only,retained,
+T1-small-cli-pipe-noskill-haiku-1-acae57,T1,small,cli-pipe-noskill,haiku,1,5,1,deny-list v2,retained,
+T4-small-cli-pipe-noskill-haiku-1-a96e21,T4,small,cli-pipe-noskill,haiku,1,5,1,deny-list v2,retained,
+T4-large-cli-pipe-haiku-1-c81d2e,T4,large,cli-pipe,haiku,1,5,1,deny-list v2,retained,
+T4-large-cli-pipe-noskill-haiku-1-301e03,T4,large,cli-pipe-noskill,haiku,1,5,1,deny-list v2,retained,
+T8-small-cli-pipe-haiku-1-207c5e,T8,small,cli-pipe,haiku,1,5,1,deny-list v2,retained,
+T8-small-cli-pipe-noskill-haiku-1-48aee7,T8,small,cli-pipe-noskill,haiku,1,5,1,deny-list v2,retained,
+T8-large-cli-pipe-skills-haiku-1-36e594,T8,large,cli-pipe-skills,haiku,1,5,1,deny-list v2,retained,
+T1-small-cli-pipe-noskill-haiku-2-3dd345,T1,small,cli-pipe-noskill,haiku,2,5,1,deny-list v2,retained,
+T4-large-cli-pipe-skills-haiku-2-97cd97,T4,large,cli-pipe-skills,haiku,2,5,1,deny-list v2,retained,
+T8-small-cli-pipe-ref-haiku-2-4d1f62,T8,small,cli-pipe-ref,haiku,2,5,1,deny-list v2,retained,
+T8-small-cli-pipe-skills-haiku-2-60818a,T8,small,cli-pipe-skills,haiku,2,5,1,deny-list v2,retained,
+T8-large-cli-pipe-haiku-2-006ee1,T8,large,cli-pipe,haiku,2,5,1,deny-list v2,retained,
+T8-large-cli-pipe-noskill-haiku-2-b293a9,T8,large,cli-pipe-noskill,haiku,2,5,1,deny-list v2,retained,
+T4-small-cli-pipe-haiku-3-5695e5,T4,small,cli-pipe,haiku,3,5,1,deny-list v2,retained,
+T8-small-cli-pipe-skills-haiku-3-f644f8,T8,small,cli-pipe-skills,haiku,3,5,1,deny-list v2,retained,
+T8-large-cli-pipe-noskill-haiku-3-103611,T8,large,cli-pipe-noskill,haiku,3,5,1,deny-list v2,retained,
+T1-small-cli-pipe-haiku-4-b3072e,T1,small,cli-pipe,haiku,4,5,1,deny-list v2,retained,
+T1-small-cli-pipe-noskill-haiku-4-d1c314,T1,small,cli-pipe-noskill,haiku,4,5,1,deny-list v2,retained,
+T1-large-cli-pipe-noskill-haiku-4-885fdf,T1,large,cli-pipe-noskill,haiku,4,5,1,deny-list v2,retained,
+T8-small-cli-pipe-haiku-4-c3e336,T8,small,cli-pipe,haiku,4,5,1,deny-list v2,retained,
+T8-small-cli-pipe-noskill-haiku-4-044f53,T8,small,cli-pipe-noskill,haiku,4,5,1,deny-list v2,retained,
+T8-large-cli-pipe-noskill-haiku-4-36f983,T8,large,cli-pipe-noskill,haiku,4,5,1,deny-list v2,retained,
+T8-large-cli-pipe-skills-haiku-4-2cb939,T8,large,cli-pipe-skills,haiku,4,5,1,deny-list v2,retained,
+T1-small-cli-pipe-noskill-haiku-5-df0b23,T1,small,cli-pipe-noskill,haiku,5,5,1,deny-list v2,retained,
+T4-small-cli-pipe-noskill-haiku-5-a499fd,T4,small,cli-pipe-noskill,haiku,5,5,1,deny-list v2,retained,
+T4-large-cli-pipe-haiku-5-4fcd5f,T4,large,cli-pipe,haiku,5,5,1,deny-list v2,retained,
+T8-small-cli-pipe-haiku-5-2f9df6,T8,small,cli-pipe,haiku,5,5,1,deny-list v2,retained,
+T8-small-cli-pipe-skills-sonnet-1-94b61a,T8,small,cli-pipe-skills,sonnet,1,5,1,deny-list v2,retained,
+T8-large-cli-pipe-sonnet-1-14c785,T8,large,cli-pipe,sonnet,1,5,1,deny-list v2,retained,
+T8-large-cli-pipe-noskill-sonnet-1-95ccc9,T8,large,cli-pipe-noskill,sonnet,1,5,1,deny-list v2,retained,
+T8-large-cli-pipe-ref-sonnet-1-3a27ea,T8,large,cli-pipe-ref,sonnet,1,5,1,deny-list v2,retained,
+T8-large-cli-pipe-skills-sonnet-1-b843b6,T8,large,cli-pipe-skills,sonnet,1,5,1,deny-list v2,retained,
+T8-large-cli-pipe-sonnet-2-a9e9bf,T8,large,cli-pipe,sonnet,2,5,1,deny-list v2,retained,
+T8-large-cli-pipe-noskill-sonnet-2-da598d,T8,large,cli-pipe-noskill,sonnet,2,5,1,deny-list v2,retained,
+T8-large-cli-pipe-skills-sonnet-2-ad89d1,T8,large,cli-pipe-skills,sonnet,2,5,1,deny-list v2,retained,
+T8-small-cli-pipe-sonnet-3-f21c12,T8,small,cli-pipe,sonnet,3,5,1,deny-list v2,retained,
+T8-large-cli-pipe-sonnet-3-4b6df4,T8,large,cli-pipe,sonnet,3,5,1,deny-list v2,retained,
+T8-large-cli-pipe-noskill-sonnet-3-f97af6,T8,large,cli-pipe-noskill,sonnet,3,5,1,deny-list v2,retained,
+T8-large-cli-pipe-ref-sonnet-3-e73ec8,T8,large,cli-pipe-ref,sonnet,3,5,1,deny-list v2,retained,
+T8-large-cli-pipe-noskill-haiku-1-f67c29,T8,large,cli-pipe-noskill,haiku,1,5,1,deny-list v2,retained,
+T8-large-cli-pipe-skills-sonnet-3-839385,T8,large,cli-pipe-skills,sonnet,3,5,1,deny-list v2,retained,
+L1-large-cli-pipe-skills-haiku-1-97c579,L1,large,cli-pipe-skills,haiku,1,5,1,deny-list v2,retained,
+L1-small-cli-pipe-skills-haiku-2-87b3a2,L1,small,cli-pipe-skills,haiku,2,5,1,deny-list v2,retained,
+L1-large-cli-pipe-haiku-2-68403f,L1,large,cli-pipe,haiku,2,5,1,deny-list v2,retained,
+L2-small-cli-pipe-ref-haiku-2-becf31,L2,small,cli-pipe-ref,haiku,2,5,1,deny-list v2,retained,
+L1-large-cli-pipe-haiku-3-a7d762,L1,large,cli-pipe,haiku,3,5,1,deny-list v2,retained,
+L2-small-cli-pipe-ref-haiku-3-e32325,L2,small,cli-pipe-ref,haiku,3,5,1,deny-list v2,retained,
+L2-large-cli-pipe-ref-haiku-3-ef1f1c,L2,large,cli-pipe-ref,haiku,3,5,1,deny-list v2,retained,
+L1-large-cli-pipe-ref-haiku-4-ef5ffc,L1,large,cli-pipe-ref,haiku,4,5,1,deny-list v2,retained,
+L2-small-cli-pipe-ref-haiku-4-34af78,L2,small,cli-pipe-ref,haiku,4,5,1,deny-list v2,retained,
+L1-large-cli-pipe-haiku-5-852b49,L1,large,cli-pipe,haiku,5,5,1,deny-list v2,retained,
+L2-small-cli-pipe-skills-haiku-5-ee3776,L2,small,cli-pipe-skills,haiku,5,5,1,deny-list v2,retained,
+L1-small-cli-pipe-sonnet-1-28f95e,L1,small,cli-pipe,sonnet,1,5,1,deny-list v2,retained,
+L1-small-cli-pipe-ref-sonnet-1-41ccc1,L1,small,cli-pipe-ref,sonnet,1,5,1,deny-list v2,retained,
+L1-large-cli-pipe-sonnet-1-d6802f,L1,large,cli-pipe,sonnet,1,5,1,deny-list v2,retained,
+L1-large-cli-pipe-skills-sonnet-1-b4b7e3,L1,large,cli-pipe-skills,sonnet,1,5,1,deny-list v2,retained,
+L1-large-cli-pipe-ref-sonnet-1-c2c0b1,L1,large,cli-pipe-ref,sonnet,1,5,1,deny-list v2,retained,
+L2-small-cli-pipe-skills-sonnet-1-cc2c7c,L2,small,cli-pipe-skills,sonnet,1,5,1,deny-list v2,retained,
+L2-small-cli-pipe-ref-sonnet-1-674d32,L2,small,cli-pipe-ref,sonnet,1,5,1,deny-list v2,retained,
+L2-large-cli-pipe-sonnet-1-8a48af,L2,large,cli-pipe,sonnet,1,5,1,deny-list v2,retained,
+L2-large-cli-pipe-skills-sonnet-1-b4a47d,L2,large,cli-pipe-skills,sonnet,1,5,1,deny-list v2,retained,
+L2-large-cli-pipe-ref-sonnet-1-3d70c1,L2,large,cli-pipe-ref,sonnet,1,5,1,deny-list v2,retained,
+L1-small-cli-pipe-sonnet-2-be1170,L1,small,cli-pipe,sonnet,2,5,1,deny-list v2,retained,
+L1-small-cli-pipe-skills-sonnet-2-5bedf8,L1,small,cli-pipe-skills,sonnet,2,5,1,deny-list v2,retained,
+L1-small-cli-pipe-ref-sonnet-2-999dba,L1,small,cli-pipe-ref,sonnet,2,5,1,deny-list v2,retained,
+L1-large-cli-pipe-sonnet-2-d60442,L1,large,cli-pipe,sonnet,2,5,1,deny-list v2,retained,
+L1-large-cli-pipe-skills-sonnet-2-13c68d,L1,large,cli-pipe-skills,sonnet,2,5,1,deny-list v2,retained,
+L1-large-cli-pipe-ref-sonnet-2-0c5e8c,L1,large,cli-pipe-ref,sonnet,2,5,1,deny-list v2,retained,
+L2-large-cli-pipe-sonnet-2-39302a,L2,large,cli-pipe,sonnet,2,5,1,deny-list v2,retained,
+L2-large-cli-pipe-skills-sonnet-2-68e864,L2,large,cli-pipe-skills,sonnet,2,5,1,deny-list v2,retained,
+L2-large-cli-pipe-ref-sonnet-2-d489c0,L2,large,cli-pipe-ref,sonnet,2,5,1,deny-list v2,retained,
+L1-small-cli-pipe-ref-sonnet-3-bd9d0b,L1,small,cli-pipe-ref,sonnet,3,5,1,deny-list v2,retained,
+L1-large-cli-pipe-sonnet-3-893e46,L1,large,cli-pipe,sonnet,3,5,1,deny-list v2,retained,
+L1-large-cli-pipe-skills-sonnet-3-054fd3,L1,large,cli-pipe-skills,sonnet,3,5,1,deny-list v2,retained,
+L1-large-cli-pipe-ref-sonnet-3-09e2cd,L1,large,cli-pipe-ref,sonnet,3,5,1,deny-list v2,retained,
+L2-small-cli-pipe-skills-sonnet-3-8ea1d5,L2,small,cli-pipe-skills,sonnet,3,5,1,deny-list v2,retained,
+L2-small-cli-pipe-ref-sonnet-3-0504c3,L2,small,cli-pipe-ref,sonnet,3,5,1,deny-list v2,retained,
+L2-large-cli-pipe-sonnet-3-e33f16,L2,large,cli-pipe,sonnet,3,5,1,deny-list v2,retained,
+L2-large-cli-pipe-skills-sonnet-3-c15245,L2,large,cli-pipe-skills,sonnet,3,5,1,deny-list v2,retained,
+L2-large-cli-pipe-ref-sonnet-3-155367,L2,large,cli-pipe-ref,sonnet,3,5,1,deny-list v2,retained,
+T1-small-cli-pipe-noskill-haiku-1-cacc01,T1,small,cli-pipe-noskill,haiku,1,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T1-small-cli-pipe-haiku-1-411cbb,T1,small,cli-pipe,haiku,1,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T1-large-cli-pipe-haiku-1-db106b,T1,large,cli-pipe,haiku,1,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T1-large-cli-pipe-noskill-haiku-1-0d1ef8,T1,large,cli-pipe-noskill,haiku,1,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T2-small-cli-pipe-haiku-1-b04d8d,T2,small,cli-pipe,haiku,1,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T2-small-cli-pipe-noskill-haiku-1-008bf1,T2,small,cli-pipe-noskill,haiku,1,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T2-large-cli-pipe-noskill-haiku-1-110171,T2,large,cli-pipe-noskill,haiku,1,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T2-large-cli-pipe-haiku-1-315a75,T2,large,cli-pipe,haiku,1,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T4-small-cli-pipe-haiku-1-ea571d,T4,small,cli-pipe,haiku,1,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T4-small-cli-pipe-noskill-haiku-1-c7d941,T4,small,cli-pipe-noskill,haiku,1,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T4-large-cli-pipe-haiku-1-00bc8f,T4,large,cli-pipe,haiku,1,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T8-small-cli-pipe-noskill-haiku-1-d87ae0,T8,small,cli-pipe-noskill,haiku,1,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T4-large-cli-pipe-noskill-haiku-1-a4b9c4,T4,large,cli-pipe-noskill,haiku,1,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T1-small-cli-pipe-haiku-2-1708b7,T1,small,cli-pipe,haiku,2,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T1-small-cli-pipe-noskill-haiku-2-ee0ff8,T1,small,cli-pipe-noskill,haiku,2,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T8-large-cli-pipe-haiku-1-167b5a,T8,large,cli-pipe,haiku,1,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T1-large-cli-pipe-haiku-2-aa9a52,T1,large,cli-pipe,haiku,2,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T1-large-cli-pipe-noskill-haiku-2-417068,T1,large,cli-pipe-noskill,haiku,2,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T8-large-cli-pipe-noskill-haiku-1-9d9d20,T8,large,cli-pipe-noskill,haiku,1,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T2-small-cli-pipe-haiku-2-f4b843,T2,small,cli-pipe,haiku,2,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T2-small-cli-pipe-noskill-haiku-2-a01858,T2,small,cli-pipe-noskill,haiku,2,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T2-large-cli-pipe-haiku-2-ab3e1f,T2,large,cli-pipe,haiku,2,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T2-large-cli-pipe-noskill-haiku-2-2aeff6,T2,large,cli-pipe-noskill,haiku,2,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T4-small-cli-pipe-haiku-2-12ea48,T4,small,cli-pipe,haiku,2,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T4-small-cli-pipe-noskill-haiku-2-9b518e,T4,small,cli-pipe-noskill,haiku,2,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T8-small-cli-pipe-haiku-1-4ae0e1,T8,small,cli-pipe,haiku,1,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T4-large-cli-pipe-haiku-2-495291,T4,large,cli-pipe,haiku,2,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T4-large-cli-pipe-noskill-haiku-2-d281f5,T4,large,cli-pipe-noskill,haiku,2,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T8-small-cli-pipe-haiku-2-f98b12,T8,small,cli-pipe,haiku,2,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T8-small-cli-pipe-noskill-haiku-2-7c06f6,T8,small,cli-pipe-noskill,haiku,2,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T1-small-cli-pipe-noskill-haiku-3-9da3f0,T1,small,cli-pipe-noskill,haiku,3,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T1-small-cli-pipe-haiku-3-848d74,T1,small,cli-pipe,haiku,3,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T1-large-cli-pipe-haiku-3-422294,T1,large,cli-pipe,haiku,3,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T8-large-cli-pipe-haiku-2-0eb33a,T8,large,cli-pipe,haiku,2,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T1-large-cli-pipe-noskill-haiku-3-5c263b,T1,large,cli-pipe-noskill,haiku,3,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T2-small-cli-pipe-haiku-3-d246e1,T2,small,cli-pipe,haiku,3,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T2-small-cli-pipe-noskill-haiku-3-6c43be,T2,small,cli-pipe-noskill,haiku,3,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T2-large-cli-pipe-haiku-3-adde9a,T2,large,cli-pipe,haiku,3,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T2-large-cli-pipe-noskill-haiku-3-5c5f9e,T2,large,cli-pipe-noskill,haiku,3,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T4-small-cli-pipe-haiku-3-e12cfb,T4,small,cli-pipe,haiku,3,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T4-small-cli-pipe-noskill-haiku-3-1a2891,T4,small,cli-pipe-noskill,haiku,3,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T4-large-cli-pipe-haiku-3-63a441,T4,large,cli-pipe,haiku,3,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T4-large-cli-pipe-noskill-haiku-3-a8a1bf,T4,large,cli-pipe-noskill,haiku,3,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T8-small-cli-pipe-haiku-3-59ac38,T8,small,cli-pipe,haiku,3,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T8-small-cli-pipe-noskill-haiku-3-4f424d,T8,small,cli-pipe-noskill,haiku,3,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T1-small-cli-pipe-noskill-haiku-4-6c066f,T1,small,cli-pipe-noskill,haiku,4,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T1-small-cli-pipe-haiku-4-3c4a8e,T1,small,cli-pipe,haiku,4,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T8-large-cli-pipe-noskill-haiku-2-2c169b,T8,large,cli-pipe-noskill,haiku,2,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T1-large-cli-pipe-haiku-4-d7c88c,T1,large,cli-pipe,haiku,4,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T1-large-cli-pipe-noskill-haiku-4-f331d1,T1,large,cli-pipe-noskill,haiku,4,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T8-large-cli-pipe-haiku-3-a41db4,T8,large,cli-pipe,haiku,3,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T2-small-cli-pipe-haiku-4-c0ab2a,T2,small,cli-pipe,haiku,4,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T8-large-cli-pipe-noskill-haiku-3-c94831,T8,large,cli-pipe-noskill,haiku,3,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T2-small-cli-pipe-noskill-haiku-4-364182,T2,small,cli-pipe-noskill,haiku,4,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T2-large-cli-pipe-haiku-4-06170b,T2,large,cli-pipe,haiku,4,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T2-large-cli-pipe-noskill-haiku-4-117f74,T2,large,cli-pipe-noskill,haiku,4,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T4-small-cli-pipe-haiku-4-114dae,T4,small,cli-pipe,haiku,4,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T4-small-cli-pipe-noskill-haiku-4-702d0f,T4,small,cli-pipe-noskill,haiku,4,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T4-large-cli-pipe-noskill-haiku-4-466ed2,T4,large,cli-pipe-noskill,haiku,4,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T4-large-cli-pipe-haiku-4-fc1021,T4,large,cli-pipe,haiku,4,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T8-small-cli-pipe-haiku-4-61e507,T8,small,cli-pipe,haiku,4,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T1-small-cli-pipe-haiku-5-e57909,T1,small,cli-pipe,haiku,5,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T8-small-cli-pipe-noskill-haiku-4-a465ac,T8,small,cli-pipe-noskill,haiku,4,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T1-small-cli-pipe-noskill-haiku-5-b6c9fb,T1,small,cli-pipe-noskill,haiku,5,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T1-large-cli-pipe-haiku-5-df851e,T1,large,cli-pipe,haiku,5,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T8-large-cli-pipe-haiku-4-113ad8,T8,large,cli-pipe,haiku,4,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T1-large-cli-pipe-noskill-haiku-5-a18df1,T1,large,cli-pipe-noskill,haiku,5,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T2-small-cli-pipe-haiku-5-dd3c05,T2,small,cli-pipe,haiku,5,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T8-large-cli-pipe-noskill-haiku-4-90c4d2,T8,large,cli-pipe-noskill,haiku,4,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T2-small-cli-pipe-noskill-haiku-5-e054e0,T2,small,cli-pipe-noskill,haiku,5,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T2-large-cli-pipe-haiku-5-52f05d,T2,large,cli-pipe,haiku,5,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T2-large-cli-pipe-noskill-haiku-5-7f4c62,T2,large,cli-pipe-noskill,haiku,5,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T4-small-cli-pipe-haiku-5-6ab127,T4,small,cli-pipe,haiku,5,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T4-small-cli-pipe-noskill-haiku-5-0d38f5,T4,small,cli-pipe-noskill,haiku,5,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T4-large-cli-pipe-haiku-5-ca55f7,T4,large,cli-pipe,haiku,5,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T4-large-cli-pipe-noskill-haiku-5-cc3c4b,T4,large,cli-pipe-noskill,haiku,5,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T8-small-cli-pipe-haiku-5-b73348,T8,small,cli-pipe,haiku,5,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T8-small-cli-pipe-noskill-haiku-5-2000ea,T8,small,cli-pipe-noskill,haiku,5,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T8-large-cli-pipe-haiku-5-76c71e,T8,large,cli-pipe,haiku,5,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T8-large-cli-pipe-noskill-haiku-5-52a10d,T8,large,cli-pipe-noskill,haiku,5,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T1-small-cli-pipe-noskill-sonnet-1-23c2ef,T1,small,cli-pipe-noskill,sonnet,1,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T1-small-cli-pipe-sonnet-1-1d06c1,T1,small,cli-pipe,sonnet,1,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T1-large-cli-pipe-sonnet-1-4b1dfc,T1,large,cli-pipe,sonnet,1,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T2-small-cli-pipe-sonnet-1-dd8712,T2,small,cli-pipe,sonnet,1,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T1-large-cli-pipe-noskill-sonnet-1-78afae,T1,large,cli-pipe-noskill,sonnet,1,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T2-small-cli-pipe-noskill-sonnet-1-137635,T2,small,cli-pipe-noskill,sonnet,1,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T2-large-cli-pipe-sonnet-1-8649b4,T2,large,cli-pipe,sonnet,1,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T2-large-cli-pipe-noskill-sonnet-1-b8f75d,T2,large,cli-pipe-noskill,sonnet,1,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T4-small-cli-pipe-sonnet-1-11f918,T4,small,cli-pipe,sonnet,1,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T4-small-cli-pipe-noskill-sonnet-1-485b6b,T4,small,cli-pipe-noskill,sonnet,1,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T4-large-cli-pipe-sonnet-1-2f9e88,T4,large,cli-pipe,sonnet,1,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T4-large-cli-pipe-noskill-sonnet-1-5f40aa,T4,large,cli-pipe-noskill,sonnet,1,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T8-small-cli-pipe-sonnet-1-ac7e79,T8,small,cli-pipe,sonnet,1,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T8-small-cli-pipe-noskill-sonnet-1-5ba4f9,T8,small,cli-pipe-noskill,sonnet,1,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T1-small-cli-pipe-sonnet-2-113e71,T1,small,cli-pipe,sonnet,2,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T1-small-cli-pipe-noskill-sonnet-2-0227d8,T1,small,cli-pipe-noskill,sonnet,2,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T1-large-cli-pipe-sonnet-2-f57cf1,T1,large,cli-pipe,sonnet,2,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T1-large-cli-pipe-noskill-sonnet-2-120bca,T1,large,cli-pipe-noskill,sonnet,2,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T8-large-cli-pipe-sonnet-1-5dc5d8,T8,large,cli-pipe,sonnet,1,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T2-small-cli-pipe-sonnet-2-0596dc,T2,small,cli-pipe,sonnet,2,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T2-small-cli-pipe-noskill-sonnet-2-e9e086,T2,small,cli-pipe-noskill,sonnet,2,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T8-large-cli-pipe-noskill-sonnet-1-c61ebf,T8,large,cli-pipe-noskill,sonnet,1,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T2-large-cli-pipe-noskill-sonnet-2-3185f7,T2,large,cli-pipe-noskill,sonnet,2,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T2-large-cli-pipe-sonnet-2-fdacb9,T2,large,cli-pipe,sonnet,2,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T4-small-cli-pipe-sonnet-2-92c5b8,T4,small,cli-pipe,sonnet,2,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T4-small-cli-pipe-noskill-sonnet-2-b8ed02,T4,small,cli-pipe-noskill,sonnet,2,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T4-large-cli-pipe-sonnet-2-9a3e84,T4,large,cli-pipe,sonnet,2,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T4-large-cli-pipe-noskill-sonnet-2-d14966,T4,large,cli-pipe-noskill,sonnet,2,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T8-small-cli-pipe-sonnet-2-ea79fa,T8,small,cli-pipe,sonnet,2,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T8-small-cli-pipe-noskill-sonnet-2-257e48,T8,small,cli-pipe-noskill,sonnet,2,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T1-small-cli-pipe-sonnet-3-842026,T1,small,cli-pipe,sonnet,3,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T1-small-cli-pipe-noskill-sonnet-3-be6f4c,T1,small,cli-pipe-noskill,sonnet,3,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T1-large-cli-pipe-sonnet-3-d1d07b,T1,large,cli-pipe,sonnet,3,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T1-large-cli-pipe-noskill-sonnet-3-01bc24,T1,large,cli-pipe-noskill,sonnet,3,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T2-small-cli-pipe-sonnet-3-f1da17,T2,small,cli-pipe,sonnet,3,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T8-large-cli-pipe-sonnet-2-a968ea,T8,large,cli-pipe,sonnet,2,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T8-large-cli-pipe-noskill-sonnet-2-9b562b,T8,large,cli-pipe-noskill,sonnet,2,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T2-small-cli-pipe-noskill-sonnet-3-feff46,T2,small,cli-pipe-noskill,sonnet,3,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T2-large-cli-pipe-sonnet-3-ae77ef,T2,large,cli-pipe,sonnet,3,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T2-large-cli-pipe-noskill-sonnet-3-eea9ac,T2,large,cli-pipe-noskill,sonnet,3,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T4-small-cli-pipe-sonnet-3-764e81,T4,small,cli-pipe,sonnet,3,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T4-small-cli-pipe-noskill-sonnet-3-bb6f80,T4,small,cli-pipe-noskill,sonnet,3,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T4-large-cli-pipe-sonnet-3-f27657,T4,large,cli-pipe,sonnet,3,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T4-large-cli-pipe-noskill-sonnet-3-791aff,T4,large,cli-pipe-noskill,sonnet,3,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T8-small-cli-pipe-sonnet-3-006b57,T8,small,cli-pipe,sonnet,3,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T8-small-cli-pipe-noskill-sonnet-3-3c7665,T8,small,cli-pipe-noskill,sonnet,3,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T8-large-cli-pipe-sonnet-3-9d731c,T8,large,cli-pipe,sonnet,3,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+T8-large-cli-pipe-noskill-sonnet-3-151337,T8,large,cli-pipe-noskill,sonnet,3,1,6,allowlist (superseded),superseded,allowlist could not check composed commands
+L2-small-cli-pipe-skills-haiku-1-49d4d2,L2,small,cli-pipe-skills,haiku,1,3,8,deny-list v1,superseded,deny-list v1 refused interpreters on loop tasks
+L1-small-cli-pipe-skills-haiku-1-430471,L1,small,cli-pipe-skills,haiku,1,3,8,deny-list v1,superseded,deny-list v1 refused interpreters on loop tasks
+L1-large-cli-pipe-skills-haiku-1-19da84,L1,large,cli-pipe-skills,haiku,1,3,8,deny-list v1,superseded,deny-list v1 refused interpreters on loop tasks
+L2-large-cli-pipe-skills-haiku-1-9c9895,L2,large,cli-pipe-skills,haiku,1,3,8,deny-list v1,superseded,deny-list v1 refused interpreters on loop tasks
+L1-large-cli-pipe-skills-haiku-2-c1fb85,L1,large,cli-pipe-skills,haiku,2,3,8,deny-list v1,superseded,deny-list v1 refused interpreters on loop tasks
+L2-small-cli-pipe-skills-haiku-2-de319a,L2,small,cli-pipe-skills,haiku,2,3,8,deny-list v1,superseded,deny-list v1 refused interpreters on loop tasks
+L1-small-cli-pipe-skills-haiku-2-8c44d6,L1,small,cli-pipe-skills,haiku,2,3,8,deny-list v1,superseded,deny-list v1 refused interpreters on loop tasks
+L2-large-cli-pipe-skills-haiku-2-546b16,L2,large,cli-pipe-skills,haiku,2,3,8,deny-list v1,superseded,deny-list v1 refused interpreters on loop tasks
+L2-small-cli-pipe-skills-haiku-3-8d2322,L2,small,cli-pipe-skills,haiku,3,3,8,deny-list v1,superseded,deny-list v1 refused interpreters on loop tasks
+L1-small-cli-pipe-skills-haiku-3-49c756,L1,small,cli-pipe-skills,haiku,3,3,8,deny-list v1,superseded,deny-list v1 refused interpreters on loop tasks
+L1-large-cli-pipe-skills-haiku-3-e075f6,L1,large,cli-pipe-skills,haiku,3,3,8,deny-list v1,superseded,deny-list v1 refused interpreters on loop tasks
+L2-small-cli-pipe-skills-haiku-4-dc60a5,L2,small,cli-pipe-skills,haiku,4,3,8,deny-list v1,superseded,deny-list v1 refused interpreters on loop tasks
+L1-small-cli-pipe-skills-haiku-4-c363eb,L1,small,cli-pipe-skills,haiku,4,3,8,deny-list v1,superseded,deny-list v1 refused interpreters on loop tasks
+L1-large-cli-pipe-skills-haiku-4-44a6ad,L1,large,cli-pipe-skills,haiku,4,3,8,deny-list v1,superseded,deny-list v1 refused interpreters on loop tasks
+L2-large-cli-pipe-skills-haiku-4-8cc9fb,L2,large,cli-pipe-skills,haiku,4,3,8,deny-list v1,superseded,deny-list v1 refused interpreters on loop tasks
+L2-large-cli-pipe-skills-haiku-3-2dfdf3,L2,large,cli-pipe-skills,haiku,3,3,8,deny-list v1,superseded,deny-list v1 refused interpreters on loop tasks
+L1-small-cli-pipe-skills-haiku-5-c06e99,L1,small,cli-pipe-skills,haiku,5,3,8,deny-list v1,superseded,deny-list v1 refused interpreters on loop tasks
+L1-large-cli-pipe-skills-haiku-5-d54108,L1,large,cli-pipe-skills,haiku,5,3,8,deny-list v1,superseded,deny-list v1 refused interpreters on loop tasks
+L2-large-cli-pipe-skills-haiku-5-c813d3,L2,large,cli-pipe-skills,haiku,5,3,8,deny-list v1,superseded,deny-list v1 refused interpreters on loop tasks
+L2-small-cli-pipe-skills-haiku-5-01d2a3,L2,small,cli-pipe-skills,haiku,5,3,8,deny-list v1,superseded,deny-list v1 refused interpreters on loop tasks
+L2-small-cli-pipe-skills-sonnet-1-012d3a,L2,small,cli-pipe-skills,sonnet,1,3,8,deny-list v1,superseded,deny-list v1 refused interpreters on loop tasks
+L1-small-cli-pipe-skills-sonnet-1-918553,L1,small,cli-pipe-skills,sonnet,1,3,8,deny-list v1,superseded,deny-list v1 refused interpreters on loop tasks
+L1-large-cli-pipe-skills-sonnet-1-68a30e,L1,large,cli-pipe-skills,sonnet,1,3,8,deny-list v1,superseded,deny-list v1 refused interpreters on loop tasks
+L2-large-cli-pipe-skills-sonnet-1-33327d,L2,large,cli-pipe-skills,sonnet,1,3,8,deny-list v1,superseded,deny-list v1 refused interpreters on loop tasks
+L2-small-cli-pipe-skills-sonnet-2-0fb908,L2,small,cli-pipe-skills,sonnet,2,3,8,deny-list v1,superseded,deny-list v1 refused interpreters on loop tasks
+L1-large-cli-pipe-skills-sonnet-2-3fd4d6,L1,large,cli-pipe-skills,sonnet,2,3,8,deny-list v1,superseded,deny-list v1 refused interpreters on loop tasks
+L2-large-cli-pipe-skills-sonnet-2-76e650,L2,large,cli-pipe-skills,sonnet,2,3,8,deny-list v1,superseded,deny-list v1 refused interpreters on loop tasks
+L1-small-cli-pipe-skills-sonnet-2-632d7f,L1,small,cli-pipe-skills,sonnet,2,3,8,deny-list v1,superseded,deny-list v1 refused interpreters on loop tasks
+L2-small-cli-pipe-skills-sonnet-3-3ab278,L2,small,cli-pipe-skills,sonnet,3,3,8,deny-list v1,superseded,deny-list v1 refused interpreters on loop tasks
+L1-small-cli-pipe-skills-sonnet-3-4400d1,L1,small,cli-pipe-skills,sonnet,3,3,8,deny-list v1,superseded,deny-list v1 refused interpreters on loop tasks
+L2-large-cli-pipe-skills-sonnet-3-3327cf,L2,large,cli-pipe-skills,sonnet,3,3,8,deny-list v1,superseded,deny-list v1 refused interpreters on loop tasks
+L1-large-cli-pipe-skills-sonnet-3-ef443c,L1,large,cli-pipe-skills,sonnet,3,3,8,deny-list v1,superseded,deny-list v1 refused interpreters on loop tasks
+T1-small-cli-pipe-noskill-haiku-1-287934,T1,small,cli-pipe-noskill,haiku,1,2,8,deny-list v1,superseded,shared temp dir between parallel runs
+T4-small-cli-pipe-noskill-haiku-1-ff40ab,T4,small,cli-pipe-noskill,haiku,1,2,8,deny-list v1,superseded,shared temp dir between parallel runs
+T4-large-cli-pipe-noskill-haiku-1-e29d2b,T4,large,cli-pipe-noskill,haiku,1,2,8,deny-list v1,superseded,shared temp dir between parallel runs
+T4-large-cli-pipe-haiku-1-791160,T4,large,cli-pipe,haiku,1,2,8,deny-list v1,superseded,shared temp dir between parallel runs
+T8-small-cli-pipe-haiku-1-8c9e64,T8,small,cli-pipe,haiku,1,2,8,deny-list v1,superseded,shared temp dir between parallel runs
+T1-small-cli-pipe-noskill-haiku-2-bbbf65,T1,small,cli-pipe-noskill,haiku,2,2,8,deny-list v1,superseded,shared temp dir between parallel runs
+T8-small-cli-pipe-noskill-haiku-1-e34a76,T8,small,cli-pipe-noskill,haiku,1,2,8,deny-list v1,superseded,shared temp dir between parallel runs
+T8-large-cli-pipe-noskill-haiku-1-24fe17,T8,large,cli-pipe-noskill,haiku,1,2,8,deny-list v1,superseded,shared temp dir between parallel runs
+T8-small-cli-pipe-ref-haiku-2-0a5034,T8,small,cli-pipe-ref,haiku,2,2,8,deny-list v1,superseded,shared temp dir between parallel runs
+T8-large-cli-pipe-haiku-2-8e25f5,T8,large,cli-pipe,haiku,2,2,8,deny-list v1,superseded,shared temp dir between parallel runs
+T8-large-cli-pipe-noskill-haiku-2-728605,T8,large,cli-pipe-noskill,haiku,2,2,8,deny-list v1,superseded,shared temp dir between parallel runs
+T4-small-cli-pipe-haiku-3-911093,T4,small,cli-pipe,haiku,3,2,8,deny-list v1,superseded,shared temp dir between parallel runs
+T1-small-cli-pipe-haiku-4-2066da,T1,small,cli-pipe,haiku,4,2,8,deny-list v1,superseded,shared temp dir between parallel runs
+T1-small-cli-pipe-noskill-haiku-4-51ddcd,T1,small,cli-pipe-noskill,haiku,4,2,8,deny-list v1,superseded,shared temp dir between parallel runs
+T1-large-cli-pipe-noskill-haiku-4-f708f1,T1,large,cli-pipe-noskill,haiku,4,2,8,deny-list v1,superseded,shared temp dir between parallel runs
+T8-large-cli-pipe-noskill-haiku-3-8f84fe,T8,large,cli-pipe-noskill,haiku,3,2,8,deny-list v1,superseded,shared temp dir between parallel runs
+T8-small-cli-pipe-haiku-4-5887f0,T8,small,cli-pipe,haiku,4,2,8,deny-list v1,superseded,shared temp dir between parallel runs
+T1-small-cli-pipe-noskill-haiku-5-1cf20f,T1,small,cli-pipe-noskill,haiku,5,2,8,deny-list v1,superseded,shared temp dir between parallel runs
+T8-large-cli-pipe-noskill-haiku-4-0b520b,T8,large,cli-pipe-noskill,haiku,4,2,8,deny-list v1,superseded,shared temp dir between parallel runs
+T8-small-cli-pipe-noskill-haiku-4-6ddaf9,T8,small,cli-pipe-noskill,haiku,4,2,8,deny-list v1,superseded,shared temp dir between parallel runs
+T4-small-cli-pipe-noskill-haiku-5-7813b7,T4,small,cli-pipe-noskill,haiku,5,2,8,deny-list v1,superseded,shared temp dir between parallel runs
+T4-large-cli-pipe-haiku-5-fe2899,T4,large,cli-pipe,haiku,5,2,8,deny-list v1,superseded,shared temp dir between parallel runs
+T8-small-cli-pipe-haiku-5-d790e1,T8,small,cli-pipe,haiku,5,2,8,deny-list v1,superseded,shared temp dir between parallel runs
+T8-large-cli-pipe-ref-sonnet-1-5bf4d4,T8,large,cli-pipe-ref,sonnet,1,2,8,deny-list v1,superseded,shared temp dir between parallel runs
+T8-large-cli-pipe-sonnet-1-97b43f,T8,large,cli-pipe,sonnet,1,2,8,deny-list v1,superseded,shared temp dir between parallel runs
+T8-large-cli-pipe-noskill-sonnet-1-b75609,T8,large,cli-pipe-noskill,sonnet,1,2,8,deny-list v1,superseded,shared temp dir between parallel runs
+T8-large-cli-pipe-sonnet-2-b99874,T8,large,cli-pipe,sonnet,2,2,8,deny-list v1,superseded,shared temp dir between parallel runs
+T8-large-cli-pipe-noskill-sonnet-2-c31bbe,T8,large,cli-pipe-noskill,sonnet,2,2,8,deny-list v1,superseded,shared temp dir between parallel runs
+T8-small-cli-pipe-sonnet-3-f88f72,T8,small,cli-pipe,sonnet,3,2,8,deny-list v1,superseded,shared temp dir between parallel runs
+T8-large-cli-pipe-ref-sonnet-3-0bb8d1,T8,large,cli-pipe-ref,sonnet,3,2,8,deny-list v1,superseded,shared temp dir between parallel runs
+T8-large-cli-pipe-sonnet-3-bd82c2,T8,large,cli-pipe,sonnet,3,2,8,deny-list v1,superseded,shared temp dir between parallel runs
+T8-large-cli-pipe-noskill-sonnet-3-970f47,T8,large,cli-pipe-noskill,sonnet,3,2,8,deny-list v1,superseded,shared temp dir between parallel runs
+T8-large-cli-pipe-skills-haiku-1-f42739,T8,large,cli-pipe-skills,haiku,1,3,8,deny-list v1,superseded,shared temp dir between parallel runs
+T4-large-cli-pipe-skills-haiku-2-f18aaa,T4,large,cli-pipe-skills,haiku,2,3,8,deny-list v1,superseded,shared temp dir between parallel runs
+T8-small-cli-pipe-skills-haiku-2-b69168,T8,small,cli-pipe-skills,haiku,2,3,8,deny-list v1,superseded,shared temp dir between parallel runs
+T8-small-cli-pipe-skills-haiku-3-e7a244,T8,small,cli-pipe-skills,haiku,3,3,8,deny-list v1,superseded,shared temp dir between parallel runs
+T8-large-cli-pipe-skills-haiku-4-fac8f7,T8,large,cli-pipe-skills,haiku,4,3,8,deny-list v1,superseded,shared temp dir between parallel runs
+T8-large-cli-pipe-skills-sonnet-1-47e314,T8,large,cli-pipe-skills,sonnet,1,3,8,deny-list v1,superseded,shared temp dir between parallel runs
+T8-small-cli-pipe-skills-sonnet-1-5c896b,T8,small,cli-pipe-skills,sonnet,1,3,8,deny-list v1,superseded,shared temp dir between parallel runs
+T8-large-cli-pipe-skills-sonnet-2-60d713,T8,large,cli-pipe-skills,sonnet,2,3,8,deny-list v1,superseded,shared temp dir between parallel runs
+T8-large-cli-pipe-skills-sonnet-3-0af7e8,T8,large,cli-pipe-skills,sonnet,3,3,8,deny-list v1,superseded,shared temp dir between parallel runs
+L1-large-cli-pipe-skills-haiku-1-b7458c,L1,large,cli-pipe-skills,haiku,1,4,8,deny-list v2,superseded,shared temp dir between parallel runs
+L1-small-cli-pipe-skills-haiku-2-93dac4,L1,small,cli-pipe-skills,haiku,2,4,8,deny-list v2,superseded,shared temp dir between parallel runs
+L2-small-cli-pipe-ref-haiku-2-885743,L2,small,cli-pipe-ref,haiku,2,4,8,deny-list v2,superseded,shared temp dir between parallel runs
+L1-large-cli-pipe-haiku-2-70a968,L1,large,cli-pipe,haiku,2,4,8,deny-list v2,superseded,shared temp dir between parallel runs
+L2-small-cli-pipe-ref-haiku-3-1aa6e0,L2,small,cli-pipe-ref,haiku,3,4,8,deny-list v2,superseded,shared temp dir between parallel runs
+L1-large-cli-pipe-haiku-3-2256de,L1,large,cli-pipe,haiku,3,4,8,deny-list v2,superseded,shared temp dir between parallel runs
+L2-large-cli-pipe-ref-haiku-3-9970f7,L2,large,cli-pipe-ref,haiku,3,4,8,deny-list v2,superseded,shared temp dir between parallel runs
+L2-small-cli-pipe-ref-haiku-4-3550d7,L2,small,cli-pipe-ref,haiku,4,4,8,deny-list v2,superseded,shared temp dir between parallel runs
+L1-large-cli-pipe-ref-haiku-4-305884,L1,large,cli-pipe-ref,haiku,4,4,8,deny-list v2,superseded,shared temp dir between parallel runs
+L1-large-cli-pipe-haiku-5-065023,L1,large,cli-pipe,haiku,5,4,8,deny-list v2,superseded,shared temp dir between parallel runs
+L2-small-cli-pipe-skills-haiku-5-d0d944,L2,small,cli-pipe-skills,haiku,5,4,8,deny-list v2,superseded,shared temp dir between parallel runs
+L1-large-cli-pipe-sonnet-1-b0bf2f,L1,large,cli-pipe,sonnet,1,4,8,deny-list v2,superseded,shared temp dir between parallel runs
+L2-small-cli-pipe-ref-sonnet-1-4e80db,L2,small,cli-pipe-ref,sonnet,1,4,8,deny-list v2,superseded,shared temp dir between parallel runs
+L1-large-cli-pipe-ref-sonnet-1-03fac8,L1,large,cli-pipe-ref,sonnet,1,4,8,deny-list v2,superseded,shared temp dir between parallel runs
+L2-small-cli-pipe-skills-sonnet-1-a533e0,L2,small,cli-pipe-skills,sonnet,1,4,8,deny-list v2,superseded,shared temp dir between parallel runs
+L1-small-cli-pipe-ref-sonnet-1-a4882c,L1,small,cli-pipe-ref,sonnet,1,4,8,deny-list v2,superseded,shared temp dir between parallel runs
+L1-small-cli-pipe-sonnet-1-064162,L1,small,cli-pipe,sonnet,1,4,8,deny-list v2,superseded,shared temp dir between parallel runs
+L2-large-cli-pipe-skills-sonnet-1-a0702d,L2,large,cli-pipe-skills,sonnet,1,4,8,deny-list v2,superseded,shared temp dir between parallel runs
+L2-large-cli-pipe-ref-sonnet-1-86088e,L2,large,cli-pipe-ref,sonnet,1,4,8,deny-list v2,superseded,shared temp dir between parallel runs
+L1-large-cli-pipe-skills-sonnet-1-b20c0a,L1,large,cli-pipe-skills,sonnet,1,4,8,deny-list v2,superseded,shared temp dir between parallel runs
+L1-small-cli-pipe-ref-sonnet-2-82d3c9,L1,small,cli-pipe-ref,sonnet,2,4,8,deny-list v2,superseded,shared temp dir between parallel runs
+L1-small-cli-pipe-skills-sonnet-2-43294a,L1,small,cli-pipe-skills,sonnet,2,4,8,deny-list v2,superseded,shared temp dir between parallel runs
+L1-large-cli-pipe-skills-sonnet-2-aca77a,L1,large,cli-pipe-skills,sonnet,2,4,8,deny-list v2,superseded,shared temp dir between parallel runs
+L1-large-cli-pipe-ref-sonnet-2-e74852,L1,large,cli-pipe-ref,sonnet,2,4,8,deny-list v2,superseded,shared temp dir between parallel runs
+L2-large-cli-pipe-sonnet-2-b68a22,L2,large,cli-pipe,sonnet,2,4,8,deny-list v2,superseded,shared temp dir between parallel runs
+L1-large-cli-pipe-sonnet-2-09536b,L1,large,cli-pipe,sonnet,2,4,8,deny-list v2,superseded,shared temp dir between parallel runs
+L2-large-cli-pipe-skills-sonnet-2-3c43ec,L2,large,cli-pipe-skills,sonnet,2,4,8,deny-list v2,superseded,shared temp dir between parallel runs
+L2-large-cli-pipe-ref-sonnet-2-5bccd7,L2,large,cli-pipe-ref,sonnet,2,4,8,deny-list v2,superseded,shared temp dir between parallel runs
+L1-small-cli-pipe-sonnet-2-6287f7,L1,small,cli-pipe,sonnet,2,4,8,deny-list v2,superseded,shared temp dir between parallel runs
+L2-small-cli-pipe-skills-sonnet-3-bcef8c,L2,small,cli-pipe-skills,sonnet,3,4,8,deny-list v2,superseded,shared temp dir between parallel runs
+L2-small-cli-pipe-ref-sonnet-3-0a5f7d,L2,small,cli-pipe-ref,sonnet,3,4,8,deny-list v2,superseded,shared temp dir between parallel runs
+L1-small-cli-pipe-ref-sonnet-3-9a3706,L1,small,cli-pipe-ref,sonnet,3,4,8,deny-list v2,superseded,shared temp dir between parallel runs
+L1-large-cli-pipe-sonnet-3-e13723,L1,large,cli-pipe,sonnet,3,4,8,deny-list v2,superseded,shared temp dir between parallel runs
+L2-large-cli-pipe-sonnet-3-77bc76,L2,large,cli-pipe,sonnet,3,4,8,deny-list v2,superseded,shared temp dir between parallel runs
+L2-large-cli-pipe-skills-sonnet-3-258adb,L2,large,cli-pipe-skills,sonnet,3,4,8,deny-list v2,superseded,shared temp dir between parallel runs
+L2-large-cli-pipe-ref-sonnet-3-eb2f8f,L2,large,cli-pipe-ref,sonnet,3,4,8,deny-list v2,superseded,shared temp dir between parallel runs
+L1-large-cli-pipe-skills-sonnet-3-944884,L1,large,cli-pipe-skills,sonnet,3,4,8,deny-list v2,superseded,shared temp dir between parallel runs
+L1-large-cli-pipe-ref-sonnet-3-11be3e,L1,large,cli-pipe-ref,sonnet,3,4,8,deny-list v2,superseded,shared temp dir between parallel runs
+L2-large-cli-pipe-sonnet-1-61bdae,L2,large,cli-pipe,sonnet,1,,,deny-list v2,superseded,"re-collection of e6305b, run alone outside the logged waves but with wave 4's shared temp path; superseded with the other shared-temp runs"
+T8-large-cli-pipe-noskill-haiku-1-f547bf,T8,large,cli-pipe-noskill,haiku,1,5,1,deny-list v2,superseded,collected in wave 5 while a smoke test ran in parallel and wrote to /tmp; discarded before analysis and re-collected
+T8-large-cli-pipe-skills-sonnet-3-5d66d9,T8,large,cli-pipe-skills,sonnet,3,5,1,deny-list v2,superseded,stopped by the operator in error
+L2-large-cli-pipe-sonnet-1-e6305b,L2,large,,,,4,8,,superseded,exceeded the 900 s read timeout with no output; re-collected as 61bdae

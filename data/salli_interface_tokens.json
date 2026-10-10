@@ -1,0 +1,29 @@
+{
+  "mcp_tools": 24,
+  "mcp_definition_chars": 11447,
+  "mcp_definition_tokens_o200k": 2987,
+  "cli_top_help_tokens": 385,
+  "cli_group_help_tokens": {
+    "accounts": 196,
+    "entry": 153,
+    "ledger": 134,
+    "tax": 184,
+    "agent": 196,
+    "parse": 142,
+    "reminders": 189,
+    "fi": 177,
+    "advisor": 175,
+    "documents": 129,
+    "billing": 122,
+    "profile": 237,
+    "budget": 160,
+    "debt": 164,
+    "portfolio": 177,
+    "subscription": 162,
+    "insurance": 153,
+    "reports": 170,
+    "bug-reports": 146
+  },
+  "cli_group_help_min": 122,
+  "cli_group_help_max": 237
+}
