@@ -2,6 +2,7 @@ cff-version: 1.2.0
 message: "If you use this package, please cite the paper."
 title: "CLI-First: paper and replication package"
 version: "1.0.0"
+doi: "10.5281/zenodo.23284582"
 authors:
   - family-names: Irugalbandara
     given-names: Chandra

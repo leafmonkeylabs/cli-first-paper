@@ -2,6 +2,8 @@
 
 Chandra Irugalbandara, Leaf Monkey Labs.
 
+Archived on Zenodo: [10.5281/zenodo.23284582](https://doi.org/10.5281/zenodo.23284582) (v1.0.0; [all versions](https://doi.org/10.5281/zenodo.23284581)).
+
 This repository holds the paper and everything behind it: the LaTeX source and PDF, plus the data, harness and analysis for the exploratory experiment (Section 6) and the case-study measurements (Section 4).
 
 ## The paper
