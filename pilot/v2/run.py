@@ -31,6 +31,7 @@ Usage (with the v2 checkout's interpreter):
 from __future__ import annotations
 
 import argparse
+from datetime import datetime, timezone
 import asyncio
 import csv
 import gzip
@@ -56,6 +57,7 @@ OUT = Path(os.environ.get("PILOT_OUT", ROOT / "data" / "pilot-v2"))
 RUNS_CSV = OUT / "runs.csv"
 WORK = HERE.parent / "work" / "runs-v2"
 BIN = HERE.parent / "work" / "v2-bin"
+JOBS = 0
 SIZE_SEED = {"small": 1, "large": 2}
 
 CLAUDE = os.environ.get("CLAUDE_BIN") or shutil.which("claude") or "claude"
@@ -94,18 +96,33 @@ WITH_REF = (
 _HELP = " `salli --help` and `salli <group> --help` describe the commands."
 assert _HELP in CLI_STEP and _HELP in CLI_PIPE
 
+# Follow-up isolation wave (paper Section 7.3):
+#  mcp-24            the 1322f84 MCP server with only the 24 tools that made up the
+#                    paper's MCP-24 at 0277747 (same names; 1322f84's schemas).
+#  cli-pipe-ref-ids  the composed CLI with the sheet, but accounts addressed by id
+#                    only, as MCP does: the sheet says "id", and the salli wrapper
+#                    refuses codes and names in --debit/--credit/--parent.
+from mcp24 import MCP24_TOOLS  # noqa: E402
+REFERENCE_IDS = (HERE / "cli_reference_ids.md").read_text() if (HERE / "cli_reference_ids.md").exists() else ""
+WITH_REF_IDS = (
+    "\n\nThe reference below lists the commands that cover what you need and the JSON each "
+    "returns; `salli` is on PATH.\n\n" + REFERENCE_IDS
+)
 ARM_SYSTEM = {
     "mcp": "Use the Salli tools.",
+    "mcp-24": "Use the Salli tools.",
+    "cli-pipe-ref-ids": CLI_PIPE.replace(_HELP, "") + WITH_REF_IDS,
     "cli-pipe": CLI_PIPE + WITH_SKILL,
     "cli-pipe-noskill": CLI_PIPE,
     "cli-step-ref": CLI_STEP.replace(_HELP, "") + WITH_REF,
     "cli-pipe-ref": CLI_PIPE.replace(_HELP, "") + WITH_REF,
 }
-MCP_SERVER = {"mcp": "mcp_stdio.py"}
+MCP_SERVER = {"mcp": "mcp_stdio.py", "mcp-24": "mcp_stdio.py"}
+MCP_ENV = {"mcp-24": {"SALLI_MCP_TOOLS": ",".join(MCP24_TOOLS)}}
 # Step arms run under an allowlist: only `salli`, so pipes and other programs
 # are refused. Composed arms run with permissions bypassed, under a deny-list
 # of destructive and network commands (pilot/run.py explains why).
-COMPOSED = {"cli-pipe", "cli-pipe-noskill", "cli-pipe-ref"}
+COMPOSED = {"cli-pipe", "cli-pipe-noskill", "cli-pipe-ref", "cli-pipe-ref-ids"}
 DENIED = [
     f"Bash({t}:*)" for t in (
         "rm", "rmdir", "mv", "cp", "dd", "chmod", "chown", "ln", "truncate", "shred",
@@ -116,6 +133,7 @@ DENIED = [
 ]
 ALLOWED = {
     "mcp": ["mcp__salli"],
+    "mcp-24": ["mcp__salli"],
     "cli-step-ref": ["Bash(salli:*)"],
 }
 FIELDS = [
@@ -241,9 +259,20 @@ async def one_run(task: str, size: str, arm: str, model: str, rep: int, base_env
     (workdir / "mcp.json").write_text(json.dumps({"mcpServers": {"salli": {
         "command": str(SALLI / ".venv" / "bin" / "python"),
         "args": [str(HERE / MCP_SERVER.get(arm, "mcp_stdio.py"))],
-        "env": {"SALLI_USER_ID": user, "SALLI": str(SALLI)},
+        "env": {"SALLI_USER_ID": user, "SALLI": str(SALLI), **MCP_ENV.get(arm, {})},
     }} if arm in MCP_SERVER else {}}))
     t0 = time.time()
+    started = datetime.now(timezone.utc).isoformat(timespec="seconds")
+    try:
+        return await _drive(run_id, task, size, arm, model, rep, spec, user, pre, workdir, env, secrets, t0, started)
+    finally:
+        # Revoke the run's token however the run ends (it was skipped on errors before).
+        if token_id:
+            await revoke_pat(user, token_id)
+        shutil.rmtree(workdir, ignore_errors=True)
+
+
+async def _drive(run_id, task, size, arm, model, rep, spec, user, pre, workdir, env, secrets, t0, started) -> dict:
     proc = await asyncio.create_subprocess_exec(
         *claude_cmd(arm, model, workdir),
         cwd=workdir, env=env, stdin=asyncio.subprocess.PIPE,
@@ -286,9 +315,9 @@ async def one_run(task: str, size: str, arm: str, model: str, rep: int, base_env
     final = m.pop("final")[0]
     checks = await spec["check"](user, final, pre)
     success = all(v for k, v in checks.items() if isinstance(v, bool))
-    if token_id:
-        await revoke_pat(user, token_id)
-    shutil.rmtree(workdir, ignore_errors=True)
+    with (OUT / "run_times.csv").open("a") as tf:
+        tf.write(f"{run_id},{started},{datetime.now(timezone.utc).isoformat(timespec='seconds')},{JOBS}\n")
+    final = scrub([final], secrets)[0]
     row = {
         "run_id": run_id, "task": task, "k": spec["k"], "size": size, "arm": arm,
         "model": model, "rep": rep, "success": success, "checks": json.dumps(checks),
@@ -300,6 +329,32 @@ async def one_run(task: str, size: str, arm: str, model: str, rep: int, base_env
     return row
 
 
+IDS_ONLY = {"cli-pipe-ref-ids"}
+# Accounts by id (or an id's start of 8+ hex characters) only; account codes and
+# names are refused with a plain error, as MCP's tools take ids only.
+IDS_WRAPPER = """#!{python}
+import os, re, sys
+args = sys.argv[1:]
+ID = re.compile(r"^[0-9a-fA-F-]{{8,}}$")
+def bad(acc):
+    return not ID.match(acc)
+for i, a in enumerate(args):
+    for flag in ("--debit", "--credit", "--parent"):
+        val = None
+        if a == flag and i + 1 < len(args):
+            val = args[i + 1]
+        elif a.startswith(flag + "="):
+            val = a[len(flag) + 1:]
+        if val is not None:
+            acc = val.rsplit(":", 1)[0] if flag != "--parent" else val
+            if bad(acc):
+                sys.stderr.write("error: name the account by its id (see `salli accounts list --json`); "
+                                 "account codes and names are not accepted\\n")
+                sys.exit(2)
+os.execv("{node}", ["{node}", "{cli}", *args])
+"""
+
+
 def ensure_bin(arms: list[str]) -> None:
     """v2: a bin dir per CLI arm holding only `salli`, a wrapper that runs the
     TypeScript CLI (pilot/run.py symlinked the Python CLI's entry point)."""
@@ -308,7 +363,10 @@ def ensure_bin(arms: list[str]) -> None:
             continue
         wrapper = BIN / arm / "salli"
         wrapper.parent.mkdir(parents=True, exist_ok=True)
-        wrapper.write_text(f'#!/bin/sh\nexec "{NODE}" "{CLI_JS}" "$@"\n')
+        if arm in IDS_ONLY:
+            wrapper.write_text(IDS_WRAPPER.format(python=sys.executable, node=NODE, cli=CLI_JS))
+        else:
+            wrapper.write_text(f'#!/bin/sh\nexec "{NODE}" "{CLI_JS}" "$@"\n')
         wrapper.chmod(0o755)
 
 
@@ -324,8 +382,14 @@ async def main() -> None:
 
     OUT.mkdir(parents=True, exist_ok=True)
     ensure_bin(a.arms)
+    global JOBS
+    JOBS = a.jobs
     base_env = {
-        **os.environ, **salli_env(),
+        # Isolation wave and later: the server's .env (database URL, service keys)
+        # is no longer put in the agents' environment. The TypeScript CLI needs only
+        # its token, and the MCP server loads the .env itself. Earlier follow-up
+        # waves passed it, as pilot/run.py had to for the in-process Python CLI.
+        **os.environ,
         "SALLI": str(SALLI),
         # Only the salli executable, not salli-core's environment, so code the
         # agent writes (shell or Python) can call the CLI but cannot import salli.

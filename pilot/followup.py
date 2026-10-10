@@ -30,10 +30,15 @@ import stats  # noqa: E402
 
 def analyse_wave(data: Path, base: str, arms: list[str], write: bool = True) -> tuple[list[dict], list[dict]]:
     """The paper's statistics on one follow-up wave, against <base>."""
-    analyze.DATA = data
-    rows = analyze.load()
-    stats.ARMS = [base, *arms]
-    ratios, _ = stats.analyse(rows, random.Random(stats.SEED))
+    saved = analyze.DATA, stats.ARMS
+    try:
+        analyze.DATA = data
+        rows = analyze.load()
+        stats.ARMS = [base, *arms]
+        ratios, _ = stats.analyse(rows, random.Random(stats.SEED))
+    finally:
+        # Restore the modules' globals so later callers see the paper's settings.
+        analyze.DATA, stats.ARMS = saved
     for r in ratios:
         r.pop("per_task", None)
     if write:

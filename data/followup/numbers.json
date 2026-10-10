@@ -17,7 +17,10 @@
  "interface": {
   "mcp_tools": 46,
   "mcp_definition_tokens_o200k": 6599,
+  "mcp24_tools": 24,
+  "mcp24_definition_tokens_o200k": 3122,
   "sheet_commands": 33,
+  "sheet_ids_tokens_o200k": 3000,
   "sheet_tokens_o200k": 3010,
   "paper_sheet_commands": 14,
   "paper_sheet_tokens_o200k": 1134
@@ -152,6 +155,118 @@
    "cells": 4
   }
  },
+ "ablation_factorial": {
+  "options/haiku/chain": {
+   "ratio": 1.241,
+   "lo": 1.168,
+   "hi": 1.319,
+   "df": 42.1,
+   "p": 0.0,
+   "cells": 8,
+   "p_holm": 0.0
+  },
+  "options/haiku/loop": {
+   "ratio": 1.055,
+   "lo": 0.945,
+   "hi": 1.178,
+   "df": 21.4,
+   "p": 0.3231,
+   "cells": 4,
+   "p_holm": 0.9692
+  },
+  "options/sonnet/chain": {
+   "ratio": 0.915,
+   "lo": 0.809,
+   "hi": 1.034,
+   "df": 21.7,
+   "p": 0.1444,
+   "cells": 8,
+   "p_holm": 0.7221
+  },
+  "options/sonnet/loop": {
+   "ratio": 1.037,
+   "lo": 0.821,
+   "hi": 1.31,
+   "df": 11.7,
+   "p": 0.7413,
+   "cells": 4,
+   "p_holm": 1.0
+  },
+  "shapes/haiku/chain": {
+   "ratio": 1.1,
+   "lo": 1.035,
+   "hi": 1.169,
+   "df": 42.1,
+   "p": 0.0028,
+   "cells": 8,
+   "p_holm": 0.0198
+  },
+  "shapes/haiku/loop": {
+   "ratio": 0.993,
+   "lo": 0.89,
+   "hi": 1.109,
+   "df": 21.4,
+   "p": 0.8993,
+   "cells": 4,
+   "p_holm": 1.0
+  },
+  "shapes/sonnet/chain": {
+   "ratio": 1.189,
+   "lo": 1.052,
+   "hi": 1.343,
+   "df": 21.7,
+   "p": 0.0077,
+   "cells": 8,
+   "p_holm": 0.0463
+  },
+  "shapes/sonnet/loop": {
+   "ratio": 1.168,
+   "lo": 0.924,
+   "hi": 1.475,
+   "df": 11.7,
+   "p": 0.1741,
+   "cells": 4,
+   "p_holm": 0.7221
+  }
+ },
+ "ablation_interaction": {
+  "haiku/chain": {
+   "ratio": 1.114,
+   "lo": 0.986,
+   "hi": 1.258,
+   "df": 42.1,
+   "p": 0.08048129220482225,
+   "cells": 8,
+   "p_holm": 0.08048129220482225
+  },
+  "haiku/loop": {
+   "ratio": 1.005,
+   "lo": 0.806,
+   "hi": 1.253,
+   "df": 21.4,
+   "p": 0.9639160665521246,
+   "cells": 4,
+   "p_holm": 0.9639160665521246
+  },
+  "sonnet/chain": {
+   "ratio": 0.938,
+   "lo": 0.735,
+   "hi": 1.198,
+   "df": 21.7,
+   "p": 0.5920111126255749,
+   "cells": 8,
+   "p_holm": 0.5920111126255749
+  },
+  "sonnet/loop": {
+   "ratio": 1.103,
+   "lo": 0.691,
+   "hi": 1.761,
+   "df": 11.7,
+   "p": 0.6550192324919981,
+   "cells": 4,
+   "p_holm": 0.6550192324919981
+  }
+ },
  "replication_vs_mcp": {
   "haiku/chain": {
    "ratio": 1.194,
@@ -185,7 +300,9 @@
    "cond_hi": 2.091,
    "p_holm": 0.0016,
    "cheaper_cells": 0,
-   "cells": 8
+   "cells": 8,
+   "task_lo": 1.498,
+   "task_hi": 2.663
   },
   "haiku/chain/cli-pipe": {
    "ratio": 1.496,
@@ -193,7 +310,9 @@
    "cond_hi": 1.58,
    "p_holm": 0.0016,
    "cheaper_cells": 1,
-   "cells": 8
+   "cells": 8,
+   "task_lo": 0.906,
+   "task_hi": 2.469
   },
   "haiku/chain/cli-step-ref": {
    "ratio": 1.121,
@@ -201,7 +320,9 @@
    "cond_hi": 1.2,
    "p_holm": 0.0016,
    "cheaper_cells": 2,
-   "cells": 8
+   "cells": 8,
+   "task_lo": 0.978,
+   "task_hi": 1.285
   },
   "haiku/chain/cli-pipe-ref": {
    "ratio": 0.897,
@@ -209,7 +330,9 @@
    "cond_hi": 0.962,
    "p_holm": 0.004,
    "cheaper_cells": 6,
-   "cells": 8
+   "cells": 8,
+   "task_lo": 0.762,
+   "task_hi": 1.056
   },
   "haiku/loop/cli-pipe-noskill": {
    "ratio": 1.008,
@@ -217,7 +340,9 @@
    "cond_hi": 1.082,
    "p_holm": 1.0,
    "cheaper_cells": 3,
-   "cells": 4
+   "cells": 4,
+   "task_lo": 0.062,
+   "task_hi": 16.442
   },
   "haiku/loop/cli-pipe": {
    "ratio": 0.719,
@@ -225,7 +350,9 @@
    "cond_hi": 0.789,
    "p_holm": 0.0016,
    "cheaper_cells": 3,
-   "cells": 4
+   "cells": 4,
+   "task_lo": 0.069,
+   "task_hi": 7.486
   },
   "haiku/loop/cli-step-ref": {
    "ratio": 0.774,
@@ -233,7 +360,9 @@
    "cond_hi": 0.868,
    "p_holm": 0.0016,
    "cheaper_cells": 3,
-   "cells": 4
+   "cells": 4,
+   "task_lo": 0.071,
+   "task_hi": 8.462
   },
   "haiku/loop/cli-pipe-ref": {
    "ratio": 0.485,
@@ -241,7 +370,9 @@
    "cond_hi": 0.531,
    "p_holm": 0.0016,
    "cheaper_cells": 4,
-   "cells": 4
+   "cells": 4,
+   "task_lo": 0.016,
+   "task_hi": 14.701
   },
   "sonnet/chain/cli-pipe-noskill": {
    "ratio": 1.336,
@@ -249,7 +380,9 @@
    "cond_hi": 1.657,
    "p_holm": 0.0016,
    "cheaper_cells": 1,
-   "cells": 8
+   "cells": 8,
+   "task_lo": 1.034,
+   "task_hi": 1.726
   },
   "sonnet/chain/cli-pipe": {
    "ratio": 1.016,
@@ -257,7 +390,9 @@
    "cond_hi": 1.241,
    "p_holm": 1.0,
    "cheaper_cells": 4,
-   "cells": 8
+   "cells": 8,
+   "task_lo": 0.771,
+   "task_hi": 1.34
   },
   "sonnet/chain/cli-step-ref": {
    "ratio": 1.009,
@@ -265,7 +400,9 @@
    "cond_hi": 1.228,
    "p_holm": 1.0,
    "cheaper_cells": 5,
-   "cells": 8
+   "cells": 8,
+   "task_lo": 0.774,
+   "task_hi": 1.316
   },
   "sonnet/chain/cli-pipe-ref": {
    "ratio": 0.602,
@@ -273,7 +410,9 @@
    "cond_hi": 0.742,
    "p_holm": 0.0016,
    "cheaper_cells": 8,
-   "cells": 8
+   "cells": 8,
+   "task_lo": 0.534,
+   "task_hi": 0.679
   },
   "sonnet/loop/cli-pipe-noskill": {
    "ratio": 0.62,
@@ -281,7 +420,9 @@
    "cond_hi": 0.658,
    "p_holm": 0.0112,
    "cheaper_cells": 3,
-   "cells": 4
+   "cells": 4,
+   "task_lo": 0.011,
+   "task_hi": 36.287
   },
   "sonnet/loop/cli-pipe": {
    "ratio": 0.418,
@@ -289,7 +430,9 @@
    "cond_hi": 0.686,
    "p_holm": 0.0016,
    "cheaper_cells": 4,
-   "cells": 4
+   "cells": 4,
+   "task_lo": 0.017,
+   "task_hi": 10.08
   },
   "sonnet/loop/cli-step-ref": {
    "ratio": 0.735,
@@ -297,7 +440,9 @@
    "cond_hi": 0.766,
    "p_holm": 0.0016,
    "cheaper_cells": 4,
-   "cells": 4
+   "cells": 4,
+   "task_lo": 0.166,
+   "task_hi": 3.263
   },
   "sonnet/loop/cli-pipe-ref": {
    "ratio": 0.319,
@@ -305,6 +450,432 @@
    "cond_hi": 0.344,
    "p_holm": 0.0016,
    "cheaper_cells": 4,
+   "cells": 4,
+   "task_lo": 0.005,
+   "task_hi": 18.623
+  }
+ },
+ "rewrite_change_vs_main": {
+  "haiku/chain/cli-pipe-noskill": {
+   "ratio": 1.001,
+   "lo": 0.918,
+   "hi": 1.093,
+   "df": 35.3,
+   "p": 0.9726,
+   "cells": 8,
+   "p_holm": 0.9726
+  },
+  "sonnet/chain/cli-pipe-noskill": {
+   "ratio": 0.823,
+   "lo": 0.683,
+   "hi": 0.991,
+   "df": 7.5,
+   "p": 0.0418,
+   "cells": 8,
+   "p_holm": 0.2466
+  },
+  "haiku/chain/cli-pipe": {
+   "ratio": 0.721,
+   "lo": 0.667,
+   "hi": 0.778,
+   "df": 55.9,
+   "p": 0.0,
+   "cells": 8,
+   "p_holm": 0.0
+  },
+  "haiku/loop/cli-pipe": {
+   "ratio": 0.915,
+   "lo": 0.771,
+   "hi": 1.084,
+   "df": 19.6,
+   "p": 0.287,
+   "cells": 4,
+   "p_holm": 0.574
+  },
+  "sonnet/chain/cli-pipe": {
+   "ratio": 0.837,
+   "lo": 0.692,
+   "hi": 1.012,
+   "df": 7.6,
+   "p": 0.0627,
+   "cells": 8,
+   "p_holm": 0.251
+  },
+  "sonnet/loop/cli-pipe": {
+   "ratio": 0.653,
+   "lo": 0.411,
+   "hi": 1.038,
+   "df": 5.7,
+   "p": 0.0651,
+   "cells": 4,
+   "p_holm": 0.251
+  },
+  "haiku/chain/cli-step-ref": {
+   "ratio": 0.877,
+   "lo": 0.816,
+   "hi": 0.943,
+   "df": 13.7,
+   "p": 0.0017,
+   "cells": 8,
+   "p_holm": 0.0134
+  },
+  "haiku/loop/cli-step-ref": {
+   "ratio": 0.676,
+   "lo": 0.594,
+   "hi": 0.769,
+   "df": 11.7,
+   "p": 0.0,
+   "cells": 4,
+   "p_holm": 0.0003
+  },
+  "sonnet/chain/cli-step-ref": {
+   "ratio": 0.814,
+   "lo": 0.671,
+   "hi": 0.988,
+   "df": 4.9,
+   "p": 0.0411,
+   "cells": 8,
+   "p_holm": 0.2466
+  },
+  "sonnet/loop/cli-step-ref": {
+   "ratio": 0.254,
+   "lo": 0.24,
+   "hi": 0.268,
+   "df": 11.4,
+   "p": 0.0,
+   "cells": 4,
+   "p_holm": 0.0
+  },
+  "haiku/chain/cli-pipe-ref": {
+   "ratio": 0.744,
+   "lo": 0.673,
+   "hi": 0.823,
+   "df": 22.6,
+   "p": 0.0,
+   "cells": 8,
+   "p_holm": 0.0
+  },
+  "haiku/loop/cli-pipe-ref": {
+   "ratio": 0.757,
+   "lo": 0.647,
+   "hi": 0.885,
+   "df": 30.5,
+   "p": 0.001,
+   "cells": 4,
+   "p_holm": 0.0094
+  },
+  "sonnet/chain/cli-pipe-ref": {
+   "ratio": 0.674,
+   "lo": 0.539,
+   "hi": 0.844,
+   "df": 10.1,
+   "p": 0.0028,
+   "cells": 8,
+   "p_holm": 0.0197
+  },
+  "sonnet/loop/cli-pipe-ref": {
+   "ratio": 0.52,
+   "lo": 0.43,
+   "hi": 0.63,
+   "df": 5.6,
+   "p": 0.0002,
+   "cells": 4,
+   "p_holm": 0.0021
+  }
+ },
+ "drift_same_commit": {
+  "haiku/chain": {
+   "ratio": 0.991,
+   "lo": 0.886,
+   "hi": 1.108,
+   "df": 29.5,
+   "p": 0.8684170658062181,
+   "cells": 8,
+   "p_holm": 1
+  },
+  "haiku/loop": {
+   "ratio": 0.888,
+   "lo": 0.725,
+   "hi": 1.088,
+   "df": 34.3,
+   "p": 0.24372370286515344,
+   "cells": 4,
+   "p_holm": 1
+  },
+  "sonnet/chain": {
+   "ratio": 1.011,
+   "lo": 0.827,
+   "hi": 1.237,
+   "df": 11.2,
+   "p": 0.9038330673601238,
+   "cells": 8,
+   "p_holm": 1
+  },
+  "sonnet/loop": {
+   "ratio": 0.971,
+   "lo": 0.704,
+   "hi": 1.341,
+   "df": 6.6,
+   "p": 0.8364421212022374,
+   "cells": 4,
+   "p_holm": 1
+  }
+ },
+ "cold_start": {
+  "ablation/haiku/chain/cli-pipe-ref-noout": {
+   "ratio": 0.969,
+   "lo": 0.93,
+   "hi": 1.009,
+   "df": 9.6,
+   "p": 0.11562706674032645,
+   "cells": 8
+  },
+  "ablation/haiku/chain/cli-pipe-ref-noopts": {
+   "ratio": 1.067,
+   "lo": 0.986,
+   "hi": 1.154,
+   "df": 22.1,
+   "p": 0.10293885304312798,
+   "cells": 8
+  },
+  "ablation/haiku/chain/cli-pipe-ref-names": {
+   "ratio": 1.141,
+   "lo": 1.074,
+   "hi": 1.212,
+   "df": 17.1,
+   "p": 0.0002448759146715865,
+   "cells": 8
+  },
+  "ablation/haiku/chain/cli-pipe-ref-wide": {
+   "ratio": 1.318,
+   "lo": 1.244,
+   "hi": 1.397,
+   "df": 24.2,
+   "p": 6.01259736435944e-10,
+   "cells": 8
+  },
+  "rewrite/haiku/chain/cli-pipe-noskill": {
+   "ratio": 1.099,
+   "lo": 1.056,
+   "hi": 1.143,
+   "df": 18.1,
+   "p": 8.447370898960997e-05,
+   "cells": 8
+  },
+  "rewrite/haiku/chain/cli-pipe": {
+   "ratio": 0.928,
+   "lo": 0.894,
+   "hi": 0.964,
+   "df": 29.1,
+   "p": 0.0003558338329076577,
+   "cells": 8
+  },
+  "rewrite/haiku/chain/cli-step-ref": {
+   "ratio": 0.94,
+   "lo": 0.915,
+   "hi": 0.967,
+   "df": 12.1,
+   "p": 0.00039505813217838087,
+   "cells": 8
+  },
+  "rewrite/haiku/chain/cli-pipe-ref": {
+   "ratio": 0.807,
+   "lo": 0.787,
+   "hi": 0.827,
+   "df": 18.7,
+   "p": 2.498930946752297e-13,
+   "cells": 8
+  },
+  "ablation/haiku/loop/cli-pipe-ref-noout": {
+   "ratio": 0.946,
+   "lo": 0.855,
+   "hi": 1.046,
+   "df": 14.9,
+   "p": 0.2549557686185018,
+   "cells": 4
+  },
+  "ablation/haiku/loop/cli-pipe-ref-noopts": {
+   "ratio": 1.021,
+   "lo": 0.879,
+   "hi": 1.186,
+   "df": 12.8,
+   "p": 0.7683982550602027,
+   "cells": 4
+  },
+  "ablation/haiku/loop/cli-pipe-ref-names": {
+   "ratio": 0.972,
+   "lo": 0.849,
+   "hi": 1.112,
+   "df": 10.7,
+   "p": 0.6492617212590042,
+   "cells": 4
+  },
+  "ablation/haiku/loop/cli-pipe-ref-wide": {
+   "ratio": 1.27,
+   "lo": 1.153,
+   "hi": 1.399,
+   "df": 13.4,
+   "p": 0.0001233593709442421,
+   "cells": 4
+  },
+  "rewrite/haiku/loop/cli-pipe-noskill": {
+   "ratio": 0.759,
+   "lo": 0.711,
+   "hi": 0.811,
+   "df": 9.7,
+   "p": 3.8432120661252925e-06,
+   "cells": 4
+  },
+  "rewrite/haiku/loop/cli-pipe": {
+   "ratio": 0.609,
+   "lo": 0.568,
+   "hi": 0.654,
+   "df": 8.9,
+   "p": 7.463947964931358e-08,
+   "cells": 4
+  },
+  "rewrite/haiku/loop/cli-step-ref": {
+   "ratio": 0.76,
+   "lo": 0.695,
+   "hi": 0.831,
+   "df": 5.3,
+   "p": 0.000436976226809612,
+   "cells": 4
+  },
+  "rewrite/haiku/loop/cli-pipe-ref": {
+   "ratio": 0.539,
+   "lo": 0.506,
+   "hi": 0.574,
+   "df": 14.5,
+   "p": 3.3951091064429255e-12,
+   "cells": 4
+  },
+  "ablation/sonnet/chain/cli-pipe-ref-noout": {
+   "ratio": 1.102,
+   "lo": 1.001,
+   "hi": 1.212,
+   "df": 7.9,
+   "p": 0.04791137814824212,
+   "cells": 8
+  },
+  "ablation/sonnet/chain/cli-pipe-ref-noopts": {
+   "ratio": 0.926,
+   "lo": 0.844,
+   "hi": 1.015,
+   "df": 6.4,
+   "p": 0.08663604407725156,
+   "cells": 8
+  },
+  "ablation/sonnet/chain/cli-pipe-ref-names": {
+   "ratio": 0.941,
+   "lo": 0.831,
+   "hi": 1.065,
+   "df": 9.5,
+   "p": 0.2970978315749656,
+   "cells": 8
+  },
+  "ablation/sonnet/chain/cli-pipe-ref-wide": {
+   "ratio": 1.399,
+   "lo": 1.285,
+   "hi": 1.523,
+   "df": 4.1,
+   "p": 0.0003534587205086385,
+   "cells": 8
+  },
+  "rewrite/sonnet/chain/cli-pipe-noskill": {
+   "ratio": 0.776,
+   "lo": 0.756,
+   "hi": 0.796,
+   "df": 4.9,
+   "p": 2.254643422021686e-06,
+   "cells": 8
+  },
+  "rewrite/sonnet/chain/cli-pipe": {
+   "ratio": 0.697,
+   "lo": 0.671,
+   "hi": 0.723,
+   "df": 9.2,
+   "p": 2.9201809306867096e-09,
+   "cells": 8
+  },
+  "rewrite/sonnet/chain/cli-step-ref": {
+   "ratio": 0.893,
+   "lo": 0.89,
+   "hi": 0.896,
+   "df": 13.0,
+   "p": 5.941493349007801e-18,
+   "cells": 8
+  },
+  "rewrite/sonnet/chain/cli-pipe-ref": {
+   "ratio": 0.669,
+   "lo": 0.626,
+   "hi": 0.714,
+   "df": 4.6,
+   "p": 3.0811973688589555e-05,
+   "cells": 8
+  },
+  "ablation/sonnet/loop/cli-pipe-ref-noout": {
+   "ratio": 0.998,
+   "lo": 0.717,
+   "hi": 1.39,
+   "df": 6.2,
+   "p": 0.9905525891946522,
+   "cells": 4
+  },
+  "ablation/sonnet/loop/cli-pipe-ref-noopts": {
+   "ratio": 0.965,
+   "lo": 0.728,
+   "hi": 1.279,
+   "df": 8.2,
+   "p": 0.778511876652118,
+   "cells": 4
+  },
+  "ablation/sonnet/loop/cli-pipe-ref-names": {
+   "ratio": 1.043,
+   "lo": 0.82,
+   "hi": 1.325,
+   "df": 5.9,
+   "p": 0.6841248855885026,
+   "cells": 4
+  },
+  "ablation/sonnet/loop/cli-pipe-ref-wide": {
+   "ratio": 1.594,
+   "lo": 1.215,
+   "hi": 2.09,
+   "df": 8.7,
+   "p": 0.003803359917536424,
+   "cells": 4
+  },
+  "rewrite/sonnet/loop/cli-pipe-noskill": {
+   "ratio": 0.481,
+   "lo": 0.461,
+   "hi": 0.502,
+   "df": 6.2,
+   "p": 7.656451137703667e-09,
+   "cells": 4
+  },
+  "rewrite/sonnet/loop/cli-pipe": {
+   "ratio": 0.404,
+   "lo": 0.277,
+   "hi": 0.589,
+   "df": 2.1,
+   "p": 0.008670859374589593,
+   "cells": 4
+  },
+  "rewrite/sonnet/loop/cli-step-ref": {
+   "ratio": 0.739,
+   "lo": 0.721,
+   "hi": 0.758,
+   "df": 8.3,
+   "p": 1.7185516603102934e-09,
+   "cells": 4
+  },
+  "rewrite/sonnet/loop/cli-pipe-ref": {
+   "ratio": 0.433,
+   "lo": 0.416,
+   "hi": 0.45,
+   "df": 3.6,
+   "p": 1.3800077300762764e-06,
    "cells": 4
   }
  },
@@ -378,6 +949,509 @@
    "haiku/loop": 0.62,
    "sonnet/chain": 0.42,
    "sonnet/loop": 0.21
+  }
+ },
+ "isolation": {
+  "runs": 384,
+  "success": 384,
+  "vs_mcp46": {
+   "haiku/chain/mcp-24": {
+    "ratio": 0.88,
+    "cond_lo": 0.806,
+    "cond_hi": 0.962,
+    "p_holm": 0.0012,
+    "cheaper_cells": 8,
+    "cells": 8
+   },
+   "haiku/chain/cli-pipe-ref": {
+    "ratio": 0.838,
+    "cond_lo": 0.759,
+    "cond_hi": 0.924,
+    "p_holm": 0.0012,
+    "cheaper_cells": 8,
+    "cells": 8
+   },
+   "haiku/chain/cli-pipe-ref-ids": {
+    "ratio": 0.858,
+    "cond_lo": 0.784,
+    "cond_hi": 0.939,
+    "p_holm": 0.0012,
+    "cheaper_cells": 6,
+    "cells": 8
+   },
+   "haiku/loop/mcp-24": {
+    "ratio": 1.022,
+    "cond_lo": 0.98,
+    "cond_hi": 1.066,
+    "p_holm": 0.3422,
+    "cheaper_cells": 1,
+    "cells": 4
+   },
+   "haiku/loop/cli-pipe-ref": {
+    "ratio": 0.529,
+    "cond_lo": 0.464,
+    "cond_hi": 0.604,
+    "p_holm": 0.0012,
+    "cheaper_cells": 4,
+    "cells": 4
+   },
+   "haiku/loop/cli-pipe-ref-ids": {
+    "ratio": 0.558,
+    "cond_lo": 0.499,
+    "cond_hi": 0.623,
+    "p_holm": 0.0012,
+    "cheaper_cells": 4,
+    "cells": 4
+   },
+   "sonnet/chain/mcp-24": {
+    "ratio": 0.888,
+    "cond_lo": 0.732,
+    "cond_hi": 1.076,
+    "p_holm": 0.0598,
+    "cheaper_cells": 8,
+    "cells": 8
+   },
+   "sonnet/chain/cli-pipe-ref": {
+    "ratio": 0.611,
+    "cond_lo": 0.491,
+    "cond_hi": 0.761,
+    "p_holm": 0.0012,
+    "cheaper_cells": 8,
+    "cells": 8
+   },
+   "sonnet/chain/cli-pipe-ref-ids": {
+    "ratio": 0.655,
+    "cond_lo": 0.523,
+    "cond_hi": 0.82,
+    "p_holm": 0.0012,
+    "cheaper_cells": 8,
+    "cells": 8
+   },
+   "sonnet/loop/mcp-24": {
+    "ratio": 0.954,
+    "cond_lo": 0.934,
+    "cond_hi": 0.975,
+    "p_holm": 0.0084,
+    "cheaper_cells": 4,
+    "cells": 4
+   },
+   "sonnet/loop/cli-pipe-ref": {
+    "ratio": 0.374,
+    "cond_lo": 0.214,
+    "cond_hi": 0.652,
+    "p_holm": 0.0012,
+    "cheaper_cells": 4,
+    "cells": 4
+   },
+   "sonnet/loop/cli-pipe-ref-ids": {
+    "ratio": 0.52,
+    "cond_lo": 0.419,
+    "cond_hi": 0.647,
+    "p_holm": 0.0024,
+    "cheaper_cells": 3,
+    "cells": 4
+   }
+  },
+  "ids_vs_codes": {
+   "haiku/chain": {
+    "ratio": 1.025,
+    "cond_lo": 0.953,
+    "cond_hi": 1.101,
+    "p_holm": 1.0
+   },
+   "haiku/loop": {
+    "ratio": 1.054,
+    "cond_lo": 0.897,
+    "cond_hi": 1.238,
+    "p_holm": 1.0
+   },
+   "sonnet/chain": {
+    "ratio": 1.071,
+    "cond_lo": 0.85,
+    "cond_hi": 1.35,
+    "p_holm": 1.0
+   },
+   "sonnet/loop": {
+    "ratio": 1.392,
+    "cond_lo": 0.885,
+    "cond_hi": 2.19,
+    "p_holm": 0.5163
+   }
+  },
+  "vs_mcp24_rewritten": {
+   "haiku/chain/cli-pipe-ref": {
+    "ratio": 0.951,
+    "cond_lo": 0.889,
+    "cond_hi": 1.018,
+    "p_holm": 0.282,
+    "cheaper_cells": 4,
+    "cells": 8
+   },
+   "haiku/chain/cli-pipe-ref-ids": {
+    "ratio": 0.975,
+    "cond_lo": 0.934,
+    "cond_hi": 1.018,
+    "p_holm": 0.282,
+    "cheaper_cells": 4,
+    "cells": 8
+   },
+   "haiku/loop/cli-pipe-ref": {
+    "ratio": 0.518,
+    "cond_lo": 0.453,
+    "cond_hi": 0.591,
+    "p_holm": 0.0008,
+    "cheaper_cells": 3,
+    "cells": 4
+   },
+   "haiku/loop/cli-pipe-ref-ids": {
+    "ratio": 0.546,
+    "cond_lo": 0.489,
+    "cond_hi": 0.61,
+    "p_holm": 0.0008,
+    "cheaper_cells": 4,
+    "cells": 4
+   },
+   "sonnet/chain/cli-pipe-ref": {
+    "ratio": 0.689,
+    "cond_lo": 0.564,
+    "cond_hi": 0.841,
+    "p_holm": 0.0008,
+    "cheaper_cells": 8,
+    "cells": 8
+   },
+   "sonnet/chain/cli-pipe-ref-ids": {
+    "ratio": 0.738,
+    "cond_lo": 0.598,
+    "cond_hi": 0.911,
+    "p_holm": 0.0008,
+    "cheaper_cells": 8,
+    "cells": 8
+   },
+   "sonnet/loop/cli-pipe-ref": {
+    "ratio": 0.392,
+    "cond_lo": 0.225,
+    "cond_hi": 0.683,
+    "p_holm": 0.0012,
+    "cheaper_cells": 4,
+    "cells": 4
+   },
+   "sonnet/loop/cli-pipe-ref-ids": {
+    "ratio": 0.545,
+    "cond_lo": 0.439,
+    "cond_hi": 0.678,
+    "p_holm": 0.0042,
+    "cheaper_cells": 3,
+    "cells": 4
+   }
+  },
+  "cli_side_change_vs_main": {
+   "haiku/chain": {
+    "ratio": 0.789,
+    "lo": 0.715,
+    "hi": 0.872,
+    "df": 21.9,
+    "p": 0.0001,
+    "cells": 8,
+    "p_holm": 0.0002
+   },
+   "haiku/loop": {
+    "ratio": 0.807,
+    "lo": 0.673,
+    "hi": 0.968,
+    "df": 31.3,
+    "p": 0.0221,
+    "cells": 4,
+    "p_holm": 0.0663
+   },
+   "sonnet/chain": {
+    "ratio": 0.772,
+    "lo": 0.623,
+    "hi": 0.956,
+    "df": 9.3,
+    "p": 0.0227,
+    "cells": 8,
+    "p_holm": 0.0663
+   },
+   "sonnet/loop": {
+    "ratio": 0.64,
+    "lo": 0.4,
+    "hi": 1.023,
+    "df": 3.2,
+    "p": 0.0569,
+    "cells": 4,
+    "p_holm": 0.0663
+   }
+  },
+  "replicates_rewrite_sheet_comp": {
+   "haiku/chain": {
+    "ratio": 0.934,
+    "lo": 0.834,
+    "hi": 1.046,
+    "df": 17.7,
+    "p": 0.2201642164792682,
+    "cells": 8
+   },
+   "haiku/loop": {
+    "ratio": 1.09,
+    "lo": 0.935,
+    "hi": 1.272,
+    "df": 24.7,
+    "p": 0.25910712904628286,
+    "cells": 4
+   },
+   "sonnet/chain": {
+    "ratio": 1.016,
+    "lo": 0.775,
+    "hi": 1.331,
+    "df": 12.5,
+    "p": 0.9034780926424026,
+    "cells": 8
+   },
+   "sonnet/loop": {
+    "ratio": 1.174,
+    "lo": 0.696,
+    "hi": 1.981,
+    "df": 2.4,
+    "p": 0.3569903485217363,
+    "cells": 4
+   }
+  },
+  "summary": [
+   {
+    "model": "haiku",
+    "family": "chain",
+    "arm": "cli-pipe-ref",
+    "runs": 40,
+    "success": 40,
+    "median_cents": 0.173,
+    "median_passes": 4.0,
+    "median_calls": 3.5,
+    "median_help_calls": 0.0,
+    "median_result_kchars": 3.1,
+    "median_seconds": 10.0
+   },
+   {
+    "model": "haiku",
+    "family": "chain",
+    "arm": "cli-pipe-ref-ids",
+    "runs": 40,
+    "success": 40,
+    "median_cents": 0.18,
+    "median_passes": 4.0,
+    "median_calls": 4.0,
+    "median_help_calls": 0.0,
+    "median_result_kchars": 3.5,
+    "median_seconds": 10.7
+   },
+   {
+    "model": "haiku",
+    "family": "chain",
+    "arm": "mcp",
+    "runs": 40,
+    "success": 40,
+    "median_cents": 0.237,
+    "median_passes": 4.0,
+    "median_calls": 3.0,
+    "median_help_calls": 0.0,
+    "median_result_kchars": 3.6,
+    "median_seconds": 9.3
+   },
+   {
+    "model": "haiku",
+    "family": "chain",
+    "arm": "mcp-24",
+    "runs": 40,
+    "success": 40,
+    "median_cents": 0.201,
+    "median_passes": 3.5,
+    "median_calls": 3.0,
+    "median_help_calls": 0.0,
+    "median_result_kchars": 3.6,
+    "median_seconds": 9.2
+   },
+   {
+    "model": "haiku",
+    "family": "loop",
+    "arm": "cli-pipe-ref",
+    "runs": 20,
+    "success": 20,
+    "median_cents": 0.262,
+    "median_passes": 4.0,
+    "median_calls": 3.0,
+    "median_help_calls": 0.0,
+    "median_result_kchars": 4.9,
+    "median_seconds": 19.3
+   },
+   {
+    "model": "haiku",
+    "family": "loop",
+    "arm": "cli-pipe-ref-ids",
+    "runs": 20,
+    "success": 20,
+    "median_cents": 0.287,
+    "median_passes": 3.0,
+    "median_calls": 2.0,
+    "median_help_calls": 0.0,
+    "median_result_kchars": 6.1,
+    "median_seconds": 19.8
+   },
+   {
+    "model": "haiku",
+    "family": "loop",
+    "arm": "mcp",
+    "runs": 20,
+    "success": 20,
+    "median_cents": 0.684,
+    "median_passes": 3.0,
+    "median_calls": 26.0,
+    "median_help_calls": 0.0,
+    "median_result_kchars": 8.9,
+    "median_seconds": 26.8
+   },
+   {
+    "model": "haiku",
+    "family": "loop",
+    "arm": "mcp-24",
+    "runs": 20,
+    "success": 20,
+    "median_cents": 0.672,
+    "median_passes": 3.0,
+    "median_calls": 26.0,
+    "median_help_calls": 0.0,
+    "median_result_kchars": 8.9,
+    "median_seconds": 28.4
+   },
+   {
+    "model": "sonnet",
+    "family": "chain",
+    "arm": "cli-pipe-ref",
+    "runs": 24,
+    "success": 24,
+    "median_cents": 2.162,
+    "median_passes": 3.5,
+    "median_calls": 2.5,
+    "median_help_calls": 0.0,
+    "median_result_kchars": 2.1,
+    "median_seconds": 9.0
+   },
+   {
+    "model": "sonnet",
+    "family": "chain",
+    "arm": "cli-pipe-ref-ids",
+    "runs": 24,
+    "success": 24,
+    "median_cents": 2.745,
+    "median_passes": 3.5,
+    "median_calls": 2.5,
+    "median_help_calls": 0.0,
+    "median_result_kchars": 1.9,
+    "median_seconds": 9.6
+   },
+   {
+    "model": "sonnet",
+    "family": "chain",
+    "arm": "mcp",
+    "runs": 24,
+    "success": 24,
+    "median_cents": 4.359,
+    "median_passes": 3.5,
+    "median_calls": 3.0,
+    "median_help_calls": 0.0,
+    "median_result_kchars": 3.9,
+    "median_seconds": 8.6
+   },
+   {
+    "model": "sonnet",
+    "family": "chain",
+    "arm": "mcp-24",
+    "runs": 24,
+    "success": 24,
+    "median_cents": 3.537,
+    "median_passes": 4.0,
+    "median_calls": 3.0,
+    "median_help_calls": 0.0,
+    "median_result_kchars": 3.6,
+    "median_seconds": 9.5
+   },
+   {
+    "model": "sonnet",
+    "family": "loop",
+    "arm": "cli-pipe-ref",
+    "runs": 12,
+    "success": 12,
+    "median_cents": 3.013,
+    "median_passes": 3.0,
+    "median_calls": 2.0,
+    "median_help_calls": 0.0,
+    "median_result_kchars": 4.0,
+    "median_seconds": 17.6
+   },
+   {
+    "model": "sonnet",
+    "family": "loop",
+    "arm": "cli-pipe-ref-ids",
+    "runs": 12,
+    "success": 12,
+    "median_cents": 3.707,
+    "median_passes": 3.0,
+    "median_calls": 2.0,
+    "median_help_calls": 0.0,
+    "median_result_kchars": 6.5,
+    "median_seconds": 19.1
+   },
+   {
+    "model": "sonnet",
+    "family": "loop",
+    "arm": "mcp",
+    "runs": 12,
+    "success": 12,
+    "median_cents": 11.679,
+    "median_passes": 3.0,
+    "median_calls": 26.0,
+    "median_help_calls": 0.0,
+    "median_result_kchars": 8.9,
+    "median_seconds": 31.6
+   },
+   {
+    "model": "sonnet",
+    "family": "loop",
+    "arm": "mcp-24",
+    "runs": 12,
+    "success": 12,
+    "median_cents": 11.278,
+    "median_passes": 3.0,
+    "median_calls": 26.0,
+    "median_help_calls": 0.0,
+    "median_result_kchars": 8.9,
+    "median_seconds": 35.1
+   }
+  ]
+ },
+ "mcp102_catalogue_share": {
+  "extra_prefix_tokens": 11933.0,
+  "haiku/chain": {
+   "median": 0.52,
+   "min": 0.17,
+   "max": 0.73,
+   "cells": 8
+  },
+  "sonnet/chain": {
+   "median": 0.53,
+   "min": 0.17,
+   "max": 1.35,
+   "cells": 8
+  },
+  "haiku/loop": {
+   "median": 0.16,
+   "min": 0.1,
+   "max": 0.44,
+   "cells": 4
+  },
+  "sonnet/loop": {
+   "median": 0.39,
+   "min": 0.14,
+   "max": 1.35,
+   "cells": 4
   }
  },
  "summary_ablation": [

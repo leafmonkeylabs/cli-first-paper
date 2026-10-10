@@ -1,0 +1,384 @@
+{
+ "record_chars_per_account": {
+  "main": {
+   "mcp get_accounts": {
+    "median_chars": 1939,
+    "n": 8,
+    "per_account": 121
+   },
+   "cli accounts list --json": {
+    "median_chars": 4504,
+    "n": 31,
+    "per_account": 282
+   }
+  },
+  "ablation": {
+   "mcp get_accounts": {
+    "median_chars": 1939,
+    "n": 8,
+    "per_account": 121
+   },
+   "cli accounts list --json": {
+    "median_chars": 4504,
+    "n": 22,
+    "per_account": 282
+   }
+  },
+  "rewrite": {
+   "mcp get_accounts": {
+    "median_chars": 1939,
+    "n": 8,
+    "per_account": 121
+   },
+   "cli accounts list --json": {
+    "median_chars": 3624,
+    "n": 4,
+    "per_account": 226
+   }
+  },
+  "isolation": {
+   "mcp get_accounts": {
+    "median_chars": 1939,
+    "n": 16,
+    "per_account": 121
+   }
+  }
+ },
+ "addressing_L1": {
+  "main": {
+   "haiku/mcp": {
+    "uuid": 500,
+    "code": 50
+   },
+   "haiku/cli-step-ref": {
+    "uuid": 500
+   },
+   "haiku/cli-pipe-ref": {
+    "variable": 20
+   },
+   "haiku/cli-pipe-skills": {
+    "variable": 32
+   },
+   "haiku/cli-pipe": {
+    "variable": 24
+   },
+   "sonnet/mcp": {
+    "uuid": 300
+   },
+   "sonnet/cli-pipe-skills": {
+    "variable": 22
+   },
+   "sonnet/cli-step-ref": {
+    "prefix": 302,
+    "uuid": 302
+   },
+   "sonnet/cli-pipe": {
+    "variable": 34,
+    "name": 2
+   },
+   "sonnet/cli-pipe-ref": {
+    "variable": 24,
+    "uuid": 2
+   }
+  },
+  "ablation": {
+   "haiku/mcp": {
+    "uuid": 518,
+    "code": 200
+   },
+   "haiku/cli-pipe-ref": {
+    "variable": 22
+   },
+   "haiku/cli-pipe-ref-noout": {
+    "variable": 20
+   },
+   "haiku/cli-pipe-ref-noopts": {
+    "variable": 22
+   },
+   "haiku/cli-pipe-ref-names": {
+    "variable": 22
+   },
+   "haiku/cli-pipe-ref-wide": {
+    "variable": 24,
+    "uuid": 4
+   },
+   "sonnet/mcp": {
+    "uuid": 300
+   },
+   "sonnet/cli-pipe-ref-noout": {
+    "variable": 22
+   },
+   "sonnet/cli-pipe-ref-noopts": {
+    "variable": 26
+   },
+   "sonnet/cli-pipe-ref": {
+    "variable": 22
+   },
+   "sonnet/cli-pipe-ref-wide": {
+    "variable": 34,
+    "name": 2,
+    "uuid": 4
+   },
+   "sonnet/cli-pipe-ref-names": {
+    "variable": 28,
+    "uuid": 4
+   }
+  },
+  "rewrite": {
+   "haiku/cli-step-ref": {
+    "code": 500
+   },
+   "haiku/mcp": {
+    "uuid": 500
+   },
+   "haiku/cli-pipe-noskill": {
+    "variable": 28
+   },
+   "haiku/cli-pipe": {
+    "variable": 28,
+    "code": 4
+   },
+   "haiku/cli-pipe-ref": {
+    "variable": 26
+   },
+   "sonnet/cli-pipe-noskill": {
+    "variable": 12
+   },
+   "sonnet/mcp": {
+    "uuid": 300
+   },
+   "sonnet/cli-step-ref": {
+    "code": 300
+   },
+   "sonnet/cli-pipe-ref": {
+    "variable": 12
+   },
+   "sonnet/cli-pipe": {
+    "variable": 16,
+    "code": 6
+   }
+  },
+  "isolation": {
+   "haiku/cli-pipe-ref": {
+    "variable": 30
+   },
+   "haiku/cli-pipe-ref-ids": {
+    "variable": 26
+   },
+   "haiku/mcp": {
+    "uuid": 500
+   },
+   "haiku/mcp-24": {
+    "uuid": 500
+   },
+   "sonnet/cli-pipe-ref": {
+    "variable": 16,
+    "code": 4
+   },
+   "sonnet/cli-pipe-ref-ids": {
+    "variable": 41
+   },
+   "sonnet/mcp-24": {
+    "uuid": 300
+   },
+   "sonnet/mcp": {
+    "uuid": 300
+   }
+  }
+ },
+ "tracebacks": {
+  "main": {
+   "haiku/cli-pipe": "2/60",
+   "haiku/cli-pipe-noskill": "1/40",
+   "haiku/cli-pipe-ref": "0/60",
+   "haiku/cli-pipe-skills": "3/60",
+   "haiku/cli-step": "1/40",
+   "haiku/cli-step-ref": "0/60",
+   "sonnet/cli-pipe": "9/36",
+   "sonnet/cli-pipe-noskill": "8/24",
+   "sonnet/cli-pipe-ref": "9/36",
+   "sonnet/cli-pipe-skills": "6/36",
+   "sonnet/cli-step": "2/24",
+   "sonnet/cli-step-ref": "7/36"
+  },
+  "ablation": {
+   "haiku/cli-pipe-ref": "0/60",
+   "haiku/cli-pipe-ref-names": "3/60",
+   "haiku/cli-pipe-ref-noopts": "3/60",
+   "haiku/cli-pipe-ref-noout": "0/60",
+   "haiku/cli-pipe-ref-wide": "1/60",
+   "sonnet/cli-pipe-ref": "7/36",
+   "sonnet/cli-pipe-ref-names": "8/36",
+   "sonnet/cli-pipe-ref-noopts": "5/36",
+   "sonnet/cli-pipe-ref-noout": "9/36",
+   "sonnet/cli-pipe-ref-wide": "5/36"
+  },
+  "rewrite": {
+   "haiku/cli-pipe": "0/60",
+   "haiku/cli-pipe-noskill": "0/60",
+   "haiku/cli-pipe-ref": "0/60",
+   "haiku/cli-step-ref": "0/60",
+   "sonnet/cli-pipe": "0/36",
+   "sonnet/cli-pipe-noskill": "0/36",
+   "sonnet/cli-pipe-ref": "0/36",
+   "sonnet/cli-step-ref": "0/36"
+  },
+  "isolation": {
+   "haiku/cli-pipe-ref": "0/60",
+   "haiku/cli-pipe-ref-ids": "0/60",
+   "sonnet/cli-pipe-ref": "0/36",
+   "sonnet/cli-pipe-ref-ids": "0/36"
+  }
+ },
+ "balances": {
+  "rewrite": {
+   "haiku/cli-pipe": "13/33",
+   "haiku/cli-pipe-ref": "11/14",
+   "haiku/cli-step-ref": "0/12",
+   "sonnet/cli-pipe": "3/3",
+   "sonnet/cli-pipe-ref": "0/1",
+   "sonnet/cli-step-ref": "0/6"
+  },
+  "isolation": {
+   "haiku/cli-pipe-ref": "10/12",
+   "haiku/cli-pipe-ref-ids": "11/12",
+   "sonnet/cli-pipe-ref": "0/2",
+   "sonnet/cli-pipe-ref-ids": "1/2"
+  }
+ },
+ "discarded_write_output": {
+  "main": {
+   "haiku/cli-pipe": "5/20",
+   "haiku/cli-pipe-ref": "5/20",
+   "haiku/cli-pipe-skills": "7/20",
+   "sonnet/cli-pipe": "5/12",
+   "sonnet/cli-pipe-ref": "2/12",
+   "sonnet/cli-pipe-skills": "7/12"
+  },
+  "ablation": {
+   "haiku/cli-pipe-ref": "3/20",
+   "haiku/cli-pipe-ref-names": "11/20",
+   "haiku/cli-pipe-ref-noopts": "7/20",
+   "haiku/cli-pipe-ref-noout": "8/20",
+   "haiku/cli-pipe-ref-wide": "4/20",
+   "sonnet/cli-pipe-ref": "1/12",
+   "sonnet/cli-pipe-ref-names": "8/12",
+   "sonnet/cli-pipe-ref-noopts": "0/12",
+   "sonnet/cli-pipe-ref-noout": "9/12",
+   "sonnet/cli-pipe-ref-wide": "1/12"
+  },
+  "rewrite": {
+   "haiku/cli-pipe": "3/20",
+   "haiku/cli-pipe-noskill": "5/20",
+   "haiku/cli-pipe-ref": "2/20",
+   "sonnet/cli-pipe": "9/12",
+   "sonnet/cli-pipe-noskill": "7/12",
+   "sonnet/cli-pipe-ref": "3/12"
+  },
+  "isolation": {
+   "haiku/cli-pipe-ref": "3/20",
+   "haiku/cli-pipe-ref-ids": "4/20",
+   "sonnet/cli-pipe-ref": "3/12",
+   "sonnet/cli-pipe-ref-ids": "2/12"
+  }
+ },
+ "host_reach": {
+  "main": {
+   "reads_saved_outputs": {
+    "runs": 66,
+    "of": 704
+   },
+   "writes_into_home": {
+    "runs": 1,
+    "of": 704
+   },
+   "wildcard_across_projects": {
+    "runs": 7,
+    "of": 704
+   },
+   "tmp_outside_TMPDIR": {
+    "runs": 16,
+    "of": 704
+   },
+   "lists_processes": {
+    "runs": 2,
+    "of": 704
+   }
+  },
+  "ablation": {
+   "tmp_outside_TMPDIR": {
+    "runs": 36,
+    "of": 576
+   },
+   "reads_saved_outputs": {
+    "runs": 79,
+    "of": 576
+   },
+   "writes_into_home": {
+    "runs": 1,
+    "of": 576
+   },
+   "wildcard_across_projects": {
+    "runs": 6,
+    "of": 576
+   },
+   "lists_processes": {
+    "runs": 1,
+    "of": 576
+   }
+  },
+  "rewrite": {
+   "tmp_outside_TMPDIR": {
+    "runs": 32,
+    "of": 480
+   },
+   "reads_saved_outputs": {
+    "runs": 60,
+    "of": 480
+   },
+   "wildcard_across_projects": {
+    "runs": 2,
+    "of": 480
+   },
+   "lists_processes": {
+    "runs": 1,
+    "of": 480
+   }
+  },
+  "isolation": {
+   "reads_saved_outputs": {
+    "runs": 41,
+    "of": 384
+   },
+   "tmp_outside_TMPDIR": {
+    "runs": 15,
+    "of": 384
+   },
+   "wildcard_across_projects": {
+    "runs": 2,
+    "of": 384
+   },
+   "lists_processes": {
+    "runs": 2,
+    "of": 384
+   }
+  }
+ },
+ "main_tracebacks": {
+  "runs_by_cause": {
+   "cli/code": 3,
+   "cli/prefix": 30,
+   "cli/variable": 11,
+   "mcp-parity/code": 5,
+   "cli/other": 4
+  },
+  "longest_traceback_chars": 9400
+ },
+ "failures": {
+  "ablation/disclosed": 2,
+  "ablation/false_success": 2,
+  "rewrite/false_success": 1,
+  "rewrite/disclosed": 2,
+  "rewrite/consent_request": 2
+ }
+}

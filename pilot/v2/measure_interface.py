@@ -22,11 +22,14 @@ from unittest.mock import MagicMock
 os.environ.setdefault("DATABASE_URL", "postgresql+asyncpg://x:y@localhost/z")
 os.environ.setdefault("ANTHROPIC_API_KEY", "sk-dummy")
 
+import sys  # noqa: E402
+
 import tiktoken  # noqa: E402
 
 from salli.interfaces.api.mcp_server import build_mcp_server  # noqa: E402
 
 HERE = Path(__file__).resolve().parent
+sys.path.insert(0, str(HERE))
 ROOT = HERE.parent.parent
 enc = tiktoken.get_encoding("o200k_base")
 
@@ -35,12 +38,17 @@ def main() -> None:
     mcp = build_mcp_server(services=MagicMock(), issuer_url="https://example.com")
     tools = asyncio.run(mcp.list_tools())
     defs = json.dumps([t.model_dump(exclude_none=True, mode="json") for t in tools])
+    from mcp24 import MCP24_TOOLS
+    defs24 = json.dumps([t.model_dump(exclude_none=True, mode="json") for t in tools if t.name in MCP24_TOOLS])
     sheet = (HERE / "cli_reference.md").read_text()
     old_sheet = (ROOT / "pilot" / "cli_reference.md").read_text()
     out = {
         "mcp_tools": len(tools),
         "mcp_definition_tokens_o200k": len(enc.encode(defs)),
+        "mcp24_tools": sum(t.name in MCP24_TOOLS for t in tools),
+        "mcp24_definition_tokens_o200k": len(enc.encode(defs24)),
         "sheet_commands": sheet.count("### "),
+        "sheet_ids_tokens_o200k": len(enc.encode((HERE / "cli_reference_ids.md").read_text())),
         "sheet_tokens_o200k": len(enc.encode(sheet)),
         "paper_sheet_commands": old_sheet.count("### "),
         "paper_sheet_tokens_o200k": len(enc.encode(old_sheet)),

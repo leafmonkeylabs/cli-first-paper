@@ -73,8 +73,14 @@ P=pilot/work/salli-core-v2/.venv/bin/python
 CLAUDE="$HOME/Library/Application Support/Claude/claude-code/2.1.293/8433d0d9cd0d/claude.app/Contents/MacOS/claude"
 $P pilot/v2/cli_reference.py > pilot/v2/cli_reference.md     # the sheet (needs the server)
 $P pilot/v2/equivalence.py small large                        # tasks through both surfaces, no agent
-# the full Haiku run (resumes from data/pilot-v2/runs.csv); --jobs 1 as in the paper
-CLAUDE_BIN="$CLAUDE" $P pilot/v2/run.py --models haiku --reps 5 --jobs 1
+# the rewrite waves as collected (resume from data/pilot-v2/runs.csv): Haiku x5 then Sonnet x3,
+# --jobs 4, while the ablation wave (pilot/run.py, --jobs 6) ran on the same machine
+CLAUDE_BIN="$CLAUDE" $P pilot/v2/run.py --models haiku --reps 5 --jobs 4
+CLAUDE_BIN="$CLAUDE" $P pilot/v2/run.py --models sonnet --reps 3 --jobs 4
+# the isolation wave (paper Section 7.3): in-wave references plus MCP-24's tools only and
+# the CLI addressing accounts by id only; Haiku then Sonnet, --jobs 4, nothing else running
+PILOT_OUT=data/pilot-iso CLAUDE_BIN="$CLAUDE" $P pilot/v2/run.py --arms mcp mcp-24 cli-pipe-ref cli-pipe-ref-ids --models haiku --reps 5 --jobs 4
+PILOT_OUT=data/pilot-iso CLAUDE_BIN="$CLAUDE" $P pilot/v2/run.py --arms mcp mcp-24 cli-pipe-ref cli-pipe-ref-ids --models sonnet --reps 3 --jobs 4
 ```
 
 Output goes to `data/pilot-v2/` (`runs.csv`, `transcripts/`) unless `PILOT_OUT` names
@@ -108,3 +114,21 @@ and the `runs.csv` columns.
   "Bank Account" (1200) is renamed to the old "Bank Account (LKR)". The result is the old
   chart: 13 starter accounts with the same codes, names, types and tax roles, plus the
   debts' liability accounts (16 small, 106 large), 30 / 440 entries, tax LKR 388,500.
+
+## Isolation wave (paper Section 7.3)
+
+Two configurations separate the rewrite's changes on each side:
+- **`mcp-24`** is the 1322f84 MCP server serving only the 24 tools that made up the paper's MCP-24 at 0277747 (`mcp24.py`; `mcp_stdio.py` removes the others when `SALLI_MCP_TOOLS` is set). Their definitions are 3,122 o200k tokens, against 6,599 for all 46.
+- **`cli-pipe-ref-ids`** is the composed CLI with the sheet, but accounts are addressed by id only, as MCP's tools require. `sheet_ids.py` documents account arguments as ids, and the `salli` wrapper refuses account codes and names in `--debit`, `--credit` and `--parent` with a plain error. It emulates a CLI without code/name addressing; the product itself was not changed.
+
+The wave re-runs `mcp` (MCP-46) and `cli-pipe-ref` as in-wave references.
+
+Changes to the harness from this wave on, none visible to the agents except as noted:
+- **No .env in the agents' environment.** The server's `.env` (database URL, service keys) is no longer put there. The TypeScript CLI needs only its token, and the MCP server loads the `.env` itself. Earlier waves passed it, as `pilot/run.py` had to for the in-process Python CLI. No agent in any wave read the environment (`pilot/followup_mechanisms.py`, host reach).
+- **Token revocation in a `finally` block.** The run's token is revoked even if the run errors.
+- **Recorded run times.** Start and end per run go to `run_times.csv` for the ledger (`pilot/followup_ledger.py`).
+- **Scrubbed final line.** The `final` column is scrubbed like the transcripts.
+
+## Collection conditions (all follow-up waves)
+
+`data/followup/run_ledger.csv` lists every follow-up run with its wave, configured `--jobs`, start, end and the number of follow-up runs in progress at its midpoint. The ablation and rewrite waves overlapped on one machine, with a median of 6–10 agents at once, so their timings are not comparable across configurations. The isolation wave ran alone at `--jobs 4`. No follow-up run was discarded or re-collected.

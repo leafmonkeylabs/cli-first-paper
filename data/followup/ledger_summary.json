@@ -1,0 +1,57 @@
+{
+ "ablation/haiku": {
+  "runs": 360,
+  "configured_jobs": 6,
+  "median_concurrent": 6.0,
+  "max_concurrent": 11,
+  "start": "2026-10-10T16:52:36+00:00",
+  "end": "2026-10-10T17:31:28+00:00"
+ },
+ "rewrite/haiku": {
+  "runs": 300,
+  "configured_jobs": 4,
+  "median_concurrent": 8.0,
+  "max_concurrent": 11,
+  "start": "2026-10-10T17:12:17+00:00",
+  "end": "2026-10-10T17:45:05+00:00"
+ },
+ "ablation/sonnet": {
+  "runs": 216,
+  "configured_jobs": 6,
+  "median_concurrent": 10.0,
+  "max_concurrent": 11,
+  "start": "2026-10-10T17:46:14+00:00",
+  "end": "2026-10-10T18:21:53+00:00"
+ },
+ "rewrite/sonnet": {
+  "runs": 180,
+  "configured_jobs": 4,
+  "median_concurrent": 10.0,
+  "max_concurrent": 11,
+  "start": "2026-10-10T17:46:15+00:00",
+  "end": "2026-10-10T18:08:42+00:00"
+ },
+ "isolation/haiku": {
+  "runs": 240,
+  "configured_jobs": 4,
+  "median_concurrent": 4.0,
+  "max_concurrent": 6,
+  "start": "2026-10-10T19:08:16+00:00",
+  "end": "2026-10-10T19:34:10+00:00"
+ },
+ "isolation/sonnet": {
+  "runs": 144,
+  "configured_jobs": 4,
+  "median_concurrent": 4.0,
+  "max_concurrent": 5,
+  "start": "2026-10-10T19:34:13+00:00",
+  "end": "2026-10-10T19:58:07+00:00"
+ },
+ "overlaps_min": {
+  "ablation/haiku|rewrite/haiku": 19,
+  "rewrite/haiku|ablation/sonnet": 0,
+  "ablation/sonnet|rewrite/sonnet": 22,
+  "rewrite/sonnet|isolation/haiku": 0,
+  "isolation/haiku|isolation/sonnet": 0
+ }
+}

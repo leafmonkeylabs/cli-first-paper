@@ -1,7 +1,7 @@
 {
   "title": "CLI-First: paper and replication package",
   "upload_type": "dataset",
-  "description": "The paper, with its data, harness and analysis: 'CLI-First: What an Agent Knows About an Interface Matters More Than Its Protocol': 947 attempted and 704 retained Claude Code runs on salli-core, two follow-up experiments (1,056 runs), with transcripts, the run ledger, collection logs and the scripts that produce every number in the paper.",
+  "description": "The paper, with its data, harness and analysis: 'CLI-First: What an Agent Knows About an Interface Matters More Than Its Protocol': 947 attempted and 704 retained Claude Code runs on salli-core, three follow-up waves (1,440 runs), with transcripts, the run ledger, collection logs and the scripts that produce every number in the paper.",
   "creators": [{"name": "Irugalbandara, Chandra", "affiliation": "Leaf Monkey Labs"}],
   "keywords": ["AI agents", "command-line interfaces", "Model Context Protocol", "tool use", "agent-computer interfaces"],
   "license": "cc-by-4.0",

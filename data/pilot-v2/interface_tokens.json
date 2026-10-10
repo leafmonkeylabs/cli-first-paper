@@ -1,7 +1,10 @@
 {
   "mcp_tools": 46,
   "mcp_definition_tokens_o200k": 6599,
+  "mcp24_tools": 24,
+  "mcp24_definition_tokens_o200k": 3122,
   "sheet_commands": 33,
+  "sheet_ids_tokens_o200k": 3000,
   "sheet_tokens_o200k": 3010,
   "paper_sheet_commands": 14,
   "paper_sheet_tokens_o200k": 1134

@@ -24,4 +24,12 @@ USER = os.environ["SALLI_USER_ID"]
 mcp_server._current_user_id = lambda: USER
 
 server = mcp_server.build_mcp_server(svc, issuer_url="http://localhost:8000")
+# Follow-up isolation wave: SALLI_MCP_TOOLS (comma-separated) keeps only those
+# tools, e.g. the 24 that made up the paper's MCP-24 at 0277747. The kept tools'
+# schemas and implementations are 1322f84's, unchanged.
+keep = [t for t in os.environ.get("SALLI_MCP_TOOLS", "").split(",") if t]
+if keep:
+    for name in [t.name for t in server._tool_manager.list_tools()]:
+        if name not in keep:
+            server.remove_tool(name)
 server.run(transport="stdio")
