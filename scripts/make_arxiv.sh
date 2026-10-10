@@ -27,5 +27,8 @@ if pdftotext "$STAGE/main.pdf" - | grep -q '??'; then echo "unresolved reference
 rm -f "$STAGE/main.pdf"
 
 # 4. Archive.
-tar -czf "$OUT/cli-first-arxiv.tar.gz" -C "$STAGE" .
+# COPYFILE_DISABLE stops macOS tar adding ._* resource files. On arXiv's Review
+# Files step, untick "delete" for data/pilot/table_*.tex: they are read with
+# \CatchFileDef, which arXiv's scanner does not see, so it marks them unused.
+COPYFILE_DISABLE=1 tar -czf "$OUT/cli-first-arxiv.tar.gz" -C "$STAGE" .
 echo "arXiv archive: $OUT/cli-first-arxiv.tar.gz ($(tar -tzf "$OUT/cli-first-arxiv.tar.gz" | grep -vc '/$') files)"

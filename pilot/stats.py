@@ -86,8 +86,9 @@ def holm(ps):
 
 def cells_for(cell, model, fam, arm):
     keys = sorted({(t, s) for (m, t, s, a) in cell if m == model and FAMILY[t] == fam})
-    return [(t, s, cell[(model, t, s, arm)], cell[(model, t, s, "mcp")]) for t, s in keys
-            if cell.get((model, t, s, arm)) and cell.get((model, t, s, "mcp"))]
+    base = ARMS[0]  # the reference configuration: MCP-24 in the paper
+    return [(t, s, cell[(model, t, s, arm)], cell[(model, t, s, base)]) for t, s in keys
+            if cell.get((model, t, s, arm)) and cell.get((model, t, s, base))]
 
 
 def log_ratio(a, b, f=lambda r: r["cost_usd"]):

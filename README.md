@@ -2,7 +2,7 @@
 
 Chandra Irugalbandara, Leaf Monkey Labs.
 
-Archived on Zenodo: [10.5281/zenodo.23284582](https://doi.org/10.5281/zenodo.23284582) (v1.0.0; [all versions](https://doi.org/10.5281/zenodo.23284581)).
+Archived on Zenodo: [10.5281/zenodo.23284581](https://doi.org/10.5281/zenodo.23284581) (all versions; v1.0.0 is [10.5281/zenodo.23284582](https://doi.org/10.5281/zenodo.23284582)).
 
 This repository holds the paper and everything behind it: the LaTeX source and PDF, plus the data, harness and analysis for the exploratory experiment (Section 6) and the case-study measurements (Section 4).
 
@@ -36,6 +36,9 @@ Every number, table and figure dataset in the paper's experiment section is prod
 | `main.tex`, `references.bib`, `main.bbl`, `main.pdf` | The paper |
 | `scripts/` | Case-study measurements (coverage, agent trailers, feature timeline, interface tokens), the cost-model table, and the arXiv build |
 | `data/*.csv`, `data/*.json`, `data/*.txt` | Case-study outputs |
+| `data/pilot-ablation/` | Follow-up 1 (paper Section 7.1, F6): command-sheet ablation on commit `0277747`, 576 runs. The sheet variants are `pilot/cli_reference_{noout,noopts,names,wide}.md`, made by `pilot/sheet_variants.py` |
+| `data/pilot-v2/`, `pilot/v2/` | Follow-up 2 (paper Section 7.2, F7): the paper's tasks on the rewritten salli-core at `1322f84`, 480 runs, and the harness ported to it (see `pilot/v2/README.md`) |
+| `data/followup/` | Follow-up tables and every number quoted in Section 7, from `pilot/followup_tables.py` |
 
 Configuration names in files differ from the paper's:
 
@@ -63,6 +66,8 @@ python3 pilot/oversight.py  # write-output discarding in composed runs
 ```
 
 The permutation tests and bootstrap use a fixed seed, so outputs are identical across runs.
+
+For the follow-ups, run `python3 pilot/followup_tables.py` (same statistics, against MCP or the full sheet as baseline).
 
 ## Re-running the experiment
 

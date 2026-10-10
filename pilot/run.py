@@ -90,6 +90,17 @@ WITH_REF = (
     "returns; `salli` is on PATH.\n\n" + REFERENCE
 )
 _HELP = " `salli --help` and `salli <group> --help` describe the commands."
+# Command-sheet ablation (agenda S3; pilot/sheet_variants.py): the composed CLI
+# with one element of the sheet removed, or the scope widened to every command.
+SHEET_VARIANTS = {"cli-pipe-ref-noout": "noout", "cli-pipe-ref-noopts": "noopts",
+                  "cli-pipe-ref-names": "names", "cli-pipe-ref-wide": "wide"}
+
+
+def with_ref(variant: str) -> str:
+    text = (HERE / f"cli_reference_{variant}.md").read_text()
+    return ("\n\nThe reference below lists the commands that cover what you need and the JSON each "
+            "returns; `salli` is on PATH.\n\n" + text)
+
 ARM_SYSTEM = {
     "mcp": "Use the Salli tools.",
     "cli-step": CLI_STEP + WITH_SKILL,
@@ -99,6 +110,7 @@ ARM_SYSTEM = {
     "cli-pipe-ref": CLI_PIPE.replace(_HELP, "") + WITH_REF,
     "cli-pipe-skills": CLI_PIPE,
     "mcp-parity": "Use the Salli tools.",
+    **{arm: CLI_PIPE.replace(_HELP, "") + with_ref(v) for arm, v in SHEET_VARIANTS.items()},
 }
 MCP_SERVER = {"mcp": "mcp_stdio.py", "mcp-parity": "mcp_parity.py"}
 # Arms whose skills are installed with `salli skills install --project` in the
@@ -114,7 +126,7 @@ INSTALLED_SKILLS = {"cli-pipe-skills"}
 # the CLI); only the salli executable is on PATH, so that code cannot import
 # salli and go around the CLI. (Chain-task composed runs used an earlier list
 # that also denied interpreters; it refused 4 calls in 256 runs.)
-COMPOSED = {"cli-pipe", "cli-pipe-noskill", "cli-pipe-ref", "cli-pipe-skills"}
+COMPOSED = {"cli-pipe", "cli-pipe-noskill", "cli-pipe-ref", "cli-pipe-skills", *SHEET_VARIANTS}
 DENIED = [
     f"Bash({t}:*)" for t in (
         "rm", "rmdir", "mv", "cp", "dd", "chmod", "chown", "ln", "truncate", "shred",
