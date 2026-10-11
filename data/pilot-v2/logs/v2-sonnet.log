@@ -1,0 +1,181 @@
+180 runs to do (300 already recorded)
+T1-small-cli-step-ref-sonnet-1-1dd818: success=True passes=2 cost=$0.0307 {"answer": true}
+T1-small-cli-pipe-noskill-sonnet-1-c4ce8d: success=True passes=4 cost=$0.0250 {"answer": true}
+T1-small-mcp-sonnet-1-ad089d: success=True passes=2 cost=$0.0480 {"answer": true}
+T1-small-cli-pipe-sonnet-1-e48447: success=True passes=4 cost=$0.0259 {"answer": true}
+T1-small-cli-pipe-ref-sonnet-1-b673dc: success=True passes=2 cost=$0.0281 {"answer": true}
+T1-large-mcp-sonnet-1-6c7dfd: success=True passes=2 cost=$0.0127 {"answer": true}
+T1-large-cli-step-ref-sonnet-1-1fb832: success=True passes=2 cost=$0.0109 {"answer": true}
+T1-large-cli-pipe-sonnet-1-22a90e: success=True passes=5 cost=$0.0208 {"answer": true}
+T1-large-cli-pipe-noskill-sonnet-1-4f1c59: success=True passes=4 cost=$0.0237 {"answer": true}
+T1-large-cli-pipe-ref-sonnet-1-2135a2: success=True passes=2 cost=$0.0078 {"answer": true}
+T2-small-mcp-sonnet-1-9a3b81: success=True passes=3 cost=$0.0205 {"entry": true, "no_extra_entries": true}
+T2-small-cli-pipe-sonnet-1-2b2e8e: success=True passes=3 cost=$0.0168 {"entry": true, "no_extra_entries": true}
+T2-small-cli-pipe-noskill-sonnet-1-c0fd9c: success=True passes=5 cost=$0.0390 {"entry": true, "no_extra_entries": true}
+T2-small-cli-step-ref-sonnet-1-dd259c: success=True passes=3 cost=$0.0201 {"entry": true, "no_extra_entries": true}
+T2-small-cli-pipe-ref-sonnet-1-b9cfc9: success=True passes=3 cost=$0.0147 {"entry": true, "no_extra_entries": true}
+T2-large-mcp-sonnet-1-cc6bf7: success=True passes=3 cost=$0.0439 {"entry": true, "no_extra_entries": true}
+T2-large-cli-pipe-sonnet-1-cce3c5: success=True passes=4 cost=$0.0412 {"entry": true, "no_extra_entries": true}
+T2-large-cli-step-ref-sonnet-1-69a323: success=True passes=3 cost=$0.0598 {"entry": true, "no_extra_entries": true}
+T2-large-cli-pipe-noskill-sonnet-1-c0e556: success=True passes=5 cost=$0.0464 {"entry": true, "no_extra_entries": true}
+T2-large-cli-pipe-ref-sonnet-1-1b5ba8: success=True passes=3 cost=$0.0219 {"entry": true, "no_extra_entries": true}
+T4-small-mcp-sonnet-1-4e64c4: success=True passes=5 cost=$0.0327 {"entry": true, "reminder": true}
+T4-small-cli-pipe-sonnet-1-a9b64f: success=True passes=6 cost=$0.0329 {"entry": true, "reminder": true}
+T4-small-cli-pipe-noskill-sonnet-1-252a64: success=True passes=8 cost=$0.0621 {"entry": true, "reminder": true}
+T4-small-cli-step-ref-sonnet-1-30c223: success=True passes=5 cost=$0.0313 {"entry": true, "reminder": true}
+T4-small-cli-pipe-ref-sonnet-1-d98214: success=True passes=4 cost=$0.0202 {"entry": true, "reminder": true}
+T4-large-mcp-sonnet-1-3aa23c: success=True passes=5 cost=$0.0577 {"entry": true, "reminder": true}
+T4-large-cli-step-ref-sonnet-1-410fc7: success=True passes=5 cost=$0.0751 {"entry": true, "reminder": true}
+T4-large-cli-pipe-sonnet-1-8b157e: success=True passes=7 cost=$0.0547 {"entry": true, "reminder": true}
+T4-large-cli-pipe-noskill-sonnet-1-75485e: success=True passes=8 cost=$0.0716 {"entry": true, "reminder": true}
+T4-large-cli-pipe-ref-sonnet-1-d18227: success=True passes=4 cost=$0.0278 {"entry": true, "reminder": true}
+T8-small-mcp-sonnet-1-f0bed2: success=True passes=7 cost=$0.0545 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "Software Subscriptions"}
+T8-small-cli-step-ref-sonnet-1-a71de3: success=True passes=7 cost=$0.0498 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "Software Subscriptions"}
+T8-small-cli-pipe-sonnet-1-04defe: success=True passes=10 cost=$0.0606 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "Software Subscriptions"}
+T8-small-cli-pipe-noskill-sonnet-1-2c103d: success=True passes=9 cost=$0.0670 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "Software Subscriptions"}
+T8-small-cli-pipe-ref-sonnet-1-ee792d: success=True passes=5 cost=$0.0362 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "Software Subscriptions"}
+T8-large-mcp-sonnet-1-e4d30d: success=True passes=5 cost=$0.0991 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "School Fees (Family)"}
+T8-large-cli-step-ref-sonnet-1-a4ca20: success=True passes=7 cost=$0.1165 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "School Fees (Family)"}
+T8-large-cli-pipe-noskill-sonnet-1-f27c88: success=True passes=8 cost=$0.0883 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "School Fees (Family)"}
+T8-large-cli-pipe-ref-sonnet-1-08793a: success=True passes=6 cost=$0.0461 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "School Fees (Family)"}
+L1-small-cli-pipe-noskill-sonnet-1-10fb0f: success=True passes=5 cost=$0.0523 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-small-mcp-sonnet-1-56b90c: success=True passes=3 cost=$0.1111 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-small-cli-step-ref-sonnet-1-48a5f7: success=True passes=3 cost=$0.0601 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-small-cli-pipe-ref-sonnet-1-332150: success=True passes=3 cost=$0.0337 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-large-cli-pipe-sonnet-1-b82cca: success=True passes=4 cost=$0.0317 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-large-mcp-sonnet-1-35bb52: success=True passes=3 cost=$0.1340 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-large-cli-pipe-noskill-sonnet-1-1d24db: success=True passes=5 cost=$0.0631 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-large-cli-step-ref-sonnet-1-b4a124: success=True passes=4 cost=$0.1038 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-large-cli-pipe-ref-sonnet-1-47920c: success=True passes=3 cost=$0.0270 {"entries": true, "no_extra_entries": true, "found": 25}
+L2-small-mcp-sonnet-1-8b86a1: success=True passes=4 cost=$0.0237 {"reminders": true, "expected_n": 1, "got_n": 1}
+L2-small-cli-pipe-sonnet-1-509712: success=True passes=4 cost=$0.0198 {"reminders": true, "expected_n": 1, "got_n": 1}
+L2-small-cli-step-ref-sonnet-1-fc07b7: success=True passes=3 cost=$0.0174 {"reminders": true, "expected_n": 1, "got_n": 1}
+L2-small-cli-pipe-noskill-sonnet-1-c19f29: success=True passes=6 cost=$0.0350 {"reminders": true, "expected_n": 1, "got_n": 1}
+L2-small-cli-pipe-ref-sonnet-1-bb6353: success=True passes=3 cost=$0.0147 {"reminders": true, "expected_n": 1, "got_n": 1}
+T8-large-cli-pipe-sonnet-1-e186fa: success=True passes=7 cost=$0.0786 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "School Fees (Family)"}
+L2-large-mcp-sonnet-1-fdef22: success=True passes=3 cost=$0.1232 {"reminders": true, "expected_n": 24, "got_n": 24}
+L2-large-cli-pipe-sonnet-1-45529d: success=True passes=8 cost=$0.0463 {"reminders": true, "expected_n": 24, "got_n": 24}
+L2-large-cli-pipe-noskill-sonnet-1-c1ff09: success=True passes=8 cost=$0.0620 {"reminders": true, "expected_n": 24, "got_n": 24}
+T1-small-mcp-sonnet-2-a2b220: success=True passes=2 cost=$0.0133 {"answer": true}
+L2-large-cli-step-ref-sonnet-1-96c46d: success=True passes=3 cost=$0.1069 {"reminders": true, "expected_n": 24, "got_n": 24}
+L2-large-cli-pipe-ref-sonnet-1-c08d0e: success=True passes=3 cost=$0.0328 {"reminders": true, "expected_n": 24, "got_n": 24}
+T1-small-cli-pipe-sonnet-2-e82e46: success=True passes=5 cost=$0.0212 {"answer": true}
+T1-small-cli-pipe-noskill-sonnet-2-cd6064: success=True passes=4 cost=$0.0231 {"answer": true}
+T1-small-cli-step-ref-sonnet-2-4f0023: success=True passes=2 cost=$0.0110 {"answer": true}
+T1-small-cli-pipe-ref-sonnet-2-bd342e: success=True passes=2 cost=$0.0081 {"answer": true}
+T1-large-mcp-sonnet-2-0b6e84: success=True passes=2 cost=$0.0136 {"answer": true}
+T1-large-cli-pipe-sonnet-2-a37810: success=True passes=5 cost=$0.0212 {"answer": true}
+T1-large-cli-pipe-noskill-sonnet-2-549c84: success=True passes=4 cost=$0.0230 {"answer": true}
+T1-large-cli-step-ref-sonnet-2-81de6f: success=True passes=2 cost=$0.0109 {"answer": true}
+T1-large-cli-pipe-ref-sonnet-2-4a5153: success=True passes=2 cost=$0.0077 {"answer": true}
+T2-small-mcp-sonnet-2-764432: success=True passes=3 cost=$0.0198 {"entry": true, "no_extra_entries": true}
+T2-small-cli-pipe-sonnet-2-647753: success=True passes=4 cost=$0.0193 {"entry": true, "no_extra_entries": true}
+T2-small-cli-step-ref-sonnet-2-329d54: success=True passes=3 cost=$0.0180 {"entry": true, "no_extra_entries": true}
+T2-small-cli-pipe-noskill-sonnet-2-f16292: success=True passes=5 cost=$0.0384 {"entry": true, "no_extra_entries": true}
+T2-small-cli-pipe-ref-sonnet-2-e67091: success=True passes=3 cost=$0.0130 {"entry": true, "no_extra_entries": true}
+T2-large-mcp-sonnet-2-c300c4: success=True passes=3 cost=$0.0433 {"entry": true, "no_extra_entries": true}
+T2-large-cli-pipe-sonnet-2-5670f0: success=True passes=4 cost=$0.0413 {"entry": true, "no_extra_entries": true}
+T2-large-cli-pipe-noskill-sonnet-2-f78571: success=True passes=5 cost=$0.0469 {"entry": true, "no_extra_entries": true}
+T2-large-cli-step-ref-sonnet-2-7143f1: success=True passes=3 cost=$0.0598 {"entry": true, "no_extra_entries": true}
+T2-large-cli-pipe-ref-sonnet-2-d48a29: success=True passes=3 cost=$0.0219 {"entry": true, "no_extra_entries": true}
+T4-small-mcp-sonnet-2-b25c48: success=True passes=5 cost=$0.0311 {"entry": true, "reminder": true}
+T4-small-cli-pipe-sonnet-2-b01d37: success=True passes=5 cost=$0.0319 {"entry": true, "reminder": true}
+T4-small-cli-pipe-noskill-sonnet-2-0735f2: success=True passes=6 cost=$0.0495 {"entry": true, "reminder": true}
+T4-small-cli-step-ref-sonnet-2-075478: success=True passes=5 cost=$0.0296 {"entry": true, "reminder": true}
+T4-small-cli-pipe-ref-sonnet-2-d21a2b: success=True passes=4 cost=$0.0182 {"entry": true, "reminder": true}
+T4-large-mcp-sonnet-2-0c7300: success=True passes=5 cost=$0.0572 {"entry": true, "reminder": true}
+T4-large-cli-pipe-sonnet-2-a9dc3f: success=True passes=7 cost=$0.0519 {"entry": true, "reminder": true}
+T4-large-cli-step-ref-sonnet-2-51a6ea: success=True passes=5 cost=$0.0752 {"entry": true, "reminder": true}
+T4-large-cli-pipe-ref-sonnet-2-e8b60f: success=True passes=4 cost=$0.0497 {"entry": true, "reminder": true}
+T8-small-mcp-sonnet-2-c184a3: success=True passes=7 cost=$0.0529 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "Software Subscriptions"}
+T8-small-cli-pipe-sonnet-2-ba8663: success=True passes=11 cost=$0.0699 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "Software Subscriptions"}
+T8-small-cli-pipe-noskill-sonnet-2-81f62c: success=True passes=9 cost=$0.0654 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "Software Subscriptions"}
+T8-small-cli-step-ref-sonnet-2-d5c706: success=True passes=7 cost=$0.0472 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "Software Subscriptions"}
+T8-small-cli-pipe-ref-sonnet-2-ccaeba: success=True passes=5 cost=$0.0359 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "Software Subscriptions"}
+T8-large-mcp-sonnet-2-c76866: success=True passes=5 cost=$0.0993 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "School Fees (Family)"}
+T4-large-cli-pipe-noskill-sonnet-2-fb6c25: success=True passes=8 cost=$0.0667 {"entry": true, "reminder": true}
+T8-large-cli-step-ref-sonnet-2-6e38fe: success=True passes=6 cost=$0.1138 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "School Fees (Family)"}
+T8-large-cli-pipe-ref-sonnet-2-1ca11c: success=True passes=5 cost=$0.0809 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "School Fees (Family)"}
+L1-small-mcp-sonnet-2-649a54: success=True passes=3 cost=$0.1087 {"entries": true, "no_extra_entries": true, "found": 25}
+T8-large-cli-pipe-sonnet-2-0c726a: success=True passes=9 cost=$0.0673 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "School Fees (Family)"}
+T8-large-cli-pipe-noskill-sonnet-2-e4b2a8: success=True passes=11 cost=$0.0960 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "School Fees (Family)"}
+L1-small-cli-pipe-sonnet-2-466341: success=True passes=4 cost=$0.0294 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-small-cli-pipe-noskill-sonnet-2-1016a4: success=True passes=5 cost=$0.0453 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-small-cli-step-ref-sonnet-2-7a62b5: success=True passes=5 cost=$0.0632 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-small-cli-pipe-ref-sonnet-2-ebf8cd: success=True passes=3 cost=$0.0270 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-large-cli-pipe-sonnet-2-352c4c: success=True passes=4 cost=$0.0328 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-large-cli-pipe-noskill-sonnet-2-c95d8a: success=True passes=5 cost=$0.0669 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-large-mcp-sonnet-2-ec14df: success=True passes=3 cost=$0.1320 {"entries": true, "no_extra_entries": true, "found": 25}
+L2-small-mcp-sonnet-2-5a6326: success=True passes=4 cost=$0.0227 {"reminders": true, "expected_n": 1, "got_n": 1}
+L1-large-cli-step-ref-sonnet-2-4dae6f: success=True passes=5 cost=$0.1061 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-large-cli-pipe-ref-sonnet-2-4f0270: success=True passes=3 cost=$0.0280 {"entries": true, "no_extra_entries": true, "found": 25}
+L2-small-cli-pipe-sonnet-2-805cb8: success=True passes=4 cost=$0.0180 {"reminders": true, "expected_n": 1, "got_n": 1}
+L2-small-cli-step-ref-sonnet-2-c6426c: success=True passes=3 cost=$0.0156 {"reminders": true, "expected_n": 1, "got_n": 1}
+L2-small-cli-pipe-noskill-sonnet-2-9d66f8: success=True passes=6 cost=$0.0339 {"reminders": true, "expected_n": 1, "got_n": 1}
+L2-small-cli-pipe-ref-sonnet-2-2f0603: success=True passes=3 cost=$0.0125 {"reminders": true, "expected_n": 1, "got_n": 1}
+L1-small-cli-pipe-sonnet-1-a34fc0: success=True passes=16 cost=$0.1241 {"entries": true, "no_extra_entries": true, "found": 25}
+L2-large-cli-pipe-sonnet-2-0ae944: success=True passes=5 cost=$0.0361 {"reminders": true, "expected_n": 24, "got_n": 24}
+L2-large-mcp-sonnet-2-45fb34: success=True passes=4 cost=$0.1159 {"reminders": true, "expected_n": 24, "got_n": 24}
+L2-large-cli-pipe-noskill-sonnet-2-7a88a1: success=True passes=6 cost=$0.0521 {"reminders": true, "expected_n": 24, "got_n": 24}
+L2-large-cli-step-ref-sonnet-2-7f1747: success=True passes=3 cost=$0.1161 {"reminders": true, "expected_n": 24, "got_n": 24}
+T1-small-mcp-sonnet-3-117544: success=True passes=2 cost=$0.0127 {"answer": true}
+T1-small-cli-pipe-sonnet-3-46e5d6: success=True passes=5 cost=$0.0208 {"answer": true}
+T1-small-cli-pipe-noskill-sonnet-3-ada00f: success=True passes=4 cost=$0.0220 {"answer": true}
+T1-small-cli-step-ref-sonnet-3-4efd4c: success=True passes=2 cost=$0.0107 {"answer": true}
+T1-small-cli-pipe-ref-sonnet-3-41b7ed: success=True passes=2 cost=$0.0078 {"answer": true}
+L2-large-cli-pipe-ref-sonnet-2-6d98d8: success=True passes=3 cost=$0.0390 {"reminders": true, "expected_n": 24, "got_n": 24}
+T1-large-mcp-sonnet-3-1c0785: success=True passes=2 cost=$0.0129 {"answer": true}
+T1-large-cli-pipe-noskill-sonnet-3-9cc75e: success=True passes=4 cost=$0.0222 {"answer": true}
+T1-large-cli-pipe-sonnet-3-902570: success=True passes=4 cost=$0.0189 {"answer": true}
+T1-large-cli-step-ref-sonnet-3-351e5d: success=True passes=2 cost=$0.0105 {"answer": true}
+T2-small-mcp-sonnet-3-392c10: success=True passes=3 cost=$0.0196 {"entry": true, "no_extra_entries": true}
+T2-small-cli-pipe-sonnet-3-a14a7d: success=True passes=4 cost=$0.0189 {"entry": true, "no_extra_entries": true}
+T1-large-cli-pipe-ref-sonnet-3-43dcc7: success=True passes=2 cost=$0.0107 {"answer": true}
+T2-small-cli-pipe-noskill-sonnet-3-7a6e1f: success=True passes=4 cost=$0.0352 {"entry": true, "no_extra_entries": true}
+T2-small-cli-step-ref-sonnet-3-0bf207: success=True passes=3 cost=$0.0182 {"entry": true, "no_extra_entries": true}
+T2-small-cli-pipe-ref-sonnet-3-f2a25c: success=True passes=3 cost=$0.0124 {"entry": true, "no_extra_entries": true}
+T2-large-cli-pipe-sonnet-3-5b7d01: success=True passes=3 cost=$0.0375 {"entry": true, "no_extra_entries": true}
+T2-large-mcp-sonnet-3-ee59ef: success=True passes=3 cost=$0.0440 {"entry": true, "no_extra_entries": true}
+T2-large-cli-pipe-noskill-sonnet-3-2775de: success=True passes=5 cost=$0.0475 {"entry": true, "no_extra_entries": true}
+T2-large-cli-step-ref-sonnet-3-2cb6d9: success=True passes=3 cost=$0.0601 {"entry": true, "no_extra_entries": true}
+T2-large-cli-pipe-ref-sonnet-3-6cf393: success=True passes=3 cost=$0.0190 {"entry": true, "no_extra_entries": true}
+T4-small-mcp-sonnet-3-c6b946: success=True passes=5 cost=$0.0306 {"entry": true, "reminder": true}
+T4-small-cli-pipe-sonnet-3-879b78: success=True passes=6 cost=$0.0326 {"entry": true, "reminder": true}
+T4-small-cli-step-ref-sonnet-3-da52c5: success=True passes=5 cost=$0.0296 {"entry": true, "reminder": true}
+T4-small-cli-pipe-ref-sonnet-3-674b37: success=True passes=4 cost=$0.0182 {"entry": true, "reminder": true}
+T4-small-cli-pipe-noskill-sonnet-3-63be8d: success=True passes=9 cost=$0.0628 {"entry": true, "reminder": true}
+T4-large-mcp-sonnet-3-4d0d61: success=True passes=5 cost=$0.0572 {"entry": true, "reminder": true}
+T4-large-cli-step-ref-sonnet-3-b33d00: success=True passes=5 cost=$0.0752 {"entry": true, "reminder": true}
+T4-large-cli-pipe-sonnet-3-81e211: success=True passes=6 cost=$0.0426 {"entry": true, "reminder": true}
+T4-large-cli-pipe-noskill-sonnet-3-30e6c8: success=True passes=8 cost=$0.0705 {"entry": true, "reminder": true}
+T4-large-cli-pipe-ref-sonnet-3-ee23b3: success=True passes=4 cost=$0.0489 {"entry": true, "reminder": true}
+T8-small-mcp-sonnet-3-9eb86e: success=True passes=7 cost=$0.0512 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "Software Subscriptions"}
+T8-small-cli-pipe-sonnet-3-04e7ae: success=True passes=8 cost=$0.0503 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "Software Subscriptions"}
+T8-small-cli-pipe-noskill-sonnet-3-068575: success=True passes=8 cost=$0.0608 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "Software Subscriptions"}
+T8-small-cli-pipe-ref-sonnet-3-653cdd: success=True passes=4 cost=$0.0251 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "Software Subscriptions"}
+T8-large-mcp-sonnet-3-2c151e: success=True passes=5 cost=$0.0992 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "School Fees (Family)"}
+T8-large-cli-pipe-sonnet-3-ed7728: success=True passes=11 cost=$0.0872 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "School Fees (Family)"}
+T8-large-cli-pipe-noskill-sonnet-3-4fc597: success=True passes=10 cost=$0.0866 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "School Fees (Family)"}
+T8-large-cli-step-ref-sonnet-3-492f59: success=True passes=7 cost=$0.1166 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "School Fees (Family)"}
+T8-large-cli-pipe-ref-sonnet-3-ffbcac: success=True passes=5 cost=$0.0386 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "School Fees (Family)"}
+L1-small-cli-pipe-sonnet-3-cdf91d: success=True passes=4 cost=$0.0284 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-small-cli-pipe-noskill-sonnet-3-ceef0e: success=True passes=4 cost=$0.0439 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-small-cli-step-ref-sonnet-3-e4dfeb: success=True passes=3 cost=$0.0584 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-small-mcp-sonnet-3-40ad09: success=True passes=3 cost=$0.1075 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-small-cli-pipe-ref-sonnet-3-02c8f0: success=True passes=3 cost=$0.0271 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-large-cli-pipe-sonnet-3-6bf872: success=True passes=4 cost=$0.0338 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-large-cli-pipe-noskill-sonnet-3-39b80e: success=True passes=5 cost=$0.0574 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-large-mcp-sonnet-3-30cd0e: success=True passes=3 cost=$0.1321 {"entries": true, "no_extra_entries": true, "found": 25}
+L1-large-cli-step-ref-sonnet-3-97e7ce: success=True passes=3 cost=$0.0973 {"entries": true, "no_extra_entries": true, "found": 25}
+L2-small-mcp-sonnet-3-88af7d: success=True passes=3 cost=$0.0206 {"reminders": true, "expected_n": 1, "got_n": 1}
+L2-small-cli-pipe-sonnet-3-dbfe48: success=True passes=4 cost=$0.0177 {"reminders": true, "expected_n": 1, "got_n": 1}
+L2-small-cli-step-ref-sonnet-3-d941a7: success=True passes=3 cost=$0.0155 {"reminders": true, "expected_n": 1, "got_n": 1}
+L1-large-cli-pipe-ref-sonnet-3-0a119c: success=True passes=3 cost=$0.0250 {"entries": true, "no_extra_entries": true, "found": 25}
+L2-small-cli-pipe-noskill-sonnet-3-e588a8: success=True passes=5 cost=$0.0310 {"reminders": true, "expected_n": 1, "got_n": 1}
+L2-small-cli-pipe-ref-sonnet-3-3aafd7: success=True passes=3 cost=$0.0132 {"reminders": true, "expected_n": 1, "got_n": 1}
+T8-small-cli-step-ref-sonnet-3-ad3f49: success=True passes=7 cost=$0.0469 {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "Software Subscriptions"}
+L2-large-cli-pipe-sonnet-3-78ed4a: success=True passes=7 cost=$0.0432 {"reminders": true, "expected_n": 24, "got_n": 24}
+L2-large-mcp-sonnet-3-9d898e: success=True passes=3 cost=$0.1191 {"reminders": true, "expected_n": 24, "got_n": 24}
+L2-large-cli-pipe-noskill-sonnet-3-dd25eb: success=True passes=6 cost=$0.0613 {"reminders": true, "expected_n": 24, "got_n": 24}
+L2-large-cli-step-ref-sonnet-3-e5591d: success=True passes=3 cost=$0.1157 {"reminders": true, "expected_n": 24, "got_n": 24}
+L2-large-cli-pipe-ref-sonnet-3-4362b9: success=True passes=5 cost=$0.0431 {"reminders": true, "expected_n": 24, "got_n": 24}

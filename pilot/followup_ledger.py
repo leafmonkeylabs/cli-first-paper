@@ -72,6 +72,8 @@ def main() -> None:
     for wave, dname, log, jobs in WAVES:
         d = ROOT / "data" / dname
         lp = WORK / log
+        if not lp.exists():  # a clean copy has no pilot/work; use the copy shipped with the data
+            lp = d / "logs" / log
         if not lp.exists() or not (d / "runs.csv").exists():
             continue
         ensure_times(d)

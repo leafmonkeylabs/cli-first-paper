@@ -6,3 +6,6 @@ arxiv/
 *.out
 *.blg
 !data/pilot/logs/*.log
+!data/pilot-ablation/logs/*.log
+!data/pilot-v2/logs/*.log
+!data/pilot-iso/logs/*.log

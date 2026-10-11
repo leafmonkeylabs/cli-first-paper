@@ -1,0 +1,49 @@
+small T1 mcp right: PASS {"answer": true}
+small T1 mcp wrong: FAIL {"answer": false}
+small T1 cli right: PASS {"answer": true}
+small T1 cli wrong: FAIL {"answer": false}
+small T2 mcp right: PASS {"entry": true, "no_extra_entries": true}
+small T2 mcp wrong: FAIL {"entry": false, "no_extra_entries": false}
+small T2 cli right: PASS {"entry": true, "no_extra_entries": true}
+small T2 cli wrong: FAIL {"entry": false, "no_extra_entries": false}
+small T4 mcp right: PASS {"entry": true, "reminder": true}
+small T4 mcp wrong: FAIL {"entry": true, "reminder": false}
+small T4 cli right: PASS {"entry": true, "reminder": true}
+small T4 cli wrong: FAIL {"entry": true, "reminder": false}
+small T8 mcp right: PASS {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "Software Subscriptions"}
+small T8 mcp wrong: FAIL {"account": true, "software_entry": true, "refund_entry": false, "reminder": true, "target": "Software Subscriptions"}
+small T8 cli right: PASS {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "Software Subscriptions"}
+small T8 cli wrong: FAIL {"account": true, "software_entry": true, "refund_entry": false, "reminder": true, "target": "Software Subscriptions"}
+small L1 mcp right: PASS {"entries": true, "no_extra_entries": true, "found": 25}
+small L1 mcp wrong: FAIL {"entries": false, "no_extra_entries": false, "found": 24}
+small L1 cli right: PASS {"entries": true, "no_extra_entries": true, "found": 25}
+small L1 cli wrong: FAIL {"entries": false, "no_extra_entries": false, "found": 24}
+small L2 mcp right: PASS {"reminders": true, "expected_n": 1, "got_n": 1}
+small L2 mcp wrong: FAIL {"reminders": false, "expected_n": 1, "got_n": 4}
+small L2 cli right: PASS {"reminders": true, "expected_n": 1, "got_n": 1}
+small L2 cli wrong: FAIL {"reminders": false, "expected_n": 1, "got_n": 4}
+large T1 mcp right: PASS {"answer": true}
+large T1 mcp wrong: FAIL {"answer": false}
+large T1 cli right: PASS {"answer": true}
+large T1 cli wrong: FAIL {"answer": false}
+large T2 mcp right: PASS {"entry": true, "no_extra_entries": true}
+large T2 mcp wrong: FAIL {"entry": false, "no_extra_entries": false}
+large T2 cli right: PASS {"entry": true, "no_extra_entries": true}
+large T2 cli wrong: FAIL {"entry": false, "no_extra_entries": false}
+large T4 mcp right: PASS {"entry": true, "reminder": true}
+large T4 mcp wrong: FAIL {"entry": true, "reminder": false}
+large T4 cli right: PASS {"entry": true, "reminder": true}
+large T4 cli wrong: FAIL {"entry": true, "reminder": false}
+large T8 mcp right: PASS {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "School Fees (Family)"}
+large T8 mcp wrong: FAIL {"account": true, "software_entry": true, "refund_entry": false, "reminder": true, "target": "School Fees (Family)"}
+large T8 cli right: PASS {"account": true, "software_entry": true, "refund_entry": true, "reminder": true, "target": "School Fees (Family)"}
+large T8 cli wrong: FAIL {"account": true, "software_entry": true, "refund_entry": false, "reminder": true, "target": "School Fees (Family)"}
+large L1 mcp right: PASS {"entries": true, "no_extra_entries": true, "found": 25}
+large L1 mcp wrong: FAIL {"entries": false, "no_extra_entries": false, "found": 24}
+large L1 cli right: PASS {"entries": true, "no_extra_entries": true, "found": 25}
+large L1 cli wrong: FAIL {"entries": false, "no_extra_entries": false, "found": 24}
+large L2 mcp right: PASS {"reminders": true, "expected_n": 24, "got_n": 24}
+large L2 mcp wrong: FAIL {"reminders": false, "expected_n": 24, "got_n": 84}
+large L2 cli right: PASS {"reminders": true, "expected_n": 24, "got_n": 24}
+large L2 cli wrong: FAIL {"reminders": false, "expected_n": 24, "got_n": 84}
+all as expected
