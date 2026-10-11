@@ -45,6 +45,8 @@ P = 10000
 SEED = 20261009
 ARMS = ["mcp", "mcp-parity", "cli-step", "cli-pipe", "cli-pipe-noskill", "cli-pipe-skills",
         "cli-step-ref", "cli-pipe-ref"]
+# Figure 4's rows, top to bottom: the generated server, then the CLI by knowledge.
+FOREST_ROWS = ["mcp-parity", "cli-pipe-noskill", "cli-step", "cli-pipe", "cli-pipe-skills", "cli-step-ref", "cli-pipe-ref"]
 SHORT = {
     "mcp": "MCP-24", "mcp-parity": "MCP-102", "cli-step": "CLI skill/step",
     "cli-pipe": "CLI skill/comp", "cli-pipe-noskill": "CLI help/comp",
@@ -313,19 +315,23 @@ def main() -> None:
 
     # Forest-plot files: conditional (thick) and task-level (thin) intervals,
     # one file per family x model x protocol so the figure can colour by protocol.
+    # Both panels share one row per configuration, grouped by knowledge (help,
+    # skill, sheet), top to bottom in FOREST_ROWS; a configuration not run on a
+    # family has no row in its file. Haiku sits above Sonnet, as in the legend.
     for fam in ("chain", "loop"):
-        arms = [a for a in ARMS[1:] if any(x["family"] == fam and x["arm"] == a for x in ratios)]
         for model, proto in [(m, p) for m in ("haiku", "sonnet") for p in ("mcp", "cli")]:
             with (DATA / f"forest_{fam}_{model}_{proto}.csv").open("w", newline="") as fh:
                 w = csv.writer(fh)
                 w.writerow(["y", "ratio", "minus", "plus", "tminus", "tplus", "arm"])
-                for i, arm in enumerate(arms):
+                for i, arm in enumerate(FOREST_ROWS):
                     if (proto == "mcp") != arm.startswith("mcp"):
                         continue
-                    x = next(x for x in ratios if x["model"] == model and x["family"] == fam and x["arm"] == arm)
-                    off = -0.15 if model == "haiku" else 0.15
+                    x = next((x for x in ratios if x["model"] == model and x["family"] == fam and x["arm"] == arm), None)
+                    if x is None:
+                        continue
+                    off = 0.15 if model == "haiku" else -0.15
                     tlo, thi = max(x.get("task_lo", x["ratio"]), 0.11), min(x.get("task_hi", x["ratio"]), 9.0)
-                    w.writerow([len(arms) - 1 - i + off, x["ratio"], round(x["ratio"] - x["cond_lo"], 3),
+                    w.writerow([len(FOREST_ROWS) - 1 - i + off, x["ratio"], round(x["ratio"] - x["cond_lo"], 3),
                                 round(x["cond_hi"] - x["ratio"], 3), round(x["ratio"] - tlo, 3),
                                 round(thi - x["ratio"], 3), SHORT[arm]])
 

@@ -39,7 +39,7 @@ Every number, table and figure dataset in the paper's experiment section is prod
 | `data/pilot-ablation/` | Follow-up 1 (paper Section 7.1, F6): command-sheet ablation on commit `0277747`, 576 runs. The sheet variants are `pilot/cli_reference_{noout,noopts,names,wide}.md`, made by `pilot/sheet_variants.py` |
 | `data/pilot-v2/`, `pilot/v2/` | Follow-up 2 (paper Section 7.2, F7): the paper's tasks on the rewritten salli-core at `1322f84`, 480 runs, and the harness ported to it (see `pilot/v2/README.md`) |
 | `data/pilot-iso/` | Follow-up 3 (paper Section 7.3): the isolation wave on `1322f84`, 384 runs. Configurations: MCP-46, MCP-46 serving only MCP-24's 24 tools (`pilot/v2/mcp24.py`), the composed CLI with the sheet, and the same CLI with accounts by id only (`pilot/v2/sheet_ids.py` and the wrapper in `pilot/v2/run.py`) |
-| `data/followup/` | Follow-up tables (`table_*.tex`), every number quoted in Section 7 (`numbers.json`, from `pilot/followup_tables.py` with `pilot/followup_stats.py`), transcript measures (`mechanisms.json`, from `pilot/followup_mechanisms.py`), the coded failures with their final reports (`failure_coding.csv`), and the follow-up run ledger with measured concurrency (`run_ledger.csv`, `ledger_summary.json`, from `pilot/followup_ledger.py`) |
+| `data/followup/` | Follow-up tables (`table_*.tex`), every number quoted in Section 7 (`numbers.json`, from `pilot/followup_tables.py` with `pilot/followup_stats.py`), the data behind Figure 5 (`fig_*_*.csv`, from `pilot/followup_figure.py`), transcript measures (`mechanisms.json`, from `pilot/followup_mechanisms.py`), the coded failures with their final reports (`failure_coding.csv`), and the follow-up run ledger with measured concurrency (`run_ledger.csv`, `ledger_summary.json`, from `pilot/followup_ledger.py`) |
 
 Configuration names in files differ from the paper's:
 
@@ -72,6 +72,7 @@ For the follow-ups:
 
 ```bash
 python3 pilot/followup_tables.py      # ratios, factorial, ratio of ratios, cold start, isolation -> data/followup/
+python3 pilot/followup_figure.py      # Figure 5's data, from numbers.json and data/pilot/ratios.csv -> data/followup/fig_*.csv
 python3 pilot/followup_mechanisms.py  # transcript measures -> data/followup/mechanisms.json
 python3 pilot/followup_ledger.py      # run ledger and concurrency -> data/followup/run_ledger.csv
 ```

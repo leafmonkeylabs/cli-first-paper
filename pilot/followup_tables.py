@@ -38,7 +38,7 @@ ROOT = Path(__file__).resolve().parent.parent
 ABL, V2, PAPER = ROOT / "data" / "pilot-ablation", ROOT / "data" / "pilot-v2", ROOT / "data" / "pilot"
 ISO = ROOT / "data" / "pilot-iso"
 ISO_ARMS = ["mcp-24", "cli-pipe-ref", "cli-pipe-ref-ids"]
-LABEL_ISO = {"mcp-24": "\\cfg{MCP-24} as rewritten (24 tools)", "cli-pipe-ref": "CLI sheet/comp", "cli-pipe-ref-ids": "CLI sheet/comp, ids only"}
+LABEL_ISO = {"mcp-24": "\\cfg{MCP-46}, 24 tools only", "cli-pipe-ref": "CLI sheet/comp", "cli-pipe-ref-ids": "CLI sheet/comp, ids only"}
 OUT = ROOT / "data" / "followup"
 VARIANTS = ["cli-pipe-ref-noout", "cli-pipe-ref-noopts", "cli-pipe-ref-names", "cli-pipe-ref-wide"]
 V2_ARMS = ["cli-pipe-noskill", "cli-pipe", "cli-step-ref", "cli-pipe-ref"]
@@ -200,7 +200,7 @@ def main() -> None:
         lines.append(row4(LABEL_V2[a], c))
         lines.append(row4("\\quad change", lambda m, f, a=a: f"$\\times${ci(change[(m, f, a)])}" if (m, f, a) in change else "--"))
     lines.append("\\midrule")
-    lines.append(row4("Same commit re-run (drift)", lambda m, f: f"$\\times${ci(drift[(m, f)])}"))
+    lines.append(row4("CLI sheet/comp, \\texttt{0277747} re-run (drift)", lambda m, f: f"$\\times${ci(drift[(m, f)])}"))
     (OUT / "table_rewrite.tex").write_text("\n".join(lines) + "\n")
 
     # Table: isolation wave (if collected).
@@ -218,11 +218,12 @@ def main() -> None:
         lines = ["\\multicolumn{6}{@{}l}{\\textit{Relative to \\cfg{MCP-46}}} \\\\"]
         lines += [row4(LABEL_ISO[a], lambda m, f, a=a: ci(I.get((m, f, a)))) for a in ISO_ARMS]
         lines.append("\\midrule")
-        lines.append("\\multicolumn{6}{@{}l}{\\textit{Relative to \\cfg{MCP-24} as rewritten}} \\\\")
+        lines.append("\\multicolumn{6}{@{}l}{\\textit{Relative to \\cfg{MCP-46} serving 24 tools}} \\\\")
         lines += [row4(LABEL_ISO[a], lambda m, f, a=a: ci(I24.get((m, f, a)))) for a in ("cli-pipe-ref", "cli-pipe-ref-ids")]
         lines.append("\\midrule")
-        lines.append(row4("Ids only vs codes allowed", lambda m, f: ci(IA.get((m, f, "cli-pipe-ref-ids")))))
-        lines.append(row4("CLI sheet/comp vs \\cfg{MCP-24}: change since \\texttt{0277747}", lambda m, f: f"$\\times${ci(cli_side[(m, f)])}"))
+        lines.append("\\multicolumn{6}{@{}l}{\\textit{Further comparisons}} \\\\")
+        lines.append(row4("CLI sheet/comp, ids only $\\div$ codes allowed", lambda m, f: ci(IA.get((m, f, "cli-pipe-ref-ids")))))
+        lines.append(row4("CLI sheet/comp $\\div$ 24-tool server: change since \\texttt{0277747}", lambda m, f: f"$\\times${ci(cli_side[(m, f)])}"))
         (OUT / "table_isolation.tex").write_text("\n".join(lines) + "\n")
         iso = {
             "runs": len(iso_rows), "success": sum(r["success"] for r in iso_rows),
